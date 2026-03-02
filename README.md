@@ -1,0 +1,121 @@
+# VisiblyAI MCP Server
+
+SEO tools for Claude Code. Free local tools + paid API-powered analysis.
+
+**Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis.
+
+**Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, link checking.
+
+## Quick Start
+
+### Option 1: Remote server (zero install, recommended)
+
+No Python or pip needed. Just add a URL to your Claude Code config:
+
+```bash
+# With API key (all 16 tools):
+claude mcp add --transport http \
+  --header "Authorization: Bearer lc_your_key" \
+  visiblyai https://mcp.visibly-ai.com/mcp
+
+# Without API key (6 free tools):
+claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp
+```
+
+### Option 2: uvx (local, no install needed)
+
+```bash
+claude mcp add --transport stdio \
+  --env VISIBLYAI_API_KEY=lc_your_key \
+  visiblyai -- uvx visiblyai-mcp-server
+```
+
+### Option 3: pip install (local)
+
+```bash
+pip install visiblyai-mcp-server
+claude mcp add --transport stdio \
+  --env VISIBLYAI_API_KEY=lc_your_key \
+  visiblyai -- visiblyai-mcp-server
+```
+
+Then restart Claude Code.
+
+> **No API key?** Free tools work without one. Get an API key at [antonioblago.com/register](https://antonioblago.com/register) to unlock paid tools.
+
+## Tools
+
+### Free (local, no credits)
+
+| Tool | Description |
+|------|-------------|
+| `classify_keywords` | Classify keywords by intent, funnel stage, brand type, topic (DE+EN) |
+| `seo_checklist` | 5 checklists: general, blog, ecommerce, discover, backlink |
+| `seo_guidance` | Best practices: title tags, EEAT, Core Web Vitals, schema, and more |
+| `analyze_url_structure` | Check URL SEO-friendliness |
+| `get_account_info` | Check your credit balance and tier |
+| `list_locations` | Available countries for paid tools |
+
+### Paid (API-powered, uses credits)
+
+| Tool | Credits | Description |
+|------|---------|-------------|
+| `get_traffic_snapshot` | varies | Current organic/paid traffic for a domain |
+| `get_historical_traffic` | varies | Traffic trends (up to 5 years) |
+| `get_keywords` | varies | Top ranking keywords with volume and position |
+| `get_competitors` | varies | Competitor domains by keyword overlap |
+| `get_backlinks` | varies | Backlink profile with Domain Rating |
+| `get_referring_domains` | varies | Referring domains with authority scores |
+| `validate_keywords` | varies | Search volume, competition, CPC for keyword list |
+| `crawl_website` | 15-60 | Live crawl + optional 24-point OnPage analysis |
+| `onpage_analysis` | 15 | Full 24-point OnPage SEO audit |
+| `check_links` | 20 | Broken link detection on a page |
+
+## Examples
+
+In Claude Code, just ask naturally:
+
+```
+> Classify these keywords: "seo tool kaufen", "was ist seo", "seo agentur berlin"
+
+> Give me the blog SEO checklist in German
+
+> What are the best practices for title tags?
+
+> Get the top keywords for example.com
+
+> Run an OnPage SEO analysis on https://example.com/page for the keyword "seo tool"
+```
+
+## Configuration
+
+### Environment Variable
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `VISIBLYAI_API_KEY` | For paid tools | API key from [antonioblago.com](https://antonioblago.com) |
+
+### Getting an API Key
+
+1. Sign up at [antonioblago.com/register](https://antonioblago.com/register)
+2. Go to Account > API Keys
+3. Create a new key (starts with `lc_`)
+4. Add it to your Claude Code MCP config
+
+### Subscription Tiers
+
+| Tier | Credits/month | Price |
+|------|---------------|-------|
+| Free | 0 | Free |
+| Standard | 2,500 | Paid |
+| Pro | 10,000 | Paid |
+| Agency | 50,000 | Paid |
+
+## Requirements
+
+- Python 3.10+
+- Claude Code CLI
+
+## License
+
+MIT
