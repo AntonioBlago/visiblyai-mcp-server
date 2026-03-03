@@ -13,12 +13,12 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 16 tools):
+# With API key (all 21 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
 
-# Without API key (6 free tools):
+# Without API key (6 free tools only):
 claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp
 ```
 
@@ -70,6 +70,18 @@ Then restart Claude Code.
 | `crawl_website` | 15-60 | Live crawl + optional 24-point OnPage analysis |
 | `onpage_analysis` | 15 | Full 24-point OnPage SEO audit |
 | `check_links` | 20 | Broken link detection on a page |
+
+### Google & Project (API key required, 0 credits)
+
+These tools use your own Google OAuth tokens connected via the VisiblyAI platform.
+
+| Tool | Description |
+|------|-------------|
+| `list_projects` | List your EEAT projects with scores and status |
+| `get_project` | Get project details, competitors, and Google connections |
+| `get_google_connections` | Show connected GSC/GA4 properties and pairings |
+| `query_search_console` | Query GSC: clicks, impressions, CTR, position by query/page/country/device |
+| `query_analytics` | Query GA4: traffic overview, top pages, traffic sources, revenue |
 
 ## Examples
 

@@ -316,3 +316,146 @@ def check_links(
         return _format_result(result)
     except Exception as e:
         return _handle_error(e)
+
+
+# ------------------------------------------------------------------
+# Google & Project Tools (no credits - uses user's OAuth tokens)
+# ------------------------------------------------------------------
+
+def list_projects() -> str:
+    """List your EEAT projects with scores and status.
+
+    Returns all projects linked to your account with names, domains,
+    latest scores, competitor counts, and analysis status.
+    Credits: 0 (free).
+
+    Returns:
+        JSON with project list
+    """
+    try:
+        client = _require_key()
+        result = client.list_projects()
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def get_project(project_id: int) -> str:
+    """Get detailed project info including competitors and Google connections.
+
+    Returns project settings, competitor domains, and connected GSC/GA4 properties.
+    Credits: 0 (free).
+
+    Args:
+        project_id: The project ID to retrieve
+
+    Returns:
+        JSON with project details, competitors, and Google connection status
+    """
+    if not project_id:
+        return json.dumps({"error": "project_id is required"})
+
+    try:
+        client = _require_key()
+        result = client.get_project(int(project_id))
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def get_google_connections() -> str:
+    """Show connected Google Search Console and Analytics 4 properties.
+
+    Lists all GSC properties, GA4 properties, and GSC-GA4 pairings
+    linked to your account.
+    Credits: 0 (free).
+
+    Returns:
+        JSON with connected properties and pairings
+    """
+    try:
+        client = _require_key()
+        result = client.get_google_connections()
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def query_search_console(
+    gsc_property: str = "",
+    dimension: str = "query",
+    days: int = 28,
+    limit: int = 100,
+    country: str = "",
+    device: str = "",
+) -> str:
+    """Query Google Search Console search analytics data.
+
+    Fetches clicks, impressions, CTR, and position data from GSC.
+    Auto-selects a property if not specified.
+    Credits: 0 (free, uses your own OAuth token).
+
+    Args:
+        gsc_property: GSC property URL (auto-selected if empty)
+        dimension: Data dimension: query, page, country, device, date (default: query)
+        days: Number of days to query (1-365, default: 28)
+        limit: Max rows to return (1-1000, default: 100)
+        country: Filter by country code (e.g., 'DEU')
+        device: Filter by device type (e.g., 'MOBILE')
+
+    Returns:
+        JSON with search analytics data
+    """
+    days = min(max(int(days), 1), 365)
+    limit = min(max(int(limit), 1), 1000)
+
+    try:
+        client = _require_key()
+        result = client.query_search_console(
+            gsc_property=gsc_property,
+            dimension=dimension,
+            days=days,
+            limit=limit,
+            country=country,
+            device=device,
+        )
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def query_analytics(
+    ga4_property: str = "",
+    report_type: str = "overview",
+    days: int = 30,
+    limit: int = 20,
+) -> str:
+    """Query Google Analytics 4 data.
+
+    Fetches traffic, page views, revenue, or traffic source data from GA4.
+    Auto-selects a property if not specified.
+    Credits: 0 (free, uses your own OAuth token).
+
+    Args:
+        ga4_property: GA4 property ID (auto-selected if empty)
+        report_type: Report type: overview, top_pages, traffic_sources, revenue (default: overview)
+        days: Number of days to query (1-365, default: 30)
+        limit: Max rows for top_pages (1-500, default: 20)
+
+    Returns:
+        JSON with analytics data
+    """
+    days = min(max(int(days), 1), 365)
+    limit = min(max(int(limit), 1), 500)
+
+    try:
+        client = _require_key()
+        result = client.query_analytics(
+            ga4_property=ga4_property,
+            report_type=report_type,
+            days=days,
+            limit=limit,
+        )
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)

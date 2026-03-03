@@ -105,6 +105,38 @@ class VisiblyAIClient:
         return self._post("/tools/check-links", {"url": url})
 
     # ------------------------------------------------------------------
+    # Google & Project tools (no credits)
+    # ------------------------------------------------------------------
+
+    def list_projects(self) -> dict:
+        return self._post("/tools/list-projects")
+
+    def get_project(self, project_id: int) -> dict:
+        return self._post("/tools/get-project", {"project_id": project_id})
+
+    def get_google_connections(self) -> dict:
+        return self._post("/tools/google-connections")
+
+    def query_search_console(self, gsc_property: str = "", dimension: str = "query",
+                             days: int = 28, limit: int = 100,
+                             country: str = "", device: str = "") -> dict:
+        payload: dict[str, Any] = {"dimension": dimension, "days": days, "limit": limit}
+        if gsc_property:
+            payload["gsc_property"] = gsc_property
+        if country:
+            payload["country"] = country
+        if device:
+            payload["device"] = device
+        return self._post("/tools/query-search-console", payload)
+
+    def query_analytics(self, ga4_property: str = "", report_type: str = "overview",
+                        days: int = 30, limit: int = 20) -> dict:
+        payload: dict[str, Any] = {"report_type": report_type, "days": days, "limit": limit}
+        if ga4_property:
+            payload["ga4_property"] = ga4_property
+        return self._post("/tools/query-analytics", payload)
+
+    # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------
 

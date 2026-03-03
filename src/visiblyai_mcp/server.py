@@ -17,11 +17,13 @@ from .tools import free_tools, paid_tools
 
 mcp = FastMCP(
     "VisiblyAI SEO Tools",
-    description=(
+    instructions=(
         "Professional SEO tools powered by VisiblyAI. "
         "Free: keyword classifier, SEO checklists, best practices. "
         "Paid: traffic analysis, keyword research, backlinks, competitor analysis, "
-        "OnPage SEO audit, link checking (requires API key + credits)."
+        "OnPage SEO audit, link checking (requires API key + credits). "
+        "Google: Search Console queries, Analytics reports, project management "
+        "(requires API key, 0 credits)."
     ),
 )
 
@@ -205,6 +207,71 @@ def check_links(url: str) -> str:
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """
     return paid_tools.check_links(url)
+
+
+# ---------------------------------------------------------------------------
+# Google & Project Tools (require API key, 0 credits)
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def list_projects() -> str:
+    """List your EEAT projects with scores, domains, and analysis status. Credits: 0.
+
+    Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.list_projects()
+
+
+@mcp.tool()
+def get_project(project_id: int) -> str:
+    """Get project details including competitors and Google connections. Credits: 0.
+
+    Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.get_project(project_id)
+
+
+@mcp.tool()
+def get_google_connections() -> str:
+    """Show connected Google Search Console and Analytics 4 properties. Credits: 0.
+
+    Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.get_google_connections()
+
+
+@mcp.tool()
+def query_search_console(
+    gsc_property: str = "",
+    dimension: str = "query",
+    days: int = 28,
+    limit: int = 100,
+    country: str = "",
+    device: str = "",
+) -> str:
+    """Query Google Search Console: clicks, impressions, CTR, position. Credits: 0.
+
+    Dimensions: query, page, country, device, date. Auto-selects property if empty.
+    Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.query_search_console(
+        gsc_property, dimension, days, limit, country, device
+    )
+
+
+@mcp.tool()
+def query_analytics(
+    ga4_property: str = "",
+    report_type: str = "overview",
+    days: int = 30,
+    limit: int = 20,
+) -> str:
+    """Query Google Analytics 4: traffic, pages, sources, revenue. Credits: 0.
+
+    Report types: overview, top_pages, traffic_sources, revenue.
+    Auto-selects property if empty. Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.query_analytics(ga4_property, report_type, days, limit)
 
 
 def main():
