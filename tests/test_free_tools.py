@@ -41,7 +41,7 @@ class TestClassifyKeywords:
 
 
 class TestSeoChecklist:
-    """Tests for seo_checklist - now fetches from API."""
+    """Tests for seo_checklist - API first, then offline fallback."""
 
     def _mock_response(self, content, status=200):
         mock_resp = MagicMock()
@@ -50,41 +50,67 @@ class TestSeoChecklist:
         return mock_resp
 
     @patch("visiblyai_mcp.knowledge.checklists.httpx")
-    def test_general_checklist(self, mock_httpx):
+    def test_general_checklist_from_api(self, mock_httpx):
         mock_httpx.get.return_value = self._mock_response("# General SEO Checklist\n- [ ] Check robots.txt")
         result = seo_checklist("general", "en")
         assert "General SEO Checklist" in result
         mock_httpx.get.assert_called_once()
 
     @patch("visiblyai_mcp.knowledge.checklists.httpx")
-    def test_blog_checklist(self, mock_httpx):
+    def test_blog_checklist_from_api(self, mock_httpx):
         mock_httpx.get.return_value = self._mock_response("# Blog Article SEO Checklist")
         result = seo_checklist("blog", "en")
         assert "Blog" in result
 
     @patch("visiblyai_mcp.knowledge.checklists.httpx")
-    def test_german_language(self, mock_httpx):
+    def test_german_language_from_api(self, mock_httpx):
         mock_httpx.get.return_value = self._mock_response("# Allgemeine SEO Checkliste")
         result = seo_checklist("general", "de")
         assert "Allgemeine" in result
 
     @patch("visiblyai_mcp.knowledge.checklists.httpx")
-    def test_api_failure_returns_message(self, mock_httpx):
+    def test_fallback_on_api_failure(self, mock_httpx):
+        """When API returns non-200, fallback to embedded data."""
         mock_resp = MagicMock()
         mock_resp.status_code = 500
         mock_httpx.get.return_value = mock_resp
         result = seo_checklist("general", "en")
-        assert "Failed to fetch" in result
+        assert "General SEO Checklist" in result
+        assert "robots.txt" in result
 
     @patch("visiblyai_mcp.knowledge.checklists.httpx")
-    def test_network_error_returns_message(self, mock_httpx):
+    def test_fallback_on_network_error(self, mock_httpx):
+        """When network is down, fallback to embedded data."""
         mock_httpx.get.side_effect = Exception("Connection refused")
         result = seo_checklist("general", "en")
-        assert "Could not fetch" in result
+        assert "General SEO Checklist" in result
+
+    @patch("visiblyai_mcp.knowledge.checklists.httpx")
+    def test_fallback_german(self, mock_httpx):
+        """Fallback also works for German content."""
+        mock_httpx.get.side_effect = Exception("Offline")
+        result = seo_checklist("general", "de")
+        assert "Allgemeine SEO Checkliste" in result
+
+    @patch("visiblyai_mcp.knowledge.checklists.httpx")
+    def test_fallback_all_checklists(self, mock_httpx):
+        """Fallback works for 'all' type."""
+        mock_httpx.get.side_effect = Exception("Offline")
+        result = seo_checklist("all", "en")
+        assert "General SEO Checklist" in result
+        assert "Blog Article SEO Checklist" in result
+        assert "E-Commerce SEO Checklist" in result
+
+    @patch("visiblyai_mcp.knowledge.checklists.httpx")
+    def test_fallback_unknown_type(self, mock_httpx):
+        """Fallback returns error for unknown type."""
+        mock_httpx.get.side_effect = Exception("Offline")
+        result = seo_checklist("nonexistent", "en")
+        assert "Unknown checklist type" in result
 
 
 class TestSeoGuidance:
-    """Tests for seo_guidance - now fetches from API."""
+    """Tests for seo_guidance - API first, then offline fallback."""
 
     def _mock_response(self, content, status=200):
         mock_resp = MagicMock()
@@ -93,13 +119,13 @@ class TestSeoGuidance:
         return mock_resp
 
     @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
-    def test_title_tags(self, mock_httpx):
+    def test_title_tags_from_api(self, mock_httpx):
         mock_httpx.get.return_value = self._mock_response("# Title Tag Best Practices")
         result = seo_guidance("title_tags")
         assert "Title Tag" in result
 
     @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
-    def test_list_topics(self, mock_httpx):
+    def test_list_topics_from_api(self, mock_httpx):
         mock_httpx.get.return_value = self._mock_response([
             {"topic": "title_tags", "title": "Title Tag Optimization"},
             {"topic": "eeat", "title": "E-E-A-T"},
@@ -109,12 +135,40 @@ class TestSeoGuidance:
         assert "title_tags" in result
 
     @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
-    def test_api_failure(self, mock_httpx):
+    def test_fallback_on_api_failure(self, mock_httpx):
+        """When API fails, fallback to embedded guidance data."""
         mock_resp = MagicMock()
         mock_resp.status_code = 500
         mock_httpx.get.return_value = mock_resp
+        result = seo_guidance("title_tags")
+        assert "Title Tag Best Practices" in result
+        assert "30-65 characters" in result
+
+    @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
+    def test_fallback_on_network_error(self, mock_httpx):
+        """When network is down, fallback to embedded data."""
+        mock_httpx.get.side_effect = Exception("Connection refused")
         result = seo_guidance("eeat")
-        assert "Failed to fetch" in result
+        assert "E-E-A-T" in result
+        assert "Experience" in result
+
+    @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
+    def test_fallback_list_topics(self, mock_httpx):
+        """list_topics falls back to embedded data."""
+        mock_httpx.get.side_effect = Exception("Offline")
+        from visiblyai_mcp.knowledge.seo_guidance import list_topics
+        topics = list_topics()
+        assert len(topics) >= 5
+        topic_keys = [t["topic"] for t in topics]
+        assert "title_tags" in topic_keys
+        assert "eeat" in topic_keys
+
+    @patch("visiblyai_mcp.knowledge.seo_guidance.httpx")
+    def test_fallback_unknown_topic(self, mock_httpx):
+        """Fallback returns error for unknown topic."""
+        mock_httpx.get.side_effect = Exception("Offline")
+        result = seo_guidance("nonexistent_topic_xyz")
+        assert "not found" in result or "Available" in result
 
 
 class TestAnalyzeUrlStructure:
