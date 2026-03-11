@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 from ..classifier import KeywordClassifier, ClassificationResult
 from ..knowledge.checklists import get_checklist, list_checklists, CHECKLIST_TYPES
 from ..knowledge.seo_guidance import get_guidance, list_topics, search_guidance
+from ..knowledge.skills import get_skill as _get_skill, list_skills as _list_skills
 from ..config import get_api_key, SIGNUP_URL
 
 logger = logging.getLogger(__name__)
@@ -118,6 +119,32 @@ def seo_guidance(
         return "\n".join(lines)
 
     return get_guidance(topic)
+
+
+def get_skill(name: str) -> str:
+    """Get an SEO workflow skill with step-by-step methodology.
+
+    Skills provide structured workflows for common SEO tasks including
+    methodology, CTR models, quality gates, and action items.
+
+    Use name='list' to see all available skills.
+
+    Args:
+        name: Skill name (e.g. 'seo-audit') or 'list' for all
+
+    Returns:
+        Markdown formatted skill content
+    """
+    if name.lower() in ("list", "help", "all"):
+        skills = _list_skills()
+        lines = ["# Available SEO Workflow Skills\n"]
+        for s in skills:
+            lines.append(f"- **{s['skill_name']}**: {s.get('description', '')}")
+        if not skills:
+            lines.append("No skills available. Skills are synced via `visiblyai-mcp-server sync-skills`.")
+        return "\n".join(lines)
+
+    return _get_skill(name)
 
 
 def analyze_url_structure(url: str) -> str:
@@ -232,7 +259,7 @@ def get_account_info() -> str:
             "signup_url": SIGNUP_URL,
             "free_tools": [
                 "classify_keywords", "seo_checklist", "seo_guidance",
-                "analyze_url_structure", "list_locations",
+                "get_skill", "analyze_url_structure", "list_locations",
             ],
         }, indent=2)
 

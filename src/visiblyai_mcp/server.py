@@ -21,7 +21,8 @@ mcp = FastMCP(
         "Professional SEO tools powered by VisiblyAI. "
         "Free: keyword classifier, SEO checklists, best practices. "
         "Paid: traffic analysis, keyword research, backlinks, competitor analysis, "
-        "OnPage SEO audit, link checking (requires API key + credits). "
+        "OnPage SEO audit, link checking, SEO agents, SEO workflows "
+        "(requires API key + credits). "
         "Google: Search Console queries, Analytics reports, project management "
         "(requires API key, 0 credits)."
     ),
@@ -38,12 +39,15 @@ def classify_keywords(
     brand_variations: list[str] | None = None,
     product_keywords: list[str] | None = None,
     competitors: list[dict] | None = None,
+    language: str = "German",
+    location: str = "Germany",
 ) -> str:
     """Classify keywords by search intent, funnel stage, brand type, and topic.
 
     Supports German and English. Returns intent (transactional/commercial/
     informational/navigational/local), funnel stage (TOFU/MOFU/BOFU),
     conversion score (0-100), and topic classification.
+    language and location params reserved for future API-based intent detection.
 
     Free tool - no API key or credits required.
     """
@@ -104,6 +108,19 @@ def list_locations() -> str:
     Free tool - no API key or credits required.
     """
     return free_tools.list_locations()
+
+
+@mcp.tool()
+def get_skill(name: str) -> str:
+    """Get an SEO workflow skill with step-by-step methodology and CTR models.
+
+    Skills: seo-audit, keyword-research, competitor-analysis,
+    traffic-analysis, gsc-report, site-health-check.
+    Use name='list' to see all available skills.
+
+    Free tool - no API key or credits required.
+    """
+    return free_tools.get_skill(name)
 
 
 # ---------------------------------------------------------------------------
@@ -209,6 +226,40 @@ def check_links(url: str) -> str:
     return paid_tools.check_links(url)
 
 
+@mcp.tool()
+def seo_agent(
+    task: str,
+    agent: str = "",
+    domain: str = "",
+    url: str = "",
+    keyword: str = "",
+    content: str = "",
+    params: dict | None = None,
+) -> str:
+    """Run a specialized SEO agent. Agents: crawling, seo_analyst, strategist,
+    copywriter, chief_editor, consultant. Auto-detects from task if omitted. Credits: varies.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.seo_agent(task, agent, domain, url, keyword, content, params)
+
+
+@mcp.tool()
+def seo_workflow(
+    workflow: str,
+    domain: str,
+    project_id: int,
+    params: dict | None = None,
+) -> str:
+    """Run a multi-step SEO workflow with report generation.
+    Workflows: seo_performance_audit (~150 credits), indexing_diagnosis (~200 credits).
+    Requires Pro+ tier. May take several minutes. Credits: 150-200.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.seo_workflow(workflow, domain, project_id, params)
+
+
 # ---------------------------------------------------------------------------
 # Google & Project Tools (require API key, 0 credits)
 # ---------------------------------------------------------------------------
@@ -275,7 +326,25 @@ def query_analytics(
 
 
 def main():
-    """Entry point for the MCP server."""
+    """Entry point for the MCP server and CLI commands.
+
+    CLI usage:
+        visiblyai-mcp-server                    Start MCP server (default)
+        visiblyai-mcp-server sync-skills [path] Push skills to platform API
+        visiblyai-mcp-server build-fallback [path] Build offline fallback blob
+    """
+    import sys
+    if len(sys.argv) > 1:
+        cmd = sys.argv[1]
+        arg = sys.argv[2] if len(sys.argv) > 2 else None
+        if cmd == "sync-skills":
+            from .cli import sync_skills
+            sync_skills(arg)
+            return
+        if cmd == "build-fallback":
+            from .cli import build_fallback
+            build_fallback(arg)
+            return
     mcp.run()
 
 

@@ -1,0 +1,102 @@
+"""
+Skills Knowledge Base - fetched from VisiblyAI platform API with offline fallback.
+
+Skill files live in .claude/skills/*.md and are synced to the platform via CLI.
+API serves the latest version; embedded fallback provides minimal offline access.
+"""
+
+import base64
+import json
+import logging
+import zlib
+
+import httpx
+
+from ..config import BASE_URL
+
+logger = logging.getLogger(__name__)
+
+# Compressed fallback (zlib + base64) — populated by `visiblyai-mcp-server build-fallback`
+_FALLBACK_DATA = "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"
+
+
+def _load_fallback() -> dict:
+    """Decompress embedded fallback data."""
+    if not _FALLBACK_DATA:
+        return {}
+    try:
+        raw = zlib.decompress(base64.b64decode(_FALLBACK_DATA))
+        return json.loads(raw.decode("utf-8"))
+    except Exception as e:
+        logger.warning(f"Failed to load fallback skills: {e}")
+        return {}
+
+
+def get_skill(name: str) -> str:
+    """Get a skill by name. API-first, fallback to embedded.
+
+    Args:
+        name: Skill slug (e.g. 'seo-audit', 'keyword-research')
+
+    Returns:
+        Markdown formatted skill content
+    """
+    # Try API first
+    try:
+        resp = httpx.get(
+            BASE_URL + "/tools/skills",
+            params={"name": name},
+            timeout=15.0,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            if data.get("success"):
+                return data.get("data", "")
+    except Exception as e:
+        logger.debug(f"API unavailable for skill '{name}': {e}")
+
+    # Fallback to embedded data
+    try:
+        skills = _load_fallback()
+        if name in skills:
+            return skills[name]["content"]
+        # Fuzzy match (hyphen/underscore tolerance)
+        normalized = name.lower().replace("_", "-")
+        for key, val in skills.items():
+            if key.replace("_", "-") == normalized:
+                return val["content"]
+        available = ", ".join(skills.keys()) if skills else "none (fallback empty)"
+        return f"Skill '{name}' not found. Available: {available}"
+    except Exception as e:
+        return f"Could not load skill: {e}"
+
+
+def list_skills() -> list[dict]:
+    """List all available skills. API-first, fallback to embedded.
+
+    Returns:
+        List of dicts with name and description
+    """
+    # Try API first
+    try:
+        resp = httpx.get(
+            BASE_URL + "/tools/skills",
+            params={"name": "list"},
+            timeout=15.0,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            if data.get("success"):
+                return data.get("data", [])
+    except Exception as e:
+        logger.debug(f"API unavailable for skill list: {e}")
+
+    # Fallback
+    try:
+        skills = _load_fallback()
+        return [
+            {"skill_name": k, "description": v.get("description", "")}
+            for k, v in skills.items()
+        ]
+    except Exception:
+        return []
