@@ -8,7 +8,7 @@ Audit a website's technical SEO structure — URL canonicalization, sitemap heal
 
 ## Arguments
 
-The user provides a domain or URL (e.g., `https://www.antonioblago.com`).
+The user provides a domain or URL (e.g., `https://www.example.com`).
 Optionally: the site's primary language (`de`, `en`, or `bilingual`).
 
 ## What This Checks
@@ -279,9 +279,9 @@ def test_hreflang_symmetry(client):
 
 ## Implementation Reference
 
-Applied on `antonioblago.com` (2026-03-12):
-- `/impressum`, `/agb`, `/datenschutz` → now 301 redirect to `/de/` canonical
+Applied on a bilingual Flask site (2026-03-12):
+- `/impressum`, `/agb`, `/datenschutz` → 301 redirect to `/de/` canonical
 - `/de/Impressum` → renamed to `/de/impressum` (lowercase)
-- `URL_MAP` in `run.py` extended with all legal page pairs for automatic hreflang
+- `URL_MAP` extended with all legal page pairs for automatic hreflang
 - Sitemap: removed all `noindex` legal pages, added missing tool pages
 - robots.txt: corrected canonical paths, added all bilingual variants

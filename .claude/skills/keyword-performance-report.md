@@ -212,7 +212,7 @@ If user asks for Excel output:
 **Sheet 4: Methodology**
 - Data sources, date ranges, CTR benchmark source
 
-Reference Excel output: `C:\Users\anton\OneDrive\Mabya\Dokumente\Claude\SEO projects\titus.de\Reports\`
+Reference Excel output: `<SEO_PROJECTS_DIR>/<client>/Reports/` — see `/ci-setup-guide` for path setup
 
 ## Quality Gates
 

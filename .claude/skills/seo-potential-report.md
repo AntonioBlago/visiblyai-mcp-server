@@ -9,7 +9,7 @@ Generate a data-driven SEO potential analysis with realistic traffic projections
 ## Arguments
 
 The user provides:
-- Client domain (e.g., `paroc.com`)
+- Client domain (e.g., `client-domain.com`)
 - Target market / country (e.g., `DE`, `AT`, `CH`)
 - Optionally: keyword file path (Excel/CSV with target keywords + SV + current positions)
 - Optionally: monthly SEA budget (EUR) for equivalence calculation
@@ -17,7 +17,7 @@ The user provides:
 
 ## Methodology
 
-Based on the real Antonio Blago workflow used for paroc.com, titus.de, x-bonic.com.
+Based on the real Antonio Blago workflow validated across multiple B2B and eCommerce clients.
 
 ### Data Pipeline
 
@@ -199,7 +199,7 @@ Always propose 3 KPQs (Key Performance Questions) + KPIs:
 
 If the user asks for a PDF deliverable:
 
-1. **Setup fonts** from `C:\Users\anton\OneDrive\Mabya\Dokumente\Claude\fonts\` (Montserrat + Mulish with `uni=True`)
+1. **Setup fonts** from `FONT_DIR` (see `/ci-setup-guide` for path setup — Montserrat + Mulish with `uni=True`)
 2. **Use CI colors:**
    ```python
    ACCENT = (246, 87, 30)      # Orange #f6571e
@@ -209,8 +209,8 @@ If the user asks for a PDF deliverable:
    LIGHT_BG = (248, 248, 248)  # #f8f8f8
    ```
 3. **Structure:** Cover page → Table of Contents → Status-Quo → Potential → Quick Wins → Offer → ROI → Roadmap → KPIs
-4. **Save to:** `C:\Users\anton\OneDrive\Mabya\Dokumente\Claude\SEO projects\[client]\Reports\`
-5. **Reference script:** `C:\Users\anton\OneDrive\Mabya\Dokumente\Claude\SEO projects\paroc.com\generate_pdf.py`
+4. **Save to:** `<SEO_PROJECTS_DIR>/<client>/Reports/`
+5. **Reference script:** see `/ci-setup-guide` → Implementation References → `generate_pdf.py`
 
 ## Quality Gates
 
@@ -223,9 +223,9 @@ If the user asks for a PDF deliverable:
 
 ## Implementation Reference
 
-Validated on paroc.com (March 2026):
-- 216 target keywords, 177 (82%) not ranking at all
-- Brand-share: 91.5% of all clicks
-- 12-month potential: +7.757 additional organic clicks/month
-- SEA equivalence: 79.800 EUR/year vs. 8.500 EUR investment = 9.4x ROI
-- Reference files: `paroc.com/Paroc_Angebot_Roadmap_v2.md`, `paroc.com/analyze_potential.py`
+Validated across B2B client projects (manufacturing / industry sector, March 2026):
+- 216 target keywords analyzed, 82% not ranking at all
+- Brand-share: 91.5% of all clicks (no discovery funnel)
+- 12-month potential: +7,757 additional organic clicks/month
+- SEA equivalence: ~80,000 EUR/year vs. 8,500 EUR investment = 9.4x ROI
+- Reference scripts: `<SEO_PROJECTS_DIR>/<client>/Scripts/analyze_potential.py`, `generate_pdf.py`
