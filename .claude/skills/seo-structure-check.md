@@ -9,23 +9,207 @@ Audit a website's technical SEO structure — URL canonicalization, sitemap heal
 ## Arguments
 
 The user provides a domain or URL (e.g., `https://www.example.com`).
-Optionally: the site's primary language (`de`, `en`, or `bilingual`).
+Optionally: the site's language structure — see patterns below (`single`, `bilingual-en-default`, `bilingual-de-default`, `international`).
+
+---
+
+## URL Structure Patterns
+
+Choose the right pattern based on the site's language setup. **Each pattern has different canonical rules, sitemap structure, and hreflang requirements.**
+
+---
+
+### Pattern 1: Single Language (no locale prefix)
+
+**When to use:** Site is entirely in one language (EN or DE only). No translations planned.
+
+```
+/                    → homepage
+/about               → about page
+/products/widget     → product page
+/blog/article-slug   → blog article
+```
+
+**Rules:**
+- No locale prefix anywhere — ever
+- No hreflang needed (single language = no alternate)
+- Canonical = the bare URL: `<link rel="canonical" href="https://www.example.com/about">`
+- Sitemap: no `xhtml:link` annotations needed
+
+**Check for:**
+- [ ] No accidental `/en/` or `/de/` prefixes on any URL
+- [ ] Consistent lowercase slugs (`/about`, not `/About`)
+- [ ] No `?lang=en` query parameters (these cause duplicate content)
+- [ ] robots.txt has no locale-based disallow rules
+
+---
+
+### Pattern 2: Bilingual — English as Default (EN = no prefix, DE = /de/)
+
+**When to use:** Bilingual site where English is the primary/default language. x-default points to EN.
+
+```
+/                    → EN homepage (canonical)
+/about               → EN about (canonical)
+/de/                 → DE homepage (canonical)
+/de/ueber-uns        → DE about (canonical)
+/about/              → redirect 301 → /about  (trailing slash)
+/en/about            → redirect 301 → /about  (no /en/ prefix)
+```
+
+**Canonical rules:**
+- EN pages: `/slug` is canonical (no prefix) → `x-default`
+- DE pages: `/de/slug` is canonical
+- `/en/*` routes: all 301 redirect to bare `/slug`
+- Uppercase variants (`/About`) → 301 redirect to lowercase canonical
+
+**Hreflang in `<head>`:**
+```html
+<!-- On /about (EN page) -->
+<link rel="alternate" hreflang="en" href="https://www.example.com/about">
+<link rel="alternate" hreflang="de" href="https://www.example.com/de/ueber-uns">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/about">
+<link rel="canonical" href="https://www.example.com/about">
+
+<!-- On /de/ueber-uns (DE page) -->
+<link rel="alternate" hreflang="en" href="https://www.example.com/about">
+<link rel="alternate" hreflang="de" href="https://www.example.com/de/ueber-uns">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/about">
+<link rel="canonical" href="https://www.example.com/de/ueber-uns">
+```
+
+**Sitemap entry:**
+```xml
+<url>
+    <loc>https://www.example.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.example.com/about"/>
+</url>
+<url>
+    <loc>https://www.example.com/de/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.example.com/about"/>
+</url>
+```
+
+**Check for:**
+- [ ] No `/en/` routes — EN is the bare URL
+- [ ] All DE pages use `/de/` prefix (lowercase)
+- [ ] Every bilingual pair appears in sitemap (both EN + DE `<url>` blocks)
+- [ ] `x-default` points to EN version
+- [ ] Hreflang is symmetric (EN page references DE, DE page references EN)
+
+---
+
+### Pattern 3: Bilingual — German as Default (DE = no prefix, EN = /en/)
+
+**When to use:** German-first site (e.g., DACH market) where DE is default. Less common — use Pattern 2 unless specifically requested.
+
+```
+/                    → DE homepage (canonical)
+/ueber-uns           → DE about (canonical)
+/en/                 → EN homepage (canonical)
+/en/about            → EN about (canonical)
+```
+
+**Canonical rules:**
+- DE pages: `/slug` is canonical → `x-default`
+- EN pages: `/en/slug` is canonical
+- `/de/*` routes → 301 redirect to bare `/slug`
+
+**Hreflang in `<head>`:**
+```html
+<!-- On /ueber-uns (DE page) -->
+<link rel="alternate" hreflang="de" href="https://www.example.com/ueber-uns">
+<link rel="alternate" hreflang="en" href="https://www.example.com/en/about">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/ueber-uns">
+<link rel="canonical" href="https://www.example.com/ueber-uns">
+```
+
+**Check for:**
+- [ ] No `/de/` routes — DE is the bare URL
+- [ ] All EN pages use `/en/` prefix
+- [ ] `x-default` points to DE version
+
+---
+
+### Pattern 4: International / Multi-Region (continent or country prefixes)
+
+**When to use:** Site targets multiple countries/regions, e.g., EU, US, APAC or individual country codes.
+
+**Option A — Language subdirectory (recommended):**
+```
+/                    → global homepage / redirect
+/en/                 → English (global default)
+/de/                 → German (DACH)
+/fr/                 → French (FR + BE + CH)
+/es/                 → Spanish (ES + LatAm)
+/en-us/              → English US (if US-specific pricing/content)
+/en-gb/              → English UK (if UK-specific content)
+```
+
+**Option B — Country subdomain (for region-specific infra):**
+```
+www.example.com      → global (redirects to geo-detected locale)
+de.example.com       → DACH (canonical for DE users)
+fr.example.com       → France
+us.example.com       → United States
+```
+
+**Option C — ccTLD (separate domains per country):**
+```
+example.de           → Germany
+example.fr           → France
+example.co.uk        → UK
+example.com          → Global / US
+```
+
+**Hreflang for multi-region (Option A):**
+```html
+<link rel="alternate" hreflang="en"    href="https://www.example.com/en/product">
+<link rel="alternate" hreflang="de"    href="https://www.example.com/de/produkt">
+<link rel="alternate" hreflang="fr"    href="https://www.example.com/fr/produit">
+<link rel="alternate" hreflang="es"    href="https://www.example.com/es/producto">
+<link rel="alternate" hreflang="en-US" href="https://www.example.com/en-us/product">
+<link rel="alternate" hreflang="en-GB" href="https://www.example.com/en-gb/product">
+<link rel="alternate" hreflang="x-default" href="https://www.example.com/en/product">
+<link rel="canonical" href="https://www.example.com/en/product">
+```
+
+**Check for:**
+- [ ] All locale prefixes are lowercase (`/en/`, not `/EN/`)
+- [ ] `x-default` → global English version
+- [ ] Every locale has both a `<url>` block in sitemap AND `xhtml:link` entries
+- [ ] No locale serves the same content as another (duplicate content penalty)
+- [ ] robots.txt does NOT block any locale subfolder
+- [ ] If using subdomains: each subdomain has its own GSC property
+- [ ] If using ccTLDs: each TLD verified in GSC separately
+
+**Common mistakes:**
+- Mixing strategies (some pages use subdirectory, others subdomain)
+- Missing `x-default` on homepage
+- hreflang only in sitemap but not in `<head>` (or vice versa) — must be consistent
+- Auto-redirecting users based on IP without a visible language switcher (Google may not follow redirects)
+
+---
 
 ## What This Checks
 
 ### 1. URL Routing & Canonical Structure
 
-The canonical URL is the one Google should index. All other variants must redirect (301) to it.
+Determine which pattern the site uses, then verify it's applied consistently.
 
-**Correct pattern for bilingual sites:**
+**Correct pattern for bilingual EN-default sites (Pattern 2):**
 - German pages: `/de/<slug>` is canonical → bare `/slug` redirects 301 to `/de/<slug>`
 - English pages: `/slug` (no locale prefix) is canonical
-- Capital-letter variants (`/Impressum`) → redirect to lowercase canonical
+- Capital-letter variants (`/About`) → redirect to lowercase canonical
 
 **Check for:**
 - [ ] Bare routes (without `/de/`) redirect to canonical with 301
 - [ ] No duplicate content served at both `/slug` AND `/de/slug`
-- [ ] Consistent lowercase URLs (no `/de/Impressum`, only `/de/impressum`)
+- [ ] Consistent lowercase URLs (no `/de/About`, only `/de/about`)
 - [ ] Legal pages have their own canonical URLs (not redirected to external domains)
 
 ### 2. Sitemap Audit
