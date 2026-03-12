@@ -10,6 +10,7 @@ from ..classifier import KeywordClassifier, ClassificationResult
 from ..knowledge.checklists import get_checklist, list_checklists, CHECKLIST_TYPES
 from ..knowledge.seo_guidance import get_guidance, list_topics, search_guidance
 from ..knowledge.skills import get_skill as _get_skill, list_skills as _list_skills
+from ..knowledge.google_guidelines import get_guidelines as _get_guidelines, list_categories as _list_guideline_categories
 from ..config import get_api_key, SIGNUP_URL
 
 logger = logging.getLogger(__name__)
@@ -318,3 +319,67 @@ def list_locations() -> str:
         "locations": locations,
         "note": "Use 'location_name' value in paid tool calls (e.g., location='Germany')",
     }, indent=2)
+
+
+def get_google_guidelines(category: str = "list") -> str:
+    """Get scraped Google Search developer guidelines.
+
+    Content is fetched weekly from developers.google.com and served via the
+    VisiblyAI platform API. Use category='list' to discover available categories.
+
+    Available categories: fundamentals, content, crawling, sitemaps,
+    structured_data, performance, ranking, updates, monitoring, snippets,
+    guidelines.
+
+    Args:
+        category: Category slug or 'list' to see all categories.
+
+    Returns:
+        Markdown formatted guideline content, or JSON category index.
+    """
+    if category.lower() in ("list", "all", "help"):
+        categories = _list_guideline_categories()
+        if not categories:
+            return "No guideline categories available. Run the weekly sync cron job first."
+        lines = ["# Google Search Developer Guidelines — Available Categories\n"]
+        for cat in categories:
+            page_count = cat.get("page_count", 0)
+            last_changed = cat.get("last_changed") or "not yet synced"
+            lines.append(
+                f"- **{cat['category']}** ({page_count} page{'s' if page_count != 1 else ''}, "
+                f"last changed: {last_changed})"
+            )
+        lines.append(
+            "\nUse category='<name>' to fetch the full content for a specific category."
+        )
+        return "\n".join(lines)
+
+    data = _get_guidelines(category)
+
+    if not data:
+        return f"Could not load guidelines for category '{category}'. Check your connection."
+
+    error = data.get("error")
+    pages = data.get("pages", [])
+
+    if error and not pages:
+        return f"Error: {error}"
+
+    if not pages:
+        return f"No guidelines found for category '{category}'."
+
+    output_parts = [f"# Google Search Guidelines: {category.replace('_', ' ').title()}\n"]
+    for page in pages:
+        title = page.get("title", "")
+        source_url = page.get("source_url", "")
+        content = page.get("content", "")
+        last_changed = page.get("last_changed") or "unknown"
+
+        output_parts.append(f"## {title}")
+        if source_url:
+            output_parts.append(f"Source: {source_url}")
+        output_parts.append(f"Last updated: {last_changed}\n")
+        output_parts.append(content)
+        output_parts.append("\n---\n")
+
+    return "\n".join(output_parts)

@@ -84,6 +84,19 @@ def seo_guidance(topic: str) -> str:
 
 
 @mcp.tool()
+def get_google_guidelines(category: str = "list") -> str:
+    """Get official Google Search developer guidelines (scraped weekly from developers.google.com).
+
+    Use category='list' to see all available categories. Available categories:
+    fundamentals, content, crawling, sitemaps, structured_data, performance,
+    ranking, updates, monitoring, snippets, guidelines.
+
+    Free tool - no API key or credits required.
+    """
+    return free_tools.get_google_guidelines(category)
+
+
+@mcp.tool()
 def analyze_url_structure(url: str) -> str:
     """Analyze a URL for SEO-friendliness. Checks length, structure, and common issues.
 
@@ -323,6 +336,23 @@ def query_analytics(
     Auto-selects property if empty. Requires VISIBLYAI_API_KEY.
     """
     return paid_tools.query_analytics(ga4_property, report_type, days, limit)
+
+
+@mcp.tool()
+def query_knowledge_base(
+    query: str,
+    top_k: int = 5,
+    category: str = "",
+    document_type: str = "",
+    include_external: bool = True,
+) -> str:
+    """Search the SEO knowledge base (blogs, docs, Google guidelines). Credits: 2.
+
+    Semantic search over all indexed content ranked by relevance + recency.
+    Sources: blog articles, SEO documentation, best practices, Google Search guidelines.
+    Requires VISIBLYAI_API_KEY.
+    """
+    return paid_tools.query_knowledge_base(query, top_k, category, document_type, include_external)
 
 
 def main():

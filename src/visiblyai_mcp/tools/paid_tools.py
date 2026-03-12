@@ -318,6 +318,81 @@ def check_links(
         return _handle_error(e)
 
 
+def seo_agent(
+    task: str,
+    agent: str = "",
+    domain: str = "",
+    url: str = "",
+    keyword: str = "",
+    content: str = "",
+    params: dict | None = None,
+) -> str:
+    """Run a specialized SEO agent for analysis, strategy, or content tasks.
+
+    Agents: crawling, seo_analyst, strategist, copywriter, chief_editor, consultant.
+    Auto-detects the best agent from your task description if not specified.
+    Credits: varies by agent and task complexity.
+
+    Args:
+        task: What you want done (e.g., 'Analyze SEO for example.com')
+        agent: Agent type (auto-detected if omitted)
+        domain: Target domain
+        url: Target URL to crawl/analyze
+        keyword: Target keyword
+        content: Content to review or optimize
+        params: Agent-specific parameters
+
+    Returns:
+        JSON with agent results, credits used, and remaining balance
+    """
+    if not task:
+        return json.dumps({"error": "task is required"})
+
+    try:
+        client = _require_key()
+        result = client.seo_agent(task, agent, domain, url, keyword, content, params)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def seo_workflow(
+    workflow: str,
+    domain: str,
+    project_id: int,
+    params: dict | None = None,
+) -> str:
+    """Run a multi-step SEO workflow with report generation.
+
+    Workflows: seo_performance_audit (GSC analysis + PDF, ~150 credits),
+    indexing_diagnosis (indexing issues, ~200 credits). Requires Pro+ tier.
+    May take several minutes.
+    Credits: 150-200 depending on workflow.
+
+    Args:
+        workflow: Workflow type (seo_performance_audit or indexing_diagnosis)
+        domain: Target domain
+        project_id: Project ID from your projects dashboard
+        params: Workflow-specific parameters
+
+    Returns:
+        JSON with workflow results and generated reports
+    """
+    if not workflow:
+        return json.dumps({"error": "workflow is required"})
+    if not domain:
+        return json.dumps({"error": "domain is required"})
+    if not project_id:
+        return json.dumps({"error": "project_id is required"})
+
+    try:
+        client = _require_key()
+        result = client.seo_workflow(workflow, domain, int(project_id), params)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
 # ------------------------------------------------------------------
 # Google & Project Tools (no credits - uses user's OAuth tokens)
 # ------------------------------------------------------------------
@@ -457,5 +532,60 @@ def query_analytics(
             limit=limit,
         )
         return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def query_knowledge_base(
+    query: str,
+    top_k: int = 5,
+    category: str = "",
+    document_type: str = "",
+    include_external: bool = True,
+) -> str:
+    """Search the SEO knowledge base with semantic search.
+
+    Searches across all indexed content: blog articles, SEO documentation,
+    best practices, checklists, and Google Search developer guidelines.
+    Results are ranked by relevance + recency (newest content scores higher
+    when similarity is tied).
+
+    Credits: 2 per query.
+
+    Args:
+        query: Natural language question or topic (e.g. "how to fix crawl errors")
+        top_k: Number of results to return (1-20, default: 5)
+        category: Filter by category slug (e.g. "fundamentals", "crawling", "ranking")
+        document_type: Filter by type (e.g. "best-practice", "checklist", "external-source", "blog")
+        include_external: Include Google guidelines and external sources (default: true)
+
+    Returns:
+        JSON with ranked results: text excerpt, title, URL, source, date, similarity score
+    """
+    top_k = min(max(int(top_k), 1), 20)
+    try:
+        client = _require_key()
+        from ..knowledge.rag_search import search_rag
+        result = search_rag(
+            client=client,
+            query=query,
+            top_k=top_k,
+            category=category or None,
+            document_type=document_type or None,
+            include_external=include_external,
+        )
+
+        if result.get("error"):
+            return json.dumps({"error": result["error"]}, ensure_ascii=False)
+
+        results = result.get("results", [])
+        output = {
+            "query": query,
+            "results_count": len(results),
+            "results": results,
+            "credits_used": result.get("credits_used", 2),
+            "credits_remaining": result.get("credits_remaining"),
+        }
+        return json.dumps(output, ensure_ascii=False, indent=2)
     except Exception as e:
         return _handle_error(e)

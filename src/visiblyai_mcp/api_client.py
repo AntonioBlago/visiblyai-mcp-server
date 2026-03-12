@@ -104,6 +104,39 @@ class VisiblyAIClient:
     def check_links(self, url: str) -> dict:
         return self._post("/tools/check-links", {"url": url})
 
+    def seo_agent(self, task: str, agent: str = "", domain: str = "",
+                  url: str = "", keyword: str = "", content: str = "",
+                  params: dict | None = None) -> dict:
+        payload: dict[str, Any] = {"task": task}
+        if agent:
+            payload["agent"] = agent
+        if domain:
+            payload["domain"] = domain
+        if url:
+            payload["url"] = url
+        if keyword:
+            payload["keyword"] = keyword
+        if content:
+            payload["content"] = content
+        if params:
+            payload["params"] = params
+        return self._post("/tools/seo-agent", payload)
+
+    def seo_workflow(self, workflow: str, domain: str, project_id: int,
+                     params: dict | None = None) -> dict:
+        payload: dict[str, Any] = {
+            "workflow": workflow, "domain": domain, "project_id": project_id
+        }
+        if params:
+            payload["params"] = params
+        return self._post("/tools/seo-workflow", payload)
+
+    def classify_keywords_api(self, keywords: list[str], language: str = "German",
+                              location: str = "Germany") -> dict:
+        return self._post("/tools/classify-keywords", {
+            "keywords": keywords, "language": language, "location": location
+        })
+
     # ------------------------------------------------------------------
     # Google & Project tools (no credits)
     # ------------------------------------------------------------------

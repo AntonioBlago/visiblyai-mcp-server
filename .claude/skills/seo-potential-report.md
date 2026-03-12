@@ -17,7 +17,7 @@ The user provides:
 
 ## Methodology
 
-Based on the real Antonio Blago workflow validated across multiple B2B and eCommerce clients.
+Based on the real Antonio Blagos workflow validated across multiple B2B and eCommerce clients.
 
 ### Data Pipeline
 
