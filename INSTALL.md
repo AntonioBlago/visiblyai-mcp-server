@@ -71,7 +71,7 @@ claude mcp add --transport http \
   visiblyai https://mcp.visibly-ai.com/mcp
 ```
 
-**Without API key (6 free tools only):**
+**Without API key (8 free tools only):**
 
 ```bash
 claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp
@@ -178,7 +178,7 @@ npx playwright install chromium
 | `get_account_info` | Your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (credits required) — 13 tools
+### Paid (credits required) — 14 tools
 
 | Tool | Credits | What it does |
 |------|---------|-------------|

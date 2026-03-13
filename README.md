@@ -13,7 +13,7 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 26 tools):
+# With API key (all 27 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
@@ -58,7 +58,7 @@ Then restart Claude Code.
 | `get_account_info` | Check your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (API-powered, uses credits) — 13 tools
+### Paid (API-powered, uses credits) — 14 tools
 
 | Tool | Credits | Description |
 |------|---------|-------------|

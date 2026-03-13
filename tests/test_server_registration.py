@@ -6,15 +6,17 @@ import pytest
 
 
 EXPECTED_TOOLS = {
-    # Free
-    "classify_keywords",
+    # Free (8)
+    "classify_keywords_simple",
     "seo_checklist",
     "seo_guidance",
+    "get_google_guidelines",
     "analyze_url_structure",
     "get_account_info",
     "list_locations",
     "get_skill",
-    # Paid
+    # Paid (14)
+    "classify_keywords_advanced",
     "get_traffic_snapshot",
     "get_historical_traffic",
     "get_keywords",
@@ -27,7 +29,8 @@ EXPECTED_TOOLS = {
     "check_links",
     "seo_agent",
     "seo_workflow",
-    # Google/Project
+    "query_knowledge_base",
+    # Google/Project (5)
     "list_projects",
     "get_project",
     "get_google_connections",
@@ -62,7 +65,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 24, f"Expected 24 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 27, f"Expected 27 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         server_py = pathlib.Path(__file__).parent.parent / "src" / "visiblyai_mcp" / "server.py"
