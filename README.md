@@ -2,9 +2,9 @@
 
 SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 
-**Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis.
+**Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis, Google guidelines, workflow skills.
 
-**Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, link checking.
+**Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, link checking, SEO agents, SEO workflows, advanced keyword classification.
 
 ## Quick Start
 
@@ -13,12 +13,12 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 21 tools):
+# With API key (all 26 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
 
-# Without API key (6 free tools only):
+# Without API key (8 free tools only):
 claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp
 ```
 
@@ -45,21 +45,24 @@ Then restart Claude Code.
 
 ## Tools
 
-### Free (local, no credits)
+### Free (local, no credits) — 8 tools
 
 | Tool | Description |
 |------|-------------|
-| `classify_keywords` | Classify keywords by intent, funnel stage, brand type, topic (DE+EN) |
+| `classify_keywords_simple` | Classify keywords by intent, funnel stage, brand type, topic (local regex, DE+EN) |
 | `seo_checklist` | 5 checklists: general, blog, ecommerce, discover, backlink |
 | `seo_guidance` | Best practices: title tags, EEAT, Core Web Vitals, schema, and more |
+| `get_google_guidelines` | Official Google Search guidelines by category (scraped weekly) |
+| `get_skill` | Fetch SEO workflow guides: audit, keyword research, competitor analysis |
 | `analyze_url_structure` | Check URL SEO-friendliness |
 | `get_account_info` | Check your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (API-powered, uses credits)
+### Paid (API-powered, uses credits) — 13 tools
 
 | Tool | Credits | Description |
 |------|---------|-------------|
+| `classify_keywords_advanced` | varies | Keyword classification with DataForSEO Search Intent API + regex (more accurate intent) |
 | `get_traffic_snapshot` | varies | Current organic/paid traffic for a domain |
 | `get_historical_traffic` | varies | Traffic trends (up to 5 years) |
 | `get_keywords` | varies | Top ranking keywords with volume and position |
@@ -70,8 +73,11 @@ Then restart Claude Code.
 | `crawl_website` | 15-60 | Live crawl + optional 24-point OnPage analysis |
 | `onpage_analysis` | 15 | Full 24-point OnPage SEO audit |
 | `check_links` | 20 | Broken link detection on a page |
+| `seo_agent` | varies | Run specialized SEO agents: analyst, strategist, copywriter, consultant |
+| `seo_workflow` | 150-200 | Multi-step SEO workflows: seo_performance_audit, indexing_diagnosis |
+| `query_knowledge_base` | 2 | Semantic RAG search over SEO knowledge base, blog articles, Google guidelines |
 
-### Google & Project (API key required, 0 credits)
+### Google & Project (API key required, 0 credits) — 5 tools
 
 These tools use your own Google OAuth tokens connected via the VisiblyAI platform.
 
@@ -94,9 +100,15 @@ In Claude Code, just ask naturally:
 
 > What are the best practices for title tags?
 
+> What does Google say about EEAT?
+
 > Get the top keywords for example.com
 
 > Run an OnPage SEO analysis on https://example.com/page for the keyword "seo tool"
+
+> Run a full SEO performance audit for example.com (project_id: 12)
+
+> Search the knowledge base for structured data best practices
 ```
 
 ## Configuration

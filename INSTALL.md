@@ -165,21 +165,24 @@ npx playwright install chromium
 
 ## Available Tools
 
-### Free (no API key needed)
+### Free (no API key needed) — 8 tools
 
 | Tool | What it does |
 |------|-------------|
-| `classify_keywords` | Brand/generic/intent classification (DE+EN) |
+| `classify_keywords_simple` | Brand/generic/intent classification via local regex (DE+EN, offline) |
 | `seo_checklist` | Blog, ecommerce, local, discover, backlink checklists |
 | `seo_guidance` | Title tags, EEAT, Core Web Vitals, Schema best practices |
+| `get_google_guidelines` | Official Google Search guidelines by category |
+| `get_skill` | SEO workflow guides: audit, keyword research, competitor analysis |
 | `analyze_url_structure` | URL SEO-friendliness check |
 | `get_account_info` | Your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (credits required)
+### Paid (credits required) — 13 tools
 
 | Tool | Credits | What it does |
 |------|---------|-------------|
+| `classify_keywords_advanced` | varies | Keyword classification with DataForSEO Search Intent API + regex |
 | `get_traffic_snapshot` | varies | Organic + paid traffic for any domain |
 | `get_historical_traffic` | varies | Traffic trends up to 5 years |
 | `get_keywords` | varies | Top ranking keywords with volume + position |
@@ -190,6 +193,9 @@ npx playwright install chromium
 | `crawl_website` | 15–60 | Live crawl + optional OnPage audit |
 | `onpage_analysis` | 15 | 24-point OnPage SEO audit |
 | `check_links` | 20 | Broken link detection |
+| `seo_agent` | varies | Specialized SEO agents: analyst, strategist, copywriter, consultant |
+| `seo_workflow` | 150–200 | Full SEO audit + keyword performance report |
+| `query_knowledge_base` | 2 | RAG search over SEO knowledge base and Google guidelines |
 
 ### Google & Projects (API key, 0 credits)
 
@@ -221,6 +227,12 @@ Classify these keywords: "seo agentur berlin", "was ist seo", "seo tool kaufen"
 Show me my GSC data for the last 30 days for project ID 5
 
 What are the backlinks for my competitor domain?
+
+Run a full SEO performance audit for example.com (project_id: 12)
+
+What does Google say about EEAT and helpful content?
+
+Search the knowledge base for structured data best practices
 ```
 
 ---
