@@ -45,6 +45,31 @@ def _handle_error(e: Exception) -> str:
     return json.dumps({"error": str(e)}, indent=2)
 
 
+def classify_keywords_advanced(
+    keywords: list[str],
+    brand_name: str = "",
+    brand_variations: list | None = None,
+    product_keywords: list | None = None,
+    competitors: list | None = None,
+    language: str = "German",
+    location: str = "Germany",
+) -> str:
+    """Classify keywords using DataForSEO Search Intent API + regex classifier.
+
+    Combines DataForSEO main_intent and secondary_intents with local regex
+    classification (brand type, funnel stage, topic, conversion score).
+    Credits: dynamic based on keyword count.
+    """
+    if not keywords:
+        return json.dumps({"error": "keywords is required"})
+    try:
+        client = _require_key()
+        result = client.classify_keywords_api(keywords, language, location)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
 def get_traffic_snapshot(
     domain: str,
     location: str = "Germany",

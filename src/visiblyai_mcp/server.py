@@ -33,21 +33,20 @@ mcp = FastMCP(
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def classify_keywords(
+def classify_keywords_simple(
     keywords: list[str],
     brand_name: str = "",
     brand_variations: list[str] | None = None,
     product_keywords: list[str] | None = None,
     competitors: list[dict] | None = None,
-    language: str = "German",
-    location: str = "Germany",
 ) -> str:
-    """Classify keywords by search intent, funnel stage, brand type, and topic.
+    """Classify keywords using local regex patterns (fast, free, offline).
 
-    Supports German and English. Returns intent (transactional/commercial/
-    informational/navigational/local), funnel stage (TOFU/MOFU/BOFU),
-    conversion score (0-100), and topic classification.
-    language and location params reserved for future API-based intent detection.
+    Returns intent (transactional/commercial/informational/navigational/local),
+    funnel stage (TOFU/MOFU/BOFU), brand type, conversion score (0-100), topic.
+    Supports German and English.
+
+    For DataForSEO-enhanced intent detection use classify_keywords_advanced (paid).
 
     Free tool - no API key or credits required.
     """
@@ -139,6 +138,30 @@ def get_skill(name: str) -> str:
 # ---------------------------------------------------------------------------
 # Paid Tools (require VISIBLYAI_API_KEY + credits)
 # ---------------------------------------------------------------------------
+
+@mcp.tool()
+def classify_keywords_advanced(
+    keywords: list[str],
+    brand_name: str = "",
+    brand_variations: list[str] | None = None,
+    product_keywords: list[str] | None = None,
+    competitors: list[dict] | None = None,
+    language: str = "German",
+    location: str = "Germany",
+) -> str:
+    """Classify keywords using DataForSEO Search Intent API + regex classifier (paid).
+
+    Combines DataForSEO search intent (main_intent, secondary_intents) with
+    local regex classification (brand type, funnel stage, topic, conversion score).
+    More accurate than classify_keywords_simple for intent detection.
+    Credits: dynamic (based on keyword count).
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.classify_keywords_advanced(
+        keywords, brand_name, brand_variations, product_keywords, competitors, language, location
+    )
+
 
 @mcp.tool()
 def get_traffic_snapshot(domain: str, location: str = "Germany") -> str:
