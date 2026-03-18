@@ -288,8 +288,9 @@ def seo_workflow(
     params: dict | None = None,
 ) -> str:
     """Run a multi-step SEO workflow with report generation.
-    Workflows: seo_performance_audit (~150 credits), indexing_diagnosis (~200 credits).
-    Requires Pro+ tier. May take several minutes. Credits: 150-200.
+    Workflows: seo_performance_audit (~150 credits), indexing_diagnosis (~200 credits),
+    quick_win_analysis (~60 credits, DR-weighted keyword opportunities pos 10-100).
+    Credits: 60-200 depending on workflow.
 
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """

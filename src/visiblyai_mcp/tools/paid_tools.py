@@ -390,9 +390,9 @@ def seo_workflow(
     """Run a multi-step SEO workflow with report generation.
 
     Workflows: seo_performance_audit (GSC analysis + PDF, ~150 credits),
-    indexing_diagnosis (indexing issues, ~200 credits). Requires Pro+ tier.
-    May take several minutes.
-    Credits: 150-200 depending on workflow.
+    indexing_diagnosis (indexing issues, ~200 credits),
+    quick_win_analysis (DR-weighted keyword opportunities pos 10-100, ~60 credits).
+    Credits: 60-200 depending on workflow.
 
     Args:
         workflow: Workflow type (seo_performance_audit or indexing_diagnosis)
