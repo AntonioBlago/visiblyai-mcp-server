@@ -72,17 +72,32 @@ Google groups close variants (singular/plural, word order, inflections) into one
    - Flag variants with high impressions but low CTR (title/meta optimization needed)
    - Flag variants on positions 4-15 (push-to-page-1 candidates)
 
-5. **Existing page check** — Determine if the user already has a page targeting this keyword:
-   - Call `query_search_console(dimension="page", limit=100)` — find which URL ranks for the keyword variants
-   - Call `analyze_url_structure` on the domain — check URL structure for thematic fit
-   - Call `crawl_website(url, keyword, max_pages=1)` on the ranking URL (if found) — get title, meta, headings, word count, internal links
-   - If NO page exists: recommend creating one (content type based on SERP analysis)
-   - If page exists but is suboptimal: identify specific gaps
+5. **Find the right target page** — This is CRITICAL. Do NOT just crawl the homepage. Find the specific page that should rank for this keyword:
 
-6. **OnPage analysis** (if URL known) — If user's page is known or found in GSC/crawl:
-   - Call `onpage_analysis(url, keyword)` — get 24-point score
-   - Identify specific on-page gaps (missing H2, thin content, no internal links, etc.)
-   - Compare word count and content depth against SERP top 3 competitors
+   **Method A: GSC page data (best)**
+   - If GSC connected: `query_search_console(dimension="page", limit=100)` — filter for pages that already get impressions for the keyword variants
+   - The URL with the most impressions for this keyword cluster = the current target page
+
+   **Method B: Sitemap scan**
+   - Call `audit_sitemap(domain)` — get all URLs from the sitemap
+   - Search the URL list for pages containing the keyword in the URL path (e.g., `/eheringe-gold/`, `/gold-eheringe/`, `/eheringe/gold/`)
+   - Also look for category pages or product listing pages that match the topic
+
+   **Method C: Site search via crawl**
+   - Call `crawl_website(f"https://{domain}/", keyword, max_pages=10)` — crawl the homepage and follow internal links
+   - From the crawl results, find pages where the title, H1, or content mentions the keyword
+
+   **Method D: Ask the user**
+   - If none of the above methods find a relevant page, ASK the user:
+     "Ich konnte keine spezifische Seite fuer '[keyword]' auf [domain] finden. Hast du bereits eine Seite dafuer? Wenn ja, welche URL? Wenn nein, empfehle ich eine neue Seite unter /[slug]/ zu erstellen."
+
+   **IMPORTANT:** Never default to the homepage. The target page must be the most relevant page for the keyword. If no page exists, explicitly recommend creating one with a suggested URL structure.
+
+6. **OnPage analysis of target page** — Run `onpage_analysis(target_url, keyword)` on the page found in step 5:
+   - Get 24-point SEO score
+   - Identify specific gaps (missing keyword in title/H1/meta, thin content, no internal links, etc.)
+   - Compare word count and content depth against SERP top 3 competitors (from step 3)
+   - If the page scores <50/100, highlight this as a P1 priority fix
 
 7. **Compile strategy** — Based on all data, generate a prioritized action plan:
 
