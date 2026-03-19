@@ -1,0 +1,1849 @@
+{
+  "videos": [
+    {
+      "video_id": "QmSkrS5rytE",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=QmSkrS5rytE",
+      "file_path": null,
+      "title": "Die 3 wichtigsten Checks in Google Search Console",
+      "description": "Eine Einführung in Google Search Console\n\nIn diesem Video gehe ich darauf ein, wie ich als SEO-Experte die Google Search Console einrichte, um einen Überblick über die Leistung einer Website zu erhalten. \nIch zeige die wichtigsten Schritte und Funktionen der Search Console und erkläre, wie man die Leistungsdaten, Indexierung und Ladezeiten analysieren kann. \nAm Ende gebe ich einen Ausblick auf weitere Themen, die in zukünftigen Videos behandelt werden. Schaut euch das Video an, um mehr über die Google Search Console zu erfahren!\n\n🚀 Weiterführende Links und Tutorials aus dem Video:  \n\n1️⃣ Google Account erstellen:  \n👉 https://antonioblago.de/seo/ein-google-konto-einrichten-anleitung  \n\n2️⃣ Google Search Console Account einrichten:  \n👉 https://antonioblago.de/seo/google-search-console-nutzer-hinzufuegen-schritt-fuer-schritt-anleitung  \n\n3️⃣ Google Search Console Benutzer hinzufügen:  \n https://antonioblago.de/seo/google-search-console-login  \n\n---\n\nYouTube Playlisten:\n- SEO 101 für Starter: https://www.youtube.com/playlist?list=PLqwPA5D-8afQhKEHICMhC8HRYIDnf_ieL\n- SEO AI Automatisierung: https://www.youtube.com/playlist?list=PLqwPA5D-8afTmjm7pHYYiSOzo4xowlOe3\n- Data Science SEO: https://www.youtube.com/playlist?list=PLqwPA5D-8afQEeFYdZds_-9ItLS95jUL4\n- E-Com/ Saas SEO Analysen: https://www.youtube.com/playlist?list=PLqwPA5D-8afTbcvNcVarwApbf7NIXlYhc\n- Local SEO Guide: https://www.youtube.com/playlist?list=PLqwPA5D-8afTGnRi0tZU5nF-_4qoWnyHO\n- Google Search Guide: https://www.youtube.com/playlist?list=PLqwPA5D-8afRe5BNKEIjUjjlVNopnhPTq\n\n🛠️ Starte jetzt dein SEO-Projekt:  \n👉 Kostenlose SEO-Checkliste: https://antonioblago.de/seo-checkliste-notion  \n\n🤝 Kurzfristige SEO-Beratung:  \n👉 https://antonioblago.de/beratung  \n\n🗓️ Projektanfragen:  \n👉 https://antonioblago.de/termin  \n\n📍Local SEO Kurs Online:\n👉 https://antonioblago.de/mitglieder/local-seo-mini-kurs/\n\n---\n\n🌐 Lass uns vernetzen:  \n📸 Instagram: https://www.instagram.com/seo_optimierung/  \n💼 LinkedIn: http://www.linkedin.com/in/antonioblago/  \n\n---\n\n🎥 Feedback oder Fragen? Schreib mir gerne in die Kommentare! 😊  \n🔔 Vergiss nicht zu abonnieren und die Glocke zu aktivieren, um keine SEO-Tipps mehr zu verpassen! 🚀\n\n*Affiliate-Hinweis: Wenn du auf diese Links klickst und darüber einkaufst, erhalte ich eine Provision. Für dich entstehen keine zusätzlichen Kosten, aber du unterstützt damit meine kostenlosen Inhalte. Vielen Dank!",
+      "duration": 594.0,
+      "upload_date": "20241217",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 50,
+      "like_count": 5,
+      "comment_count": null,
+      "tags": [],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi/QmSkrS5rytE/maxresdefault.jpg",
+      "chapters": [],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "ja herzlich willkommen zu diesem ersten",
+          "start": 1.16,
+          "end": 6.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "offiziellen Video in meinem",
+          "start": 3.84,
+          "end": 9.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "YouTube-Kanal und hier möchte ich auf",
+          "start": 6.44,
+          "end": 12.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das Thema eingehen",
+          "start": 9.96,
+          "end": 16.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm was ich quasi als erstes mache als",
+          "start": 12.16,
+          "end": 20.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "SEO bei einem Projekt und das ist die",
+          "start": 16.0,
+          "end": 23.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google Search Konsole einrichten W mir",
+          "start": 20.4,
+          "end": 26.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "da ein guten Überblick zu verschaffen",
+          "start": 23.08,
+          "end": 30.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "über die aktuelle Situation",
+          "start": 26.84,
+          "end": 32.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und ich werde hier diesen Video zeigen",
+          "start": 30.24,
+          "end": 35.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "was die wichtigsten drei Punkte sind die",
+          "start": 32.84,
+          "end": 38.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich mir mal anschaue gleich zu anfangs",
+          "start": 35.64,
+          "end": 41.239000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in einem neuen Projekt und ja was ist",
+          "start": 38.079,
+          "end": 43.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "überhaupt die Google Search Konsole weil",
+          "start": 41.239,
+          "end": 46.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es wahrscheinlich sehr viele von euch",
+          "start": 43.84,
+          "end": 49.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht kennen ähm oder nur mal gehört",
+          "start": 46.12,
+          "end": 51.839999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "haben und zeige euch auch noch",
+          "start": 49.079,
+          "end": 54.480000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "weiterführende Literatur Informationen",
+          "start": 51.84,
+          "end": 56.879000000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wie ihr euch quasi eine Google Search",
+          "start": 54.48,
+          "end": 61.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Konsole anlegen könnt und da möchte ich",
+          "start": 56.879,
+          "end": 63.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "erstmal drauf eingehen was ist die",
+          "start": 61.0,
+          "end": 66.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google Search Konsole",
+          "start": 63.32,
+          "end": 69.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und Google ist in dem Sinne ja die",
+          "start": 66.24,
+          "end": 71.67999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Suchmaschine",
+          "start": 69.6,
+          "end": 74.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und wir können wir wissen ja alle dass",
+          "start": 71.68,
+          "end": 80.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir hier z.B Suchanfragen stellen können",
+          "start": 74.28,
+          "end": 80.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "aber",
+          "start": 80.64,
+          "end": 85.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir wissen nicht was passiert eigentlich",
+          "start": 82.4,
+          "end": 88.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wenn man eine Suchanfrage stellt wer",
+          "start": 85.52,
+          "end": 90.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "klickt auf meine Seite",
+          "start": 88.72,
+          "end": 94.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und diese ganzen Zahlen das können wir",
+          "start": 90.56,
+          "end": 96.96000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durch die Google Search",
+          "start": 94.399,
+          "end": 100.07900000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Kole aufdecken also über die eigene",
+          "start": 96.96,
+          "end": 101.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Homepage",
+          "start": 100.079,
+          "end": 105.75899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und wenn ich jetzt z.B hier",
+          "start": 101.6,
+          "end": 109.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "suche unify Super",
+          "start": 105.759,
+          "end": 112.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "League und dann sehe ich jetzt hier z.B",
+          "start": 109.52,
+          "end": 116.15899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "als erstes zu dem",
+          "start": 112.84,
+          "end": 117.71900000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Suchbegriff",
+          "start": 116.159,
+          "end": 122.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann den Spiel Artikel und äh Klick hier",
+          "start": 117.719,
+          "end": 123.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "drauf",
+          "start": 122.0,
+          "end": 126.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm dann äh kann",
+          "start": 123.32,
+          "end": 131.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh und ich äh noch hier diese Kent auf",
+          "start": 126.92,
+          "end": 132.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jeden Fall",
+          "start": 131.36,
+          "end": 134.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm",
+          "start": 132.76,
+          "end": 136.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zustimme und hier",
+          "start": 134.92,
+          "end": 140.23899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch lese den Artikel also hier scrolle",
+          "start": 136.879,
+          "end": 143.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "damit Google merkt okay ich bin hier",
+          "start": 140.239,
+          "end": 147.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch aktiv und der Artikel gefällt mir",
+          "start": 143.319,
+          "end": 148.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und ich klicke nicht gleich wieder weg",
+          "start": 147.16,
+          "end": 150.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann wird es quasi",
+          "start": 148.599,
+          "end": 155.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "als Klick gezählt und das kann Spiegel",
+          "start": 150.64,
+          "end": 158.23899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in Google Search Kole sehen wenn ich",
+          "start": 155.0,
+          "end": 160.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier auf das Suchergebnis über das",
+          "start": 158.239,
+          "end": 163.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword drauf klicke auf diesen Artikel",
+          "start": 160.159,
+          "end": 166.07999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und das will ich jetzt mal zeigen wie",
+          "start": 163.4,
+          "end": 169.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ihr das in dem Google Search Kole sehen",
+          "start": 166.08,
+          "end": 171.76000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "könnt genau hier habe ich jetzt mein",
+          "start": 169.4,
+          "end": 173.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Beispiel",
+          "start": 171.76,
+          "end": 177.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "m Projekt von mir offen und zwar ist es",
+          "start": 173.28,
+          "end": 180.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich zensiert und äh",
+          "start": 177.239,
+          "end": 182.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die ersten drei Sachen die ich immer",
+          "start": 180.36,
+          "end": 186.31900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mache ist auf jeden Fall mir quasi die",
+          "start": 182.4,
+          "end": 188.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Performance anzuschauen also hier die",
+          "start": 186.319,
+          "end": 191.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Leistungsdaten also wie viele Klicks",
+          "start": 188.84,
+          "end": 196.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "habe ich auf meiner Seite und das gilt",
+          "start": 191.72,
+          "end": 197.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer für die domainne oder für die",
+          "start": 196.04,
+          "end": 201.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinterlegte Seite und dann sehen wir",
+          "start": 197.879,
+          "end": 202.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schon mal ganz schnell okay in den",
+          "start": 201.28,
+          "end": 207.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "letzten ähm 3 Monaten hier in diesen in",
+          "start": 202.84,
+          "end": 210.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dieser Schnellansicht ist äh der Traffic",
+          "start": 207.319,
+          "end": 212.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eher seitwärts gelaufen",
+          "start": 210.439,
+          "end": 214.799,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und ist natürlich jetzt nicht",
+          "start": 212.56,
+          "end": 217.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "alarmierend aber auf jeden Fall kann man",
+          "start": 214.799,
+          "end": 220.76000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "da noch mal reinschauen was da jetzt",
+          "start": 217.2,
+          "end": 223.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "vielleicht nicht so gut läuft woh",
+          "start": 220.76,
+          "end": 227.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "vielleicht mal noch mal Content pushchen",
+          "start": 223.92,
+          "end": 230.39999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "können genau jetzt bin ich jetzt mir mal",
+          "start": 227.72,
+          "end": 234.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auf die search Kole auf die Performance",
+          "start": 230.4,
+          "end": 237.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ansicht hier in dem Reiter gegangen und",
+          "start": 234.68,
+          "end": 238.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jetzt sehen wir jetzt schon mal hier die",
+          "start": 237.36,
+          "end": 240.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dre Monats",
+          "start": 238.56,
+          "end": 243.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ansicht und ähm wir sehen jetzt die",
+          "start": 240.28,
+          "end": 248.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "impressions also die äh Anzeigen äh der",
+          "start": 243.68,
+          "end": 251.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Suchergebnisse in dem",
+          "start": 248.68,
+          "end": 254.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Suchergebnissen also jetzt äh wo wir",
+          "start": 251.079,
+          "end": 258.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jetzt hier drauf waren ähm das sind",
+          "start": 254.519,
+          "end": 260.359,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "quasi impressions ne also wenn du jetzt",
+          "start": 258.079,
+          "end": 262.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier was suchst und dann deine Seite",
+          "start": 260.359,
+          "end": 264.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "angezeigt wird das ist die impression",
+          "start": 262.04,
+          "end": 265.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und",
+          "start": 264.52,
+          "end": 268.03999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm wenn wir jetzt quasi auf einen",
+          "start": 265.44,
+          "end": 271.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Artikel drauf klicken dann ist es zählt",
+          "start": 268.04,
+          "end": 274.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es als Klick ähm aber nur dann wenn ich",
+          "start": 271.52,
+          "end": 277.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht sofort wieder zurückspringe",
+          "start": 274.919,
+          "end": 281.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sondern ähm der zählt der Klick zählt",
+          "start": 277.08,
+          "end": 283.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "erst wenn ich genügend lang auf der",
+          "start": 281.08,
+          "end": 285.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seite bin und zufriedenstellende",
+          "start": 283.08,
+          "end": 287.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzersignale für Google aussende dann",
+          "start": 285.4,
+          "end": 289.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zählt es hier als Klick und dann sehen",
+          "start": 287.84,
+          "end": 292.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir schon ganz gut okay was ist die",
+          "start": 289.759,
+          "end": 295.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verzehrung zwischen äh Suchergebnis",
+          "start": 292.759,
+          "end": 298.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Anzeige und Klicks und",
+          "start": 295.88,
+          "end": 303.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm daraus resultiert das weiteren sehen",
+          "start": 298.639,
+          "end": 305.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir ja auch noch mal",
+          "start": 303.4,
+          "end": 308.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die durchschnittliche Position aller",
+          "start": 305.24,
+          "end": 309.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords also ich habe das jetzt noch",
+          "start": 308.4,
+          "end": 311.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal nicht",
+          "start": 309.88,
+          "end": 313.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gefiltert",
+          "start": 311.32,
+          "end": 316.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann sieht man auch für jedes",
+          "start": 313.6,
+          "end": 317.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword hier",
+          "start": 316.44,
+          "end": 321.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "unten welche Position das Keyword hat",
+          "start": 317.72,
+          "end": 324.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und sieht es auch im zeitlichen",
+          "start": 321.28,
+          "end": 328.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verlauf ich habe jetzt hier die Position",
+          "start": 324.319,
+          "end": 331.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchschnittliche Position markiert und",
+          "start": 328.039,
+          "end": 333.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir sehen jetzt hier in der orangenen",
+          "start": 331.16,
+          "end": 337.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Linie ähm Position für jedes einzelne",
+          "start": 333.16,
+          "end": 339.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kivt und kann man auch jetzt hier im",
+          "start": 337.0,
+          "end": 341.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zeitlichen Verlauf",
+          "start": 339.319,
+          "end": 344.03900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sehen genau eine zweite Sache die ich",
+          "start": 341.36,
+          "end": 346.96000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mir immer auch anschaue ist die",
+          "start": 344.039,
+          "end": 350.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Indexierung also wie gut ist meine Seite",
+          "start": 346.96,
+          "end": 353.31899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in Google indexiert weil ohne",
+          "start": 350.52,
+          "end": 356.35999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Indexierung kannst du gar nicht hier in",
+          "start": 353.319,
+          "end": 359.96000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "den äh Suchergebnissen auftauchen",
+          "start": 356.36,
+          "end": 362.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also ohne dass deine Seite hier",
+          "start": 359.96,
+          "end": 365.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in dem grünen Bereich ist also hier",
+          "start": 362.8,
+          "end": 368.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "indexiert angezeigt ist wird sie in",
+          "start": 365.0,
+          "end": 370.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "diesen Suchergebnissen nicht auftauchen",
+          "start": 368.479,
+          "end": 374.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "insofern muss man hier immer das",
+          "start": 370.8,
+          "end": 377.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verhältnis sehen zwischen indexiert und",
+          "start": 374.479,
+          "end": 379.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht indexiert da werden wir noch mal",
+          "start": 377.44,
+          "end": 381.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tiefer drauf eingehen welche",
+          "start": 379.96,
+          "end": 385.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verhältnisse ganz gut sind und eher",
+          "start": 381.96,
+          "end": 388.71999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bedenklich aber es gibt sehr viele",
+          "start": 385.599,
+          "end": 390.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Möglichkeit",
+          "start": 388.72,
+          "end": 393.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "warum deine Seite nicht indexiert wird",
+          "start": 390.319,
+          "end": 396.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das ist auf jeden Fall noch mal ein",
+          "start": 393.919,
+          "end": 399.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tiefgehenderes Thema aber",
+          "start": 396.199,
+          "end": 402.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nur mal für dich zu wissen wenn du jetzt",
+          "start": 399.599,
+          "end": 405.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "z.B auf deine Seite gehst und du siehst",
+          "start": 402.24,
+          "end": 409.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier nur drei Seiten sind grün und",
+          "start": 405.319,
+          "end": 412.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "100.000 Seiten sind nicht indexiert dann",
+          "start": 409.56,
+          "end": 414.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist es natürlich sehr alarmierend weil",
+          "start": 412.28,
+          "end": 416.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Seite so gut wie gar nicht",
+          "start": 414.96,
+          "end": 419.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "indexiert wird und",
+          "start": 416.96,
+          "end": 421.35999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht auf Google irgendwie auffindbar",
+          "start": 419.96,
+          "end": 422.79999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist da solltest du auf jeden Fall",
+          "start": 421.36,
+          "end": 426.08000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Handeln ähm also je je mehr Grün du hier",
+          "start": 422.8,
+          "end": 429.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "siehst desto besser äh und bei viel grau",
+          "start": 426.08,
+          "end": 432.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "musst du auf jeden Fall",
+          "start": 429.919,
+          "end": 434.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "handeln was natürlich auch immer sehr",
+          "start": 432.0,
+          "end": 436.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtig ist was ich mir auch immer sehr",
+          "start": 434.479,
+          "end": 439.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gerne anschaue ist die Core webweitles",
+          "start": 436.28,
+          "end": 443.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das ist in dem Sinne die Geschwindigkeit",
+          "start": 439.4,
+          "end": 448.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm äh oder die äh ja die Messung für",
+          "start": 443.599,
+          "end": 452.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google ob eine domainne oder eine URL",
+          "start": 448.039,
+          "end": 455.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schnell genug Daten oder Seiten",
+          "start": 452.52,
+          "end": 457.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "inliefert und",
+          "start": 455.639,
+          "end": 460.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh hier siehst Du quasi wenn du jetzt",
+          "start": 457.52,
+          "end": 463.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "viel Grün hast dann ist deine Seite",
+          "start": 460.44,
+          "end": 465.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schnell genug ähm wenn du jetzt",
+          "start": 463.12,
+          "end": 468.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich gelb hast als Zeichen dass du",
+          "start": 465.599,
+          "end": 471.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verbesserung hast und bei Rot solltest",
+          "start": 468.159,
+          "end": 475.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "du natürlich sofort handeln weil Google",
+          "start": 471.08,
+          "end": 477.87899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm da zu viel Ladezeit hat und dann",
+          "start": 475.0,
+          "end": 480.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "unter Umständen",
+          "start": 477.879,
+          "end": 481.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Seite nicht richtig crawen kann",
+          "start": 480.12,
+          "end": 484.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder auch die Nutzer",
+          "start": 481.879,
+          "end": 487.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gegebenfalls auch abspringen wenn deine",
+          "start": 484.72,
+          "end": 488.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seite zu",
+          "start": 487.159,
+          "end": 492.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Arl genau das weiteren ähm gibt's auch",
+          "start": 488.36,
+          "end": 495.47900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "noch äh diesen",
+          "start": 492.639,
+          "end": 500.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sehr wichtigen Tab und zwar die Produkt",
+          "start": 495.479,
+          "end": 503.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh und Merchant also",
+          "start": 500.159,
+          "end": 505.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "händlerlistings und",
+          "start": 503.84,
+          "end": 508.31899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm das würde ich auch noch mal in einem",
+          "start": 505.879,
+          "end": 510.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Video besprechen genauer weil es wirürde",
+          "start": 508.319,
+          "end": 513.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jetzt den Rahmen sprengen",
+          "start": 510.84,
+          "end": 515.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm aber es ist auch noch mal ein sehr",
+          "start": 513.12,
+          "end": 518.5600000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtiger äh Indikator wenn ihr jetzt",
+          "start": 515.88,
+          "end": 520.8389999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein E-Commerce Unternehmen seid oder ein",
+          "start": 518.56,
+          "end": 523.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "onlineeshop habt dann solltet ihr auf",
+          "start": 520.839,
+          "end": 525.9200000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jeden Fall hier schauen dass alle Eure",
+          "start": 523.56,
+          "end": 527.279,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Produkte",
+          "start": 525.92,
+          "end": 529.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh angezeigt",
+          "start": 527.279,
+          "end": 532.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "werden genau also ich hoffe ähm das",
+          "start": 529.16,
+          "end": 534.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Video hat euch soweit gefallen und",
+          "start": 532.0,
+          "end": 538.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm des Weiteren ähm habe ich hier noch",
+          "start": 534.519,
+          "end": 540.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein paar",
+          "start": 538.2,
+          "end": 543.1600000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm Tutorials die ich auch",
+          "start": 540.079,
+          "end": 544.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in",
+          "start": 543.16,
+          "end": 548.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "der Beschreibung hinterlege also wie",
+          "start": 544.399,
+          "end": 551.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "könnt ihr ein Google Konto einrichten",
+          "start": 548.36,
+          "end": 554.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also das ist sehr wichtig natürlich um",
+          "start": 551.76,
+          "end": 555.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein Gole search Kole überhaupt",
+          "start": 554.16,
+          "end": 557.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einzurichten dass ihr ein Google Konto",
+          "start": 555.72,
+          "end": 559.9590000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "habt und",
+          "start": 557.24,
+          "end": 564.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm wenn ihr quasi ein",
+          "start": 559.959,
+          "end": 567.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google Search Kole dann einrichten wollt",
+          "start": 564.2,
+          "end": 568.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann habe ich hier auch noch mal eine",
+          "start": 567.079,
+          "end": 569.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Anleitung",
+          "start": 568.519,
+          "end": 573.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "detailliert wie ihr es machen könnt und",
+          "start": 569.88,
+          "end": 576.4399999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm dann habe ich noch ein Video wie ihr",
+          "start": 573.12,
+          "end": 577.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann",
+          "start": 576.44,
+          "end": 581.6400000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Person oder eure Team",
+          "start": 577.76,
+          "end": 585.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähure Team Mitglieder auch zu Google",
+          "start": 581.64,
+          "end": 586.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Search Konsole",
+          "start": 585.36,
+          "end": 589.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinzufügent genau also ich hoffe das",
+          "start": 586.959,
+          "end": 591.5189999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Video war toll für euch und wir sehen",
+          "start": 589.16,
+          "end": 595.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "uns beim nächsten Mal macht's gut ciao",
+          "start": 591.519,
+          "end": 595.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 120.0,
+          "duration": 120.0,
+          "transcript": "ja herzlich willkommen zu diesem ersten offiziellen Video in meinem YouTube-Kanal und hier möchte ich auf das Thema eingehen ähm was ich quasi als erstes mache als SEO bei einem Projekt und das ist die Google Search Konsole einrichten W mir da ein guten Überblick zu verschaffen über die aktuelle Situation und ich werde hier diesen Video zeigen was die wichtigsten drei Punkte sind die ich mir mal anschaue gleich zu anfangs in einem neuen Projekt und ja was ist überhaupt die Google Search Konsole weil es wahrscheinlich sehr viele von euch nicht kennen ähm oder nur mal gehört haben und zeige euch auch noch weiterführende Literatur Informationen wie ihr euch quasi eine Google Search Konsole anlegen könnt und da möchte ich erstmal drauf eingehen was ist die Google Search Konsole und Google ist in dem Sinne ja die Suchmaschine und wir können wir wissen ja alle dass wir hier z.B Suchanfragen stellen können aber wir wissen nicht was passiert eigentlich wenn man eine Suchanfrage stellt wer klickt auf meine Seite und diese ganzen Zahlen das können wir durch die Google Search Kole aufdecken also über die eigene Homepage und wenn ich jetzt z.B hier suche unify Super League und dann sehe ich jetzt hier z.B als erstes zu dem Suchbegriff dann den Spiel Artikel und äh Klick hier",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (00:00 - 02:00)\n\nja herzlich willkommen zu diesem ersten offiziellen Video in meinem YouTube-Kanal und hier möchte ich auf das Thema eingehen ähm was ich quasi als erstes mache als SEO bei einem Projekt und das ist die Google Search Konsole einrichten W mir da ein guten Überblick zu verschaffen über die aktuelle Situation und ich werde hier diesen Video zeigen was die wichtigsten drei Punkte sind die ich mir mal anschaue gleich zu anfangs in einem neuen Projekt und ja was ist überhaupt die Google Search Konsole weil es wahrscheinlich sehr viele von euch nicht kennen ähm oder nur mal gehört haben und zeige euch auch noch weiterführende Literatur Informationen wie ihr euch quasi eine Google Search Konsole anlegen könnt und da möchte ich erstmal drauf eingehen was ist die Google Search Konsole und Google ist in dem Sinne ja die Suchmaschine und wir können wir wissen ja alle dass wir hier z.B Suchanfragen stellen können aber wir wissen nicht was passiert eigentlich wenn man eine Suchanfrage stellt wer klickt auf meine Seite und diese ganzen Zahlen das können wir durch die Google Search Kole aufdecken also über die eigene Homepage und wenn ich jetzt z.B hier suche unify Super League und dann sehe ich jetzt hier z.B als erstes zu dem Suchbegriff dann den Spiel Artikel und äh Klick hier",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 120.0,
+          "end_time": 240.0,
+          "duration": 120.0,
+          "transcript": "Suchbegriff dann den Spiel Artikel und äh Klick hier drauf ähm dann äh kann äh und ich äh noch hier diese Kent auf jeden Fall ähm zustimme und hier auch lese den Artikel also hier scrolle damit Google merkt okay ich bin hier auch aktiv und der Artikel gefällt mir und ich klicke nicht gleich wieder weg dann wird es quasi als Klick gezählt und das kann Spiegel in Google Search Kole sehen wenn ich hier auf das Suchergebnis über das Keyword drauf klicke auf diesen Artikel und das will ich jetzt mal zeigen wie ihr das in dem Google Search Kole sehen könnt genau hier habe ich jetzt mein Beispiel m Projekt von mir offen und zwar ist es natürlich zensiert und äh die ersten drei Sachen die ich immer mache ist auf jeden Fall mir quasi die Performance anzuschauen also hier die Leistungsdaten also wie viele Klicks habe ich auf meiner Seite und das gilt immer für die domainne oder für die hinterlegte Seite und dann sehen wir schon mal ganz schnell okay in den letzten ähm 3 Monaten hier in diesen in dieser Schnellansicht ist äh der Traffic eher seitwärts gelaufen und ist natürlich jetzt nicht alarmierend aber auf jeden Fall kann man da noch mal reinschauen was da jetzt vielleicht nicht so gut läuft woh vielleicht mal noch mal Content pushchen können genau jetzt bin ich jetzt mir mal auf die search Kole auf die Performance Ansicht hier in dem Reiter gegangen und jetzt sehen wir jetzt schon mal hier die dre Monats",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (02:00 - 04:00)\n\nSuchbegriff dann den Spiel Artikel und äh Klick hier drauf ähm dann äh kann äh und ich äh noch hier diese Kent auf jeden Fall ähm zustimme und hier auch lese den Artikel also hier scrolle damit Google merkt okay ich bin hier auch aktiv und der Artikel gefällt mir und ich klicke nicht gleich wieder weg dann wird es quasi als Klick gezählt und das kann Spiegel in Google Search Kole sehen wenn ich hier auf das Suchergebnis über das Keyword drauf klicke auf diesen Artikel und das will ich jetzt mal zeigen wie ihr das in dem Google Search Kole sehen könnt genau hier habe ich jetzt mein Beispiel m Projekt von mir offen und zwar ist es natürlich zensiert und äh die ersten drei Sachen die ich immer mache ist auf jeden Fall mir quasi die Performance anzuschauen also hier die Leistungsdaten also wie viele Klicks habe ich auf meiner Seite und das gilt immer für die domainne oder für die hinterlegte Seite und dann sehen wir schon mal ganz schnell okay in den letzten ähm 3 Monaten hier in diesen in dieser Schnellansicht ist äh der Traffic eher seitwärts gelaufen und ist natürlich jetzt nicht alarmierend aber auf jeden Fall kann man da noch mal reinschauen was da jetzt vielleicht nicht so gut läuft woh vielleicht mal noch mal Content pushchen können genau jetzt bin ich jetzt mir mal auf die search Kole auf die Performance Ansicht hier in dem Reiter gegangen und jetzt sehen wir jetzt schon mal hier die dre Monats",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 240.0,
+          "end_time": 360.0,
+          "duration": 120.0,
+          "transcript": "jetzt sehen wir jetzt schon mal hier die dre Monats Ansicht und ähm wir sehen jetzt die impressions also die äh Anzeigen äh der Suchergebnisse in dem Suchergebnissen also jetzt äh wo wir jetzt hier drauf waren ähm das sind quasi impressions ne also wenn du jetzt hier was suchst und dann deine Seite angezeigt wird das ist die impression und ähm wenn wir jetzt quasi auf einen Artikel drauf klicken dann ist es zählt es als Klick ähm aber nur dann wenn ich nicht sofort wieder zurückspringe sondern ähm der zählt der Klick zählt erst wenn ich genügend lang auf der Seite bin und zufriedenstellende nutzersignale für Google aussende dann zählt es hier als Klick und dann sehen wir schon ganz gut okay was ist die Verzehrung zwischen äh Suchergebnis Anzeige und Klicks und ähm daraus resultiert das weiteren sehen wir ja auch noch mal die durchschnittliche Position aller Keywords also ich habe das jetzt noch mal nicht gefiltert und dann sieht man auch für jedes Keyword hier unten welche Position das Keyword hat und sieht es auch im zeitlichen Verlauf ich habe jetzt hier die Position durchschnittliche Position markiert und wir sehen jetzt hier in der orangenen Linie ähm Position für jedes einzelne kivt und kann man auch jetzt hier im zeitlichen Verlauf sehen genau eine zweite Sache die ich mir immer auch anschaue ist die Indexierung also wie gut ist meine Seite in Google indexiert weil ohne Indexierung kannst du gar nicht hier in den äh Suchergebnissen auftauchen also ohne dass deine Seite hier",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (04:00 - 06:00)\n\njetzt sehen wir jetzt schon mal hier die dre Monats Ansicht und ähm wir sehen jetzt die impressions also die äh Anzeigen äh der Suchergebnisse in dem Suchergebnissen also jetzt äh wo wir jetzt hier drauf waren ähm das sind quasi impressions ne also wenn du jetzt hier was suchst und dann deine Seite angezeigt wird das ist die impression und ähm wenn wir jetzt quasi auf einen Artikel drauf klicken dann ist es zählt es als Klick ähm aber nur dann wenn ich nicht sofort wieder zurückspringe sondern ähm der zählt der Klick zählt erst wenn ich genügend lang auf der Seite bin und zufriedenstellende nutzersignale für Google aussende dann zählt es hier als Klick und dann sehen wir schon ganz gut okay was ist die Verzehrung zwischen äh Suchergebnis Anzeige und Klicks und ähm daraus resultiert das weiteren sehen wir ja auch noch mal die durchschnittliche Position aller Keywords also ich habe das jetzt noch mal nicht gefiltert und dann sieht man auch für jedes Keyword hier unten welche Position das Keyword hat und sieht es auch im zeitlichen Verlauf ich habe jetzt hier die Position durchschnittliche Position markiert und wir sehen jetzt hier in der orangenen Linie ähm Position für jedes einzelne kivt und kann man auch jetzt hier im zeitlichen Verlauf sehen genau eine zweite Sache die ich mir immer auch anschaue ist die Indexierung also wie gut ist meine Seite in Google indexiert weil ohne Indexierung kannst du gar nicht hier in den äh Suchergebnissen auftauchen also ohne dass deine Seite hier",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 3,
+          "start_time": 360.0,
+          "end_time": 480.0,
+          "duration": 120.0,
+          "transcript": "den äh Suchergebnissen auftauchen also ohne dass deine Seite hier in dem grünen Bereich ist also hier indexiert angezeigt ist wird sie in diesen Suchergebnissen nicht auftauchen insofern muss man hier immer das Verhältnis sehen zwischen indexiert und nicht indexiert da werden wir noch mal tiefer drauf eingehen welche Verhältnisse ganz gut sind und eher bedenklich aber es gibt sehr viele Möglichkeit warum deine Seite nicht indexiert wird das ist auf jeden Fall noch mal ein tiefgehenderes Thema aber nur mal für dich zu wissen wenn du jetzt z.B auf deine Seite gehst und du siehst hier nur drei Seiten sind grün und 100.000 Seiten sind nicht indexiert dann ist es natürlich sehr alarmierend weil deine Seite so gut wie gar nicht indexiert wird und nicht auf Google irgendwie auffindbar ist da solltest du auf jeden Fall Handeln ähm also je je mehr Grün du hier siehst desto besser äh und bei viel grau musst du auf jeden Fall handeln was natürlich auch immer sehr wichtig ist was ich mir auch immer sehr gerne anschaue ist die Core webweitles das ist in dem Sinne die Geschwindigkeit ähm äh oder die äh ja die Messung für Google ob eine domainne oder eine URL schnell genug Daten oder Seiten inliefert und äh hier siehst Du quasi wenn du jetzt viel Grün hast dann ist deine Seite schnell genug ähm wenn du jetzt natürlich gelb hast als Zeichen dass du Verbesserung hast und bei Rot solltest du natürlich sofort handeln weil Google ähm da zu viel Ladezeit hat und dann unter Umständen",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (06:00 - 08:00)\n\nden äh Suchergebnissen auftauchen also ohne dass deine Seite hier in dem grünen Bereich ist also hier indexiert angezeigt ist wird sie in diesen Suchergebnissen nicht auftauchen insofern muss man hier immer das Verhältnis sehen zwischen indexiert und nicht indexiert da werden wir noch mal tiefer drauf eingehen welche Verhältnisse ganz gut sind und eher bedenklich aber es gibt sehr viele Möglichkeit warum deine Seite nicht indexiert wird das ist auf jeden Fall noch mal ein tiefgehenderes Thema aber nur mal für dich zu wissen wenn du jetzt z.B auf deine Seite gehst und du siehst hier nur drei Seiten sind grün und 100.000 Seiten sind nicht indexiert dann ist es natürlich sehr alarmierend weil deine Seite so gut wie gar nicht indexiert wird und nicht auf Google irgendwie auffindbar ist da solltest du auf jeden Fall Handeln ähm also je je mehr Grün du hier siehst desto besser äh und bei viel grau musst du auf jeden Fall handeln was natürlich auch immer sehr wichtig ist was ich mir auch immer sehr gerne anschaue ist die Core webweitles das ist in dem Sinne die Geschwindigkeit ähm äh oder die äh ja die Messung für Google ob eine domainne oder eine URL schnell genug Daten oder Seiten inliefert und äh hier siehst Du quasi wenn du jetzt viel Grün hast dann ist deine Seite schnell genug ähm wenn du jetzt natürlich gelb hast als Zeichen dass du Verbesserung hast und bei Rot solltest du natürlich sofort handeln weil Google ähm da zu viel Ladezeit hat und dann unter Umständen",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 4,
+          "start_time": 480.0,
+          "end_time": 594.0,
+          "duration": 114.0,
+          "transcript": "ähm da zu viel Ladezeit hat und dann unter Umständen deine Seite nicht richtig crawen kann oder auch die Nutzer gegebenfalls auch abspringen wenn deine Seite zu Arl genau das weiteren ähm gibt's auch noch äh diesen sehr wichtigen Tab und zwar die Produkt äh und Merchant also händlerlistings und ähm das würde ich auch noch mal in einem Video besprechen genauer weil es wirürde jetzt den Rahmen sprengen ähm aber es ist auch noch mal ein sehr wichtiger äh Indikator wenn ihr jetzt ein E-Commerce Unternehmen seid oder ein onlineeshop habt dann solltet ihr auf jeden Fall hier schauen dass alle Eure Produkte äh angezeigt werden genau also ich hoffe ähm das Video hat euch soweit gefallen und ähm des Weiteren ähm habe ich hier noch ein paar ähm Tutorials die ich auch in der Beschreibung hinterlege also wie könnt ihr ein Google Konto einrichten also das ist sehr wichtig natürlich um ein Gole search Kole überhaupt einzurichten dass ihr ein Google Konto habt und ähm wenn ihr quasi ein Google Search Kole dann einrichten wollt dann habe ich hier auch noch mal eine Anleitung detailliert wie ihr es machen könnt und ähm dann habe ich noch ein Video wie ihr dann Person oder eure Team ähure Team Mitglieder auch zu Google Search Konsole hinzufügent genau also ich hoffe das Video war toll für euch und wir sehen uns beim nächsten Mal macht's gut ciao",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (08:00 - 09:54)\n\nähm da zu viel Ladezeit hat und dann unter Umständen deine Seite nicht richtig crawen kann oder auch die Nutzer gegebenfalls auch abspringen wenn deine Seite zu Arl genau das weiteren ähm gibt's auch noch äh diesen sehr wichtigen Tab und zwar die Produkt äh und Merchant also händlerlistings und ähm das würde ich auch noch mal in einem Video besprechen genauer weil es wirürde jetzt den Rahmen sprengen ähm aber es ist auch noch mal ein sehr wichtiger äh Indikator wenn ihr jetzt ein E-Commerce Unternehmen seid oder ein onlineeshop habt dann solltet ihr auf jeden Fall hier schauen dass alle Eure Produkte äh angezeigt werden genau also ich hoffe ähm das Video hat euch soweit gefallen und ähm des Weiteren ähm habe ich hier noch ein paar ähm Tutorials die ich auch in der Beschreibung hinterlege also wie könnt ihr ein Google Konto einrichten also das ist sehr wichtig natürlich um ein Gole search Kole überhaupt einzurichten dass ihr ein Google Konto habt und ähm wenn ihr quasi ein Google Search Kole dann einrichten wollt dann habe ich hier auch noch mal eine Anleitung detailliert wie ihr es machen könnt und ähm dann habe ich noch ein Video wie ihr dann Person oder eure Team ähure Team Mitglieder auch zu Google Search Konsole hinzufügent genau also ich hoffe das Video war toll für euch und wir sehen uns beim nächsten Mal macht's gut ciao",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.0746381282806396,
+      "extracted_at": "2026-03-11T12:31:30Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 594.0,
+  "total_segments": 5,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.0746381282806396,
+  "warnings": [],
+  "errors": []
+}

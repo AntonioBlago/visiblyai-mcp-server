@@ -1,0 +1,1029 @@
+{
+  "videos": [
+    {
+      "video_id": "OzJdYOxVGuw",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=OzJdYOxVGuw",
+      "file_path": null,
+      "title": "Wie führe ich eine gute Wettbewerbsanalyse für Keywords durch 😊",
+      "description": "In diesem Video erkläre ich, wie man eine effektive Wettbewerbsanalyse für Keywords durchführt. Ich zeige anhand eines Beispiels, wie man die Top-Konkurrenten identifiziert, ihren Traffic analysiert und ihre Backlinks überprüft. Außerdem gebe ich Tipps zur Verteilung des organischen Rankings. Schau es dir an, um wertvolle Einblicke in die Konkurrenzanalyse zu erhalten!\n\nZu den SEO Checkliste und Tools: https://antonioblago.notion.site/?pvs=74\nZu SE Ranking: https://antonioblago.de/seranking\nSEO mit KI: https://visibly-ai.com",
+      "duration": 345.0,
+      "upload_date": "20260224",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 20,
+      "like_count": 1,
+      "comment_count": null,
+      "tags": [],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi/OzJdYOxVGuw/maxresdefault.jpg",
+      "chapters": [],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "wie F euch jetzt eine gute",
+          "start": 0.399,
+          "end": 5.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Wettbewerbsanalyse für die Keywords",
+          "start": 3.0,
+          "end": 9.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durch und da kannst du das Feature von",
+          "start": 5.96,
+          "end": 12.440000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "SE Ranking auch nutzen",
+          "start": 9.48,
+          "end": 14.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Wettbewerbsanalyse und zwar gehe ich",
+          "start": 12.44,
+          "end": 16.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer so vor wenn ich ein neues Projekt",
+          "start": 14.36,
+          "end": 20.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "starte das Keyword wofür mein Kunde",
+          "start": 16.84,
+          "end": 23.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ranken will oder ich Ranken will suche",
+          "start": 20.48,
+          "end": 25.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich als erstes",
+          "start": 23.439,
+          "end": 27.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "z.B",
+          "start": 25.039,
+          "end": 31.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Personal Training",
+          "start": 27.8,
+          "end": 31.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Köln und dann also das ist quasi das",
+          "start": 32.44,
+          "end": 36.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ziel",
+          "start": 36.0,
+          "end": 40.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword und dann suche ich z.B okay wer",
+          "start": 36.92,
+          "end": 44.800000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sind die Top 3 Top 5 ne und dann sehe",
+          "start": 40.0,
+          "end": 49.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich z.B hier mrköln.de",
+          "start": 44.8,
+          "end": 49.038999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Toplisten den Link öffne ich den Link",
+          "start": 49.079,
+          "end": 55.160000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "öffne",
+          "start": 53.48,
+          "end": 58.919999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich den Link öffne",
+          "start": 55.16,
+          "end": 62.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich genau und dann schaue ich mir hier",
+          "start": 58.92,
+          "end": 65.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Seiten an also es ist quasi einfach",
+          "start": 62.12,
+          "end": 69.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein Beispiel hier und die sind auf jeden",
+          "start": 65.84,
+          "end": 72.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall die",
+          "start": 69.759,
+          "end": 72.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bestgelistetesten in die Suche für Köln",
+          "start": 72.799,
+          "end": 81.52000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann kopiere ich mir diese",
+          "start": 77.84,
+          "end": 83.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "URL",
+          "start": 81.52,
+          "end": 86.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und kopiere sie hier rein lass se",
+          "start": 83.56,
+          "end": 91.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ranking mir diese URL",
+          "start": 86.92,
+          "end": 94.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "alysieren und dann sehe ich schon gleich",
+          "start": 91.6,
+          "end": 98.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "okay die Domain mrköln.de die hat elich",
+          "start": 94.159,
+          "end": 101.32000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ganz guten Traffic schon mal also 70 000",
+          "start": 98.0,
+          "end": 102.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Klicks pro",
+          "start": 101.32,
+          "end": 106.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Monat insgesamt sind sie schon für 22000",
+          "start": 102.88,
+          "end": 109.79899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords gerankt mit dem absteigenden",
+          "start": 106.32,
+          "end": 113.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Trend und dann sind die trafficosten",
+          "start": 109.799,
+          "end": 117.24000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch bei 20000 das",
+          "start": 113.6,
+          "end": 121.719,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "heißt Gegenwert also Traffic auf Google",
+          "start": 117.24,
+          "end": 124.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ads zu generieren bräuchtest du 20.000 €",
+          "start": 121.719,
+          "end": 127.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "im Monat und da sieht man schon auch die",
+          "start": 124.439,
+          "end": 130.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Power hinter",
+          "start": 127.079,
+          "end": 130.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "organisch organisches",
+          "start": 130.8,
+          "end": 136.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ranking dann sieht man auch bei Ranking",
+          "start": 133.56,
+          "end": 138.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch immer hier dieses diesen",
+          "start": 136.519,
+          "end": 142.48000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verlaufsdiagramm also für den Traffic",
+          "start": 138.92,
+          "end": 146.51899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "insgesamt grün ist jeweils organisch und",
+          "start": 142.48,
+          "end": 147.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "blaues",
+          "start": 146.519,
+          "end": 150.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bezahlt hier haben sie quasi nur",
+          "start": 147.959,
+          "end": 152.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "organischen",
+          "start": 150.84,
+          "end": 155.64000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Traffic und dann kann man auch sehen",
+          "start": 152.239,
+          "end": 158.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "über 18 Monate und den ganzen Zeitrum",
+          "start": 155.64,
+          "end": 160.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinweg und da sieht man auf jeden Fall",
+          "start": 158.2,
+          "end": 163.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die haben ja ansteigigenen Traffic also",
+          "start": 160.64,
+          "end": 166.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tun sie auf jeden Fall schon mal was",
+          "start": 163.319,
+          "end": 167.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "denke ich mal",
+          "start": 166.0,
+          "end": 171.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und hier sieht man auch die ansteigenden",
+          "start": 167.36,
+          "end": 174.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords muss halt",
+          "start": 171.599,
+          "end": 177.67999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sagen nur weil du mehr Content und",
+          "start": 174.56,
+          "end": 179.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords generierst muss auch nicht",
+          "start": 177.68,
+          "end": 181.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gleich gleichzeitig den Traffic hier so",
+          "start": 179.519,
+          "end": 185.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hochgen das ist meistens leider nicht so",
+          "start": 181.44,
+          "end": 187.799,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier ist es der Fall",
+          "start": 185.76,
+          "end": 189.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "aber gut für",
+          "start": 187.799,
+          "end": 193.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sie genau da hat man hier noch",
+          "start": 189.92,
+          "end": 196.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "trafficosten und Backlinks auch immer",
+          "start": 193.72,
+          "end": 200.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ganz guter Hinweis also welche Seiten",
+          "start": 196.879,
+          "end": 204.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "werden wie quasi von den",
+          "start": 200.56,
+          "end": 206.799,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verlinkt da da ma ich noch mal ein",
+          "start": 204.319,
+          "end": 208.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "separates Video dazu wie du das ganze",
+          "start": 206.799,
+          "end": 211.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auswertest mit eranking n mal so als",
+          "start": 208.56,
+          "end": 212.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Hinweis",
+          "start": 211.519,
+          "end": 214.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann hier siehst du dann die",
+          "start": 212.599,
+          "end": 217.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verweisenden Domains also",
+          "start": 214.72,
+          "end": 219.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "unterschiedliche Domains und dann die",
+          "start": 217.0,
+          "end": 222.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Anzahl aller Backlinks also eine Domain",
+          "start": 219.48,
+          "end": 225.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kann auch mehrere Backlinks",
+          "start": 222.2,
+          "end": 228.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "haben die auf deine Seite",
+          "start": 225.0,
+          "end": 230.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verweist genau und dann siehst du hier",
+          "start": 228.599,
+          "end": 234.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "noch ein gutes Feature das heißt diese",
+          "start": 230.72,
+          "end": 236.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords Liste",
+          "start": 234.2,
+          "end": 240.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das kannst du hier auch aufmachen",
+          "start": 236.56,
+          "end": 241.64000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann",
+          "start": 240.04,
+          "end": 244.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "siehst Du diese ganzen Keywords für die",
+          "start": 241.64,
+          "end": 245.27999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine",
+          "start": 244.319,
+          "end": 248.83999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Konkurrenz quasi dann rankt ne und dann",
+          "start": 245.28,
+          "end": 251.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kannst du die diese auch hier in deiner",
+          "start": 248.84,
+          "end": 253.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword Recherche beispielsweise auch",
+          "start": 251.4,
+          "end": 256.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "exportieren lassen",
+          "start": 253.48,
+          "end": 259.03999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann auch mit deinen",
+          "start": 256.4,
+          "end": 262.03999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "keywordlisten",
+          "start": 259.04,
+          "end": 262.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zusammenfügen genau und was auch immer",
+          "start": 263.96,
+          "end": 267.79999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sehr wichtig ist in der",
+          "start": 266.88,
+          "end": 270.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Konkurrenzanalyse",
+          "start": 267.8,
+          "end": 272.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist dann auch",
+          "start": 270.039,
+          "end": 273.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die",
+          "start": 272.72,
+          "end": 277.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verteilung des organischen Rankings also",
+          "start": 273.96,
+          "end": 279.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Verteilung der",
+          "start": 277.24,
+          "end": 283.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords anhand der der der Rankings",
+          "start": 279.56,
+          "end": 288.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also Top 1 bis 5 Plätze 6 bis 10 11 bis",
+          "start": 283.639,
+          "end": 293.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "20 21 bis 50 und 51 bis 100 also das",
+          "start": 288.199,
+          "end": 297.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sind quasi so Kategorien ne und man",
+          "start": 293.12,
+          "end": 300.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "möchte eigentlich eher natürlich hier",
+          "start": 297.919,
+          "end": 304.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die meisten Keywords haben aber das ist",
+          "start": 300.199,
+          "end": 307.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "meistens nicht möglich insofern wird",
+          "start": 304.12,
+          "end": 311.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer nur ein Teil eurer ganzen Keywords",
+          "start": 307.56,
+          "end": 314.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier unten gerankt werden in den",
+          "start": 311.199,
+          "end": 316.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "toppatzierung am guutter Richtwert ist",
+          "start": 314.0,
+          "end": 319.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auf jeden Fall mindestens 5% aller",
+          "start": 316.44,
+          "end": 322.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deiner Keywords hier zu ranken auf den",
+          "start": 319.36,
+          "end": 325.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Top 1 bis 5 Plätzen und hier auch noch",
+          "start": 322.639,
+          "end": 331.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal mehr als 5% zu ranken und hier ähm",
+          "start": 325.88,
+          "end": 335.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "so wenig wie mögliche dann ähm zu haben",
+          "start": 331.56,
+          "end": 341.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ne genau das war's jetzt erstmal und ich",
+          "start": 335.919,
+          "end": 342.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "werde noch im weiteren Video alle",
+          "start": 341.08,
+          "end": 347.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "möglichen einzelheiten dazu erklären",
+          "start": 342.96,
+          "end": 347.23999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 120.0,
+          "duration": 120.0,
+          "transcript": "wie F euch jetzt eine gute Wettbewerbsanalyse für die Keywords durch und da kannst du das Feature von SE Ranking auch nutzen Wettbewerbsanalyse und zwar gehe ich immer so vor wenn ich ein neues Projekt starte das Keyword wofür mein Kunde Ranken will oder ich Ranken will suche ich als erstes z.B Personal Training Köln und dann also das ist quasi das Ziel Keyword und dann suche ich z.B okay wer sind die Top 3 Top 5 ne und dann sehe ich z.B hier mrköln.de Toplisten den Link öffne ich den Link öffne ich den Link öffne ich genau und dann schaue ich mir hier die Seiten an also es ist quasi einfach ein Beispiel hier und die sind auf jeden Fall die bestgelistetesten in die Suche für Köln und dann kopiere ich mir diese URL und kopiere sie hier rein lass se Ranking mir diese URL alysieren und dann sehe ich schon gleich okay die Domain mrköln.de die hat elich ganz guten Traffic schon mal also 70 000 Klicks pro Monat insgesamt sind sie schon für 22000 Keywords gerankt mit dem absteigenden Trend und dann sind die trafficosten auch bei 20000 das heißt Gegenwert also Traffic auf Google",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (00:00 - 02:00)\n\nwie F euch jetzt eine gute Wettbewerbsanalyse für die Keywords durch und da kannst du das Feature von SE Ranking auch nutzen Wettbewerbsanalyse und zwar gehe ich immer so vor wenn ich ein neues Projekt starte das Keyword wofür mein Kunde Ranken will oder ich Ranken will suche ich als erstes z.B Personal Training Köln und dann also das ist quasi das Ziel Keyword und dann suche ich z.B okay wer sind die Top 3 Top 5 ne und dann sehe ich z.B hier mrköln.de Toplisten den Link öffne ich den Link öffne ich den Link öffne ich genau und dann schaue ich mir hier die Seiten an also es ist quasi einfach ein Beispiel hier und die sind auf jeden Fall die bestgelistetesten in die Suche für Köln und dann kopiere ich mir diese URL und kopiere sie hier rein lass se Ranking mir diese URL alysieren und dann sehe ich schon gleich okay die Domain mrköln.de die hat elich ganz guten Traffic schon mal also 70 000 Klicks pro Monat insgesamt sind sie schon für 22000 Keywords gerankt mit dem absteigenden Trend und dann sind die trafficosten auch bei 20000 das heißt Gegenwert also Traffic auf Google",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 120.0,
+          "end_time": 240.0,
+          "duration": 120.0,
+          "transcript": "auch bei 20000 das heißt Gegenwert also Traffic auf Google Ads zu generieren bräuchtest du 20.000 € im Monat und da sieht man schon auch die Power hinter organisch organisches Ranking dann sieht man auch bei Ranking auch immer hier dieses diesen verlaufsdiagramm also für den Traffic insgesamt grün ist jeweils organisch und blaues bezahlt hier haben sie quasi nur organischen Traffic und dann kann man auch sehen über 18 Monate und den ganzen Zeitrum hinweg und da sieht man auf jeden Fall die haben ja ansteigigenen Traffic also tun sie auf jeden Fall schon mal was denke ich mal und hier sieht man auch die ansteigenden Keywords muss halt sagen nur weil du mehr Content und Keywords generierst muss auch nicht gleich gleichzeitig den Traffic hier so hochgen das ist meistens leider nicht so hier ist es der Fall aber gut für Sie genau da hat man hier noch trafficosten und Backlinks auch immer ganz guter Hinweis also welche Seiten werden wie quasi von den verlinkt da da ma ich noch mal ein separates Video dazu wie du das ganze auswertest mit eranking n mal so als Hinweis dann hier siehst du dann die verweisenden Domains also unterschiedliche Domains und dann die Anzahl aller Backlinks also eine Domain kann auch mehrere Backlinks haben die auf deine Seite verweist genau und dann siehst du hier noch ein gutes Feature das heißt diese Keywords Liste das kannst du hier auch aufmachen",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (02:00 - 04:00)\n\nauch bei 20000 das heißt Gegenwert also Traffic auf Google Ads zu generieren bräuchtest du 20.000 € im Monat und da sieht man schon auch die Power hinter organisch organisches Ranking dann sieht man auch bei Ranking auch immer hier dieses diesen verlaufsdiagramm also für den Traffic insgesamt grün ist jeweils organisch und blaues bezahlt hier haben sie quasi nur organischen Traffic und dann kann man auch sehen über 18 Monate und den ganzen Zeitrum hinweg und da sieht man auf jeden Fall die haben ja ansteigigenen Traffic also tun sie auf jeden Fall schon mal was denke ich mal und hier sieht man auch die ansteigenden Keywords muss halt sagen nur weil du mehr Content und Keywords generierst muss auch nicht gleich gleichzeitig den Traffic hier so hochgen das ist meistens leider nicht so hier ist es der Fall aber gut für Sie genau da hat man hier noch trafficosten und Backlinks auch immer ganz guter Hinweis also welche Seiten werden wie quasi von den verlinkt da da ma ich noch mal ein separates Video dazu wie du das ganze auswertest mit eranking n mal so als Hinweis dann hier siehst du dann die verweisenden Domains also unterschiedliche Domains und dann die Anzahl aller Backlinks also eine Domain kann auch mehrere Backlinks haben die auf deine Seite verweist genau und dann siehst du hier noch ein gutes Feature das heißt diese Keywords Liste das kannst du hier auch aufmachen",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 240.0,
+          "end_time": 345.0,
+          "duration": 105.0,
+          "transcript": "Keywords Liste das kannst du hier auch aufmachen und dann siehst Du diese ganzen Keywords für die deine Konkurrenz quasi dann rankt ne und dann kannst du die diese auch hier in deiner Keyword Recherche beispielsweise auch exportieren lassen und dann auch mit deinen keywordlisten zusammenfügen genau und was auch immer sehr wichtig ist in der Konkurrenzanalyse ist dann auch die Verteilung des organischen Rankings also die Verteilung der Keywords anhand der der der Rankings also Top 1 bis 5 Plätze 6 bis 10 11 bis 20 21 bis 50 und 51 bis 100 also das sind quasi so Kategorien ne und man möchte eigentlich eher natürlich hier die meisten Keywords haben aber das ist meistens nicht möglich insofern wird immer nur ein Teil eurer ganzen Keywords hier unten gerankt werden in den toppatzierung am guutter Richtwert ist auf jeden Fall mindestens 5% aller deiner Keywords hier zu ranken auf den Top 1 bis 5 Plätzen und hier auch noch mal mehr als 5% zu ranken und hier ähm so wenig wie mögliche dann ähm zu haben ne genau das war's jetzt erstmal und ich werde noch im weiteren Video alle möglichen einzelheiten dazu erklären",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (04:00 - 05:45)\n\nKeywords Liste das kannst du hier auch aufmachen und dann siehst Du diese ganzen Keywords für die deine Konkurrenz quasi dann rankt ne und dann kannst du die diese auch hier in deiner Keyword Recherche beispielsweise auch exportieren lassen und dann auch mit deinen keywordlisten zusammenfügen genau und was auch immer sehr wichtig ist in der Konkurrenzanalyse ist dann auch die Verteilung des organischen Rankings also die Verteilung der Keywords anhand der der der Rankings also Top 1 bis 5 Plätze 6 bis 10 11 bis 20 21 bis 50 und 51 bis 100 also das sind quasi so Kategorien ne und man möchte eigentlich eher natürlich hier die meisten Keywords haben aber das ist meistens nicht möglich insofern wird immer nur ein Teil eurer ganzen Keywords hier unten gerankt werden in den toppatzierung am guutter Richtwert ist auf jeden Fall mindestens 5% aller deiner Keywords hier zu ranken auf den Top 1 bis 5 Plätzen und hier auch noch mal mehr als 5% zu ranken und hier ähm so wenig wie mögliche dann ähm zu haben ne genau das war's jetzt erstmal und ich werde noch im weiteren Video alle möglichen einzelheiten dazu erklären",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.132861852645874,
+      "extracted_at": "2026-03-11T12:31:19Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 345.0,
+  "total_segments": 3,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.132861852645874,
+  "warnings": [],
+  "errors": []
+}

@@ -264,6 +264,42 @@ def check_serp(keyword: str, location: str = "Germany", language: str = "German"
 
 
 @mcp.tool()
+def check_pagespeed(url: str, strategy: str = "mobile") -> str:
+    """Check PageSpeed and Core Web Vitals for a URL. Returns performance, accessibility, SEO scores, LCP, CLS, TBT, and optimization opportunities. Credits: 5.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.check_pagespeed(url, strategy)
+
+
+@mcp.tool()
+def audit_sitemap(domain: str) -> str:
+    """Audit a site's XML sitemap: total URLs, duplicates, broken links, lastmod coverage. Credits: 20.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.audit_sitemap(domain)
+
+
+@mcp.tool()
+def check_structured_data(url: str) -> str:
+    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.check_structured_data(url)
+
+
+@mcp.tool()
+def check_hreflang(url: str) -> str:
+    """Validate hreflang annotations: x-default, language codes, broken targets, bidirectional linking. Credits: 10.
+
+    Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
+    """
+    return paid_tools.check_hreflang(url)
+
+
+@mcp.tool()
 def check_links(url: str) -> str:
     """Check all links on a page for broken/redirect status. Credits: 20.
 

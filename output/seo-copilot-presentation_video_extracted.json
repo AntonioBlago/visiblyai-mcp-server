@@ -1,0 +1,1674 @@
+{
+  "videos": [
+    {
+      "video_id": "ikqfIqFv2Fc",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=ikqfIqFv2Fc",
+      "file_path": null,
+      "title": "Präsentation meines neuen Copilot für SEO Analysen 🚀",
+      "description": "Willkommen zur Premiere meines SEO Copilot Tools, meinem eigenen KI-gestützten SEO Assistenten auf antonioblago.com.\nIn diesem Video zeige ich dir Schritt für Schritt, wie du mit der kostenlosen Version startest, ein Projekt anlegst und deinen gesamten E E A T Score analysieren kannst.\n\nHier Account zulegen und starten: https://www.antonioblago.com/register\n\nDu erfährst, wie der SEO Copilot technische Website-Parameter, Content Qualität, persönliche Erfahrungssignale, Trust und Authority bewertet. Zusätzlich gebe ich dir einen Einblick in die Score Entwicklung im Zeitverlauf sowie die detaillierten Analysebereiche wie technische Basis, Experience, Expertise, Authority und Trust.\n\nIch zeige dir außerdem, wie du automatische wöchentliche Analysen einstellst, Score Warnungen aktivierst, deine Rolle und Zielgruppe definierst und wie der Copilot diese Informationen nutzt, um dir präzise Empfehlungen zu geben.\n\nIm zweiten Teil werfen wir einen Blick auf die KI Funktionen wie Content Hilfen, E E A T Verbesserungs-Tipps, Keyword Empfehlungen, Bloggenerierung und Outreach-Strategien. Du siehst, wie du Keywords direkt per Klick kopierst, Unterhaltungen speicherst und Credits verwaltest.\n\nDas Tool richtet sich an alle, die SEO datengetrieben, transparent und effizient aufsetzen möchten. Viel Freude beim Entdecken und ich freue mich sehr auf dein Feedback.\n\n⏱️ YouTube Kapitel\n\n00:00 Einführung und Tool Premiere\n00:32 Kostenlos registrieren und Projekt anlegen\n01:04 E E A T Tracking und Konkurrenzvergleich\n01:36 Technische Basis, Experience, Expertise im Überblick\n01:57 Authority, Trust und Onlinepräsenz verstehen\n02:23 Wöchentliche Analysen und Score Verlauf\n03:12 Projekt Einstellungen, Rollen, Zielgruppen\n03:56 Score Warnungen und Benachrichtigungen\n04:20 KI Dialoge, Empfehlungen und Verlauf\n04:48 Credits, Abos und Quick Actions\n05:28 Keyword Extraction und Bloggenerator\n06:10 Keyword Speicherung und Produktfeedback\n06:53 Hinweise, Kontakt und Schlusswort",
+      "duration": 454.0,
+      "upload_date": "20251209",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 27,
+      "like_count": null,
+      "comment_count": null,
+      "tags": [
+        "SEOcopilot",
+        "EEATAnalyse",
+        "SEOAutomatisierung",
+        "SEOProjektTracking",
+        "KeywordTools",
+        "SEOOptimierung",
+        "ContentStrategie",
+        "BacklinkStrategie",
+        "AISEO",
+        "SEOAnalytics",
+        "TechnicalSEO",
+        "SEO",
+        "Antonioblago",
+        "mcp"
+      ],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi_webp/ikqfIqFv2Fc/maxresdefault.webp",
+      "chapters": [
+        {
+          "title": "Einführung und Tool Premiere",
+          "start_time": 0.0,
+          "end_time": 32.0
+        },
+        {
+          "title": "Kostenlos registrieren und Projekt anlegen",
+          "start_time": 32.0,
+          "end_time": 64.0
+        },
+        {
+          "title": "E E A T Tracking und Konkurrenzvergleich",
+          "start_time": 64.0,
+          "end_time": 96.0
+        },
+        {
+          "title": "Technische Basis, Experience, Expertise im Überblick",
+          "start_time": 96.0,
+          "end_time": 117.0
+        },
+        {
+          "title": "Authority, Trust und Onlinepräsenz verstehen",
+          "start_time": 117.0,
+          "end_time": 143.0
+        },
+        {
+          "title": "Wöchentliche Analysen und Score Verlauf",
+          "start_time": 143.0,
+          "end_time": 192.0
+        },
+        {
+          "title": "Projekt Einstellungen, Rollen, Zielgruppen",
+          "start_time": 192.0,
+          "end_time": 236.0
+        },
+        {
+          "title": "Score Warnungen und Benachrichtigungen",
+          "start_time": 236.0,
+          "end_time": 260.0
+        },
+        {
+          "title": "KI Dialoge, Empfehlungen und Verlauf",
+          "start_time": 260.0,
+          "end_time": 288.0
+        },
+        {
+          "title": "Credits, Abos und Quick Actions",
+          "start_time": 288.0,
+          "end_time": 328.0
+        },
+        {
+          "title": "Keyword Extraction und Bloggenerator",
+          "start_time": 328.0,
+          "end_time": 370.0
+        },
+        {
+          "title": "Keyword Speicherung und Produktfeedback",
+          "start_time": 370.0,
+          "end_time": 413.0
+        },
+        {
+          "title": "Hinweise, Kontakt und Schlusswort",
+          "start_time": 413.0,
+          "end_time": 454
+        }
+      ],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "Herzlich willkommen äh zu der Premiere",
+          "start": 0.04,
+          "end": 7.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "von meinem SEO Tool. In dem Sinne ähm",
+          "start": 2.96,
+          "end": 10.440000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mein eigenes programmiertes SEO Tool auf",
+          "start": 7.56,
+          "end": 13.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "meiner Domain antonioblago.com.",
+          "start": 10.44,
+          "end": 16.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm und hier habe ich ein Testccount,",
+          "start": 13.44,
+          "end": 20.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also die freie Version. Ähm, da könnt",
+          "start": 16.08,
+          "end": 22.198999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ihr euch einfach registrieren unter",
+          "start": 20.24,
+          "end": 25.198999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "antonioblago.com",
+          "start": 22.199,
+          "end": 25.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh Register",
+          "start": 25.359,
+          "end": 31.480000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und ähm da solltet ihr euch einfach",
+          "start": 28.48,
+          "end": 33.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anmelden können und dann kriegt ihr",
+          "start": 31.48,
+          "end": 36.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einen Link äh E-Mail confirmation",
+          "start": 33.16,
+          "end": 40.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann habt ihr da ein gratis Account",
+          "start": 36.92,
+          "end": 44.879000000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und könnt auch in dem Sinne ähm",
+          "start": 40.239,
+          "end": 47.919999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh ein SEOjekt anlegen. Also hier habe",
+          "start": 44.879,
+          "end": 50.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich quasi ein SEOjekt",
+          "start": 47.92,
+          "end": 53.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm angelegt.",
+          "start": 50.8,
+          "end": 54.959999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm",
+          "start": 53.199,
+          "end": 58.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "könnt ihr quasi euer EAT äh tracken von",
+          "start": 54.96,
+          "end": 62.559,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "euren äh eigener Webseite",
+          "start": 58.8,
+          "end": 65.15899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und von euren Mitbewerbern. Da könnt ihr",
+          "start": 62.559,
+          "end": 67.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in der kostenfreien Version ein Projekt",
+          "start": 65.159,
+          "end": 69.24000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anlegen und bis zu fünf Konkurrenten",
+          "start": 67.36,
+          "end": 73.03999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anlegen. Die könnt ihr dann ähm dort",
+          "start": 69.24,
+          "end": 77.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch hier noch mal tracken und seht äh",
+          "start": 73.04,
+          "end": 81.60000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "quasi die Analyse Hinsicht äh Ansicht.",
+          "start": 77.88,
+          "end": 84.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm habt ihr so ein Scoreverlauf.",
+          "start": 81.6,
+          "end": 87.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, genau. Und dann hier noch mal diese",
+          "start": 84.88,
+          "end": 92.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh Indikatoren, also technisch, Präsenz,",
+          "start": 87.72,
+          "end": 95.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Trust, äh Authority, Expertise,",
+          "start": 92.079,
+          "end": 97.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm Experience.",
+          "start": 95.6,
+          "end": 99.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Und im Detail könnt ihr euch dann auch",
+          "start": 97.96,
+          "end": 102.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer die Details noch mal anschauen äh",
+          "start": 99.96,
+          "end": 104.719,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "von euren äh eigenen Webseite oder von",
+          "start": 102.399,
+          "end": 106.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "euren Konkurrenten, wie die so",
+          "start": 104.719,
+          "end": 108.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "aufgestellt ist.",
+          "start": 106.56,
+          "end": 111.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, genau. technische Basis in dem",
+          "start": 108.32,
+          "end": 115.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sinne alles, was rund um äh Server",
+          "start": 111.119,
+          "end": 118.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Impressum so angeht, dann Experience",
+          "start": 115.439,
+          "end": 120.83999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch sehr wichtig, persönliche Erfahrung",
+          "start": 118.159,
+          "end": 124.32000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh reinzubringen, Fachkompetenz, Content",
+          "start": 120.84,
+          "end": 127.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm dann Autorität, Branchenanerkennung",
+          "start": 124.32,
+          "end": 129.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh Bewertung,",
+          "start": 127.56,
+          "end": 132.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau Trustiness ist auch Vertrauen,",
+          "start": 129.879,
+          "end": 134.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Transparenz und dann die Online Präsenz",
+          "start": 132.08,
+          "end": 137.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch noch mal Social Media äh in dem",
+          "start": 134.72,
+          "end": 140.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sinne auch organisches Sichtbarkeit.",
+          "start": 137.92,
+          "end": 141.95899999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm,",
+          "start": 140.36,
+          "end": 144.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau. Und dann seht ihr auch noch mal",
+          "start": 141.959,
+          "end": 147.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier die Übersicht äh aller Analysen.",
+          "start": 144.2,
+          "end": 149.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Also, könnt ihr euch an einstellen, dass",
+          "start": 147.879,
+          "end": 152.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ihr quasi wöchentlich",
+          "start": 149.959,
+          "end": 156.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm das äh einmal analysiert und dann",
+          "start": 152.04,
+          "end": 159.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tracken lassen und äh dann bekommt ihr",
+          "start": 156.239,
+          "end": 161.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "so eine Übersicht, was man machen",
+          "start": 159.56,
+          "end": 165.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "müsste. Ähm, dann noch mal was erfindet.",
+          "start": 161.159,
+          "end": 168.79999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Hier z.B. die Zitate und Quellenangaben.",
+          "start": 165.36,
+          "end": 172.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, genau.",
+          "start": 168.8,
+          "end": 175.76000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Und dann zusätzlich habt ihr dann noch",
+          "start": 172.08,
+          "end": 179.87900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "den äh SEO Copilot ähm wo auch dann noch",
+          "start": 175.76,
+          "end": 182.67999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal äh ein Projekt verbinden könnt oder",
+          "start": 179.879,
+          "end": 186.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch anlegen könnt. Ähm und da könnt ihr",
+          "start": 182.68,
+          "end": 190.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch äh in den Projekten verwalten.",
+          "start": 186.72,
+          "end": 194.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm könnt ihr euch auch noch mal ähm",
+          "start": 190.519,
+          "end": 195.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann in den Einstellungen auch ganz",
+          "start": 194.12,
+          "end": 197.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtig",
+          "start": 195.92,
+          "end": 200.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm",
+          "start": 197.68,
+          "end": 201.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh quasi auch noch mal hier die",
+          "start": 200.04,
+          "end": 203.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Einstellung wöchentlich jeden Montag",
+          "start": 201.56,
+          "end": 205.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "z.B.",
+          "start": 203.72,
+          "end": 207.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dass die Analyse durchläuft und dann",
+          "start": 205.319,
+          "end": 211.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch äh was ist euer Projekttyp? äh dann",
+          "start": 207.92,
+          "end": 213.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Zielgruppe, deine Rolle im Unternehmen,",
+          "start": 211.12,
+          "end": 215.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Contentprache",
+          "start": 213.879,
+          "end": 217.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann seissen.",
+          "start": 215.68,
+          "end": 219.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, genau. Dann bekommst du eine E-Mail",
+          "start": 217.72,
+          "end": 221.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Benachrichtigung",
+          "start": 219.68,
+          "end": 226.31900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und auch äh wenn dein Score zu arg ähm",
+          "start": 221.2,
+          "end": 227.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "abweicht, dann kriegst du auch noch mal",
+          "start": 226.319,
+          "end": 229.67999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eine",
+          "start": 227.599,
+          "end": 232.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh Score äh Warnung in dem Sinne,",
+          "start": 229.68,
+          "end": 234.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Schwellenwertwarnung.",
+          "start": 232.36,
+          "end": 236.48000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm,",
+          "start": 234.36,
+          "end": 238.87900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau. Das ist super, wenn ihr da alles",
+          "start": 236.48,
+          "end": 240.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ausfüllt,",
+          "start": 238.879,
+          "end": 242.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm, dass die KI da auch immer die",
+          "start": 240.439,
+          "end": 244.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ganzen Daten hat. Ähm, und genau, dann",
+          "start": 242.159,
+          "end": 248.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "könnt ihr z.B. hier auch ähm dann auch",
+          "start": 244.959,
+          "end": 251.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "fragen, z.B. helf mir mein Eat zu",
+          "start": 248.48,
+          "end": 254.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verbessern und dann zieht er sich das",
+          "start": 251.84,
+          "end": 257.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Projekt ähm eure Daten dazu und dann",
+          "start": 254.12,
+          "end": 260.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hältst du dazu auch Anweisung. Ähm,",
+          "start": 257.239,
+          "end": 263.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "alles wird quasi gespeichert ähm unter",
+          "start": 260.04,
+          "end": 265.47900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verlauf. Kannst du auch neue",
+          "start": 263.44,
+          "end": 268.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Unterhaltungen machen, wie bei Chat GBT.",
+          "start": 265.479,
+          "end": 270.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, und dann kriegst du auch immer so",
+          "start": 268.32,
+          "end": 272.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Empfehlungen.",
+          "start": 270.639,
+          "end": 276.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Äh, z.B. hier Medical Link Building und",
+          "start": 272.16,
+          "end": 280.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm dann bei jeder Ausführung äh kostet",
+          "start": 276.32,
+          "end": 284.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es halt Credits. Ähm und die kannst du",
+          "start": 280.6,
+          "end": 287.47900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch aufladen separat.",
+          "start": 284.52,
+          "end": 289.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm oder du kannst ein Abonnement",
+          "start": 287.479,
+          "end": 291.59999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "abschließen.",
+          "start": 289.919,
+          "end": 294.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm genau. Ansonsten kannst du hier auch",
+          "start": 291.6,
+          "end": 297.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "alle möglichen Quick Actions",
+          "start": 294.68,
+          "end": 300.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchführen, ähm wie Blockschreiben, äh",
+          "start": 297.199,
+          "end": 302.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywordempfehlung",
+          "start": 300.479,
+          "end": 304.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und äh du kannst hier auch quasi dann",
+          "start": 302.199,
+          "end": 309.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Keywords aus dem Prom ziehen. ähm",
+          "start": 304.56,
+          "end": 313.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "muss nicht ähm alles so rauskopiert",
+          "start": 309.6,
+          "end": 315.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "werden äh wie bei Chat GBT, sondern ich",
+          "start": 313.16,
+          "end": 319.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "habe das so äh erstellt, dass man jetzt",
+          "start": 315.88,
+          "end": 321.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh in dem Sinne auch gleich äh die",
+          "start": 319.36,
+          "end": 324.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords einfach äh per Button",
+          "start": 321.4,
+          "end": 327.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "rauskopieren kann und sie in deinem SEO",
+          "start": 324.0,
+          "end": 330.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Tool oder noch mal äh in ChatBT noch mal",
+          "start": 327.0,
+          "end": 332.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "reinzupasten.",
+          "start": 330.479,
+          "end": 335.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm genau, der erstellt jetzt hier z.B.",
+          "start": 332.52,
+          "end": 341.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eine ganze Outreach äh Agenda, wie man",
+          "start": 335.759,
+          "end": 344.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jetzt z.B. Backlinks aufbauen kann im",
+          "start": 341.12,
+          "end": 347.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "medizinischen Bereich.",
+          "start": 344.72,
+          "end": 349.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm,",
+          "start": 347.24,
+          "end": 351.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau. Die die Strategie äh kannst du",
+          "start": 349.28,
+          "end": 356.79999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann übernehmen und äh dann auch selber",
+          "start": 351.8,
+          "end": 358.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchführen.",
+          "start": 356.8,
+          "end": 360.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm, genau. Dann kannst du auch hier",
+          "start": 358.639,
+          "end": 363.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "z.B. Keywords speichern drücken auch was",
+          "start": 360.759,
+          "end": 365.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ganz immer ganz hilfreich ist, wenn du",
+          "start": 363.199,
+          "end": 367.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es gut findest, auch hier hilfreich zu",
+          "start": 365.28,
+          "end": 371.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "klicken. Ähm und ähm dann werden dann",
+          "start": 367.08,
+          "end": 375.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "halt auch äh Feedback zur",
+          "start": 371.28,
+          "end": 378.63899999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Produktweiterentwicklung auch empfohlen,",
+          "start": 375.919,
+          "end": 380.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ne? Also z.B. jetzt hier z.B. die",
+          "start": 378.639,
+          "end": 383.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords gespeichert, auch kategorisiert",
+          "start": 380.68,
+          "end": 387.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nach Longtail Fragen ähm Hauptteil und",
+          "start": 383.36,
+          "end": 389.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann kannst du auch noch mal hier die",
+          "start": 387.88,
+          "end": 393.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords kopieren oder äh für Chat GBT",
+          "start": 389.56,
+          "end": 396.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch noch mal nutzen.",
+          "start": 393.08,
+          "end": 400.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm genau mit quasi prompt.",
+          "start": 396.039,
+          "end": 402.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Ähm,",
+          "start": 400.56,
+          "end": 405.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau. Und dann äh",
+          "start": 402.4,
+          "end": 409.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schreibt er hier dir einen Blogartikel",
+          "start": 405.68,
+          "end": 412.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mit diesem vorgefertigten Prompt.",
+          "start": 409.08,
+          "end": 414.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Genau. Ansonsten, wenn du Fragen hast,",
+          "start": 412.84,
+          "end": 416.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh immer gerne hier an diese E-Mail",
+          "start": 414.88,
+          "end": 420.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "richten oder über LinkedIn. Ähm, genau.",
+          "start": 416.56,
+          "end": 422.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Gibt bitte keine sensiblen oder Personen",
+          "start": 420.039,
+          "end": 426.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bezogenen Daten ein. Äh und ähm die KI",
+          "start": 422.44,
+          "end": 428.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist auch nicht ganz fehlerfrei. Insofern",
+          "start": 426.08,
+          "end": 431.87899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm prüfe immer vorher, wenn du",
+          "start": 428.879,
+          "end": 435.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "irgendwas tust, ähm ob das auch alles",
+          "start": 431.879,
+          "end": 438.59900000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "plausibel ist. Ähm genau. Und frage mich",
+          "start": 435.28,
+          "end": 442.67999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bitte eher, bevor du ähm",
+          "start": 438.599,
+          "end": 445.71999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht weißt, ob das wirklich was hilft.",
+          "start": 442.68,
+          "end": 447.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Genau. Und dann wünsche ich dir viel",
+          "start": 445.72,
+          "end": 450.52000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Erfolg und ähm freue mich auf dein",
+          "start": 447.319,
+          "end": 455.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Feedback und ja, viel Spaß.",
+          "start": 450.52,
+          "end": 455.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 32.0,
+          "duration": 32.0,
+          "transcript": "Herzlich willkommen äh zu der Premiere von meinem SEO Tool. In dem Sinne ähm mein eigenes programmiertes SEO Tool auf meiner Domain antonioblago.com. Ähm und hier habe ich ein Testccount, also die freie Version. Ähm, da könnt ihr euch einfach registrieren unter antonioblago.com äh Register und ähm da solltet ihr euch einfach anmelden können und dann kriegt ihr",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Einführung und Tool Premiere",
+          "topic": null,
+          "category": null,
+          "content": "### Einführung und Tool Premiere (00:00 - 00:32)\n\nHerzlich willkommen äh zu der Premiere von meinem SEO Tool. In dem Sinne ähm mein eigenes programmiertes SEO Tool auf meiner Domain antonioblago.com. Ähm und hier habe ich ein Testccount, also die freie Version. Ähm, da könnt ihr euch einfach registrieren unter antonioblago.com äh Register und ähm da solltet ihr euch einfach anmelden können und dann kriegt ihr",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 32.0,
+          "end_time": 64.0,
+          "duration": 32.0,
+          "transcript": "und ähm da solltet ihr euch einfach anmelden können und dann kriegt ihr einen Link äh E-Mail confirmation und dann habt ihr da ein gratis Account und könnt auch in dem Sinne ähm äh ein SEOjekt anlegen. Also hier habe ich quasi ein SEOjekt ähm angelegt. Ähm könnt ihr quasi euer EAT äh tracken von euren äh eigener Webseite und von euren Mitbewerbern. Da könnt ihr",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Kostenlos registrieren und Projekt anlegen",
+          "topic": null,
+          "category": null,
+          "content": "### Kostenlos registrieren und Projekt anlegen (00:32 - 01:04)\n\nund ähm da solltet ihr euch einfach anmelden können und dann kriegt ihr einen Link äh E-Mail confirmation und dann habt ihr da ein gratis Account und könnt auch in dem Sinne ähm äh ein SEOjekt anlegen. Also hier habe ich quasi ein SEOjekt ähm angelegt. Ähm könnt ihr quasi euer EAT äh tracken von euren äh eigener Webseite und von euren Mitbewerbern. Da könnt ihr",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 64.0,
+          "end_time": 96.0,
+          "duration": 32.0,
+          "transcript": "euren äh eigener Webseite und von euren Mitbewerbern. Da könnt ihr in der kostenfreien Version ein Projekt anlegen und bis zu fünf Konkurrenten anlegen. Die könnt ihr dann ähm dort auch hier noch mal tracken und seht äh quasi die Analyse Hinsicht äh Ansicht. Ähm habt ihr so ein Scoreverlauf. Ähm, genau. Und dann hier noch mal diese äh Indikatoren, also technisch, Präsenz, Trust, äh Authority, Expertise, ähm Experience.",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "E E A T Tracking und Konkurrenzvergleich",
+          "topic": null,
+          "category": null,
+          "content": "### E E A T Tracking und Konkurrenzvergleich (01:04 - 01:36)\n\neuren äh eigener Webseite und von euren Mitbewerbern. Da könnt ihr in der kostenfreien Version ein Projekt anlegen und bis zu fünf Konkurrenten anlegen. Die könnt ihr dann ähm dort auch hier noch mal tracken und seht äh quasi die Analyse Hinsicht äh Ansicht. Ähm habt ihr so ein Scoreverlauf. Ähm, genau. Und dann hier noch mal diese äh Indikatoren, also technisch, Präsenz, Trust, äh Authority, Expertise, ähm Experience.",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 3,
+          "start_time": 96.0,
+          "end_time": 117.0,
+          "duration": 21.0,
+          "transcript": "Trust, äh Authority, Expertise, ähm Experience. Und im Detail könnt ihr euch dann auch immer die Details noch mal anschauen äh von euren äh eigenen Webseite oder von euren Konkurrenten, wie die so aufgestellt ist. Ähm, genau. technische Basis in dem Sinne alles, was rund um äh Server Impressum so angeht, dann Experience",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Technische Basis, Experience, Expertise im Überblick",
+          "topic": null,
+          "category": null,
+          "content": "### Technische Basis, Experience, Expertise im Überblick (01:36 - 01:57)\n\nTrust, äh Authority, Expertise, ähm Experience. Und im Detail könnt ihr euch dann auch immer die Details noch mal anschauen äh von euren äh eigenen Webseite oder von euren Konkurrenten, wie die so aufgestellt ist. Ähm, genau. technische Basis in dem Sinne alles, was rund um äh Server Impressum so angeht, dann Experience",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 4,
+          "start_time": 117.0,
+          "end_time": 143.0,
+          "duration": 26.0,
+          "transcript": "Sinne alles, was rund um äh Server Impressum so angeht, dann Experience auch sehr wichtig, persönliche Erfahrung äh reinzubringen, Fachkompetenz, Content ähm dann Autorität, Branchenanerkennung äh Bewertung, genau Trustiness ist auch Vertrauen, Transparenz und dann die Online Präsenz auch noch mal Social Media äh in dem Sinne auch organisches Sichtbarkeit. Ähm, genau. Und dann seht ihr auch noch mal",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Authority, Trust und Onlinepräsenz verstehen",
+          "topic": null,
+          "category": null,
+          "content": "### Authority, Trust und Onlinepräsenz verstehen (01:57 - 02:23)\n\nSinne alles, was rund um äh Server Impressum so angeht, dann Experience auch sehr wichtig, persönliche Erfahrung äh reinzubringen, Fachkompetenz, Content ähm dann Autorität, Branchenanerkennung äh Bewertung, genau Trustiness ist auch Vertrauen, Transparenz und dann die Online Präsenz auch noch mal Social Media äh in dem Sinne auch organisches Sichtbarkeit. Ähm, genau. Und dann seht ihr auch noch mal",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 5,
+          "start_time": 143.0,
+          "end_time": 192.0,
+          "duration": 49.0,
+          "transcript": "Ähm, genau. Und dann seht ihr auch noch mal hier die Übersicht äh aller Analysen. Also, könnt ihr euch an einstellen, dass ihr quasi wöchentlich ähm das äh einmal analysiert und dann tracken lassen und äh dann bekommt ihr so eine Übersicht, was man machen müsste. Ähm, dann noch mal was erfindet. Hier z.B. die Zitate und Quellenangaben. Ähm, genau. Und dann zusätzlich habt ihr dann noch den äh SEO Copilot ähm wo auch dann noch mal äh ein Projekt verbinden könnt oder auch anlegen könnt. Ähm und da könnt ihr auch äh in den Projekten verwalten. ähm könnt ihr euch auch noch mal ähm",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Wöchentliche Analysen und Score Verlauf",
+          "topic": null,
+          "category": null,
+          "content": "### Wöchentliche Analysen und Score Verlauf (02:23 - 03:12)\n\nÄhm, genau. Und dann seht ihr auch noch mal hier die Übersicht äh aller Analysen. Also, könnt ihr euch an einstellen, dass ihr quasi wöchentlich ähm das äh einmal analysiert und dann tracken lassen und äh dann bekommt ihr so eine Übersicht, was man machen müsste. Ähm, dann noch mal was erfindet. Hier z.B. die Zitate und Quellenangaben. Ähm, genau. Und dann zusätzlich habt ihr dann noch den äh SEO Copilot ähm wo auch dann noch mal äh ein Projekt verbinden könnt oder auch anlegen könnt. Ähm und da könnt ihr auch äh in den Projekten verwalten. ähm könnt ihr euch auch noch mal ähm",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 6,
+          "start_time": 192.0,
+          "end_time": 236.0,
+          "duration": 44.0,
+          "transcript": "auch äh in den Projekten verwalten. ähm könnt ihr euch auch noch mal ähm dann in den Einstellungen auch ganz wichtig ähm äh quasi auch noch mal hier die Einstellung wöchentlich jeden Montag z.B. dass die Analyse durchläuft und dann auch äh was ist euer Projekttyp? äh dann Zielgruppe, deine Rolle im Unternehmen, deine Contentprache und dann seissen. Ähm, genau. Dann bekommst du eine E-Mail Benachrichtigung und auch äh wenn dein Score zu arg ähm abweicht, dann kriegst du auch noch mal eine äh Score äh Warnung in dem Sinne, Schwellenwertwarnung. Ähm,",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Projekt Einstellungen, Rollen, Zielgruppen",
+          "topic": null,
+          "category": null,
+          "content": "### Projekt Einstellungen, Rollen, Zielgruppen (03:12 - 03:56)\n\nauch äh in den Projekten verwalten. ähm könnt ihr euch auch noch mal ähm dann in den Einstellungen auch ganz wichtig ähm äh quasi auch noch mal hier die Einstellung wöchentlich jeden Montag z.B. dass die Analyse durchläuft und dann auch äh was ist euer Projekttyp? äh dann Zielgruppe, deine Rolle im Unternehmen, deine Contentprache und dann seissen. Ähm, genau. Dann bekommst du eine E-Mail Benachrichtigung und auch äh wenn dein Score zu arg ähm abweicht, dann kriegst du auch noch mal eine äh Score äh Warnung in dem Sinne, Schwellenwertwarnung. Ähm,",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 7,
+          "start_time": 236.0,
+          "end_time": 260.0,
+          "duration": 24.0,
+          "transcript": "Schwellenwertwarnung. Ähm, genau. Das ist super, wenn ihr da alles ausfüllt, ähm, dass die KI da auch immer die ganzen Daten hat. Ähm, und genau, dann könnt ihr z.B. hier auch ähm dann auch fragen, z.B. helf mir mein Eat zu verbessern und dann zieht er sich das Projekt ähm eure Daten dazu und dann hältst du dazu auch Anweisung. Ähm,",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Score Warnungen und Benachrichtigungen",
+          "topic": null,
+          "category": null,
+          "content": "### Score Warnungen und Benachrichtigungen (03:56 - 04:20)\n\nSchwellenwertwarnung. Ähm, genau. Das ist super, wenn ihr da alles ausfüllt, ähm, dass die KI da auch immer die ganzen Daten hat. Ähm, und genau, dann könnt ihr z.B. hier auch ähm dann auch fragen, z.B. helf mir mein Eat zu verbessern und dann zieht er sich das Projekt ähm eure Daten dazu und dann hältst du dazu auch Anweisung. Ähm,",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 8,
+          "start_time": 260.0,
+          "end_time": 288.0,
+          "duration": 28.0,
+          "transcript": "Projekt ähm eure Daten dazu und dann hältst du dazu auch Anweisung. Ähm, alles wird quasi gespeichert ähm unter Verlauf. Kannst du auch neue Unterhaltungen machen, wie bei Chat GBT. Ähm, und dann kriegst du auch immer so Empfehlungen. Äh, z.B. hier Medical Link Building und ähm dann bei jeder Ausführung äh kostet es halt Credits. Ähm und die kannst du auch aufladen separat. ähm oder du kannst ein Abonnement",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "KI Dialoge, Empfehlungen und Verlauf",
+          "topic": null,
+          "category": null,
+          "content": "### KI Dialoge, Empfehlungen und Verlauf (04:20 - 04:48)\n\nProjekt ähm eure Daten dazu und dann hältst du dazu auch Anweisung. Ähm, alles wird quasi gespeichert ähm unter Verlauf. Kannst du auch neue Unterhaltungen machen, wie bei Chat GBT. Ähm, und dann kriegst du auch immer so Empfehlungen. Äh, z.B. hier Medical Link Building und ähm dann bei jeder Ausführung äh kostet es halt Credits. Ähm und die kannst du auch aufladen separat. ähm oder du kannst ein Abonnement",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 9,
+          "start_time": 288.0,
+          "end_time": 328.0,
+          "duration": 40.0,
+          "transcript": "auch aufladen separat. ähm oder du kannst ein Abonnement abschließen. Ähm genau. Ansonsten kannst du hier auch alle möglichen Quick Actions durchführen, ähm wie Blockschreiben, äh Keywordempfehlung und äh du kannst hier auch quasi dann deine Keywords aus dem Prom ziehen. ähm muss nicht ähm alles so rauskopiert werden äh wie bei Chat GBT, sondern ich habe das so äh erstellt, dass man jetzt äh in dem Sinne auch gleich äh die Keywords einfach äh per Button rauskopieren kann und sie in deinem SEO Tool oder noch mal äh in ChatBT noch mal",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Credits, Abos und Quick Actions",
+          "topic": null,
+          "category": null,
+          "content": "### Credits, Abos und Quick Actions (04:48 - 05:28)\n\nauch aufladen separat. ähm oder du kannst ein Abonnement abschließen. Ähm genau. Ansonsten kannst du hier auch alle möglichen Quick Actions durchführen, ähm wie Blockschreiben, äh Keywordempfehlung und äh du kannst hier auch quasi dann deine Keywords aus dem Prom ziehen. ähm muss nicht ähm alles so rauskopiert werden äh wie bei Chat GBT, sondern ich habe das so äh erstellt, dass man jetzt äh in dem Sinne auch gleich äh die Keywords einfach äh per Button rauskopieren kann und sie in deinem SEO Tool oder noch mal äh in ChatBT noch mal",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 10,
+          "start_time": 328.0,
+          "end_time": 370.0,
+          "duration": 42.0,
+          "transcript": "rauskopieren kann und sie in deinem SEO Tool oder noch mal äh in ChatBT noch mal reinzupasten. Ähm genau, der erstellt jetzt hier z.B. eine ganze Outreach äh Agenda, wie man jetzt z.B. Backlinks aufbauen kann im medizinischen Bereich. Ähm, genau. Die die Strategie äh kannst du dann übernehmen und äh dann auch selber durchführen. Ähm, genau. Dann kannst du auch hier z.B. Keywords speichern drücken auch was ganz immer ganz hilfreich ist, wenn du es gut findest, auch hier hilfreich zu klicken. Ähm und ähm dann werden dann",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Keyword Extraction und Bloggenerator",
+          "topic": null,
+          "category": null,
+          "content": "### Keyword Extraction und Bloggenerator (05:28 - 06:10)\n\nrauskopieren kann und sie in deinem SEO Tool oder noch mal äh in ChatBT noch mal reinzupasten. Ähm genau, der erstellt jetzt hier z.B. eine ganze Outreach äh Agenda, wie man jetzt z.B. Backlinks aufbauen kann im medizinischen Bereich. Ähm, genau. Die die Strategie äh kannst du dann übernehmen und äh dann auch selber durchführen. Ähm, genau. Dann kannst du auch hier z.B. Keywords speichern drücken auch was ganz immer ganz hilfreich ist, wenn du es gut findest, auch hier hilfreich zu klicken. Ähm und ähm dann werden dann",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 11,
+          "start_time": 370.0,
+          "end_time": 413.0,
+          "duration": 43.0,
+          "transcript": "es gut findest, auch hier hilfreich zu klicken. Ähm und ähm dann werden dann halt auch äh Feedback zur Produktweiterentwicklung auch empfohlen, ne? Also z.B. jetzt hier z.B. die Keywords gespeichert, auch kategorisiert nach Longtail Fragen ähm Hauptteil und dann kannst du auch noch mal hier die Keywords kopieren oder äh für Chat GBT auch noch mal nutzen. Ähm genau mit quasi prompt. Ähm, genau. Und dann äh schreibt er hier dir einen Blogartikel mit diesem vorgefertigten Prompt. Genau. Ansonsten, wenn du Fragen hast,",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Keyword Speicherung und Produktfeedback",
+          "topic": null,
+          "category": null,
+          "content": "### Keyword Speicherung und Produktfeedback (06:10 - 06:53)\n\nes gut findest, auch hier hilfreich zu klicken. Ähm und ähm dann werden dann halt auch äh Feedback zur Produktweiterentwicklung auch empfohlen, ne? Also z.B. jetzt hier z.B. die Keywords gespeichert, auch kategorisiert nach Longtail Fragen ähm Hauptteil und dann kannst du auch noch mal hier die Keywords kopieren oder äh für Chat GBT auch noch mal nutzen. Ähm genau mit quasi prompt. Ähm, genau. Und dann äh schreibt er hier dir einen Blogartikel mit diesem vorgefertigten Prompt. Genau. Ansonsten, wenn du Fragen hast,",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 12,
+          "start_time": 413.0,
+          "end_time": 454,
+          "duration": 41.0,
+          "transcript": "mit diesem vorgefertigten Prompt. Genau. Ansonsten, wenn du Fragen hast, äh immer gerne hier an diese E-Mail richten oder über LinkedIn. Ähm, genau. Gibt bitte keine sensiblen oder Personen bezogenen Daten ein. Äh und ähm die KI ist auch nicht ganz fehlerfrei. Insofern ähm prüfe immer vorher, wenn du irgendwas tust, ähm ob das auch alles plausibel ist. Ähm genau. Und frage mich bitte eher, bevor du ähm nicht weißt, ob das wirklich was hilft. Genau. Und dann wünsche ich dir viel Erfolg und ähm freue mich auf dein Feedback und ja, viel Spaß.",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": "Hinweise, Kontakt und Schlusswort",
+          "topic": null,
+          "category": null,
+          "content": "### Hinweise, Kontakt und Schlusswort (06:53 - 07:34)\n\nmit diesem vorgefertigten Prompt. Genau. Ansonsten, wenn du Fragen hast, äh immer gerne hier an diese E-Mail richten oder über LinkedIn. Ähm, genau. Gibt bitte keine sensiblen oder Personen bezogenen Daten ein. Äh und ähm die KI ist auch nicht ganz fehlerfrei. Insofern ähm prüfe immer vorher, wenn du irgendwas tust, ähm ob das auch alles plausibel ist. Ähm genau. Und frage mich bitte eher, bevor du ähm nicht weißt, ob das wirklich was hilft. Genau. Und dann wünsche ich dir viel Erfolg und ähm freue mich auf dein Feedback und ja, viel Spaß.",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.6356394290924072,
+      "extracted_at": "2026-03-11T12:31:33Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 454.0,
+  "total_segments": 13,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.6356394290924072,
+  "warnings": [],
+  "errors": []
+}

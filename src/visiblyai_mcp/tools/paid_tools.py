@@ -336,6 +336,55 @@ def check_serp(
         return _handle_error(e)
 
 
+def check_pagespeed(
+    url: str,
+    strategy: str = "mobile",
+) -> str:
+    """Check PageSpeed and Core Web Vitals for a URL. Returns performance, accessibility, SEO scores, LCP, CLS, TBT, and optimization opportunities. Credits: 5."""
+    try:
+        client = _require_key()
+        result = client.check_pagespeed(url, strategy)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def audit_sitemap(
+    domain: str,
+) -> str:
+    """Audit a site's XML sitemap: total URLs, duplicates, broken links, lastmod coverage. Credits: 20."""
+    try:
+        client = _require_key()
+        result = client.audit_sitemap(domain)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def check_structured_data(
+    url: str,
+) -> str:
+    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5."""
+    try:
+        client = _require_key()
+        result = client.check_structured_data(url)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
+def check_hreflang(
+    url: str,
+) -> str:
+    """Validate hreflang annotations: x-default, language codes, broken targets, bidirectional linking. Credits: 10."""
+    try:
+        client = _require_key()
+        result = client.check_hreflang(url)
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
 def check_links(
     url: str,
 ) -> str:

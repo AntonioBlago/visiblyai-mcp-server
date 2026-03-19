@@ -1,0 +1,1983 @@
+{
+  "videos": [
+    {
+      "video_id": "o5HGyXgGlhA",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=o5HGyXgGlhA",
+      "file_path": null,
+      "title": "Google Search Console - Performance und Indexierung",
+      "description": "In diesem Video stelle ich die Google Search Console vor und gehe Schritt für Schritt durch die verschiedenen Funktionen. Ich zeige die Performance- und Leistungsübersicht, die Indexierung, wichtige Fehlermeldungen und wie man Seiten manuell entfernen lassen kann. Schau dir das Video an, um einen Überblick über die wichtigsten Funktionen der Google Search Console zu erhalten und zu erfahren, wie du sie effektiv nutzen kannst.",
+      "duration": 641.0,
+      "upload_date": "20251222",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 20,
+      "like_count": null,
+      "comment_count": null,
+      "tags": [],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi/o5HGyXgGlhA/maxresdefault.jpg",
+      "chapters": [],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "ja hallo also in der Lektion will ich",
+          "start": 0.32,
+          "end": 5.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jetzt die Google Search Kole noch mal",
+          "start": 3.0,
+          "end": 8.120000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "vorstellen in der Praxis so von dem",
+          "start": 5.08,
+          "end": 10.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Layout kannst sich natürlich noch mal",
+          "start": 8.12,
+          "end": 13.678999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ändern dann mir gerne Bescheid geben",
+          "start": 10.04,
+          "end": 16.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "insofern ist das jetzt eine",
+          "start": 13.679,
+          "end": 18.198999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "searchkonsole von einem Kunden",
+          "start": 16.24,
+          "end": 19.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die",
+          "start": 18.199,
+          "end": 21.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "datensensiblen Themen habe ich jetzt",
+          "start": 19.72,
+          "end": 23.479999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich versteckt",
+          "start": 21.6,
+          "end": 26.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und so sieht die jetzt quasi in der",
+          "start": 23.48,
+          "end": 30.880000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "overview also in der Übersicht aus und",
+          "start": 26.32,
+          "end": 32.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann gehen wir jetzt mal durch die",
+          "start": 30.88,
+          "end": 35.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verschiedenen Punkte",
+          "start": 32.64,
+          "end": 38.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann haben wir hier den wichtigsten",
+          "start": 35.239,
+          "end": 42.199999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Bereich nämlich die Performance und die",
+          "start": 38.28,
+          "end": 42.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Leistungsübersicht kann man hier",
+          "start": 42.239,
+          "end": 47.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bestimmte Urs noch mal checken hier die",
+          "start": 43.76,
+          "end": 49.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Indexierung ist auch sehr wichtig also",
+          "start": 47.239,
+          "end": 52.959999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "welche Seiten habt jetzt indexiert",
+          "start": 49.32,
+          "end": 56.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wie wo die",
+          "start": 52.96,
+          "end": 58.160000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sitemap",
+          "start": 56.16,
+          "end": 60.718999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinterlegt wollt ihr",
+          "start": 58.16,
+          "end": 63.718999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verschiedene Seiten manuell entfernen",
+          "start": 60.719,
+          "end": 67.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "lassen wie ist quasi die seitenerfahrung",
+          "start": 63.719,
+          "end": 71.32000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also die Nutzererfahrung auch ein sehr",
+          "start": 67.52,
+          "end": 74.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtiger Punkt die cor webweitals zu",
+          "start": 71.32,
+          "end": 77.91999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "berücksichtigen https Verschlüsselung",
+          "start": 74.96,
+          "end": 79.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist eigentlich",
+          "start": 77.92,
+          "end": 82.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Standard und falls ihr irgendwie",
+          "start": 79.079,
+          "end": 85.27999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Shopping Produkte hab wenn die auch",
+          "start": 82.64,
+          "end": 88.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gelistet",
+          "start": 85.28,
+          "end": 88.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "accelerated mobile",
+          "start": 88.159,
+          "end": 93.60000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist noch mal so ein bisschen für für",
+          "start": 90.72,
+          "end": 95.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mobile",
+          "start": 93.6,
+          "end": 97.15899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seitenansicht",
+          "start": 95.439,
+          "end": 99.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "optimierte",
+          "start": 97.159,
+          "end": 101.799,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Technik und dann hier noch mal so ein",
+          "start": 99.36,
+          "end": 104.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "paar Details pradcums",
+          "start": 101.799,
+          "end": 106.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "FAQs",
+          "start": 104.88,
+          "end": 108.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Reviews",
+          "start": 106.64,
+          "end": 113.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sitelinks searchbox also PR crums ist so",
+          "start": 108.56,
+          "end": 118.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "im Prinzip in Blog",
+          "start": 113.6,
+          "end": 120.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "beispielsweise wenn dann",
+          "start": 118.0,
+          "end": 124.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seitennavigation oben seht Blog Artikel",
+          "start": 120.0,
+          "end": 128.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und FQ sagt euch bestimmt das meist",
+          "start": 124.079,
+          "end": 132.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gestellte Fragen dann habt ihr auch",
+          "start": 128.959,
+          "end": 133.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer",
+          "start": 132.44,
+          "end": 135.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bewertungsnippets",
+          "start": 133.68,
+          "end": 137.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und rechts",
+          "start": 135.36,
+          "end": 141.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "daneben könnt ihr auch immer sitit links",
+          "start": 137.44,
+          "end": 144.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "darstellen auf eurer Homepage",
+          "start": 141.28,
+          "end": 146.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann könnt ihr auch",
+          "start": 144.319,
+          "end": 151.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier quasi Security und man",
+          "start": 146.68,
+          "end": 153.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das ist auch sehr wichtig wenn jetzt ihr",
+          "start": 151.319,
+          "end": 156.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gegen Seiten",
+          "start": 153.84,
+          "end": 159.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verstöße habt und dann google euch",
+          "start": 156.879,
+          "end": 162.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "irgendwie abmaht dann wird es hier",
+          "start": 159.48,
+          "end": 165.23899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "angezeigt und ja die weiteren Punkte",
+          "start": 162.72,
+          "end": 168.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "werden noch mal detaillierter dann",
+          "start": 165.239,
+          "end": 170.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eingehen genau also gehen wir jetzt mal",
+          "start": 168.12,
+          "end": 173.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Schritt für Schritt und zwar zunächst",
+          "start": 170.8,
+          "end": 176.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal natürlich in die Performance Ansicht",
+          "start": 173.959,
+          "end": 179.31900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also das ist die wichtigste und zwar in",
+          "start": 176.959,
+          "end": 180.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "den full",
+          "start": 179.319,
+          "end": 183.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "report genau und jetzt sehen wir hier",
+          "start": 180.76,
+          "end": 187.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schon mal die Leistungsübersicht und",
+          "start": 183.48,
+          "end": 190.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier im Blau quasi die",
+          "start": 187.0,
+          "end": 193.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "klickanzahl dann hier impression also",
+          "start": 190.28,
+          "end": 196.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wie viele Seitenaufrufe habt ihr gehabt",
+          "start": 193.28,
+          "end": 199.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchschnittliche clickthr rate also",
+          "start": 196.44,
+          "end": 200.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sind so",
+          "start": 199.239,
+          "end": 201.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Mikro",
+          "start": 200.2,
+          "end": 206.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Conversion Rates und dann hier die",
+          "start": 201.959,
+          "end": 208.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "average Position also die",
+          "start": 206.12,
+          "end": 210.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchschnittliche Ranking Position auf",
+          "start": 208.239,
+          "end": 213.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google und auf jeden Fall die",
+          "start": 210.92,
+          "end": 217.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verhältnisse in im Gesamt muss man immer",
+          "start": 213.959,
+          "end": 219.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "berücksichtigen also es hilft nicht nur",
+          "start": 217.36,
+          "end": 222.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "klickanzahl oder nur impression",
+          "start": 219.68,
+          "end": 224.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anzugucken sondern auch immer alle",
+          "start": 222.2,
+          "end": 227.79899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Zahlen in Verhältnis sich",
+          "start": 224.68,
+          "end": 231.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anzugucken weil es kann sein dass ihr",
+          "start": 227.799,
+          "end": 233.799,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "viel mehr Aufrufe habt als ihr",
+          "start": 231.36,
+          "end": 238.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Klicks und dann ist quasi die TTR nicht",
+          "start": 233.799,
+          "end": 241.76000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "so gut oder auch rum und das gilt dann",
+          "start": 238.0,
+          "end": 244.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer für die einzelnen Seiten auch zu",
+          "start": 241.76,
+          "end": 247.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "könnt ihr auch beispielsweise die",
+          "start": 244.84,
+          "end": 250.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "average CTA CTR",
+          "start": 247.92,
+          "end": 253.79899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "an zeigen lassen und die im",
+          "start": 250.68,
+          "end": 256.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchschnittlichen Bereich bei 2% das",
+          "start": 253.799,
+          "end": 258.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schon mal gut und auch die average",
+          "start": 256.16,
+          "end": 261.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Position und man sieht hier z.B dass die",
+          "start": 258.84,
+          "end": 263.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "average Position natürlich besser",
+          "start": 261.72,
+          "end": 266.32000000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "geworden ist mit der Zeit es kann sein",
+          "start": 263.759,
+          "end": 268.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "halt wenn ihr z.B sehr viele neue",
+          "start": 266.32,
+          "end": 272.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "aufrufe habt und eure Impressionen ganz",
+          "start": 268.919,
+          "end": 274.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "stark ansteigen dass eure average",
+          "start": 272.32,
+          "end": 277.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Position erstmal sinkt weil ihr für mehr",
+          "start": 274.16,
+          "end": 280.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword rank das ist am Anfang ganz oft",
+          "start": 277.039,
+          "end": 286.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "so dass wenn ihr erer für sehr wenige",
+          "start": 280.68,
+          "end": 289.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords ranked also für 10 20 Keywords",
+          "start": 286.039,
+          "end": 292.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann ist es noch nicht wirklich relevant",
+          "start": 289.759,
+          "end": 295.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann wenn ihr mal für 100 500 oder",
+          "start": 292.8,
+          "end": 297.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ta000 Keywords",
+          "start": 295.6,
+          "end": 300.40000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "rankt dann wird sich das irgendwann",
+          "start": 297.84,
+          "end": 303.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zwischen 20 und 30 so einpendeln im",
+          "start": 300.4,
+          "end": 306.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Durchschnitt wahrscheinlich und ähm",
+          "start": 303.84,
+          "end": 309.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau das immer auch wichtig zu",
+          "start": 306.759,
+          "end": 311.40000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "berücksichtigen genau und was ihr auch",
+          "start": 309.32,
+          "end": 313.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer machen solltet ist auf jeden Fall",
+          "start": 311.4,
+          "end": 318.31899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier natürlich verschiedene Abstände zu",
+          "start": 313.8,
+          "end": 320.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "analysieren aber das werden wir noch mal",
+          "start": 318.319,
+          "end": 323.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm später in einer anderen Folge noch",
+          "start": 320.44,
+          "end": 325.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal genauer",
+          "start": 323.759,
+          "end": 328.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchgehen genau erstmal die anderen",
+          "start": 325.039,
+          "end": 330.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Bereiche",
+          "start": 328.759,
+          "end": 333.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau page Indexierung ist ein sehr",
+          "start": 330.68,
+          "end": 336.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtiger Bereich und der sollte oft",
+          "start": 333.12,
+          "end": 339.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "überprüft werden dass alle relevanten",
+          "start": 336.8,
+          "end": 342.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seiten natürlich indexiert sind und alle",
+          "start": 339.44,
+          "end": 344.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht relevanten sollten nicht indexiert",
+          "start": 342.44,
+          "end": 346.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sein weil",
+          "start": 344.84,
+          "end": 349.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sonst kann es sein dass ihr Google mit",
+          "start": 346.0,
+          "end": 352.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "zu ir relelevanten Seiten vollspamt und",
+          "start": 349.0,
+          "end": 355.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das könnt auch euer Ranking",
+          "start": 352.56,
+          "end": 358.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "beeinflussen genau das könnt ihr hier",
+          "start": 355.96,
+          "end": 360.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch dann genau",
+          "start": 358.16,
+          "end": 364.88000000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "analysieren also es gibt den Fehler page",
+          "start": 360.56,
+          "end": 368.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder den nicht den Fehler den den Grund",
+          "start": 364.88,
+          "end": 370.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "warum die Seiten nicht indexiert sind",
+          "start": 368.52,
+          "end": 373.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder zum grauen Index gehören ist page",
+          "start": 370.96,
+          "end": 376.75899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Redirect also eine Umleitung das ist",
+          "start": 373.599,
+          "end": 379.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch valider",
+          "start": 376.759,
+          "end": 382.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall dann ein",
+          "start": 379.96,
+          "end": 385.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "alter native Seite mit dem richtigen",
+          "start": 382.599,
+          "end": 389.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kanonischen Tag",
+          "start": 385.919,
+          "end": 389.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall auf jeden Fall also wenn ihr eine",
+          "start": 390.24,
+          "end": 398.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seite mit einem kanonischen TEAG",
+          "start": 394.36,
+          "end": 400.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kennzeichnet dann sagt ihr damit",
+          "start": 398.479,
+          "end": 403.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eigentlich dass Google diese Seite schon",
+          "start": 400.16,
+          "end": 405.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mal indexiert habt aber dass sie ähnlich",
+          "start": 403.12,
+          "end": 408.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist zu der Seite die ihr als kanonisch",
+          "start": 405.919,
+          "end": 410.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bezeichnet habt und dann kann es auch",
+          "start": 408.4,
+          "end": 413.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "den Fehler geben dass Google sagt nein",
+          "start": 410.28,
+          "end": 415.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "an der andere Seite ist ähnlicher als",
+          "start": 413.16,
+          "end": 418.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die angezeigt habt als kanonisch und",
+          "start": 415.52,
+          "end": 421.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann würde das hier",
+          "start": 418.68,
+          "end": 425.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch angezeigt werden",
+          "start": 421.479,
+          "end": 428.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und genau und das ist z.B hier der",
+          "start": 425.319,
+          "end": 430.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fehler duplicate Google choose different",
+          "start": 428.199,
+          "end": 434.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Canonical Tag den User",
+          "start": 430.599,
+          "end": 437.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also Google bezeichnet hier eine andere",
+          "start": 434.639,
+          "end": 442.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seite als kanonisch als die der",
+          "start": 437.52,
+          "end": 446.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "User ja gekennzeichnet hat und da muss",
+          "start": 442.68,
+          "end": 448.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "man halt noch mal reingehen und sich",
+          "start": 446.4,
+          "end": 451.31899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anschauen warum das passiert ist genau",
+          "start": 448.28,
+          "end": 453.11999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann wichtig ist auf jeden Fall hier",
+          "start": 451.319,
+          "end": 454.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "not",
+          "start": 453.12,
+          "end": 456.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "found das sollte man auf jeden Fall",
+          "start": 454.28,
+          "end": 459.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "öfters überprüfen ob Google da alles",
+          "start": 456.879,
+          "end": 461.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "richtig macht natürlich kann man da",
+          "start": 459.919,
+          "end": 464.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht immer alles richtig machen weil",
+          "start": 461.72,
+          "end": 465.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google auch",
+          "start": 464.12,
+          "end": 468.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hfig mal nicht richtige 404",
+          "start": 465.0,
+          "end": 472.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anzeigt genau und dann gibt's auch noch",
+          "start": 468.8,
+          "end": 475.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann gibt's z.B auch den Fehler",
+          "start": 472.12,
+          "end": 478.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "duplicate und das sollte man auf jeden",
+          "start": 475.479,
+          "end": 481.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall auch berücksichtigen also wenn",
+          "start": 478.599,
+          "end": 484.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google eine duplikatseite gefunden hat",
+          "start": 481.199,
+          "end": 489.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann excluded by no Index Tag also quasi",
+          "start": 484.56,
+          "end": 490.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hab",
+          "start": 489.24,
+          "end": 492.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seiten als nicht",
+          "start": 490.0,
+          "end": 494.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "indexierbar bezeichnet das ist auch",
+          "start": 492.28,
+          "end": 499.19899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer wel wichtig dann Block bei robots",
+          "start": 494.759,
+          "end": 501.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "txt das ist genau was wir auch schon",
+          "start": 499.199,
+          "end": 505.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gesprochen haben dieser robots txt Datei",
+          "start": 501.879,
+          "end": 506.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Seiten habt ihr blockiert da sollt",
+          "start": 505.199,
+          "end": 508.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ihr natürlich immer gucken ob das die",
+          "start": 506.8,
+          "end": 512.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "richtigen Seiten sind und dann sieht man",
+          "start": 508.639,
+          "end": 514.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier auch noch mal andere Fehler bei",
+          "start": 512.08,
+          "end": 517.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "vier",
+          "start": 514.88,
+          "end": 521.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "issues und crawed currently not Index",
+          "start": 517.36,
+          "end": 524.839,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also die Seite hat Google gefunden aber",
+          "start": 521.76,
+          "end": 527.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es sie ist nicht indexiert diese sollte",
+          "start": 524.839,
+          "end": 529.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sollte man auch",
+          "start": 527.2,
+          "end": 532.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "öfters natürlich überprüfen und dann",
+          "start": 529.44,
+          "end": 535.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau schon erwähnt",
+          "start": 532.88,
+          "end": 538.4399999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "duplicate duplicate",
+          "start": 535.2,
+          "end": 542.9590000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google onical User also dass die",
+          "start": 538.44,
+          "end": 545.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kanonische Seite et was eine andere",
+          "start": 542.959,
+          "end": 546.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seite",
+          "start": 545.12,
+          "end": 549.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist genau und da gibt's noch natürlich",
+          "start": 546.399,
+          "end": 554.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "403 Fehler also der der Inhalt ist",
+          "start": 549.76,
+          "end": 556.8389999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "blockiert",
+          "start": 554.24,
+          "end": 556.839,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also der sollte natürlich nicht",
+          "start": 557.6,
+          "end": 564.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Inhalte Google öffentlich zugänglich",
+          "start": 561.6,
+          "end": 566.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "machen also z.B Mitgliederbereiche und",
+          "start": 564.12,
+          "end": 568.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "solche Fehler sind",
+          "start": 566.32,
+          "end": 571.0400000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das genau jetzt sind wir in dem Sitemap",
+          "start": 568.36,
+          "end": 572.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Bereich und das haben wir auch schon mal",
+          "start": 571.04,
+          "end": 575.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "besprochen dass die Sitemap sehr wichtig",
+          "start": 572.76,
+          "end": 577.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist für Google und zu sehen welche",
+          "start": 575.399,
+          "end": 581.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seiten ähm indexiert werden sollen",
+          "start": 577.2,
+          "end": 583.6400000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "m und hier könnt ihr quasi eure Sitemap",
+          "start": 581.2,
+          "end": 585.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einreichen da gibt ihr einfach dem fah",
+          "start": 583.64,
+          "end": 588.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein von der Sitemap oder dem Index der",
+          "start": 585.76,
+          "end": 591.4399999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sitemap und dann sieht ihr wie viele",
+          "start": 588.519,
+          "end": 593.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Seiten dort gelesen worden sind und ob",
+          "start": 591.44,
+          "end": 595.6800000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es erfolgreich",
+          "start": 593.76,
+          "end": 599.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh gelesen worden ist eure Sitemap",
+          "start": 595.68,
+          "end": 602.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau in dem Bereich Removals da könnt",
+          "start": 599.6,
+          "end": 606.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ihr eure Seiten manuell entfernen lassen",
+          "start": 602.64,
+          "end": 612.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also wenn ihr z.B Seiten 404 oder so als",
+          "start": 606.6,
+          "end": 615.8000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "404 Fehler entdeckt worden sind durch",
+          "start": 612.68,
+          "end": 617.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Google und die wollte durch Google gar",
+          "start": 615.8,
+          "end": 618.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht",
+          "start": 617.76,
+          "end": 621.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mehr auffindbar machen dann könnt ihr",
+          "start": 618.76,
+          "end": 625.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich auch hier bitte berücksichtige",
+          "start": 621.56,
+          "end": 627.279,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Seiten nicht dann könnt ihr diese",
+          "start": 625.0,
+          "end": 631.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier auch manuell",
+          "start": 627.279,
+          "end": 633.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einreichen genau und in den nächsten",
+          "start": 631.04,
+          "end": 635.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Lektionen werden wir jetzt noch mal die",
+          "start": 633.64,
+          "end": 640.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "anderen Bereiche äh durchgehen und genau",
+          "start": 635.76,
+          "end": 643.279,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bis gleich",
+          "start": 640.04,
+          "end": 643.279,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 120.0,
+          "duration": 120.0,
+          "transcript": "ja hallo also in der Lektion will ich jetzt die Google Search Kole noch mal vorstellen in der Praxis so von dem Layout kannst sich natürlich noch mal ändern dann mir gerne Bescheid geben insofern ist das jetzt eine searchkonsole von einem Kunden die datensensiblen Themen habe ich jetzt natürlich versteckt und so sieht die jetzt quasi in der overview also in der Übersicht aus und dann gehen wir jetzt mal durch die verschiedenen Punkte und dann haben wir hier den wichtigsten Bereich nämlich die Performance und die Leistungsübersicht kann man hier bestimmte Urs noch mal checken hier die Indexierung ist auch sehr wichtig also welche Seiten habt jetzt indexiert wie wo die Sitemap hinterlegt wollt ihr verschiedene Seiten manuell entfernen lassen wie ist quasi die seitenerfahrung also die Nutzererfahrung auch ein sehr wichtiger Punkt die cor webweitals zu berücksichtigen https Verschlüsselung ist eigentlich Standard und falls ihr irgendwie Shopping Produkte hab wenn die auch gelistet accelerated mobile ist noch mal so ein bisschen für für mobile Seitenansicht optimierte Technik und dann hier noch mal so ein paar Details pradcums FAQs Reviews Sitelinks searchbox also PR crums ist so im Prinzip in Blog beispielsweise wenn dann",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (00:00 - 02:00)\n\nja hallo also in der Lektion will ich jetzt die Google Search Kole noch mal vorstellen in der Praxis so von dem Layout kannst sich natürlich noch mal ändern dann mir gerne Bescheid geben insofern ist das jetzt eine searchkonsole von einem Kunden die datensensiblen Themen habe ich jetzt natürlich versteckt und so sieht die jetzt quasi in der overview also in der Übersicht aus und dann gehen wir jetzt mal durch die verschiedenen Punkte und dann haben wir hier den wichtigsten Bereich nämlich die Performance und die Leistungsübersicht kann man hier bestimmte Urs noch mal checken hier die Indexierung ist auch sehr wichtig also welche Seiten habt jetzt indexiert wie wo die Sitemap hinterlegt wollt ihr verschiedene Seiten manuell entfernen lassen wie ist quasi die seitenerfahrung also die Nutzererfahrung auch ein sehr wichtiger Punkt die cor webweitals zu berücksichtigen https Verschlüsselung ist eigentlich Standard und falls ihr irgendwie Shopping Produkte hab wenn die auch gelistet accelerated mobile ist noch mal so ein bisschen für für mobile Seitenansicht optimierte Technik und dann hier noch mal so ein paar Details pradcums FAQs Reviews Sitelinks searchbox also PR crums ist so im Prinzip in Blog beispielsweise wenn dann",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 120.0,
+          "end_time": 240.0,
+          "duration": 120.0,
+          "transcript": "beispielsweise wenn dann Seitennavigation oben seht Blog Artikel und FQ sagt euch bestimmt das meist gestellte Fragen dann habt ihr auch immer bewertungsnippets und rechts daneben könnt ihr auch immer sitit links darstellen auf eurer Homepage dann könnt ihr auch hier quasi Security und man das ist auch sehr wichtig wenn jetzt ihr gegen Seiten Verstöße habt und dann google euch irgendwie abmaht dann wird es hier angezeigt und ja die weiteren Punkte werden noch mal detaillierter dann eingehen genau also gehen wir jetzt mal Schritt für Schritt und zwar zunächst mal natürlich in die Performance Ansicht also das ist die wichtigste und zwar in den full report genau und jetzt sehen wir hier schon mal die Leistungsübersicht und hier im Blau quasi die klickanzahl dann hier impression also wie viele Seitenaufrufe habt ihr gehabt durchschnittliche clickthr rate also sind so Mikro Conversion Rates und dann hier die average Position also die durchschnittliche Ranking Position auf Google und auf jeden Fall die Verhältnisse in im Gesamt muss man immer berücksichtigen also es hilft nicht nur klickanzahl oder nur impression anzugucken sondern auch immer alle Zahlen in Verhältnis sich anzugucken weil es kann sein dass ihr viel mehr Aufrufe habt als ihr Klicks und dann ist quasi die TTR nicht so gut oder auch rum und das gilt dann",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (02:00 - 04:00)\n\nbeispielsweise wenn dann Seitennavigation oben seht Blog Artikel und FQ sagt euch bestimmt das meist gestellte Fragen dann habt ihr auch immer bewertungsnippets und rechts daneben könnt ihr auch immer sitit links darstellen auf eurer Homepage dann könnt ihr auch hier quasi Security und man das ist auch sehr wichtig wenn jetzt ihr gegen Seiten Verstöße habt und dann google euch irgendwie abmaht dann wird es hier angezeigt und ja die weiteren Punkte werden noch mal detaillierter dann eingehen genau also gehen wir jetzt mal Schritt für Schritt und zwar zunächst mal natürlich in die Performance Ansicht also das ist die wichtigste und zwar in den full report genau und jetzt sehen wir hier schon mal die Leistungsübersicht und hier im Blau quasi die klickanzahl dann hier impression also wie viele Seitenaufrufe habt ihr gehabt durchschnittliche clickthr rate also sind so Mikro Conversion Rates und dann hier die average Position also die durchschnittliche Ranking Position auf Google und auf jeden Fall die Verhältnisse in im Gesamt muss man immer berücksichtigen also es hilft nicht nur klickanzahl oder nur impression anzugucken sondern auch immer alle Zahlen in Verhältnis sich anzugucken weil es kann sein dass ihr viel mehr Aufrufe habt als ihr Klicks und dann ist quasi die TTR nicht so gut oder auch rum und das gilt dann",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 240.0,
+          "end_time": 360.0,
+          "duration": 120.0,
+          "transcript": "Klicks und dann ist quasi die TTR nicht so gut oder auch rum und das gilt dann immer für die einzelnen Seiten auch zu könnt ihr auch beispielsweise die average CTA CTR an zeigen lassen und die im durchschnittlichen Bereich bei 2% das schon mal gut und auch die average Position und man sieht hier z.B dass die average Position natürlich besser geworden ist mit der Zeit es kann sein halt wenn ihr z.B sehr viele neue aufrufe habt und eure Impressionen ganz stark ansteigen dass eure average Position erstmal sinkt weil ihr für mehr Keyword rank das ist am Anfang ganz oft so dass wenn ihr erer für sehr wenige Keywords ranked also für 10 20 Keywords dann ist es noch nicht wirklich relevant und dann wenn ihr mal für 100 500 oder ta000 Keywords rankt dann wird sich das irgendwann zwischen 20 und 30 so einpendeln im Durchschnitt wahrscheinlich und ähm genau das immer auch wichtig zu berücksichtigen genau und was ihr auch immer machen solltet ist auf jeden Fall hier natürlich verschiedene Abstände zu analysieren aber das werden wir noch mal ähm später in einer anderen Folge noch mal genauer durchgehen genau erstmal die anderen Bereiche genau page Indexierung ist ein sehr wichtiger Bereich und der sollte oft überprüft werden dass alle relevanten Seiten natürlich indexiert sind und alle nicht relevanten sollten nicht indexiert sein weil sonst kann es sein dass ihr Google mit zu ir relelevanten Seiten vollspamt und das könnt auch euer Ranking beeinflussen genau das könnt ihr hier auch dann genau",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (04:00 - 06:00)\n\nKlicks und dann ist quasi die TTR nicht so gut oder auch rum und das gilt dann immer für die einzelnen Seiten auch zu könnt ihr auch beispielsweise die average CTA CTR an zeigen lassen und die im durchschnittlichen Bereich bei 2% das schon mal gut und auch die average Position und man sieht hier z.B dass die average Position natürlich besser geworden ist mit der Zeit es kann sein halt wenn ihr z.B sehr viele neue aufrufe habt und eure Impressionen ganz stark ansteigen dass eure average Position erstmal sinkt weil ihr für mehr Keyword rank das ist am Anfang ganz oft so dass wenn ihr erer für sehr wenige Keywords ranked also für 10 20 Keywords dann ist es noch nicht wirklich relevant und dann wenn ihr mal für 100 500 oder ta000 Keywords rankt dann wird sich das irgendwann zwischen 20 und 30 so einpendeln im Durchschnitt wahrscheinlich und ähm genau das immer auch wichtig zu berücksichtigen genau und was ihr auch immer machen solltet ist auf jeden Fall hier natürlich verschiedene Abstände zu analysieren aber das werden wir noch mal ähm später in einer anderen Folge noch mal genauer durchgehen genau erstmal die anderen Bereiche genau page Indexierung ist ein sehr wichtiger Bereich und der sollte oft überprüft werden dass alle relevanten Seiten natürlich indexiert sind und alle nicht relevanten sollten nicht indexiert sein weil sonst kann es sein dass ihr Google mit zu ir relelevanten Seiten vollspamt und das könnt auch euer Ranking beeinflussen genau das könnt ihr hier auch dann genau",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 3,
+          "start_time": 360.0,
+          "end_time": 480.0,
+          "duration": 120.0,
+          "transcript": "beeinflussen genau das könnt ihr hier auch dann genau analysieren also es gibt den Fehler page oder den nicht den Fehler den den Grund warum die Seiten nicht indexiert sind oder zum grauen Index gehören ist page Redirect also eine Umleitung das ist auch valider Fall dann ein alter native Seite mit dem richtigen kanonischen Tag Fall auf jeden Fall also wenn ihr eine Seite mit einem kanonischen TEAG kennzeichnet dann sagt ihr damit eigentlich dass Google diese Seite schon mal indexiert habt aber dass sie ähnlich ist zu der Seite die ihr als kanonisch bezeichnet habt und dann kann es auch den Fehler geben dass Google sagt nein an der andere Seite ist ähnlicher als die angezeigt habt als kanonisch und dann würde das hier auch angezeigt werden und genau und das ist z.B hier der Fehler duplicate Google choose different Canonical Tag den User also Google bezeichnet hier eine andere Seite als kanonisch als die der User ja gekennzeichnet hat und da muss man halt noch mal reingehen und sich anschauen warum das passiert ist genau und dann wichtig ist auf jeden Fall hier not found das sollte man auf jeden Fall öfters überprüfen ob Google da alles richtig macht natürlich kann man da nicht immer alles richtig machen weil Google auch hfig mal nicht richtige 404 anzeigt genau und dann gibt's auch noch dann gibt's z.B auch den Fehler duplicate und das sollte man auf jeden Fall auch berücksichtigen also wenn",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (06:00 - 08:00)\n\nbeeinflussen genau das könnt ihr hier auch dann genau analysieren also es gibt den Fehler page oder den nicht den Fehler den den Grund warum die Seiten nicht indexiert sind oder zum grauen Index gehören ist page Redirect also eine Umleitung das ist auch valider Fall dann ein alter native Seite mit dem richtigen kanonischen Tag Fall auf jeden Fall also wenn ihr eine Seite mit einem kanonischen TEAG kennzeichnet dann sagt ihr damit eigentlich dass Google diese Seite schon mal indexiert habt aber dass sie ähnlich ist zu der Seite die ihr als kanonisch bezeichnet habt und dann kann es auch den Fehler geben dass Google sagt nein an der andere Seite ist ähnlicher als die angezeigt habt als kanonisch und dann würde das hier auch angezeigt werden und genau und das ist z.B hier der Fehler duplicate Google choose different Canonical Tag den User also Google bezeichnet hier eine andere Seite als kanonisch als die der User ja gekennzeichnet hat und da muss man halt noch mal reingehen und sich anschauen warum das passiert ist genau und dann wichtig ist auf jeden Fall hier not found das sollte man auf jeden Fall öfters überprüfen ob Google da alles richtig macht natürlich kann man da nicht immer alles richtig machen weil Google auch hfig mal nicht richtige 404 anzeigt genau und dann gibt's auch noch dann gibt's z.B auch den Fehler duplicate und das sollte man auf jeden Fall auch berücksichtigen also wenn",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 4,
+          "start_time": 480.0,
+          "end_time": 600.0,
+          "duration": 120.0,
+          "transcript": "duplicate und das sollte man auf jeden Fall auch berücksichtigen also wenn Google eine duplikatseite gefunden hat dann excluded by no Index Tag also quasi hab Seiten als nicht indexierbar bezeichnet das ist auch immer wel wichtig dann Block bei robots txt das ist genau was wir auch schon gesprochen haben dieser robots txt Datei die Seiten habt ihr blockiert da sollt ihr natürlich immer gucken ob das die richtigen Seiten sind und dann sieht man hier auch noch mal andere Fehler bei vier issues und crawed currently not Index also die Seite hat Google gefunden aber es sie ist nicht indexiert diese sollte sollte man auch öfters natürlich überprüfen und dann genau schon erwähnt duplicate duplicate Google onical User also dass die kanonische Seite et was eine andere Seite ist genau und da gibt's noch natürlich 403 Fehler also der der Inhalt ist blockiert also der sollte natürlich nicht die Inhalte Google öffentlich zugänglich machen also z.B Mitgliederbereiche und solche Fehler sind das genau jetzt sind wir in dem Sitemap Bereich und das haben wir auch schon mal besprochen dass die Sitemap sehr wichtig ist für Google und zu sehen welche Seiten ähm indexiert werden sollen m und hier könnt ihr quasi eure Sitemap einreichen da gibt ihr einfach dem fah ein von der Sitemap oder dem Index der Sitemap und dann sieht ihr wie viele Seiten dort gelesen worden sind und ob es erfolgreich äh gelesen worden ist eure Sitemap genau in dem Bereich Removals da könnt",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (08:00 - 10:00)\n\nduplicate und das sollte man auf jeden Fall auch berücksichtigen also wenn Google eine duplikatseite gefunden hat dann excluded by no Index Tag also quasi hab Seiten als nicht indexierbar bezeichnet das ist auch immer wel wichtig dann Block bei robots txt das ist genau was wir auch schon gesprochen haben dieser robots txt Datei die Seiten habt ihr blockiert da sollt ihr natürlich immer gucken ob das die richtigen Seiten sind und dann sieht man hier auch noch mal andere Fehler bei vier issues und crawed currently not Index also die Seite hat Google gefunden aber es sie ist nicht indexiert diese sollte sollte man auch öfters natürlich überprüfen und dann genau schon erwähnt duplicate duplicate Google onical User also dass die kanonische Seite et was eine andere Seite ist genau und da gibt's noch natürlich 403 Fehler also der der Inhalt ist blockiert also der sollte natürlich nicht die Inhalte Google öffentlich zugänglich machen also z.B Mitgliederbereiche und solche Fehler sind das genau jetzt sind wir in dem Sitemap Bereich und das haben wir auch schon mal besprochen dass die Sitemap sehr wichtig ist für Google und zu sehen welche Seiten ähm indexiert werden sollen m und hier könnt ihr quasi eure Sitemap einreichen da gibt ihr einfach dem fah ein von der Sitemap oder dem Index der Sitemap und dann sieht ihr wie viele Seiten dort gelesen worden sind und ob es erfolgreich äh gelesen worden ist eure Sitemap genau in dem Bereich Removals da könnt",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 5,
+          "start_time": 600.0,
+          "end_time": 641.0,
+          "duration": 41.0,
+          "transcript": "äh gelesen worden ist eure Sitemap genau in dem Bereich Removals da könnt ihr eure Seiten manuell entfernen lassen also wenn ihr z.B Seiten 404 oder so als 404 Fehler entdeckt worden sind durch Google und die wollte durch Google gar nicht mehr auffindbar machen dann könnt ihr natürlich auch hier bitte berücksichtige die Seiten nicht dann könnt ihr diese hier auch manuell einreichen genau und in den nächsten Lektionen werden wir jetzt noch mal die anderen Bereiche äh durchgehen und genau bis gleich",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (10:00 - 10:41)\n\näh gelesen worden ist eure Sitemap genau in dem Bereich Removals da könnt ihr eure Seiten manuell entfernen lassen also wenn ihr z.B Seiten 404 oder so als 404 Fehler entdeckt worden sind durch Google und die wollte durch Google gar nicht mehr auffindbar machen dann könnt ihr natürlich auch hier bitte berücksichtige die Seiten nicht dann könnt ihr diese hier auch manuell einreichen genau und in den nächsten Lektionen werden wir jetzt noch mal die anderen Bereiche äh durchgehen und genau bis gleich",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.55826473236084,
+      "extracted_at": "2026-03-11T12:31:26Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 641.0,
+  "total_segments": 6,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.55826473236084,
+  "warnings": [],
+  "errors": []
+}

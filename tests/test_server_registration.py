@@ -15,7 +15,7 @@ EXPECTED_TOOLS = {
     "get_account_info",
     "list_locations",
     "get_skill",
-    # Paid (15)
+    # Paid (19)
     "classify_keywords_advanced",
     "get_traffic_snapshot",
     "get_historical_traffic",
@@ -28,6 +28,10 @@ EXPECTED_TOOLS = {
     "onpage_analysis",
     "check_links",
     "check_serp",
+    "check_pagespeed",
+    "audit_sitemap",
+    "check_structured_data",
+    "check_hreflang",
     "seo_agent",
     "seo_workflow",
     "query_knowledge_base",
@@ -66,7 +70,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 28, f"Expected 28 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 32, f"Expected 32 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         server_py = pathlib.Path(__file__).parent.parent / "src" / "visiblyai_mcp" / "server.py"

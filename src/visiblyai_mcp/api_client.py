@@ -106,6 +106,18 @@ class VisiblyAIClient:
             "keyword": keyword, "location": location, "language": language, "depth": depth
         })
 
+    def check_pagespeed(self, url: str, strategy: str = "mobile") -> dict:
+        return self._post("/tools/check-pagespeed", {"url": url, "strategy": strategy})
+
+    def audit_sitemap(self, domain: str) -> dict:
+        return self._post("/tools/audit-sitemap", {"domain": domain})
+
+    def check_structured_data(self, url: str) -> dict:
+        return self._post("/tools/check-structured-data", {"url": url})
+
+    def check_hreflang(self, url: str) -> dict:
+        return self._post("/tools/check-hreflang", {"url": url})
+
     def check_links(self, url: str) -> dict:
         return self._post("/tools/check-links", {"url": url})
 

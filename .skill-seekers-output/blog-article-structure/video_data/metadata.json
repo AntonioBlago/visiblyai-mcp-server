@@ -1,0 +1,1203 @@
+{
+  "videos": [
+    {
+      "video_id": "JIzm5OumLEI",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=JIzm5OumLEI",
+      "file_path": null,
+      "title": "Aufbau des optimalen Blogartikels 📝",
+      "description": "Hier präsentiere ich eine Blog Checkliste für den optimalen Aufbau eines Blogartikels. Wichtige Punkte sind Inside-Informationen über die Zielgruppe, ein gut strukturiertes Layout für Mensch und Maschine, interne und externe Verlinkungen, ansprechende Gestaltungselemente wie Überschriften und Listen, sowie die Verwendung von Bildern und Videos. Am Ende wird die Bedeutung von SEO-Optimierungen wie Meta-Tags und aussagekräftigen Titeln hervorgehoben. Achte besonders auf die genannten Punkte, um deinen Blogartikel zu optimieren.\n\n👉 Erfahre, worauf es bei der SEO-Analyse ankommt und wie du direkt umsetzbare Erkenntnisse gewinnst.\n\n🚀 Weiterführende Links und Tutorials aus dem Video:  \n\n1️⃣ E-Commerce SEO Checkliste:  \n👉 https://antonioblago.de/ecom-seo-checkliste\n\n2️⃣ SEO Basic Checkliste:  \n👉 https://antonioblago.de/seo-checkliste-notion  \n\n3️⃣ Google Search Console Guide:  \nhttps://antonioblago.de/seo/google-search-console-ein-ueberblick/\n\nYouTube Playlisten:\n- SEO 101 für Starter: https://www.youtube.com/playlist?list=PLqwPA5D-8afQhKEHICMhC8HRYIDnf_ieL\n- SEO AI Automatisierung: https://www.youtube.com/playlist?list=PLqwPA5D-8afTmjm7pHYYiSOzo4xowlOe3\n- Data Science SEO: https://www.youtube.com/playlist?list=PLqwPA5D-8afQEeFYdZds_-9ItLS95jUL4\n- E-Com/ Saas SEO Analysen: https://www.youtube.com/playlist?list=PLqwPA5D-8afTbcvNcVarwApbf7NIXlYhc\n- Local SEO Guide: https://www.youtube.com/playlist?list=PLqwPA5D-8afTGnRi0tZU5nF-_4qoWnyHO\n- Google Search Guide: https://www.youtube.com/playlist?list=PLqwPA5D-8afRe5BNKEIjUjjlVNopnhPTq\n\n--- \n\n🤝 Kurzfristige SEO-Beratung:  \n👉 https://antonioblago.de/beratung  \n\n🗓️ Projektanfragen:  \n👉 https://antonioblago.de/termin  \n\n📍Local SEO Kurs Online:\n👉 https://antonioblago.de/mitglieder/local-seo-mini-kurs/\n\n---\n\n🌐 Lass uns vernetzen:  \n📸 Instagram: https://www.instagram.com/seo_optimierung/  \n💼 LinkedIn: http://www.linkedin.com/in/antonioblago/  \n\n---\n\n🎥 Feedback oder Fragen? Schreib mir gerne in die Kommentare! 😊  \n🔔 Vergiss nicht zu abonnieren und die Glocke zu aktivieren, um keine SEO-Tipps mehr zu verpassen! 🚀",
+      "duration": 369.0,
+      "upload_date": "20250607",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 17,
+      "like_count": null,
+      "comment_count": null,
+      "tags": [],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi/JIzm5OumLEI/maxresdefault.jpg",
+      "chapters": [],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "ja hallo und zwar kommen jetzt hier zu",
+          "start": 0.799,
+          "end": 5.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einer Blog Checkliste also wie du den",
+          "start": 2.8,
+          "end": 8.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "optimalen Blogartikel aufbaust und da",
+          "start": 5.4,
+          "end": 10.719000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "habe ich dir auch eine nützliche",
+          "start": 8.92,
+          "end": 12.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Checkliste",
+          "start": 10.719,
+          "end": 17.759999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gebaut die ich auch immer nutze und da",
+          "start": 12.24,
+          "end": 18.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kannst du auf jeden Fall immer",
+          "start": 17.76,
+          "end": 20.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchgehen wenn du ein Blogartikel",
+          "start": 18.96,
+          "end": 21.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "schreiben willst oder auch noch mal",
+          "start": 20.48,
+          "end": 24.560000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "durchgehen willst also es immer wichtig",
+          "start": 21.92,
+          "end": 27.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich dass du in einem Blogartikel",
+          "start": 24.56,
+          "end": 29.479999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "möglichst insideer Information hast über",
+          "start": 27.039,
+          "end": 31.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Zielgruppe Interviews",
+          "start": 29.48,
+          "end": 33.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "erfahrungsberichtig oder Umfragen ne das",
+          "start": 31.36,
+          "end": 36.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "macht deinen Blogartikel möglichst",
+          "start": 33.6,
+          "end": 39.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einzigartig und",
+          "start": 36.96,
+          "end": 42.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht kopierbar genau und dann kommt",
+          "start": 39.079,
+          "end": 44.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kommen wir quasi auch dann zum Layout",
+          "start": 42.399,
+          "end": 47.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also ist den Content optimal organisiert",
+          "start": 44.96,
+          "end": 50.719,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "es geht quasi immer darum dass der",
+          "start": 47.68,
+          "end": 52.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Mensch einerseits natürlich sich in so",
+          "start": 50.719,
+          "end": 54.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einem Blogartikel gut zcht findet aber",
+          "start": 52.76,
+          "end": 57.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch die Suchmaschine natürlich alles",
+          "start": 54.84,
+          "end": 60.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "optimal vorfindet ne also",
+          "start": 57.68,
+          "end": 64.199,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Mensch Maschine äh Verhältnis auf jeden",
+          "start": 60.92,
+          "end": 68.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall optimal genutzt ist und",
+          "start": 64.199,
+          "end": 71.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dafür aus SEO Perspektive ist auf jeden",
+          "start": 68.08,
+          "end": 74.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall wichtig dass du auf jeden Fall in",
+          "start": 71.0,
+          "end": 77.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deinem Blog interne Verlinkung auch",
+          "start": 74.479,
+          "end": 79.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "machst also mindestens fünf andere",
+          "start": 77.479,
+          "end": 81.25,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Artikel",
+          "start": 79.6,
+          "end": 83.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "[Musik]",
+          "start": 81.25,
+          "end": 86.759,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verlinkst also auch andere Unterseiten",
+          "start": 83.28,
+          "end": 89.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder andere Blogartikel oder auch dein",
+          "start": 86.759,
+          "end": 92.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Angebot Seite mit",
+          "start": 89.4,
+          "end": 95.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verlinkst dann natürlich auch CTA",
+          "start": 92.04,
+          "end": 98.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "beispielsweise setzen zu deinem",
+          "start": 95.68,
+          "end": 100.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Angebot",
+          "start": 98.68,
+          "end": 103.60000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau genau und dann externe verlenkung",
+          "start": 100.28,
+          "end": 108.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch setzt also die",
+          "start": 103.6,
+          "end": 111.15899999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "externverlenkung kannst du auf jeden",
+          "start": 108.119,
+          "end": 115.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall auch auf follow setzen wenn diese",
+          "start": 111.159,
+          "end": 118.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch eine gute Quelle sind also",
+          "start": 115.119,
+          "end": 121.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "z.B seriöse Quellen also keine",
+          "start": 118.159,
+          "end": 123.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "irgendwelche Angebotsseiten oder",
+          "start": 121.0,
+          "end": 125.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Affiliate links dann solltest du dir auf",
+          "start": 123.64,
+          "end": 128.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jeden Fall auf noofollow oder Sponsor",
+          "start": 125.96,
+          "end": 130.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "setzen ähm ansonsten wenn du",
+          "start": 128.119,
+          "end": 133.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "irgendwelche wissenschaftlichen Artikel",
+          "start": 130.879,
+          "end": 136.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh zitierst beispielsweise dann solltest",
+          "start": 133.76,
+          "end": 137.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "du dir auf jeden Fall auf follow setzen",
+          "start": 136.0,
+          "end": 139.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder",
+          "start": 137.76,
+          "end": 143.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm seriöse Quellen wie andere",
+          "start": 139.239,
+          "end": 145.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Blogartikel dann solltest du auf jeden",
+          "start": 143.44,
+          "end": 148.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fall auch ein Inhaltsverzeichnis haben",
+          "start": 145.68,
+          "end": 151.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm ein von die immer auch eine",
+          "start": 148.64,
+          "end": 153.39999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Autobiografie und natürlich auch",
+          "start": 151.36,
+          "end": 157.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "weiterführende Blogartikel zum Thema das",
+          "start": 153.4,
+          "end": 160.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "weiteren ist natürlich auch wichtig dass",
+          "start": 157.56,
+          "end": 163.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "du einen ansprechenden Titel hast der",
+          "start": 160.2,
+          "end": 165.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch natürlich",
+          "start": 163.599,
+          "end": 168.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "SEO Aspekte beinhaltet also das wichtige",
+          "start": 165.12,
+          "end": 172.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword und dass er auch gut lesbar ist",
+          "start": 168.319,
+          "end": 175.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder ansprechbar lesbar ist für den",
+          "start": 172.44,
+          "end": 178.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Leser zusätzlich sollten deine Absätze",
+          "start": 175.2,
+          "end": 180.83999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht zu lang sein maximal zwei bis drei",
+          "start": 178.159,
+          "end": 183.07999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Sätze nicht zu verschachtelt eher",
+          "start": 180.84,
+          "end": 186.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kürzere und ausgewogene Sprachmelodie",
+          "start": 183.08,
+          "end": 190.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzen wenn möglich solltest du Listen",
+          "start": 186.2,
+          "end": 192.23899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "bevorzugen",
+          "start": 190.68,
+          "end": 195.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also nummerierte Listen",
+          "start": 192.239,
+          "end": 197.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder normale",
+          "start": 195.4,
+          "end": 200.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Listen immer natürlich auch Bilder",
+          "start": 197.76,
+          "end": 202.159,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzen das lockert so ein bisschen den",
+          "start": 200.28,
+          "end": 205.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Inhalt auf die Bilder immer mit demem",
+          "start": 202.159,
+          "end": 207.48,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "altteag hinterlegen das mit Keywords",
+          "start": 205.04,
+          "end": 211.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "oder auch ausführlichen beschreib",
+          "start": 207.48,
+          "end": 213.39999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Youtube Videos auf jeden Fall auch",
+          "start": 211.319,
+          "end": 215.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verlinken wenn du welche hast oder",
+          "start": 213.4,
+          "end": 219.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "welche auch relevant sind in dem",
+          "start": 215.56,
+          "end": 219.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Kontext Tools auch immer mit",
+          "start": 219.48,
+          "end": 224.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "implementieren also wenn du z.B so einen",
+          "start": 222.2,
+          "end": 227.83999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Rechner hast wie irgendwie",
+          "start": 224.76,
+          "end": 230.35999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "altersforgerechner oder wie rechnest du",
+          "start": 227.84,
+          "end": 232.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine Kalorien oder",
+          "start": 230.36,
+          "end": 234.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hautfaltenmessung das kannst du alles",
+          "start": 232.959,
+          "end": 238.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch mit berücksichtigen das fördert die",
+          "start": 234.68,
+          "end": 240.15900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Interaktion dann natürlich eine gute",
+          "start": 238.0,
+          "end": 243.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Einleitung gutes Fazit wichtige",
+          "start": 240.159,
+          "end": 246.79899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywörter Fett drrucken oder auch",
+          "start": 243.4,
+          "end": 249.87900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtige Sätze kursiv",
+          "start": 246.799,
+          "end": 251.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das weiteren auf jeden Fall auch malmer",
+          "start": 249.879,
+          "end": 254.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dein Angebot oder ein weiterführendes",
+          "start": 251.28,
+          "end": 257.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Angebot verlinken oder deine",
+          "start": 254.84,
+          "end": 259.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Kontaktseite",
+          "start": 257.079,
+          "end": 262.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "herundladbares Material Interessent auch",
+          "start": 259.4,
+          "end": 265.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "quasi was herunterladen kann als PDF",
+          "start": 262.68,
+          "end": 266.88,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Zusammenfassung ist auch immer ganz gut",
+          "start": 265.16,
+          "end": 268.03900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "für",
+          "start": 266.88,
+          "end": 271.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "SEO dann natürlich wenn du Neuron wiiter",
+          "start": 268.039,
+          "end": 273.919,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzt den Score möglichst höher als",
+          "start": 271.639,
+          "end": 276.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "deine witbewerber setzen",
+          "start": 273.919,
+          "end": 279.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also der Content Score sollte natürlich",
+          "start": 276.68,
+          "end": 282.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "über der mit deiner Mitbewerber liegen",
+          "start": 279.56,
+          "end": 283.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die",
+          "start": 282.08,
+          "end": 285.59999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Metatag solltest du auch",
+          "start": 283.32,
+          "end": 289.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "optimieren mit rankm kannst du das ja",
+          "start": 285.6,
+          "end": 293.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzen und genau Titel und mit",
+          "start": 289.56,
+          "end": 297.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Description und hier sieh noch",
+          "start": 293.6,
+          "end": 301.28000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Nurit da kannst sehen wie die Keywords",
+          "start": 297.56,
+          "end": 305.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann genutzt werden und siehst dann auch",
+          "start": 301.28,
+          "end": 308.11999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Vorschläge und wenn du auch WordPress",
+          "start": 305.639,
+          "end": 314.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nutzt dann kannst du auch z.B das rankm",
+          "start": 308.12,
+          "end": 316.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Tool nutzen und das ist sehr",
+          "start": 314.08,
+          "end": 319.8,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "m nützlich und dann noch mal zu sehen",
+          "start": 316.32,
+          "end": 321.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "okay wie ist das von der Snippet",
+          "start": 319.8,
+          "end": 324.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Optimierung und",
+          "start": 321.479,
+          "end": 325.639,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau kannst es dahingehen noch mal",
+          "start": 324.0,
+          "end": 328.16,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "optimieren auch wichtig ist immer ganz",
+          "start": 325.639,
+          "end": 331.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "der Titel",
+          "start": 328.16,
+          "end": 334.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "der Link ne also dass ja nicht zu lang",
+          "start": 331.039,
+          "end": 339.31899999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ist und auch aussagekräftige Keywords",
+          "start": 334.36,
+          "end": 341.84000000000003,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "beinhaltet genau und nicht sowas wie",
+          "start": 339.319,
+          "end": 344.91900000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Block 1 Block 2 oder",
+          "start": 341.84,
+          "end": 348.35999999999996,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "2024 Monat Tag oder",
+          "start": 344.919,
+          "end": 351.15999999999997,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sowas genau und bei den Keywords",
+          "start": 348.36,
+          "end": 352.08000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "natürlich auch",
+          "start": 351.16,
+          "end": 354.96000000000004,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "immer zusätzlich berücksichtigen dass du",
+          "start": 352.08,
+          "end": 357.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch Synonyme nutzt andere",
+          "start": 354.96,
+          "end": 362.23999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Formulierungen fragen ähm und genau die",
+          "start": 357.479,
+          "end": 364.039,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tiels auch in deinen Bildern oder",
+          "start": 362.24,
+          "end": 367.319,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dateinahen nutzt genau falls du dech",
+          "start": 364.039,
+          "end": 371.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Fragen hast gerne auf mich zukommen",
+          "start": 367.319,
+          "end": 371.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 120.0,
+          "duration": 120.0,
+          "transcript": "ja hallo und zwar kommen jetzt hier zu einer Blog Checkliste also wie du den optimalen Blogartikel aufbaust und da habe ich dir auch eine nützliche Checkliste gebaut die ich auch immer nutze und da kannst du auf jeden Fall immer durchgehen wenn du ein Blogartikel schreiben willst oder auch noch mal durchgehen willst also es immer wichtig natürlich dass du in einem Blogartikel möglichst insideer Information hast über deine Zielgruppe Interviews erfahrungsberichtig oder Umfragen ne das macht deinen Blogartikel möglichst einzigartig und nicht kopierbar genau und dann kommt kommen wir quasi auch dann zum Layout also ist den Content optimal organisiert es geht quasi immer darum dass der Mensch einerseits natürlich sich in so einem Blogartikel gut zcht findet aber auch die Suchmaschine natürlich alles optimal vorfindet ne also Mensch Maschine äh Verhältnis auf jeden Fall optimal genutzt ist und dafür aus SEO Perspektive ist auf jeden Fall wichtig dass du auf jeden Fall in deinem Blog interne Verlinkung auch machst also mindestens fünf andere Artikel [Musik] verlinkst also auch andere Unterseiten oder andere Blogartikel oder auch dein Angebot Seite mit verlinkst dann natürlich auch CTA beispielsweise setzen zu deinem Angebot genau genau und dann externe verlenkung auch setzt also die externverlenkung kannst du auf jeden Fall auch auf follow setzen wenn diese auch eine gute Quelle sind also z.B seriöse Quellen also keine",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (00:00 - 02:00)\n\nja hallo und zwar kommen jetzt hier zu einer Blog Checkliste also wie du den optimalen Blogartikel aufbaust und da habe ich dir auch eine nützliche Checkliste gebaut die ich auch immer nutze und da kannst du auf jeden Fall immer durchgehen wenn du ein Blogartikel schreiben willst oder auch noch mal durchgehen willst also es immer wichtig natürlich dass du in einem Blogartikel möglichst insideer Information hast über deine Zielgruppe Interviews erfahrungsberichtig oder Umfragen ne das macht deinen Blogartikel möglichst einzigartig und nicht kopierbar genau und dann kommt kommen wir quasi auch dann zum Layout also ist den Content optimal organisiert es geht quasi immer darum dass der Mensch einerseits natürlich sich in so einem Blogartikel gut zcht findet aber auch die Suchmaschine natürlich alles optimal vorfindet ne also Mensch Maschine äh Verhältnis auf jeden Fall optimal genutzt ist und dafür aus SEO Perspektive ist auf jeden Fall wichtig dass du auf jeden Fall in deinem Blog interne Verlinkung auch machst also mindestens fünf andere Artikel [Musik] verlinkst also auch andere Unterseiten oder andere Blogartikel oder auch dein Angebot Seite mit verlinkst dann natürlich auch CTA beispielsweise setzen zu deinem Angebot genau genau und dann externe verlenkung auch setzt also die externverlenkung kannst du auf jeden Fall auch auf follow setzen wenn diese auch eine gute Quelle sind also z.B seriöse Quellen also keine",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 120.0,
+          "end_time": 240.0,
+          "duration": 120.0,
+          "transcript": "auch eine gute Quelle sind also z.B seriöse Quellen also keine irgendwelche Angebotsseiten oder Affiliate links dann solltest du dir auf jeden Fall auf noofollow oder Sponsor setzen ähm ansonsten wenn du irgendwelche wissenschaftlichen Artikel äh zitierst beispielsweise dann solltest du dir auf jeden Fall auf follow setzen oder ähm seriöse Quellen wie andere Blogartikel dann solltest du auf jeden Fall auch ein Inhaltsverzeichnis haben ähm ein von die immer auch eine Autobiografie und natürlich auch weiterführende Blogartikel zum Thema das weiteren ist natürlich auch wichtig dass du einen ansprechenden Titel hast der auch natürlich SEO Aspekte beinhaltet also das wichtige Keyword und dass er auch gut lesbar ist oder ansprechbar lesbar ist für den Leser zusätzlich sollten deine Absätze nicht zu lang sein maximal zwei bis drei Sätze nicht zu verschachtelt eher kürzere und ausgewogene Sprachmelodie nutzen wenn möglich solltest du Listen bevorzugen also nummerierte Listen oder normale Listen immer natürlich auch Bilder nutzen das lockert so ein bisschen den Inhalt auf die Bilder immer mit demem altteag hinterlegen das mit Keywords oder auch ausführlichen beschreib Youtube Videos auf jeden Fall auch verlinken wenn du welche hast oder welche auch relevant sind in dem Kontext Tools auch immer mit implementieren also wenn du z.B so einen Rechner hast wie irgendwie altersforgerechner oder wie rechnest du deine Kalorien oder hautfaltenmessung das kannst du alles auch mit berücksichtigen das fördert die Interaktion dann natürlich eine gute",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (02:00 - 04:00)\n\nauch eine gute Quelle sind also z.B seriöse Quellen also keine irgendwelche Angebotsseiten oder Affiliate links dann solltest du dir auf jeden Fall auf noofollow oder Sponsor setzen ähm ansonsten wenn du irgendwelche wissenschaftlichen Artikel äh zitierst beispielsweise dann solltest du dir auf jeden Fall auf follow setzen oder ähm seriöse Quellen wie andere Blogartikel dann solltest du auf jeden Fall auch ein Inhaltsverzeichnis haben ähm ein von die immer auch eine Autobiografie und natürlich auch weiterführende Blogartikel zum Thema das weiteren ist natürlich auch wichtig dass du einen ansprechenden Titel hast der auch natürlich SEO Aspekte beinhaltet also das wichtige Keyword und dass er auch gut lesbar ist oder ansprechbar lesbar ist für den Leser zusätzlich sollten deine Absätze nicht zu lang sein maximal zwei bis drei Sätze nicht zu verschachtelt eher kürzere und ausgewogene Sprachmelodie nutzen wenn möglich solltest du Listen bevorzugen also nummerierte Listen oder normale Listen immer natürlich auch Bilder nutzen das lockert so ein bisschen den Inhalt auf die Bilder immer mit demem altteag hinterlegen das mit Keywords oder auch ausführlichen beschreib Youtube Videos auf jeden Fall auch verlinken wenn du welche hast oder welche auch relevant sind in dem Kontext Tools auch immer mit implementieren also wenn du z.B so einen Rechner hast wie irgendwie altersforgerechner oder wie rechnest du deine Kalorien oder hautfaltenmessung das kannst du alles auch mit berücksichtigen das fördert die Interaktion dann natürlich eine gute",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 240.0,
+          "end_time": 360.0,
+          "duration": 120.0,
+          "transcript": "auch mit berücksichtigen das fördert die Interaktion dann natürlich eine gute Einleitung gutes Fazit wichtige Keywörter Fett drrucken oder auch wichtige Sätze kursiv das weiteren auf jeden Fall auch malmer dein Angebot oder ein weiterführendes Angebot verlinken oder deine Kontaktseite herundladbares Material Interessent auch quasi was herunterladen kann als PDF Zusammenfassung ist auch immer ganz gut für SEO dann natürlich wenn du Neuron wiiter nutzt den Score möglichst höher als deine witbewerber setzen also der Content Score sollte natürlich über der mit deiner Mitbewerber liegen die Metatag solltest du auch optimieren mit rankm kannst du das ja nutzen und genau Titel und mit Description und hier sieh noch Nurit da kannst sehen wie die Keywords dann genutzt werden und siehst dann auch Vorschläge und wenn du auch WordPress nutzt dann kannst du auch z.B das rankm Tool nutzen und das ist sehr m nützlich und dann noch mal zu sehen okay wie ist das von der Snippet Optimierung und genau kannst es dahingehen noch mal optimieren auch wichtig ist immer ganz der Titel der Link ne also dass ja nicht zu lang ist und auch aussagekräftige Keywords beinhaltet genau und nicht sowas wie Block 1 Block 2 oder 2024 Monat Tag oder sowas genau und bei den Keywords natürlich auch immer zusätzlich berücksichtigen dass du auch Synonyme nutzt andere Formulierungen fragen ähm und genau die",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (04:00 - 06:00)\n\nauch mit berücksichtigen das fördert die Interaktion dann natürlich eine gute Einleitung gutes Fazit wichtige Keywörter Fett drrucken oder auch wichtige Sätze kursiv das weiteren auf jeden Fall auch malmer dein Angebot oder ein weiterführendes Angebot verlinken oder deine Kontaktseite herundladbares Material Interessent auch quasi was herunterladen kann als PDF Zusammenfassung ist auch immer ganz gut für SEO dann natürlich wenn du Neuron wiiter nutzt den Score möglichst höher als deine witbewerber setzen also der Content Score sollte natürlich über der mit deiner Mitbewerber liegen die Metatag solltest du auch optimieren mit rankm kannst du das ja nutzen und genau Titel und mit Description und hier sieh noch Nurit da kannst sehen wie die Keywords dann genutzt werden und siehst dann auch Vorschläge und wenn du auch WordPress nutzt dann kannst du auch z.B das rankm Tool nutzen und das ist sehr m nützlich und dann noch mal zu sehen okay wie ist das von der Snippet Optimierung und genau kannst es dahingehen noch mal optimieren auch wichtig ist immer ganz der Titel der Link ne also dass ja nicht zu lang ist und auch aussagekräftige Keywords beinhaltet genau und nicht sowas wie Block 1 Block 2 oder 2024 Monat Tag oder sowas genau und bei den Keywords natürlich auch immer zusätzlich berücksichtigen dass du auch Synonyme nutzt andere Formulierungen fragen ähm und genau die",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 3,
+          "start_time": 360.0,
+          "end_time": 369.0,
+          "duration": 9.0,
+          "transcript": "auch Synonyme nutzt andere Formulierungen fragen ähm und genau die tiels auch in deinen Bildern oder dateinahen nutzt genau falls du dech Fragen hast gerne auf mich zukommen",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (06:00 - 06:09)\n\nauch Synonyme nutzt andere Formulierungen fragen ähm und genau die tiels auch in deinen Bildern oder dateinahen nutzt genau falls du dech Fragen hast gerne auf mich zukommen",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.658841848373413,
+      "extracted_at": "2026-03-11T12:31:53Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 369.0,
+  "total_segments": 4,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.659850835800171,
+  "warnings": [],
+  "errors": []
+}

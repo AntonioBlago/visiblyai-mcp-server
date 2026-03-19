@@ -1,0 +1,789 @@
+{
+  "videos": [
+    {
+      "video_id": "WUTTxtJQKf4",
+      "source_type": "youtube",
+      "source_url": "https://www.youtube.com/watch?v=WUTTxtJQKf4",
+      "file_path": null,
+      "title": "Keyword Recherche Einführung",
+      "description": "In diesem Video erkläre ich die Bedeutung und den Prozess der Keyword-Recherche im SEO. Ich zeige, wie Content aus Themen und Keywords entsteht und wie man sie richtig kombiniert, um hochwertigen Content zu generieren. Es ist wichtig, die Keywords nach Themen und Suchintentionen zu gruppieren. Schau dir das Video an, um mehr zu erfahren!\n\nZu den SEO Checkliste und Tools: https://antonioblago.notion.site/?pvs=74\nZu SE Ranking: https://antonioblago.de/seranking\nSEO mit KI: https://visibly-ai.com",
+      "duration": 252.0,
+      "upload_date": "20260224",
+      "language": "de",
+      "channel_name": "Antonio Blago",
+      "channel_url": "https://www.youtube.com/channel/UCoIBDdswc5VViHYPTKd0HwA",
+      "view_count": 21,
+      "like_count": null,
+      "comment_count": null,
+      "tags": [],
+      "categories": [
+        "People & Blogs"
+      ],
+      "thumbnail_url": "https://i.ytimg.com/vi/WUTTxtJQKf4/maxresdefault.jpg",
+      "chapters": [],
+      "playlist_title": null,
+      "playlist_index": null,
+      "playlist_total": null,
+      "raw_transcript": [
+        {
+          "text": "ja hallo ich will dir zeigen wie du eine",
+          "start": 1.12,
+          "end": 7.399,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "effektive Keyword Recherche machst mit",
+          "start": 4.4,
+          "end": 11.280000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "CE Ranking natürlich kannst du andere",
+          "start": 7.399,
+          "end": 15.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "tool set nutzen und da kannst du einfach",
+          "start": 11.28,
+          "end": 19.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein Thema deiner Wahl beispielsweise",
+          "start": 15.2,
+          "end": 22.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "eintippen und dann fängst du einfach an",
+          "start": 19.119,
+          "end": 25.08,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "mit Rückenschmerzen",
+          "start": 22.64,
+          "end": 30.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "beispielsweise und kannst dann Dir quasi",
+          "start": 25.08,
+          "end": 33.239999999999995,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Kes",
+          "start": 30.64,
+          "end": 33.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Anzeigen genau und jetzt hier siehst du",
+          "start": 33.44,
+          "end": 38.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein si Ranking dann hier die Übersicht",
+          "start": 35.84,
+          "end": 41.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die Schwierigkeit des Keywords also",
+          "start": 38.92,
+          "end": 44.879000000000005,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Rückenschmerzen ist ein großes Thema",
+          "start": 41.84,
+          "end": 49.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann das suvolumen also 74 000 im",
+          "start": 44.879,
+          "end": 52.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Durchschnitt über diese ganzen Zeitraum",
+          "start": 49.079,
+          "end": 54.079,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und dann hier",
+          "start": 52.12,
+          "end": 57.959999999999994,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "den click per cost also wie weit das",
+          "start": 54.079,
+          "end": 62.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "gehandelt wird auf den ADS und das",
+          "start": 57.96,
+          "end": 64.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wichtigste ist quasi bei der Keyword",
+          "start": 62.96,
+          "end": 68.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Auswahl dass man immer schaut dass man",
+          "start": 64.84,
+          "end": 71.04,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein gutes Schwierigkeits und",
+          "start": 68.68,
+          "end": 74.36000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "suchvolumenverhältnis hat und dass die",
+          "start": 71.04,
+          "end": 75.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "suchintension",
+          "start": 74.36,
+          "end": 80.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch für das geeignete Thema richtig ist",
+          "start": 75.92,
+          "end": 81.52,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau",
+          "start": 80.479,
+          "end": 84.6,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und Rückenschmerzen ist jetzt eigentlich",
+          "start": 81.52,
+          "end": 86.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "nicht nur ein Keyword sondern eigentlich",
+          "start": 84.6,
+          "end": 87.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein",
+          "start": 86.28,
+          "end": 91.119,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Thema was dann imip Prinip noch",
+          "start": 87.64,
+          "end": 93.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "verfeinert werden muss und dann hat man",
+          "start": 91.119,
+          "end": 94.96,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hier die",
+          "start": 93.2,
+          "end": 97.64,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Auswahl zwischen ähnlichen Keywords also",
+          "start": 94.96,
+          "end": 99.72,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wo Rückenschmerzen enthalten ist",
+          "start": 97.64,
+          "end": 101.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Verwandte",
+          "start": 99.72,
+          "end": 103.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords und dann noch natürlich",
+          "start": 101.2,
+          "end": 106.96000000000001,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Longtail Keywords oder Fragen die dann",
+          "start": 103.439,
+          "end": 111.439,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "auch entscheidend sind bei der Suche und",
+          "start": 106.96,
+          "end": 114.32,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann hast du auch immer noch die",
+          "start": 111.439,
+          "end": 118.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Auswahl welche bestimmten",
+          "start": 114.32,
+          "end": 121.27999999999999,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "organischen Ergebnisse gezeigt werden",
+          "start": 118.24,
+          "end": 123.24,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und es gibt auch immer ein Hinweis okay",
+          "start": 121.28,
+          "end": 125.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wie stark sind deine Konkurrenten hier",
+          "start": 123.24,
+          "end": 127.479,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "in diesem Bereich und wer sind deine",
+          "start": 125.28,
+          "end": 130.879,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Konkurrenten z.B hier ähm TK oder",
+          "start": 127.479,
+          "end": 133.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "apothekenrundschau",
+          "start": 130.879,
+          "end": 137.2,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm was natürlich ein Hinweis ist wie",
+          "start": 133.519,
+          "end": 141.31900000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hoch finanzielle Mittel sein müssen",
+          "start": 137.2,
+          "end": 144.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "genau und wenn du dann hier z.B auf",
+          "start": 141.319,
+          "end": 148.92,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "detaillierte Berichte Anzeigen gehst",
+          "start": 144.12,
+          "end": 148.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann siehst Du quasi die",
+          "start": 151.12,
+          "end": 156.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "detaillierten",
+          "start": 154.239,
+          "end": 160.44,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords und kannst auch danach filtern",
+          "start": 156.28,
+          "end": 164.519,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und ich empfehle am Anfang relativ",
+          "start": 160.44,
+          "end": 169.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "das Keyword erstmal zu filtern also die",
+          "start": 164.519,
+          "end": 171.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Schwierigkeit wenn du gar kein noch gar",
+          "start": 169.12,
+          "end": 175.239,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kein Themen Aufbau gehabt hast noch ganz",
+          "start": 171.92,
+          "end": 177.07999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "jung bist also immer sehr niedrig zu",
+          "start": 175.239,
+          "end": 178.48000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "halten",
+          "start": 177.08,
+          "end": 181.04000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "also die Schwierigkeit auf 10 zu setzen",
+          "start": 178.48,
+          "end": 184.39999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "und trotzdem 100 Suchvolumen",
+          "start": 181.04,
+          "end": 187.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm zu",
+          "start": 184.4,
+          "end": 187.0,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "setzen und dann erkennt man schon okay",
+          "start": 187.159,
+          "end": 193.07999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "wir haben wir schon drastisch reduziert",
+          "start": 190.599,
+          "end": 196.67999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ne und ähm dann erkennt man hier schon",
+          "start": 193.08,
+          "end": 199.23000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ein paar Keywords und dann",
+          "start": 196.68,
+          "end": 200.4,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "[Musik]",
+          "start": 199.23,
+          "end": 204.11999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "kann man hier z.B in si Ranking die",
+          "start": 200.4,
+          "end": 208.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keywords jetzt markieren",
+          "start": 204.12,
+          "end": 211.68,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ähm und dann",
+          "start": 208.76,
+          "end": 213.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "äh zu",
+          "start": 211.68,
+          "end": 215.20000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "einem",
+          "start": 213.599,
+          "end": 218.56,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Keyword Manager List hinzufügen das",
+          "start": 215.2,
+          "end": 222.07999999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "empfehle ich natürlich auch und dann",
+          "start": 218.56,
+          "end": 225.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "m die",
+          "start": 222.08,
+          "end": 227.92000000000002,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinzuzufügen und dann hat kann man sich",
+          "start": 225.12,
+          "end": 230.28,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Listen aufbauen ne und",
+          "start": 227.92,
+          "end": 234.51899999999998,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann kann man dort dann diese Keywords",
+          "start": 230.28,
+          "end": 237.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "hinzufügen genau und dann arbeitet man",
+          "start": 234.519,
+          "end": 239.36,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "sich so ein Keyword setet also zu dem",
+          "start": 237.12,
+          "end": 240.84,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Thema",
+          "start": 239.36,
+          "end": 244.959,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "die man interessant findet und dann zeig",
+          "start": 240.84,
+          "end": 246.12,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "ich im nächsten",
+          "start": 244.959,
+          "end": 249.599,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "Video quasi wie du diese keyord Sets",
+          "start": 246.12,
+          "end": 253.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        },
+        {
+          "text": "dann gropieren kannst",
+          "start": 249.599,
+          "end": 253.76,
+          "confidence": 1.0,
+          "words": null,
+          "source": "youtube_auto_generated"
+        }
+      ],
+      "segments": [
+        {
+          "index": 0,
+          "start_time": 0.0,
+          "end_time": 120.0,
+          "duration": 120.0,
+          "transcript": "ja hallo ich will dir zeigen wie du eine effektive Keyword Recherche machst mit CE Ranking natürlich kannst du andere tool set nutzen und da kannst du einfach ein Thema deiner Wahl beispielsweise eintippen und dann fängst du einfach an mit Rückenschmerzen beispielsweise und kannst dann Dir quasi Kes Anzeigen genau und jetzt hier siehst du ein si Ranking dann hier die Übersicht die Schwierigkeit des Keywords also Rückenschmerzen ist ein großes Thema dann das suvolumen also 74 000 im Durchschnitt über diese ganzen Zeitraum und dann hier den click per cost also wie weit das gehandelt wird auf den ADS und das wichtigste ist quasi bei der Keyword Auswahl dass man immer schaut dass man ein gutes Schwierigkeits und suchvolumenverhältnis hat und dass die suchintension auch für das geeignete Thema richtig ist genau und Rückenschmerzen ist jetzt eigentlich nicht nur ein Keyword sondern eigentlich ein Thema was dann imip Prinip noch verfeinert werden muss und dann hat man hier die Auswahl zwischen ähnlichen Keywords also wo Rückenschmerzen enthalten ist Verwandte Keywords und dann noch natürlich Longtail Keywords oder Fragen die dann auch entscheidend sind bei der Suche und dann hast du auch immer noch die Auswahl welche bestimmten organischen Ergebnisse gezeigt werden",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (00:00 - 02:00)\n\nja hallo ich will dir zeigen wie du eine effektive Keyword Recherche machst mit CE Ranking natürlich kannst du andere tool set nutzen und da kannst du einfach ein Thema deiner Wahl beispielsweise eintippen und dann fängst du einfach an mit Rückenschmerzen beispielsweise und kannst dann Dir quasi Kes Anzeigen genau und jetzt hier siehst du ein si Ranking dann hier die Übersicht die Schwierigkeit des Keywords also Rückenschmerzen ist ein großes Thema dann das suvolumen also 74 000 im Durchschnitt über diese ganzen Zeitraum und dann hier den click per cost also wie weit das gehandelt wird auf den ADS und das wichtigste ist quasi bei der Keyword Auswahl dass man immer schaut dass man ein gutes Schwierigkeits und suchvolumenverhältnis hat und dass die suchintension auch für das geeignete Thema richtig ist genau und Rückenschmerzen ist jetzt eigentlich nicht nur ein Keyword sondern eigentlich ein Thema was dann imip Prinip noch verfeinert werden muss und dann hat man hier die Auswahl zwischen ähnlichen Keywords also wo Rückenschmerzen enthalten ist Verwandte Keywords und dann noch natürlich Longtail Keywords oder Fragen die dann auch entscheidend sind bei der Suche und dann hast du auch immer noch die Auswahl welche bestimmten organischen Ergebnisse gezeigt werden",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 1,
+          "start_time": 120.0,
+          "end_time": 240.0,
+          "duration": 120.0,
+          "transcript": "Auswahl welche bestimmten organischen Ergebnisse gezeigt werden und es gibt auch immer ein Hinweis okay wie stark sind deine Konkurrenten hier in diesem Bereich und wer sind deine Konkurrenten z.B hier ähm TK oder apothekenrundschau ähm was natürlich ein Hinweis ist wie hoch finanzielle Mittel sein müssen genau und wenn du dann hier z.B auf detaillierte Berichte Anzeigen gehst dann siehst Du quasi die detaillierten Keywords und kannst auch danach filtern und ich empfehle am Anfang relativ das Keyword erstmal zu filtern also die Schwierigkeit wenn du gar kein noch gar kein Themen Aufbau gehabt hast noch ganz jung bist also immer sehr niedrig zu halten also die Schwierigkeit auf 10 zu setzen und trotzdem 100 Suchvolumen ähm zu setzen und dann erkennt man schon okay wir haben wir schon drastisch reduziert ne und ähm dann erkennt man hier schon ein paar Keywords und dann [Musik] kann man hier z.B in si Ranking die Keywords jetzt markieren ähm und dann äh zu einem Keyword Manager List hinzufügen das empfehle ich natürlich auch und dann m die hinzuzufügen und dann hat kann man sich Listen aufbauen ne und dann kann man dort dann diese Keywords hinzufügen genau und dann arbeitet man sich so ein Keyword setet also zu dem Thema",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (02:00 - 04:00)\n\nAuswahl welche bestimmten organischen Ergebnisse gezeigt werden und es gibt auch immer ein Hinweis okay wie stark sind deine Konkurrenten hier in diesem Bereich und wer sind deine Konkurrenten z.B hier ähm TK oder apothekenrundschau ähm was natürlich ein Hinweis ist wie hoch finanzielle Mittel sein müssen genau und wenn du dann hier z.B auf detaillierte Berichte Anzeigen gehst dann siehst Du quasi die detaillierten Keywords und kannst auch danach filtern und ich empfehle am Anfang relativ das Keyword erstmal zu filtern also die Schwierigkeit wenn du gar kein noch gar kein Themen Aufbau gehabt hast noch ganz jung bist also immer sehr niedrig zu halten also die Schwierigkeit auf 10 zu setzen und trotzdem 100 Suchvolumen ähm zu setzen und dann erkennt man schon okay wir haben wir schon drastisch reduziert ne und ähm dann erkennt man hier schon ein paar Keywords und dann [Musik] kann man hier z.B in si Ranking die Keywords jetzt markieren ähm und dann äh zu einem Keyword Manager List hinzufügen das empfehle ich natürlich auch und dann m die hinzuzufügen und dann hat kann man sich Listen aufbauen ne und dann kann man dort dann diese Keywords hinzufügen genau und dann arbeitet man sich so ein Keyword setet also zu dem Thema",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        },
+        {
+          "index": 2,
+          "start_time": 240.0,
+          "end_time": 252.0,
+          "duration": 12.0,
+          "transcript": "sich so ein Keyword setet also zu dem Thema die man interessant findet und dann zeig ich im nächsten Video quasi wie du diese keyord Sets dann gropieren kannst",
+          "words": [],
+          "transcript_confidence": 1.0,
+          "keyframes": [],
+          "ocr_text": "",
+          "detected_code_blocks": [],
+          "has_code_on_screen": false,
+          "has_slides": false,
+          "has_diagram": false,
+          "chapter_title": null,
+          "topic": null,
+          "category": null,
+          "content": "### Segment (04:00 - 04:12)\n\nsich so ein Keyword setet also zu dem Thema die man interessant findet und dann zeig ich im nächsten Video quasi wie du diese keyord Sets dann gropieren kannst",
+          "summary": null,
+          "confidence": 1.0,
+          "content_type": "explanation"
+        }
+      ],
+      "transcript_source": "youtube_auto_generated",
+      "visual_extraction_enabled": false,
+      "whisper_model": null,
+      "processing_time_seconds": 3.2140114307403564,
+      "extracted_at": "2026-03-11T12:31:15Z",
+      "transcript_confidence": 0.8,
+      "content_richness_score": 0.0,
+      "original_duration": null,
+      "clip_start": null,
+      "clip_end": null,
+      "text_group_timeline": null,
+      "audio_visual_alignments": []
+    }
+  ],
+  "total_duration_seconds": 252.0,
+  "total_segments": 3,
+  "total_code_blocks": 0,
+  "processing_time_seconds": 3.2140114307403564,
+  "warnings": [],
+  "errors": []
+}
