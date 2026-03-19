@@ -101,6 +101,11 @@ class VisiblyAIClient:
     def onpage_analysis(self, url: str, keyword: str) -> dict:
         return self._post("/tools/onpage-analysis", {"url": url, "keyword": keyword})
 
+    def check_serp(self, keyword: str, location: str = "Germany", language: str = "German", depth: int = 10) -> dict:
+        return self._post("/tools/check-serp", {
+            "keyword": keyword, "location": location, "language": language, "depth": depth
+        })
+
     def check_links(self, url: str) -> dict:
         return self._post("/tools/check-links", {"url": url})
 

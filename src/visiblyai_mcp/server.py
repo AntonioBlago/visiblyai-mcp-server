@@ -254,6 +254,16 @@ def onpage_analysis(url: str, keyword: str) -> str:
 
 
 @mcp.tool()
+def check_serp(keyword: str, location: str = "Germany", language: str = "German", depth: int = 10) -> str:
+    """Check live Google SERP for a keyword. See who ranks, what content types dominate, and SERP features present.
+
+    Use for: competitive analysis, content gap detection, SERP intent analysis.
+    Credits: 15.
+    """
+    return paid_tools.check_serp(keyword, location, language, depth)
+
+
+@mcp.tool()
 def check_links(url: str) -> str:
     """Check all links on a page for broken/redirect status. Credits: 20.
 

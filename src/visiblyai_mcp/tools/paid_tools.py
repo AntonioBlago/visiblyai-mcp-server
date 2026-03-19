@@ -321,6 +321,21 @@ def onpage_analysis(
         return _handle_error(e)
 
 
+def check_serp(
+    keyword: str,
+    location: str = "Germany",
+    language: str = "German",
+    depth: int = 10,
+) -> str:
+    """Check live Google SERP results for a keyword. Returns top organic results with position, URL, domain, title, description. Credits: 15."""
+    try:
+        client = _require_key()
+        result = client.check_serp(keyword, location, language, min(depth, 100))
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
 def check_links(
     url: str,
 ) -> str:
