@@ -111,9 +111,21 @@ The user provides:
     - Dofollow vs. nofollow ratio
     - Top referring domains
 
-### Phase 8: Report Compilation
+### Phase 8: GEO Readiness (0 additional credits — uses existing data)
 
-15. **Generate structured report** with these sections:
+15. **AI visibility quick-check** — Using data already collected, call `seo_agent` with:
+    ```
+    task: "GEO-Readiness-Check for [domain]: Bewerte Citation Worthiness (Heading-Struktur, Standalone-Absätze, Schema-Coverage), AI-Crawler-Zugang (robots.txt: OAI-SearchBot, Google-Extended, PerplexityBot), und Grounding Page Existenz. Nutze die bereits gecrawlten Daten."
+    agent: "consultant"
+    domain: "[domain]"
+    ```
+    The backend agent system has built-in GEO knowledge (4 Stufen der AI-Sichtbarkeit, Citation Worthiness, Brand Visibility, Sentiment) and will generate GEO-aware recommendations automatically.
+
+    Add the GEO findings as **Section 9** in the report output.
+
+### Phase 9: Report Compilation
+
+16. **Generate structured report** with these sections:
 
 ## Output Format
 
@@ -185,7 +197,16 @@ The user provides:
 | Domain | DR | Traffic | Keywords | Gap |
 |--------|----|---------|---------|----|
 
-## 9. Priority Action Plan (P1/P2/P3)
+## 9. GEO Readiness (AI Visibility)
+| Check | Status | Action |
+|-------|--------|--------|
+| Citation Worthiness | [score/assessment] | [action] |
+| AI Crawler Access | [allowed/blocked] | [action] |
+| Structured Data for AI | [coverage %] | [action] |
+| Grounding Page | [exists/missing] | [action] |
+| Informational CTR Trend | [stable/falling] | [AI Overview impact?] |
+
+## 10. Priority Action Plan (P1/P2/P3)
 
 **P1 — Sofort (Critical, week 1-2)**
 - [List of critical issues with specific fixes]

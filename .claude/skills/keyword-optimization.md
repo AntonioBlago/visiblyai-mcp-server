@@ -120,6 +120,13 @@ Google groups close variants (singular/plural, word order, inflections) into one
 - Earn backlinks via content marketing or digital PR
 - Build topical authority in the keyword's category
 
+**Tier 4 — GEO Optimization (if informational keyword with falling CTR)**
+- AI Overviews reduce informational CTR by up to 44.6% at position #1
+- Optimize content for citation worthiness: clear headings, standalone paragraphs, direct Q&A format
+- Add FAQ schema and structured data for AI extraction
+- For brand keywords: ensure Grounding Page exists at /facts/[brand]/
+- Note: the backend `seo_agent` (consultant) has built-in GEO knowledge — use it for deeper GEO analysis
+
 ## Output Format
 
 ```markdown

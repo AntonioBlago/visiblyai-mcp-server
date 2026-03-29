@@ -415,6 +415,7 @@ def seo_agent(
     keyword: str = "",
     content: str = "",
     params: dict | None = None,
+    project_id: int = 0,
 ) -> str:
     """Run a specialized SEO agent for analysis, strategy, or content tasks.
 
@@ -430,6 +431,7 @@ def seo_agent(
         keyword: Target keyword
         content: Content to review or optimize
         params: Agent-specific parameters
+        project_id: Project ID to enrich with project context (business type, skill profile, GEO)
 
     Returns:
         JSON with agent results, credits used, and remaining balance
@@ -439,7 +441,7 @@ def seo_agent(
 
     try:
         client = _require_key()
-        result = client.seo_agent(task, agent, domain, url, keyword, content, params)
+        result = client.seo_agent(task, agent, domain, url, keyword, content, params, project_id)
         return _format_result(result)
     except Exception as e:
         return _handle_error(e)

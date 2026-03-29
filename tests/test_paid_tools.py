@@ -259,7 +259,7 @@ class TestSeoAgent:
             paid_tools.seo_agent("Write meta tags", agent="copywriter",
                                  domain="example.com", keyword="seo")
             mock_client.seo_agent.assert_called_once_with(
-                "Write meta tags", "copywriter", "example.com", "", "seo", "", None)
+                "Write meta tags", "copywriter", "example.com", "", "seo", "", None, 0)
 
     def test_empty_task(self, mock_api_key):
         data = _parse(paid_tools.seo_agent(""))

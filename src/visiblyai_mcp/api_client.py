@@ -123,7 +123,7 @@ class VisiblyAIClient:
 
     def seo_agent(self, task: str, agent: str = "", domain: str = "",
                   url: str = "", keyword: str = "", content: str = "",
-                  params: dict | None = None) -> dict:
+                  params: dict | None = None, project_id: int = 0) -> dict:
         payload: dict[str, Any] = {"task": task}
         if agent:
             payload["agent"] = agent
@@ -137,6 +137,8 @@ class VisiblyAIClient:
             payload["content"] = content
         if params:
             payload["params"] = params
+        if project_id:
+            payload["project_id"] = project_id
         return self._post("/tools/seo-agent", payload)
 
     def seo_workflow(self, workflow: str, domain: str, project_id: int,

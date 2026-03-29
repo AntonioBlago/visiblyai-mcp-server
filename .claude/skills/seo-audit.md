@@ -54,7 +54,15 @@ Follow Antonio Blago's 4-phase Neuro-SEO audit approach:
 
 8. **Backlink profile** — Call `get_backlinks`. Report Domain Rating, total backlinks, referring domains.
 
-9. **Compile report** — Present a structured markdown report with:
+9. **GEO readiness check** — Call `seo_agent` with:
+   ```
+   task: "GEO-Quick-Check for [domain]: Citation Worthiness, AI-Crawler-Zugang (robots.txt), Schema-Coverage für KI, CTR-Trend bei informational Keywords."
+   agent: "consultant"
+   domain: "[domain]"
+   ```
+   The backend has built-in GEO knowledge and will return AI-visibility-aware recommendations.
+
+10. **Compile report** — Present a structured markdown report with:
    - Executive summary (1-2 sentences)
    - Traffic overview table with SEA equivalent value
    - Keyword distribution by intent AND funnel stage (AIDA mapping)

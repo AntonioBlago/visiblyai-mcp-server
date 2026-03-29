@@ -137,7 +137,16 @@ Structure the offer in 4 phases matching client context:
 | Q3 | Skalierung + Tracking | +400-500% org. traffic |
 | Q4 | Optimierung + Scale | +700-1.000% org. traffic |
 
-### Phase 7: KPQ / KPI Framework
+### Phase 7: GEO Impact Assessment
+
+For informational keywords in the potential analysis:
+- Flag keywords likely affected by AI Overviews (high impressions, falling CTR, informational intent)
+- Note: AI Overviews reduce CTR by ~34.5% — adjust traffic projections for informational keywords accordingly
+- Recommend GEO optimization as part of Phase 3 (content must be citation-worthy for AI systems)
+- Add KPQ for AI visibility (see below)
+- The backend `seo_agent` has built-in GEO knowledge — use `agent: "consultant"` for deeper GEO analysis
+
+### Phase 8: KPQ / KPI Framework
 
 Always propose 3 KPQs (Key Performance Questions) + KPIs:
 
@@ -152,6 +161,11 @@ Always propose 3 KPQs (Key Performance Questions) + KPIs:
 **KPQ 3:** "Generieren wir qualifizierte Kontakte über digitale Kanäle?"
 - KPI: Contact form submissions / downloads / calls
 - KPI: Lead-to-Sale conversion rate
+
+**KPQ 4:** "Sind wir in KI-Antworten sichtbar?" (GEO)
+- KPI: LLM Referral Sessions in GA4 (chatgpt.com, perplexity.ai etc.)
+- KPI: AI Citation Rate (via Peec.ai or SE Ranking AI tracking)
+- KPI: Brand Sentiment in AI responses
 
 ## Steps
 

@@ -317,13 +317,16 @@ def seo_agent(
     keyword: str = "",
     content: str = "",
     params: dict | None = None,
+    project_id: int = 0,
 ) -> str:
     """Run a specialized SEO agent. Agents: crawling, seo_analyst, strategist,
     copywriter, chief_editor, consultant. Auto-detects from task if omitted. Credits: varies.
 
+    Pass project_id to enrich with project context (business type, target group, skill profile).
+
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """
-    return paid_tools.seo_agent(task, agent, domain, url, keyword, content, params)
+    return paid_tools.seo_agent(task, agent, domain, url, keyword, content, params, project_id)
 
 
 @mcp.tool()
