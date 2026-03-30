@@ -4,7 +4,7 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 
 **Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis, Google guidelines, workflow skills.
 
-**Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, link checking, SEO agents, SEO workflows, advanced keyword classification.
+**Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, PageSpeed/Core Web Vitals, SERP analysis, sitemap audit, structured data validation, hreflang checks, link checking, SEO agents, SEO workflows, advanced keyword classification.
 
 ## Quick Start
 
@@ -13,7 +13,7 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 27 tools):
+# With API key (all 32 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
@@ -58,7 +58,7 @@ Then restart Claude Code.
 | `get_account_info` | Check your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (API-powered, uses credits) — 14 tools
+### Paid (API-powered, uses credits) — 19 tools
 
 | Tool | Credits | Description |
 |------|---------|-------------|
@@ -72,6 +72,11 @@ Then restart Claude Code.
 | `validate_keywords` | varies | Search volume, competition, CPC for keyword list |
 | `crawl_website` | 15-60 | Live crawl + optional 24-point OnPage analysis |
 | `onpage_analysis` | 15 | Full 24-point OnPage SEO audit |
+| `check_serp` | 15 | Live Google SERP results for a keyword: top organic results with position, URL, domain |
+| `check_pagespeed` | 5 | Google PageSpeed Insights + Core Web Vitals: LCP, CLS, TBT, performance score |
+| `audit_sitemap` | 20 | XML sitemap audit: total URLs, duplicates, broken links, lastmod coverage |
+| `check_structured_data` | 5 | JSON-LD and microdata validation: schema types, required fields, errors |
+| `check_hreflang` | 10 | Hreflang validation: x-default, language codes, bidirectional linking |
 | `check_links` | 20 | Broken link detection on a page |
 | `seo_agent` | varies | Run specialized SEO agents: analyst, strategist, copywriter, consultant |
 | `seo_workflow` | 150-200 | Multi-step SEO workflows: seo_performance_audit, indexing_diagnosis |
