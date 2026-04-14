@@ -3,6 +3,9 @@
 Usage:
     visiblyai-mcp-server sync-skills [path]   Push local skills to platform API
     visiblyai-mcp-server build-fallback [path] Compress skills into offline fallback
+
+Skill source:  ``seo_skills/skills/*/SKILL.md`` (gitagent-style directories)
+               or ``*.md`` flat files (legacy).
 """
 
 import base64
@@ -18,25 +21,81 @@ import httpx
 from .config import BASE_URL, get_api_key
 
 
-def _parse_frontmatter(content: str) -> str:
-    """Extract description from YAML frontmatter."""
+# ---------------------------------------------------------------------------
+# Frontmatter parsing (no pyyaml dependency)
+# ---------------------------------------------------------------------------
+
+def _parse_frontmatter(content: str) -> dict[str, object]:
+    """Extract metadata from YAML frontmatter (simple line-by-line parser).
+
+    Returns a dict with string values and a ``triggers`` list.
+    """
     if not content.startswith("---"):
-        return ""
+        return {}
     parts = content.split("---", 2)
     if len(parts) < 3:
-        return ""
-    # Simple YAML parsing without pyyaml dependency
-    for line in parts[1].strip().splitlines():
-        line = line.strip()
-        if line.startswith("description:"):
-            desc = line[len("description:"):].strip()
-            # Remove surrounding quotes
-            if (desc.startswith('"') and desc.endswith('"')) or \
-               (desc.startswith("'") and desc.endswith("'")):
-                desc = desc[1:-1]
-            return desc
-    return ""
+        return {}
 
+    result: dict[str, object] = {}
+    current_list_key: str | None = None
+    current_list: list[str] = []
+
+    for line in parts[1].strip().splitlines():
+        stripped = line.strip()
+
+        # List item (indented "- value")
+        if stripped.startswith("- ") and current_list_key:
+            val = stripped[2:].strip().strip('"').strip("'")
+            if val != "[]":
+                current_list.append(val)
+            continue
+
+        # Close previous list
+        if current_list_key:
+            result[current_list_key] = current_list
+            current_list_key = None
+            current_list = []
+
+        if ":" not in stripped:
+            continue
+
+        key, _, raw_val = stripped.partition(":")
+        key = key.strip()
+        raw_val = raw_val.strip()
+
+        # Value on same line
+        if raw_val and raw_val != "[]":
+            # Remove surrounding quotes
+            if (raw_val.startswith('"') and raw_val.endswith('"')) or \
+               (raw_val.startswith("'") and raw_val.endswith("'")):
+                raw_val = raw_val[1:-1]
+            # Boolean
+            if raw_val.lower() == "true":
+                result[key] = True
+            elif raw_val.lower() == "false":
+                result[key] = False
+            # Integer
+            elif raw_val.isdigit():
+                result[key] = int(raw_val)
+            else:
+                result[key] = raw_val
+        elif raw_val == "[]":
+            result[key] = []
+        else:
+            # Start of a list on following lines
+            current_list_key = key
+            current_list = []
+
+    # Close final list
+    if current_list_key:
+        result[current_list_key] = current_list
+
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Skill discovery
+# ---------------------------------------------------------------------------
 
 def _find_skills_dir(skills_dir: str | None = None) -> Path:
     """Locate the skills directory."""
@@ -47,41 +106,74 @@ def _find_skills_dir(skills_dir: str | None = None) -> Path:
         print(f"Error: Skills directory not found: {p}")
         sys.exit(1)
 
-    # Default: .claude/skills/ relative to CWD
+    # Prefer seo_skills/skills/ (gitagent-style directories)
+    p = Path.cwd() / "seo_skills" / "skills"
+    if p.exists():
+        return p
+
+    # Legacy: .claude/skills/ flat files
     p = Path.cwd() / ".claude" / "skills"
     if p.exists():
         return p
 
     # Try relative to package location
-    p = Path(__file__).parent.parent.parent.parent / ".claude" / "skills"
-    if p.exists():
-        return p
+    for sub in ("seo_skills/skills", ".claude/skills"):
+        p = Path(__file__).parent.parent.parent.parent / sub
+        if p.exists():
+            return p
 
     print("Error: Skills directory not found. Provide path as argument.")
     sys.exit(1)
 
 
 def _load_skills(skills_path: Path) -> list[dict]:
-    """Read and parse all skill markdown files."""
-    md_files = sorted(skills_path.glob("*.md"))
+    """Read and parse all skill files (directory or flat layout).
+
+    Supports:
+    - ``seo_skills/skills/*/SKILL.md``  (gitagent directories)
+    - ``*.md``                           (legacy flat files)
+    """
+    # Try directory layout first (flat or nested by category)
+    dir_skills = sorted(skills_path.glob("**/SKILL.md"))
+    if dir_skills:
+        md_files = dir_skills
+    else:
+        md_files = sorted(skills_path.glob("*.md"))
+
     if not md_files:
-        print(f"No .md files found in {skills_path}")
+        print(f"No skill files found in {skills_path}")
         sys.exit(1)
 
     skills = []
     for f in md_files:
         content = f.read_text(encoding="utf-8")
-        skills.append({
-            "name": f.stem,
-            "description": _parse_frontmatter(content),
+        fm = _parse_frontmatter(content)
+        name = fm.get("name", f.parent.name if f.name == "SKILL.md" else f.stem)
+
+        skill = {
+            "name": name,
+            "description": fm.get("description", ""),
             "content": content,
             "content_hash": hashlib.sha256(content.encode("utf-8")).hexdigest(),
-        })
+            # Extended metadata from frontmatter
+            "label_de": fm.get("label_de", ""),
+            "label_en": fm.get("label_en", ""),
+            "category": fm.get("category", "seo-analysis"),
+            "credits_estimate": int(fm.get("credits_estimate", 0)),
+            "orchestrable": bool(fm.get("orchestrable", False)),
+            "triggers": fm.get("triggers", []),
+            "related_agent_workflows": fm.get("related_agent_workflows", []),
+        }
+        skills.append(skill)
     return skills
 
 
+# ---------------------------------------------------------------------------
+# CLI commands
+# ---------------------------------------------------------------------------
+
 def sync_skills(skills_dir: str | None = None):
-    """Push local .claude/skills/*.md files to the platform API."""
+    """Push local skills to the platform API with full metadata."""
     api_key = get_api_key()
     if not api_key:
         print("Error: VISIBLYAI_API_KEY not set")
