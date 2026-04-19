@@ -336,6 +336,30 @@ def check_serp(
         return _handle_error(e)
 
 
+def query_fanout(
+    url: str,
+    keyword: str,
+    data_source: str = "dataforseo",
+    gsc_property: str | None = None,
+    language: str = "en",
+) -> str:
+    """Run Query Fan-Out AI Coverage Analysis: Gemini-generated sub-queries are matched
+    semantically against the page's content. Returns coverage_score, fanout_queries[],
+    gaps[], covered_count, total_count. Credits: dynamic (~3-5)."""
+    try:
+        client = _require_key()
+        result = client.query_fanout(
+            url=url,
+            keyword=keyword,
+            data_source=data_source,
+            gsc_property=gsc_property,
+            language=language,
+        )
+        return _format_result(result)
+    except Exception as e:
+        return _handle_error(e)
+
+
 def check_pagespeed(
     url: str,
     strategy: str = "mobile",

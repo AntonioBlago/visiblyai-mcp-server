@@ -118,6 +118,24 @@ class VisiblyAIClient:
     def check_hreflang(self, url: str) -> dict:
         return self._post("/tools/check-hreflang", {"url": url})
 
+    def query_fanout(
+        self,
+        url: str,
+        keyword: str,
+        data_source: str = "dataforseo",
+        gsc_property: str | None = None,
+        language: str = "en",
+    ) -> dict:
+        payload: dict = {
+            "url": url,
+            "keyword": keyword,
+            "data_source": data_source,
+            "language": language,
+        }
+        if gsc_property:
+            payload["gsc_property"] = gsc_property
+        return self._post("/tools/query-fanout", payload)
+
     def check_links(self, url: str) -> dict:
         return self._post("/tools/check-links", {"url": url})
 

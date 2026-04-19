@@ -264,6 +264,26 @@ def check_serp(keyword: str, location: str = "Germany", language: str = "German"
 
 
 @mcp.tool()
+def query_fanout(
+    url: str,
+    keyword: str,
+    data_source: str = "dataforseo",
+    gsc_property: str | None = None,
+    language: str = "en",
+) -> str:
+    """Run Query Fan-Out AI Coverage Analysis for a URL + seed keyword.
+
+    Gemini Grounding generates fan-out sub-queries; page content is crawled and
+    topic-extracted; semantic matching (embeddings) scores coverage and surfaces gaps.
+    GSC or DataForSEO ranking keywords feed into the coverage calculation.
+
+    Use for: content gap analysis, AI-search coverage, sub-topic coverage for a page.
+    Credits: dynamic (~3-5 depending on data_source).
+    """
+    return paid_tools.query_fanout(url, keyword, data_source, gsc_property, language)
+
+
+@mcp.tool()
 def check_pagespeed(url: str, strategy: str = "mobile") -> str:
     """Check PageSpeed and Core Web Vitals for a URL. Returns performance, accessibility, SEO scores, LCP, CLS, TBT, and optimization opportunities. Credits: 5.
 
