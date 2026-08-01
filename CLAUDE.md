@@ -8,8 +8,10 @@ Python MCP (Model Context Protocol) server providing 33 SEO tools for Claude Cod
 - **Paid tools (20)**: Use the Visibly AI API (traffic, keywords, backlinks, competitors, crawling, audits, RAG, SEO agents, workflows)
 - **Google tools (5)**: Use user's OAuth tokens, 0 credits (GSC, GA4, projects)
 
-**Backend API**: `https://visibly-ai.com/api/v1/mcp`
+**Backend API**: `https://app.visibly-ai.com/api/v1/mcp`
 **Remote MCP**: `https://mcp.visibly-ai.com/mcp`
+
+The backend URL is the internal REST target used by API-backed package tools. MCP clients configure the remote MCP URL. The marketing domain `visibly-ai.com` is not an API host.
 
 ---
 

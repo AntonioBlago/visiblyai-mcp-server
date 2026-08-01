@@ -57,7 +57,7 @@ class TestApiUrlOverride:
         import visiblyai_mcp.config as config
 
         importlib.reload(config)
-        assert config.BASE_URL == "https://visibly-ai.com/api/v1/mcp"
+        assert config.BASE_URL == "https://app.visibly-ai.com/api/v1/mcp"
 
     def test_override_repoints_all_api_tools(self, monkeypatch):
         monkeypatch.setenv(

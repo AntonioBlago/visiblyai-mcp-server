@@ -3,7 +3,7 @@
 import os
 
 BASE_URL = os.environ.get(
-    "VISIBLYAI_API_URL", "https://visibly-ai.com/api/v1/mcp"
+    "VISIBLYAI_API_URL", "https://app.visibly-ai.com/api/v1/mcp"
 ).rstrip("/")
 
 SIGNUP_URL = "https://visibly-ai.com/register"

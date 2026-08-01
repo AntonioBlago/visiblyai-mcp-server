@@ -2,6 +2,8 @@
 
 SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 
+**Production routing:** MCP clients connect to `https://mcp.visibly-ai.com/mcp`. The installed package sends API-backed tool calls to `https://app.visibly-ai.com/api/v1/mcp`. The marketing domain `visibly-ai.com` is not an API host.
+
 **Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis, Google guidelines, workflow skills.
 
 **Paid tools** (require API key + credits): traffic analysis, keyword research, backlinks, competitors, OnPage SEO audit, PageSpeed/Core Web Vitals, SERP analysis, sitemap audit, structured data validation, hreflang checks, link checking, SEO agents, SEO workflows, advanced keyword classification.

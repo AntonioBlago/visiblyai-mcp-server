@@ -34,9 +34,10 @@ src/visiblyai_mcp/
 - No credits consumed
 
 ### API Base URL
-- Config default: `https://visibly-ai.com/api/v1/mcp`
+- Config default: `https://app.visibly-ai.com/api/v1/mcp`
 - Override: `VISIBLYAI_API_URL`
 - Remote MCP: `https://mcp.visibly-ai.com/mcp`
+- Routing rule: package API calls use the app host; MCP clients use the remote MCP host; the marketing domain is not an API host.
 
 ## Test Structure
 

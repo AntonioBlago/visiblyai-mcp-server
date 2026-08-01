@@ -4,10 +4,15 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.7.1] - 2026-08-01
+
+### Fixed
+- The default native API base URL now uses the production app host at `https://app.visibly-ai.com/api/v1/mcp`.
+
 ## [0.7.0] - 2026-08-01
 
 ### Changed
-- All API-backed tools now use the native visibly-app FastAPI backend at `https://visibly-ai.com/api/v1/mcp`.
+- All API-backed tools now use the native visibly-app FastAPI backend. The production host correction ships in 0.7.1.
 - RAG search uses the shared `VisiblyAIClient` transport again; the temporary split `VISIBLYAI_RAG_URL` path is removed.
 - Signup, credit-management, homepage, and documentation URLs now point to Visibly AI.
 - The backend owner and release documentation now reflect the 33 registered tools.
