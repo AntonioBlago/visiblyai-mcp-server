@@ -13,7 +13,7 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 32 tools):
+# With API key (all 33 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
@@ -41,7 +41,7 @@ claude mcp add --transport stdio \
 
 Then restart Claude Code.
 
-> **No API key?** Free tools work without one. Get an API key at [antonioblago.com/register](https://antonioblago.com/register) to unlock paid tools.
+> **No API key?** Free tools work without one. Get an API key at [visibly-ai.com/register](https://visibly-ai.com/register) to unlock paid tools.
 
 ## Tools
 
@@ -58,7 +58,7 @@ Then restart Claude Code.
 | `get_account_info` | Check your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (API-powered, uses credits) — 19 tools
+### Paid (API-powered, uses credits) — 20 tools
 
 | Tool | Credits | Description |
 |------|---------|-------------|
@@ -81,6 +81,7 @@ Then restart Claude Code.
 | `seo_agent` | varies | Run specialized SEO agents: analyst, strategist, copywriter, consultant |
 | `seo_workflow` | 150-200 | Multi-step SEO workflows: seo_performance_audit, indexing_diagnosis |
 | `query_knowledge_base` | 2 | Semantic RAG search over SEO knowledge base, blog articles, Google guidelines |
+| `query_fanout` | 10-60 | AI query fan-out and content coverage analysis |
 
 ### Google & Project (API key required, 0 credits) — 5 tools
 
@@ -122,12 +123,13 @@ In Claude Code, just ask naturally:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VISIBLYAI_API_KEY` | For paid tools | API key from [antonioblago.com](https://antonioblago.com) |
+| `VISIBLYAI_API_KEY` | For API-backed tools | API key from [visibly-ai.com](https://visibly-ai.com) |
+| `VISIBLYAI_API_URL` | No | Override the API base URL for local development or staging |
 
 ### Getting an API Key
 
-1. Sign up at [antonioblago.com/register](https://antonioblago.com/register)
-2. Go to Account > API Keys
+1. Sign up at [visibly-ai.com/register](https://visibly-ai.com/register)
+2. Go to Settings > API Keys
 3. Create a new key (starts with `lc_`)
 4. Add it to your Claude Code MCP config
 

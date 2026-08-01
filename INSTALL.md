@@ -1,7 +1,7 @@
 # Visibly AI MCP — Installation Guide
 
 **MCP Server:** `visiblyai-mcp-server`
-**Support:** [antonioblago.com](https://www.antonioblago.com) · info@antonioblago.com
+**Support:** [visibly-ai.com](https://visibly-ai.com) · info@antonioblago.com
 
 ---
 
@@ -107,8 +107,8 @@ claude mcp add --transport stdio \
 
 Free tools work without a key. Paid tools (traffic, keywords, backlinks, audits) require an API key with credits.
 
-1. Register at [antonioblago.com/register](https://www.antonioblago.com/register)
-2. Go to **Account → API Keys**
+1. Register at [visibly-ai.com/register](https://visibly-ai.com/register)
+2. Go to **Settings → API Keys**
 3. Create a key (starts with `lc_`)
 4. Replace `YOUR_API_KEY` in the command above
 
@@ -178,7 +178,7 @@ npx playwright install chromium
 | `get_account_info` | Your credit balance and tier |
 | `list_locations` | Available countries for paid tools |
 
-### Paid (credits required) — 14 tools
+### Paid (credits required) — 20 tools
 
 | Tool | Credits | What it does |
 |------|---------|-------------|
@@ -192,7 +192,13 @@ npx playwright install chromium
 | `validate_keywords` | varies | Search volume, competition, CPC |
 | `crawl_website` | 15–60 | Live crawl + optional OnPage audit |
 | `onpage_analysis` | 15 | 24-point OnPage SEO audit |
+| `query_fanout` | 10–60 | AI query fan-out and page coverage analysis |
 | `check_links` | 20 | Broken link detection |
+| `check_serp` | 15 | Live organic Google results for a keyword |
+| `check_pagespeed` | 5 | PageSpeed and Core Web Vitals |
+| `audit_sitemap` | 20 | Sitemap coverage, duplicates, and URL status audit |
+| `check_structured_data` | 5 | JSON-LD and microdata validation |
+| `check_hreflang` | 10 | Hreflang target and language validation |
 | `seo_agent` | varies | Specialized SEO agents: analyst, strategist, copywriter, consultant |
 | `seo_workflow` | 150–200 | Full SEO audit + keyword performance report |
 | `query_knowledge_base` | 2 | RAG search over SEO knowledge base and Google guidelines |
@@ -257,7 +263,7 @@ The MCP is connected but the tool name is wrong. Use `/mcp` to see available too
 
 ### "Not enough credits"
 
-Top up at [antonioblago.com/credits](https://www.antonioblago.com/credits/dashboard) or upgrade your plan.
+Top up or upgrade at [visibly-ai.com/settings](https://visibly-ai.com/settings).
 
 ### Python not found (Windows)
 

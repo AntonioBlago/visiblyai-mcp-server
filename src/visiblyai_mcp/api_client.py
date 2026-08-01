@@ -174,6 +174,25 @@ class VisiblyAIClient:
             "keywords": keywords, "language": language, "location": location
         })
 
+    def rag_search(
+        self,
+        query: str,
+        top_k: int = 5,
+        category: str | None = None,
+        document_type: str | None = None,
+        include_external: bool = True,
+    ) -> dict:
+        payload: dict[str, Any] = {
+            "query": query,
+            "top_k": top_k,
+            "include_external": include_external,
+        }
+        if category:
+            payload["category"] = category
+        if document_type:
+            payload["document_type"] = document_type
+        return self._post("/tools/rag-search", payload)
+
     # ------------------------------------------------------------------
     # Google & Project tools (no credits)
     # ------------------------------------------------------------------

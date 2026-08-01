@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-Python MCP (Model Context Protocol) server providing 23 SEO tools for Claude Code and other MCP clients. Published on PyPI as `visiblyai-mcp-server`.
+Python MCP (Model Context Protocol) server providing 33 SEO tools for Claude Code and other MCP clients. Published on PyPI as `visiblyai-mcp-server`.
 
-- **Free tools (6)**: Run locally, no API key needed (classifier, checklists, guidance, URL analysis)
-- **Paid tools (12)**: Proxy to VisiblyAI platform API (traffic, keywords, backlinks, competitors, crawling, on-page analysis, SEO agents, workflows)
+- **Free tools (8)**: Run locally or use free API metadata (classifier, checklists, guidance, URL analysis)
+- **Paid tools (20)**: Use the Visibly AI API (traffic, keywords, backlinks, competitors, crawling, audits, RAG, SEO agents, workflows)
 - **Google tools (5)**: Use user's OAuth tokens, 0 credits (GSC, GA4, projects)
 
-**Backend API**: `https://antonioblago.com/api/v1/mcp`
+**Backend API**: `https://visibly-ai.com/api/v1/mcp`
 **Remote MCP**: `https://mcp.visibly-ai.com/mcp`
 
 ---
@@ -17,7 +17,7 @@ Python MCP (Model Context Protocol) server providing 23 SEO tools for Claude Cod
 
 | File | Purpose |
 |------|---------|
-| `src/visiblyai_mcp/server.py` | FastMCP server — all 23 `@mcp.tool()` registrations |
+| `src/visiblyai_mcp/server.py` | FastMCP server with all 33 `@mcp.tool()` registrations |
 | `src/visiblyai_mcp/api_client.py` | `VisiblyAIClient` HTTP client for backend |
 | `src/visiblyai_mcp/tools/paid_tools.py` | Paid tool implementations |
 | `src/visiblyai_mcp/tools/free_tools.py` | Free tool implementations (local) |
@@ -94,10 +94,11 @@ pytest tests/test_server_registration.py -v
 
 ## Backend Sync
 
-The backend is in `c:\Users\anton\PycharmProjects\Bikefitting_Project\scripts\`:
-- `mcp_protocol_routes.py` — Remote MCP server (JSON-RPC)
-- `mcp_api_routes.py` — REST API routes
-- Both must stay in sync with this PyPI package's tool definitions
+The backend is in `c:\Users\anton\PycharmProjects\visibly-app\`:
+- `backend/app/routers/mcp/` contains the API-key-authenticated REST routes.
+- `shared/services/` contains billing-free operations and native orchestration.
+- `shared/tools/definitions.py` contains the chat tool contracts.
+- The FastAPI routes and this package's tool definitions must stay in sync.
 
 ---
 

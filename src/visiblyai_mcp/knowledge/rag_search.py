@@ -1,10 +1,7 @@
-"""
-RAG Knowledge Base search — calls /api/v1/mcp/tools/rag-search on the backend.
-"""
+"""RAG knowledge-base search through the shared visibly-app API client."""
 
 from __future__ import annotations
 
-import json
 from typing import Optional
 
 
@@ -25,16 +22,14 @@ def search_rag(
         credits_remaining: int
         error: str (only on failure)
     """
-    payload: dict = {"query": query, "top_k": top_k, "include_external": include_external}
-    if category:
-        payload["category"] = category
-    if document_type:
-        payload["document_type"] = document_type
-
     try:
-        resp = client.post("/tools/rag-search", json=payload)
-        resp.raise_for_status()
-        data = resp.json()
+        data = client.rag_search(
+            query=query,
+            top_k=top_k,
+            category=category,
+            document_type=document_type,
+            include_external=include_external,
+        )
         return {
             "results": data.get("data", []),
             "credits_used": data.get("credits_used", 2),

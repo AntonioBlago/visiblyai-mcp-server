@@ -29,7 +29,7 @@ python -m build --sdist --wheel
 ```bash
 pytest tests/test_server_registration.py -v
 ```
-**Gate: Tool count must match expected (23).**
+**Gate: Tool count must match expected (33).**
 
 ### 5. Commit
 - Stage specific files (not `git add .`)

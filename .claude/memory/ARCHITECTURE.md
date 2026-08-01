@@ -4,7 +4,7 @@
 
 ```
 src/visiblyai_mcp/
-├── server.py           # FastMCP server — all 23 @mcp.tool() registrations
+├── server.py           # FastMCP server — all 33 @mcp.tool() registrations
 ├── api_client.py       # VisiblyAIClient — HTTP client for backend API
 ├── config.py           # BASE_URL, get_api_key(), SIGNUP_URL, CREDITS_URL
 ├── classifier.py       # KeywordClassifier — local keyword classification
@@ -34,7 +34,8 @@ src/visiblyai_mcp/
 - No credits consumed
 
 ### API Base URL
-- Config: `https://antonioblago.com/api/v1/mcp`
+- Config default: `https://visibly-ai.com/api/v1/mcp`
+- Override: `VISIBLYAI_API_URL`
 - Remote MCP: `https://mcp.visibly-ai.com/mcp`
 
 ## Test Structure

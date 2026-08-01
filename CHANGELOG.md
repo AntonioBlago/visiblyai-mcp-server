@@ -4,6 +4,35 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.7.0] - 2026-08-01
+
+### Changed
+- All API-backed tools now use the native visibly-app FastAPI backend at `https://visibly-ai.com/api/v1/mcp`.
+- RAG search uses the shared `VisiblyAIClient` transport again; the temporary split `VISIBLYAI_RAG_URL` path is removed.
+- Signup, credit-management, homepage, and documentation URLs now point to Visibly AI.
+- The backend owner and release documentation now reflect the 33 registered tools.
+
+### Added
+- `VISIBLYAI_API_URL` can override the complete API base URL for local development or staging.
+
+### Notes
+- Tool names and function signatures are unchanged.
+- The native backend preserves the legacy MCP response envelopes while using shared FastAPI authentication, credit billing, Google integrations, and SSRF protection.
+
+## [0.6.1] — 2026-06-04
+
+### Changed
+- **RAG search backend repointed (surgical).** `query_knowledge_base` / `rag_search` now targets a dedicated `RAG_BASE_URL` instead of the shared `BASE_URL`. RAG has moved to the visibly-app (FastAPI on Railway); all other tools (`guidance`, `checklist`, `skills`, `google-guidelines`, traffic/keywords/…) still talk to antonioblago.com unchanged.
+- `rag_search.py` now performs its own authenticated `httpx.post` against `RAG_BASE_URL/tools/rag-search` (Bearer API key) and parses the new envelope (`data` / `credits_used` / `credits_remaining`), rather than routing through `VisiblyAIClient` whose handler expects the legacy Flask response shape. The `client` argument is retained purely as the API-key source, so the `paid_tools` call site is unchanged.
+- `__init__.py` version synced to `0.6.1` (was stuck at `0.5.2`, out of step with `pyproject.toml`).
+
+### Added
+- **`VISIBLYAI_RAG_URL` env var** — overrides the RAG backend URL. Defaults to `BASE_URL` (antonioblago.com), so behaviour is **unchanged** until the cutover is explicitly activated. Set to e.g. `https://<app>.up.railway.app/api/v1/mcp` to switch RAG to visibly-app.
+
+### Notes
+- No breaking changes. Tool signatures and the `paid_tools` call site are identical; the switch is purely transport-level and env-gated.
+- Cutover gate: with `VISIBLYAI_RAG_URL` pointing at visibly-app, `query_knowledge_base` returns hits from visibly-app, 2 credits are deducted, and an `mcp_transactions` row is written (verified by `backend/scripts/check_rag_search_live.py --write` in visibly-app).
+
 ## [0.6.0] — 2026-04-19
 
 ### Added

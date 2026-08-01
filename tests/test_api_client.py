@@ -213,3 +213,23 @@ class TestClientMethods:
         mock.post.assert_called_with("/tools/classify-keywords",
                                      json={"keywords": ["seo tools"],
                                            "language": "German", "location": "Germany"})
+
+    def test_rag_search_endpoint(self):
+        client, mock = self._setup_client()
+        client.rag_search(
+            "structured data",
+            top_k=7,
+            category="technical",
+            document_type="guideline",
+            include_external=False,
+        )
+        mock.post.assert_called_with(
+            "/tools/rag-search",
+            json={
+                "query": "structured data",
+                "top_k": 7,
+                "include_external": False,
+                "category": "technical",
+                "document_type": "guideline",
+            },
+        )
