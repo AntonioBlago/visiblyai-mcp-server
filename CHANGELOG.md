@@ -4,7 +4,7 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
-## [Unreleased]
+## [0.7.2] - 2026-09-06
 
 ### Fixed
 - Register and credit-management links now point to the app (`https://app.visibly-ai.com/register`, `https://app.visibly-ai.com/settings`) instead of the marketing domain; the stale `antonioblago.com` support block in INSTALL.md is gone.
