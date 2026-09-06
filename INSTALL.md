@@ -107,7 +107,7 @@ claude mcp add --transport stdio \
 
 Free tools work without a key. Paid tools (traffic, keywords, backlinks, audits) require an API key with credits.
 
-1. Register at [visibly-ai.com/register](https://visibly-ai.com/register)
+1. Register at [app.visibly-ai.com/register](https://app.visibly-ai.com/register)
 2. Go to **Settings → API Keys**
 3. Create a key (starts with `lc_`)
 4. Replace `YOUR_API_KEY` in the command above
@@ -263,7 +263,7 @@ The MCP is connected but the tool name is wrong. Use `/mcp` to see available too
 
 ### "Not enough credits"
 
-Top up or upgrade at [visibly-ai.com/settings](https://visibly-ai.com/settings).
+Top up or upgrade at [app.visibly-ai.com/settings](https://app.visibly-ai.com/settings).
 
 ### Python not found (Windows)
 
@@ -315,13 +315,11 @@ You can also edit the config manually. Example with both MCPs:
 | Plan | Credits/month | Projects | Price |
 |------|---------------|----------|-------|
 | Free | 0 | 1 | Free |
-| Standard | 2,500 | 3 | €39/mo |
-| Pro | 10,000 | 10 | €119/mo |
-| Agency | 50,000 | 50 | €399/mo |
+| Standard | 9,000 | 3 | €49/mo |
+| Pro | 30,000 | 10 | €149/mo |
+| Agency | 90,000 | 50 | €499/mo |
 
-> Introductory prices — limited time.
-
-Manage your subscription at [antonioblago.com/credits](https://www.antonioblago.com/credits/dashboard)
+Manage your subscription at [app.visibly-ai.com/settings](https://app.visibly-ai.com/settings)
 
 ---
 
@@ -329,11 +327,11 @@ Manage your subscription at [antonioblago.com/credits](https://www.antonioblago.
 
 | Channel | Link |
 |---------|------|
-| Support | [antonioblago.com](https://www.antonioblago.com) |
+| Support | [visibly-ai.com](https://visibly-ai.com) |
 | Email | info@antonioblago.com |
-| Register | [antonioblago.com/register](https://www.antonioblago.com/register) |
-| Credits | [antonioblago.com/credits](https://www.antonioblago.com/credits/dashboard) |
-| API Keys | Account → API Keys after login |
+| Register | [app.visibly-ai.com/register](https://app.visibly-ai.com/register) |
+| Credits | [app.visibly-ai.com/settings](https://app.visibly-ai.com/settings) |
+| API Keys | Settings → API-Key & MCP after login |
 
 ---
 

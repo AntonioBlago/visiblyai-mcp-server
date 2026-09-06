@@ -43,7 +43,7 @@ claude mcp add --transport stdio \
 
 Then restart Claude Code.
 
-> **No API key?** Free tools work without one. Get an API key at [visibly-ai.com/register](https://visibly-ai.com/register) to unlock paid tools.
+> **No API key?** Free tools work without one. Get an API key at [app.visibly-ai.com/register](https://app.visibly-ai.com/register) to unlock paid tools.
 
 ## Tools
 
@@ -125,12 +125,12 @@ In Claude Code, just ask naturally:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VISIBLYAI_API_KEY` | For API-backed tools | API key from [visibly-ai.com](https://visibly-ai.com) |
+| `VISIBLYAI_API_KEY` | For API-backed tools | API key from [app.visibly-ai.com](https://app.visibly-ai.com/settings) |
 | `VISIBLYAI_API_URL` | No | Override the API base URL for local development or staging |
 
 ### Getting an API Key
 
-1. Sign up at [visibly-ai.com/register](https://visibly-ai.com/register)
+1. Sign up at [app.visibly-ai.com/register](https://app.visibly-ai.com/register)
 2. Go to Settings > API Keys
 3. Create a new key (starts with `lc_`)
 4. Add it to your Claude Code MCP config
@@ -140,9 +140,9 @@ In Claude Code, just ask naturally:
 | Tier | Credits/month | Price |
 |------|---------------|-------|
 | Free | 0 | Free |
-| Standard | 2,500 | Paid |
-| Pro | 10,000 | Paid |
-| Agency | 50,000 | Paid |
+| Standard | 9,000 | €49/mo |
+| Pro | 30,000 | €149/mo |
+| Agency | 90,000 | €499/mo |
 
 ## Requirements
 

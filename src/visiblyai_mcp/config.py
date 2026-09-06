@@ -6,8 +6,8 @@ BASE_URL = os.environ.get(
     "VISIBLYAI_API_URL", "https://app.visibly-ai.com/api/v1/mcp"
 ).rstrip("/")
 
-SIGNUP_URL = "https://visibly-ai.com/register"
-CREDITS_URL = "https://visibly-ai.com/settings"
+SIGNUP_URL = "https://app.visibly-ai.com/register"
+CREDITS_URL = "https://app.visibly-ai.com/settings"
 
 # API key from environment
 def get_api_key() -> str | None:

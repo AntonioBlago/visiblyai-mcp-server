@@ -4,6 +4,12 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- Register and credit-management links now point to the app (`https://app.visibly-ai.com/register`, `https://app.visibly-ai.com/settings`) instead of the marketing domain; the stale `antonioblago.com` support block in INSTALL.md is gone.
+- Subscription tables in README and INSTALL show the current tiers (Standard €49 / 9,000 credits, Pro €149 / 30,000, Agency €499 / 90,000).
+
 ## [0.7.1] - 2026-08-01
 
 ### Fixed
