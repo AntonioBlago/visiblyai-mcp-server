@@ -226,6 +226,91 @@ class VisiblyAIClient:
         return self._post("/tools/query-analytics", payload)
 
     # ------------------------------------------------------------------
+    # Project data & content (read-only, 0 credits)
+    # ------------------------------------------------------------------
+
+    def gsc_clusters(self, project_id: int, days: int = 28, top_n: int = 30, country: str | None = None) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "days": days, "top_n": top_n}
+        if country:
+            payload["country"] = country
+        return self._post("/tools/gsc-clusters", payload)
+
+    def cluster_keywords(self, project_id: int, cluster_key: str, days: int = 28, country: str | None = None,
+                         limit: int = 100, offset: int = 0) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "cluster_key": cluster_key, "days": days,
+                                   "limit": limit, "offset": offset}
+        if country:
+            payload["country"] = country
+        return self._post("/tools/cluster-keywords", payload)
+
+    def analytics_insights(self, project_id: int, days: int = 28) -> dict:
+        return self._post("/tools/analytics-insights", {"project_id": project_id, "days": days})
+
+    def revenue_insights(self, project_id: int) -> dict:
+        return self._post("/tools/revenue-insights", {"project_id": project_id})
+
+    def scorecard(self, project_id: int, days: int = 28) -> dict:
+        return self._post("/tools/scorecard", {"project_id": project_id, "days": days})
+
+    def eeat_summary(self, project_id: int) -> dict:
+        return self._post("/tools/eeat-summary", {"project_id": project_id})
+
+    def pages(self, project_id: int, page_type: str | None = None, search: str = "",
+              limit: int = 50, offset: int = 0) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "search": search, "limit": limit, "offset": offset}
+        if page_type:
+            payload["page_type"] = page_type
+        return self._post("/tools/pages", payload)
+
+    def internal_links(self, project_id: int, url: str | None = None, limit: int = 20, offset: int = 0) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "limit": limit, "offset": offset}
+        if url:
+            payload["url"] = url
+        return self._post("/tools/internal-links", payload)
+
+    def memory_recall(self, query: str = "", project_id: int | None = None, limit: int = 10) -> dict:
+        payload: dict[str, Any] = {"query": query, "limit": limit}
+        if project_id:
+            payload["project_id"] = project_id
+        return self._post("/tools/memory/recall", payload)
+
+    def content_articles(self, project_id: int, status: str = "all", limit: int = 25, offset: int = 0) -> dict:
+        return self._post("/tools/content/articles",
+                          {"project_id": project_id, "status": status, "limit": limit, "offset": offset})
+
+    def content_article(self, article_id: int, include_content: bool = False, content_offset: int = 0,
+                        content_limit: int = 20000, project_id: int | None = None) -> dict:
+        payload: dict[str, Any] = {"article_id": article_id, "include_content": include_content,
+                                   "content_offset": content_offset, "content_limit": content_limit}
+        if project_id:
+            payload["project_id"] = project_id
+        return self._post("/tools/content/article", payload)
+
+    def content_queries(self, project_id: int, limit: int = 50, offset: int = 0) -> dict:
+        return self._post("/tools/content/queries", {"project_id": project_id, "limit": limit, "offset": offset})
+
+    def content_briefing(self, query_id: int, project_id: int | None = None) -> dict:
+        payload: dict[str, Any] = {"query_id": query_id}
+        if project_id:
+            payload["project_id"] = project_id
+        return self._post("/tools/content/briefing", payload)
+
+    def content_status(self, query_id: int, project_id: int | None = None) -> dict:
+        payload: dict[str, Any] = {"query_id": query_id}
+        if project_id:
+            payload["project_id"] = project_id
+        return self._post("/tools/content/status", payload)
+
+    def score_text(self, project_id: int, content: str, format: str = "markdown",
+                   query_id: int | None = None, persona_id: int | None = None) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "content": content, "format": format}
+        if query_id:
+            payload["query_id"] = query_id
+        if persona_id:
+            payload["persona_id"] = persona_id
+        return self._post("/tools/content/score-text", payload)
+
+    # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------
 
