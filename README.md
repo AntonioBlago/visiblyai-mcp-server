@@ -170,6 +170,18 @@ In Claude Code, just ask naturally:
 - Python 3.10+
 - Claude Code CLI
 
+## Development
+
+Run the test suite with `PYTHONPATH=src`, not a plain `python -m pytest`:
+
+```bash
+PYTHONPATH=src python -m pytest tests -q --ignore=tests/integration
+```
+
+Without `PYTHONPATH=src`, `python -m pytest` can resolve `visiblyai_mcp` against an
+installed package version instead of the local `src/` checkout, so tests run against
+the wrong code. `--ignore=tests/integration` skips the tests that need a live API key.
+
 ## License
 
 MIT
