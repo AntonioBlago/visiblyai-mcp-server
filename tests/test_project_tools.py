@@ -58,6 +58,20 @@ def test_api_error_is_reported_not_raised():
     assert out["error"] == "Rate limited"
 
 
+def test_403_detail_is_surfaced_in_wrapper_output():
+    client = MagicMock()
+    client.memory_recall.side_effect = APIError(
+        "memory_disabled: Kundengraph ist fuer diesen Tarif nicht aktiv",
+        status_code=403,
+        detail={"error": "memory_disabled", "message": "Kundengraph ist fuer diesen Tarif nicht aktiv"},
+    )
+    with patch("visiblyai_mcp.tools.project_tools._require_key", return_value=client):
+        out = json.loads(project_tools.recall())
+    assert out["error"] == "memory_disabled: Kundengraph ist fuer diesen Tarif nicht aktiv"
+    assert out["status_code"] == 403
+    assert out["detail"] == {"error": "memory_disabled", "message": "Kundengraph ist fuer diesen Tarif nicht aktiv"}
+
+
 def test_missing_key_hint():
     with patch("visiblyai_mcp.tools.project_tools.get_api_key", return_value=None):
         out = json.loads(project_tools.list_articles(5))

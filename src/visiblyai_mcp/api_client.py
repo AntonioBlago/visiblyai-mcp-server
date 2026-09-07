@@ -15,9 +15,11 @@ _TIMEOUT = httpx.Timeout(60.0, connect=10.0)
 class APIError(Exception):
     """Raised when the platform API returns an error."""
 
-    def __init__(self, message: str, status_code: int = 0, credits_hint: bool = False):
+    def __init__(self, message: str, status_code: int = 0, credits_hint: bool = False,
+                 detail: dict | None = None):
         self.status_code = status_code
         self.credits_hint = credits_hint
+        self.detail = detail
         super().__init__(message)
 
 
@@ -359,11 +361,43 @@ class VisiblyAIClient:
                 credits_hint=True,
             )
         if resp.status_code == 429:
-            raise APIError("Rate limit exceeded. Please wait and try again.", status_code=429)
+            message = "Rate limit exceeded. Please wait and try again."
+            retry_after = resp.headers.get("Retry-After") if hasattr(resp, "headers") else None
+            if retry_after:
+                message = f"Rate limit exceeded. Retry after {retry_after}s. Please wait and try again."
+            raise APIError(message, status_code=429)
         if resp.status_code >= 500:
             raise APIError(f"Server error ({resp.status_code})", status_code=resp.status_code)
+        if resp.status_code >= 400:
+            message, detail = self._parse_error_body(resp)
+            raise APIError(message, status_code=resp.status_code, detail=detail)
 
         data = resp.json()
         if not data.get("success", True):
             raise APIError(data.get("error", "Unknown error"), status_code=resp.status_code)
         return data
+
+    def _parse_error_body(self, resp: httpx.Response) -> tuple[str, dict | None]:
+        """Turn a 4xx FastAPI error body into (message, detail-dict-or-None).
+
+        Handles the three shapes the platform can send for `detail`:
+        a dict (`{"error": ..., "message": ...}`), a plain string,
+        or a pydantic validation-error list (`[{"msg": ..., ...}, ...]`).
+        """
+        try:
+            body = resp.json()
+        except Exception:
+            body = None
+        detail = body.get("detail") if isinstance(body, dict) else None
+
+        if isinstance(detail, dict):
+            message = f"{detail.get('error', 'error')}: {detail.get('message', '')}".strip(": ")
+            return message, detail
+        if isinstance(detail, str) and detail:
+            return detail, None
+        if isinstance(detail, list) and detail:
+            messages = [str(item.get("msg", item)) if isinstance(item, dict) else str(item) for item in detail]
+            return "; ".join(messages), None
+
+        text = (getattr(resp, "text", "") or "")[:200]
+        return text or f"HTTP error ({resp.status_code})", None

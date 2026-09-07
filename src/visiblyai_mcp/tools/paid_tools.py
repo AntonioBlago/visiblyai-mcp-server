@@ -36,7 +36,9 @@ def _format_result(result: dict) -> str:
 def _handle_error(e: Exception) -> str:
     """Format error as JSON string."""
     if isinstance(e, APIError):
-        error_data = {"error": str(e)}
+        error_data = {"error": str(e), "status_code": e.status_code}
+        if e.detail:
+            error_data["detail"] = e.detail
         if e.credits_hint:
             error_data["credits_url"] = CREDITS_URL
         if e.status_code == 401:

@@ -64,6 +64,47 @@ class TestHandleResponse:
         with pytest.raises(APIError, match="Bad request"):
             client._handle_response(resp)
 
+    def test_403_raises_with_dict_detail(self):
+        client = VisiblyAIClient(api_key="lc_test")
+        resp = self._mock_response(403, {
+            "detail": {"error": "role_no_access", "message": "Viewer role cannot do this"}
+        })
+        with pytest.raises(APIError) as exc_info:
+            client._handle_response(resp)
+        assert exc_info.value.status_code == 403
+        assert str(exc_info.value).startswith("role_no_access:")
+        assert exc_info.value.detail == {"error": "role_no_access", "message": "Viewer role cannot do this"}
+
+    def test_422_raises_with_pydantic_list_detail(self):
+        client = VisiblyAIClient(api_key="lc_test")
+        resp = self._mock_response(422, {"detail": [
+            {"loc": ["body", "project_id"], "msg": "field required", "type": "value_error.missing"},
+            {"loc": ["body", "days"], "msg": "value is not a valid integer", "type": "type_error.integer"},
+        ]})
+        with pytest.raises(APIError) as exc_info:
+            client._handle_response(resp)
+        assert exc_info.value.status_code == 422
+        assert "field required" in str(exc_info.value)
+        assert "value is not a valid integer" in str(exc_info.value)
+        assert exc_info.value.detail is None
+
+    def test_404_raises_with_string_detail(self):
+        client = VisiblyAIClient(api_key="lc_test")
+        resp = self._mock_response(404, {"detail": "not_found"})
+        with pytest.raises(APIError) as exc_info:
+            client._handle_response(resp)
+        assert exc_info.value.status_code == 404
+        assert str(exc_info.value) == "not_found"
+
+    def test_429_includes_retry_after_header(self):
+        client = VisiblyAIClient(api_key="lc_test")
+        resp = self._mock_response(429)
+        resp.headers = {"Retry-After": "30"}
+        with pytest.raises(APIError) as exc_info:
+            client._handle_response(resp)
+        assert exc_info.value.status_code == 429
+        assert "30" in str(exc_info.value)
+
 
 class TestClientLifecycle:
     def test_ensure_client_creates_once(self):
