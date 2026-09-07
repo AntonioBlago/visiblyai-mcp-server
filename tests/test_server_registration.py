@@ -42,6 +42,22 @@ EXPECTED_TOOLS = {
     "get_google_connections",
     "query_search_console",
     "query_analytics",
+    # Project data & content, read-only (15)
+    "get_gsc_clusters",
+    "get_cluster_keywords",
+    "get_analytics_insights",
+    "get_revenue_insights",
+    "get_scorecard",
+    "get_eeat_summary",
+    "list_pages",
+    "get_internal_links",
+    "recall",
+    "list_articles",
+    "get_article",
+    "list_content_queries",
+    "get_content_briefing",
+    "get_content_status",
+    "score_text",
 }
 
 
@@ -71,7 +87,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 33, f"Expected 33 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 48, f"Expected 48 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         server_py = pathlib.Path(__file__).parent.parent / "src" / "visiblyai_mcp" / "server.py"

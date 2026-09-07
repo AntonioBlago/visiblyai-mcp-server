@@ -97,6 +97,27 @@ These tools use your own Google OAuth tokens connected via the VisiblyAI platfor
 | `query_search_console` | Query GSC: clicks, impressions, CTR, position by query/page/country/device |
 | `query_analytics` | Query GA4: traffic overview, top pages, traffic sources, revenue |
 
+### Project data & content (API key required, 0 credits, read-only) — 15 tools
+
+Nothing here writes back to visibly or spends credits. Team members read on the project owner's data; area roles apply (analytics / seo_tools / content).
+
+| Tool | What it returns |
+|---|---|
+| `get_gsc_clusters` | Topic clusters (top_n), quick wins, alerts, `computing`/`stale` flags |
+| `get_cluster_keywords` | Keywords of one cluster, paginated (`cluster_key` from the overview) |
+| `get_analytics_insights` | GA4 flow, funnel, channels, AI-referrer signals |
+| `get_revenue_insights` | Revenue totals, top keywords/pages, Pareto, cluster revenue |
+| `get_scorecard` | KPI scorecard, 28 or 90 days |
+| `get_eeat_summary` | E-E-A-T scores, trend, open todos, competitors |
+| `list_pages` | Page inventory with GSC metrics and index state |
+| `get_internal_links` | Link-graph summary + orphans, or inbound links of one URL |
+| `recall` | Facts remembered in the visibly chat (tier Pro) |
+| `list_articles` / `get_article` | Articles; text only on request, chunked |
+| `list_content_queries` / `get_content_briefing` / `get_content_status` | Content analyses, briefing, status |
+| `score_text` | Brand + AI-slop check, NSS with a finished analysis |
+
+Limits: 60 requests/minute per key, responses up to 256 KiB (lists continue via `page.next_offset`), requests up to 512 KiB. Errors come as `{"error": "<code>", "message": ...}` (`not_found`, `role_no_access`, `rate_limited`, `result_too_large`, ...).
+
 ## Examples
 
 In Claude Code, just ask naturally:

@@ -13,7 +13,7 @@ Usage:
 
 from mcp.server.fastmcp import FastMCP
 
-from .tools import free_tools, paid_tools
+from .tools import free_tools, paid_tools, project_tools
 
 mcp = FastMCP(
     "VisiblyAI SEO Tools",
@@ -24,7 +24,10 @@ mcp = FastMCP(
         "OnPage SEO audit, link checking, SEO agents, SEO workflows "
         "(requires API key + credits). "
         "Google: Search Console queries, Analytics reports, project management "
-        "(requires API key, 0 credits)."
+        "(requires API key, 0 credits). "
+        "Project data & content (read-only, 0 credits): GSC clusters, GA4 insights, "
+        "revenue, scorecard, EEAT, pages, internal links, articles, content queries, "
+        "briefings, text scoring, memory recall. Nothing is written back."
     ),
 )
 
@@ -446,6 +449,130 @@ def query_knowledge_base(
     Requires VISIBLYAI_API_KEY.
     """
     return paid_tools.query_knowledge_base(query, top_k, category, document_type, include_external)
+
+
+# ---------------------------------------------------------------------------
+# Project data & content (API key required, 0 credits, READ-ONLY)
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_gsc_clusters(project_id: int, days: int = 28, top_n: int = 30, country: str | None = None) -> str:
+    """Topic clusters from Search Console with quick wins and alerts. Credits: 0, read-only.
+
+    Returns the top_n clusters by impressions (each with a stable cluster_key for
+    get_cluster_keywords), quick wins, alerts, totals and `computing`/`stale` flags.
+    country: ISO alpha-3 (e.g. deu). Runs on the project owner's Google quota.
+    """
+    return project_tools.get_gsc_clusters(project_id, days, top_n, country)
+
+
+@mcp.tool()
+def get_cluster_keywords(project_id: int, cluster_key: str, days: int = 28, country: str | None = None,
+                         limit: int = 100, offset: int = 0) -> str:
+    """Keywords of one cluster (clicks, impressions, CTR, position), paginated. Credits: 0, read-only.
+
+    Use cluster_key from get_gsc_clusters. Response carries page.has_more/next_offset.
+    """
+    return project_tools.get_cluster_keywords(project_id, cluster_key, days, country, limit, offset)
+
+
+@mcp.tool()
+def get_analytics_insights(project_id: int, days: int = 28) -> str:
+    """GA4 flow (channels → page types → outcomes), funnel, channels, AI-referrer signals. Credits: 0, read-only."""
+    return project_tools.get_analytics_insights(project_id, days)
+
+
+@mcp.tool()
+def get_revenue_insights(project_id: int) -> str:
+    """Organic revenue attribution: totals, top keywords/landing pages, Pareto, cluster revenue. Credits: 0, read-only.
+
+    has_data=false means no revenue analysis exists yet (nothing is estimated).
+    """
+    return project_tools.get_revenue_insights(project_id)
+
+
+@mcp.tool()
+def get_scorecard(project_id: int, days: int = 28) -> str:
+    """KPI scorecard (leading + lagging indicators) over 28 or 90 days. Credits: 0, read-only."""
+    return project_tools.get_scorecard(project_id, days)
+
+
+@mcp.tool()
+def get_eeat_summary(project_id: int) -> str:
+    """Latest E-E-A-T scores, trend, open todos and competitor comparison. Credits: 0, read-only."""
+    return project_tools.get_eeat_summary(project_id)
+
+
+@mcp.tool()
+def list_pages(project_id: int, page_type: str | None = None, search: str = "", limit: int = 50, offset: int = 0) -> str:
+    """Page inventory from the sitemap with GSC metrics and index state, paginated. Credits: 0, read-only."""
+    return project_tools.list_pages(project_id, page_type, search, limit, offset)
+
+
+@mcp.tool()
+def get_internal_links(project_id: int, url: str | None = None, limit: int = 20, offset: int = 0) -> str:
+    """Internal link graph. Without url: summary + orphan pages. With url: inbound links and anchors. Credits: 0, read-only."""
+    return project_tools.get_internal_links(project_id, url, limit, offset)
+
+
+@mcp.tool()
+def recall(query: str = "", project_id: int | None = None, limit: int = 10) -> str:
+    """Recall facts the account remembered in the visibly chat (account facts, plus project facts if project_id). Credits: 0, read-only.
+
+    Empty query lists recent facts. Requires tier Pro and CUSTOMER_MEMORY_ENABLED on the platform.
+    """
+    return project_tools.recall(query, project_id, limit)
+
+
+@mcp.tool()
+def list_articles(project_id: int, status: str = "all", limit: int = 25, offset: int = 0) -> str:
+    """Content articles of a project (metadata only), newest first, paginated. Credits: 0, read-only.
+
+    status: all|draft|queued|generating|approved|rejected|published|failed|archived.
+    """
+    return project_tools.list_articles(project_id, status, limit, offset)
+
+
+@mcp.tool()
+def get_article(article_id: int, include_content: bool = False, content_offset: int = 0,
+                content_limit: int = 20000, project_id: int | None = None) -> str:
+    """One article. Text only with include_content=true, delivered in chunks of up to 20000 characters. Credits: 0, read-only.
+
+    Use next_content_offset to continue; content_hash changes when the article was edited.
+    """
+    return project_tools.get_article(article_id, include_content, content_offset, content_limit, project_id)
+
+
+@mcp.tool()
+def list_content_queries(project_id: int, limit: int = 50, offset: int = 0) -> str:
+    """Content queries (keyword analyses) with status and scores, paginated. Credits: 0, read-only."""
+    return project_tools.list_content_queries(project_id, limit, offset)
+
+
+@mcp.tool()
+def get_content_briefing(query_id: int, project_id: int | None = None) -> str:
+    """Editorial briefing of a finished content analysis: terms, entities, questions, outline. Credits: 0, read-only.
+
+    409 query_not_ready while the analysis is still pending.
+    """
+    return project_tools.get_content_briefing(query_id, project_id)
+
+
+@mcp.tool()
+def get_content_status(query_id: int, project_id: int | None = None) -> str:
+    """Analysis status of a content query plus article generation state, no texts. Credits: 0, read-only."""
+    return project_tools.get_content_status(query_id, project_id)
+
+
+@mcp.tool()
+def score_text(project_id: int, content: str, format: str = "markdown",
+               query_id: int | None = None, persona_id: int | None = None) -> str:
+    """Score a text against the project's brand rules and AI-slop patterns; with a ready query_id also the NSS. Credits: 0.
+
+    Deterministic, nothing is stored. format: html|markdown (max 100000 chars).
+    nss is null with a reason when no finished analysis is referenced.
+    """
+    return project_tools.score_text(project_id, content, format, query_id, persona_id)
 
 
 def main():
