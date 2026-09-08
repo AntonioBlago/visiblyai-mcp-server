@@ -4,6 +4,16 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.9.0] - 2026-09-08
+
+### Added
+- Three write tools (stage 2A of write-back, 0 credits, need the key right `content:write` granted in the visibly settings): `submit_article_draft` hands your own text over as an article draft (query, draft and article in one transaction, HTML sanitized), `update_article` edits a draft or rejected article guarded by `expected_revision`, `get_mcp_operation` reads the status of a write operation. Every call carries an `idempotency_key` (generated when omitted and echoed back) so retries replay instead of duplicating.
+
+## [0.8.0] - 2026-09-08
+
+### Added
+- 15 read-only project-data and content tools (0 credits): Search Console clusters and keywords, GA4 insights, revenue, scorecard, EEAT, pages, internal links, `recall`, articles, content queries, briefing, status and `score_text`.
+
 ## [0.7.2] - 2026-09-06
 
 ### Fixed

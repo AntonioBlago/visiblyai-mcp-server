@@ -313,6 +313,19 @@ class VisiblyAIClient:
         return self._post("/tools/content/score-text", payload)
 
     # ------------------------------------------------------------------
+    # Write tools (stage 2A, 0 credits, need key right content:write)
+    # ------------------------------------------------------------------
+
+    def submit_article_draft(self, payload: dict) -> dict:
+        return self._post("/tools/content/submit-draft", payload)
+
+    def update_article(self, payload: dict) -> dict:
+        return self._post("/tools/content/update-article", payload)
+
+    def mcp_operation(self, operation_id: int) -> dict:
+        return self._post("/tools/content/operation", {"operation_id": operation_id})
+
+    # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------
 

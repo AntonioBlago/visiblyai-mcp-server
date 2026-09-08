@@ -13,7 +13,7 @@ Usage:
 
 from mcp.server.fastmcp import FastMCP
 
-from .tools import free_tools, paid_tools, project_tools
+from .tools import content_write_tools, free_tools, paid_tools, project_tools
 
 mcp = FastMCP(
     "VisiblyAI SEO Tools",
@@ -573,6 +573,43 @@ def score_text(project_id: int, content: str, format: str = "markdown",
     nss is null with a reason when no finished analysis is referenced.
     """
     return project_tools.score_text(project_id, content, format, query_id, persona_id)
+
+
+@mcp.tool()
+def submit_article_draft(project_id: int, title: str, content: str, keyword: str, format: str = "markdown",
+                         idempotency_key: str | None = None, language: str = "de", country: str = "de",
+                         persona_id: int | None = None, query_id: int | None = None,
+                         expected_query_revision: int | None = None, expected_article_revision: int | None = None) -> str:
+    """Hand your text over to visibly as an article draft (status draft, never queued). Credits: 0.
+
+    Needs an API key with the right content:write. Pass a stable idempotency_key when retrying;
+    the response echoes the key used. format: html|markdown. Without query_id a new content query
+    is created; with query_id keyword/country/language/persona and expected_query_revision must match.
+    """
+    return content_write_tools.submit_article_draft(project_id, title, content, keyword, format, idempotency_key,
+                                                    language, country, persona_id, query_id,
+                                                    expected_query_revision, expected_article_revision)
+
+
+@mcp.tool()
+def update_article(article_id: int, expected_revision: int, idempotency_key: str | None = None,
+                   title: str | None = None, content: str | None = None, format: str | None = None,
+                   meta_description: str | None = None, keywords: list[str] | None = None,
+                   project_id: int | None = None) -> str:
+    """Edit a draft or rejected article. Credits: 0. Needs content:write.
+
+    expected_revision comes from get_article; a mismatch returns revision_conflict with the current
+    revision. With content, format (html|markdown) is required. Approved or published articles
+    cannot be edited here; hand over a new draft instead.
+    """
+    return content_write_tools.update_article(article_id, expected_revision, idempotency_key, title, content, format,
+                                              meta_description, keywords, project_id)
+
+
+@mcp.tool()
+def get_mcp_operation(operation_id: int) -> str:
+    """Status and result of one of your write operations. Credits: 0, read-only."""
+    return content_write_tools.get_mcp_operation(operation_id)
 
 
 def main():
