@@ -612,6 +612,19 @@ def get_mcp_operation(operation_id: int) -> str:
     return content_write_tools.get_mcp_operation(operation_id)
 
 
+@mcp.tool()
+def remember(content: str, scope: str = "project", project_id: int | None = None,
+             idempotency_key: str | None = None) -> str:
+    """Store a fact in YOUR visibly brain (the key holder's memory graph, read back by recall and the chat). Credits: 0.
+
+    User data, not a permission: the fact only shapes your own chat context, never project
+    content and never another member's graph. scope=project needs project_id; scope=account
+    applies across all projects. Needs the key right memory:write. Pass a stable idempotency_key
+    when retrying; the response echoes the key used.
+    """
+    return content_write_tools.remember(content, scope, project_id, idempotency_key)
+
+
 def main():
     """Entry point for the MCP server and CLI commands.
 

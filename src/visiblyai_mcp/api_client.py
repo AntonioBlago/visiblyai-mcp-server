@@ -325,6 +325,9 @@ class VisiblyAIClient:
     def mcp_operation(self, operation_id: int) -> dict:
         return self._post("/tools/content/operation", {"operation_id": operation_id})
 
+    def remember(self, payload: dict) -> dict:
+        return self._post("/tools/memory/remember", payload)
+
     # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------

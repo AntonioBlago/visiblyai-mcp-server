@@ -4,6 +4,11 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.10.0] - 2026-09-10
+
+### Added
+- `remember` (stage 2D of write-back, 0 credits, needs the key right `memory:write`): stores a fact in the key holder's own visibly brain, account-wide or for one project; `recall` and the SEO copilot chat read the same graph. Idempotent via `idempotency_key`, the server derives a stable memory id from the operation so retries never duplicate.
+
 ## [0.9.0] - 2026-09-08
 
 ### Added

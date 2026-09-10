@@ -15,7 +15,7 @@ SEO tools for Claude Code. Free local tools + paid API-powered analysis.
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 51 tools):
+# With API key (all 52 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
@@ -116,7 +116,7 @@ Nothing here writes back to visibly or spends credits. Team members read on the 
 | `list_content_queries` / `get_content_briefing` / `get_content_status` | Content analyses, briefing, status |
 | `score_text` | Brand + AI-slop check, NSS with a finished analysis |
 
-### Write tools (API key with the right `content:write`, 0 credits) — 3 tools
+### Write tools (API key with a write right, 0 credits) — 4 tools
 
 Stage 2A of write-back. The key right is granted in the visibly settings (API key section); the server operator must have the stage enabled. Every call carries an `idempotency_key` (generated when omitted and echoed back) so a retry replays instead of duplicating.
 
@@ -125,6 +125,7 @@ Stage 2A of write-back. The key right is granted in the visibly settings (API ke
 | `submit_article_draft` | Hand your own text over as an article draft (query, draft and article in one transaction; HTML is sanitized) |
 | `update_article` | Edit a draft or rejected article with `expected_revision` (409 on conflict) |
 | `get_mcp_operation` | Status and result of one of your write operations |
+| `remember` | Store a fact in your own visibly brain (key right `memory:write`; account or project scope; read back by `recall` and the chat) |
 
 Limits: 60 requests/minute per key, responses up to 256 KiB (lists continue via `page.next_offset`), requests up to 512 KiB. Errors come as `{"error": "<code>", "message": ...}` (`not_found`, `role_no_access`, `rate_limited`, `result_too_large`, ...).
 

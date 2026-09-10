@@ -61,6 +61,7 @@ EXPECTED_TOOLS = {
     "submit_article_draft",
     "update_article",
     "get_mcp_operation",
+    "remember",
 }
 
 
@@ -90,7 +91,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 51, f"Expected 51 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 52, f"Expected 52 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         server_py = pathlib.Path(__file__).parent.parent / "src" / "visiblyai_mcp" / "server.py"

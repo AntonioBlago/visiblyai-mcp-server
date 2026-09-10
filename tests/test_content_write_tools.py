@@ -48,3 +48,16 @@ def test_operation_and_api_error():
     client.mcp_operation.side_effect = APIError("stage_disabled", status_code=403)
     with patch("visiblyai_mcp.tools.content_write_tools._require_key", return_value=client):
         assert json.loads(w.get_mcp_operation(11))["error"] == "stage_disabled"
+
+
+def test_remember_validates_and_maps_payload():
+    assert "error" in json.loads(w.remember(""))
+    assert "error" in json.loads(w.remember("x", scope="global"))
+    assert "error" in json.loads(w.remember("x", scope="project"))
+    out, call = _run(w.remember, "remember", "JACKS: Kernkundin 45+", scope="project", project_id=12)
+    payload = call.args[0]
+    assert payload == {"content": "JACKS: Kernkundin 45+", "scope": "project", "project_id": 12,
+                       "idempotency_key": payload["idempotency_key"]}
+    assert len(payload["idempotency_key"]) == 32 and out["idempotency_key"] == payload["idempotency_key"]
+    _, call = _run(w.remember, "remember", "kontoweit", scope="account", idempotency_key="abc")
+    assert call.args[0] == {"content": "kontoweit", "scope": "account", "idempotency_key": "abc"}

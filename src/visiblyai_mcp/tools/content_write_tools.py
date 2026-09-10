@@ -10,7 +10,7 @@ from ..api_client import APIError, VisiblyAIClient
 from ..config import SIGNUP_URL, get_api_key
 from .paid_tools import _format_result, _handle_error
 
-__all__ = ["submit_article_draft", "update_article", "get_mcp_operation"]
+__all__ = ["submit_article_draft", "update_article", "get_mcp_operation", "remember"]
 FORMATS = ("html", "markdown")
 
 
@@ -89,3 +89,18 @@ def get_mcp_operation(operation_id: int) -> str:
     if not operation_id:
         return _bad("operation_id is required")
     return _call("mcp_operation", operation_id)
+
+
+def remember(content: str, scope: str = "project", project_id: int | None = None,
+             idempotency_key: str | None = None) -> str:
+    """Store a fact in your own visibly brain (account or project scope). Needs the key right memory:write."""
+    if not (content or "").strip():
+        return _bad("content is required")
+    if scope not in ("project", "account"):
+        return _bad("scope must be project or account")
+    if scope == "project" and not project_id:
+        return _bad("project_id is required for scope=project")
+    payload = {"content": content, "scope": scope, "idempotency_key": idempotency_key}
+    if project_id:
+        payload["project_id"] = project_id
+    return _with_key("remember", payload)
