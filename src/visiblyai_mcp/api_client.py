@@ -328,6 +328,12 @@ class VisiblyAIClient:
     def remember(self, payload: dict) -> dict:
         return self._post("/tools/memory/remember", payload)
 
+    def import_meeting_preview(self, payload: dict) -> dict:
+        return self._post("/tools/memory/meeting-import/preview", payload)
+
+    def import_meeting_apply(self, payload: dict) -> dict:
+        return self._post("/tools/memory/meeting-import/apply", payload)
+
     # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------

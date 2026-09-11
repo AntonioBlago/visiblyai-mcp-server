@@ -61,3 +61,26 @@ def test_remember_validates_and_maps_payload():
     assert len(payload["idempotency_key"]) == 32 and out["idempotency_key"] == payload["idempotency_key"]
     _, call = _run(w.remember, "remember", "kontoweit", scope="account", idempotency_key="abc")
     assert call.args[0] == {"content": "kontoweit", "scope": "account", "idempotency_key": "abc"}
+
+def test_import_meeting_preview_validates_and_maps_payload():
+    assert "error" in json.loads(w.import_meeting_preview(0, "x" * 300))
+    assert "error" in json.loads(w.import_meeting_preview(5, "zu kurz"))
+    assert "error" in json.loads(w.import_meeting_preview(5, "x" * 60_001))
+    _, call = _run(w.import_meeting_preview, "import_meeting_preview", 5, "  " + "x" * 300 + "  ", source="Call 11.9.")
+    assert call.args[0] == {"project_id": 5, "text": "x" * 300, "source": "Call 11.9."}
+    _, call = _run(w.import_meeting_preview, "import_meeting_preview", 5, "y" * 200)
+    assert "source" not in call.args[0]
+
+def test_import_meeting_apply_validates_and_generates_key():
+    assert "error" in json.loads(w.import_meeting_apply(5, "Call"))
+    assert "error" in json.loads(w.import_meeting_apply(5, "", facts=[{"content": "x"}]))
+    assert "error" in json.loads(w.import_meeting_apply(5, "Call", rules=[{"rule_type": "excluded_term", "term": "x"}]))
+    assert "error" in json.loads(w.import_meeting_apply(5, "Call", facts=[{"content": " "}]))
+    fact = {"content": "Produziert in Berlin.", "category": "marke", "entities": [{"name": "Berlin", "type": "ort"}]}
+    out, call = _run(w.import_meeting_apply, "import_meeting_apply", 5, "Call", facts=[fact],
+                     rules=[{"rule_type": "tone", "note": "Per Du."}], brand_profile={"usps": ["A"]})
+    payload = call.args[0]
+    assert payload["facts"] == [fact] and payload["personas"] == [] and payload["brand_profile"] == {"usps": ["A"]}
+    assert len(payload["idempotency_key"]) == 32 and out["idempotency_key"] == payload["idempotency_key"]
+    _, call = _run(w.import_meeting_apply, "import_meeting_apply", 5, "Call", facts=[fact], idempotency_key="k1")
+    assert call.args[0]["idempotency_key"] == "k1"

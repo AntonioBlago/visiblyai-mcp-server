@@ -126,6 +126,8 @@ Stage 2A of write-back. The key right is granted in the visibly settings (API ke
 | `update_article` | Edit a draft or rejected article with `expected_revision` (409 on conflict) |
 | `get_mcp_operation` | Status and result of one of your write operations |
 | `remember` | Store a fact in your own visibly brain (key right `memory:write`; account or project scope; read back by `recall` and the chat) |
+| `import_meeting_preview` | Turn a meeting transcript into a reviewable proposal: brain facts with categories and entities, brand rules, personas, profile fields (15 credits, nothing written) |
+| `import_meeting_apply` | Write the reviewed selection: facts into your brain (`memory:write`), rules, personas and profile into the project (`content:write`); 0 credits, idempotent |
 
 Limits: 60 requests/minute per key, responses up to 256 KiB (lists continue via `page.next_offset`), requests up to 512 KiB. Errors come as `{"error": "<code>", "message": ...}` (`not_found`, `role_no_access`, `rate_limited`, `result_too_large`, ...).
 

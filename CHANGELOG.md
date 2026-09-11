@@ -4,6 +4,12 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.11.0] - 2026-09-11
+
+### Added
+- `import_meeting_preview` (15 credits, key holder pays, nothing written): turns a meeting or call transcript into a proposal with brain facts (category plus typed entities), brand rules, personas and brand profile fields, so the user can review before anything lands.
+- `import_meeting_apply` (0 credits, idempotent via `idempotency_key`): writes the reviewed selection. Facts go into the key holder's brain (`memory:write`), rules, personas and profile fields into the project (`content:write` plus a content write role).
+
 ## [0.10.0] - 2026-09-10
 
 ### Added

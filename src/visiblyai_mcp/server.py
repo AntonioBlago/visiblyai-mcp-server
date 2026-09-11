@@ -625,6 +625,35 @@ def remember(content: str, scope: str = "project", project_id: int | None = None
     return content_write_tools.remember(content, scope, project_id, idempotency_key)
 
 
+@mcp.tool()
+def import_meeting_preview(project_id: int, text: str, source: str | None = None) -> str:
+    """Turn a meeting or call transcript into a reviewable proposal for one project. Credits: 15 per run, charged to the key holder.
+
+    Returns four lists, nothing is written: brain facts (each with a category and typed entities),
+    brand rules (not_allowed, preferred, tone, hard_rule), personas and brand profile fields. Show
+    them to the user, let them strike or edit items, then call import_meeting_apply with the
+    selection. text: 200 to 60000 characters, plain text; source: a short name for the transcript.
+    Needs the key right memory:write and access to the project.
+    """
+    return content_write_tools.import_meeting_preview(project_id, text, source)
+
+
+@mcp.tool()
+def import_meeting_apply(project_id: int, source: str, facts: list[dict] | None = None,
+                         rules: list[dict] | None = None, personas: list[dict] | None = None,
+                         brand_profile: dict | None = None, idempotency_key: str | None = None) -> str:
+    """Write the reviewed selection from import_meeting_preview. Credits: 0, idempotent.
+
+    Pass the items the user approved, in the shape the preview returned (facts with content,
+    category, entities; rules with rule_type plus term or note; personas; brand_profile fields).
+    Facts go into YOUR brain (key right memory:write), rules, personas and profile into the
+    project (key right content:write plus a content write role). Retries with the same
+    idempotency_key replay instead of duplicating; the response echoes the key used.
+    """
+    return content_write_tools.import_meeting_apply(project_id, source, facts, rules, personas, brand_profile,
+                                                    idempotency_key)
+
+
 def main():
     """Entry point for the MCP server and CLI commands.
 

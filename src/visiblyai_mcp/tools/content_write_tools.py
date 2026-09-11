@@ -10,7 +10,8 @@ from ..api_client import APIError, VisiblyAIClient
 from ..config import SIGNUP_URL, get_api_key
 from .paid_tools import _format_result, _handle_error
 
-__all__ = ["submit_article_draft", "update_article", "get_mcp_operation", "remember"]
+__all__ = ["submit_article_draft", "update_article", "get_mcp_operation", "remember",
+           "import_meeting_preview", "import_meeting_apply"]
 FORMATS = ("html", "markdown")
 
 
@@ -104,3 +105,43 @@ def remember(content: str, scope: str = "project", project_id: int | None = None
     if project_id:
         payload["project_id"] = project_id
     return _with_key("remember", payload)
+
+MEETING_RULE_TYPES = ("not_allowed", "preferred", "tone", "hard_rule")
+
+def import_meeting_preview(project_id: int, text: str, source: str | None = None) -> str:
+    """Turn a meeting transcript into a proposal: brain facts, brand rules, personas, profile fields. Costs credits."""
+    if not project_id:
+        return _bad("project_id is required")
+    body = (text or "").strip()
+    if len(body) < 200:
+        return _bad("text must have at least 200 characters")
+    if len(body) > 60_000:
+        return _bad("text must have at most 60000 characters (split the transcript)")
+    payload = {"project_id": project_id, "text": body}
+    if source:
+        payload["source"] = str(source)[:200]
+    return _call("import_meeting_preview", payload)
+
+def import_meeting_apply(project_id: int, source: str, facts: list[dict] | None = None,
+                         rules: list[dict] | None = None, personas: list[dict] | None = None,
+                         brand_profile: dict | None = None, idempotency_key: str | None = None) -> str:
+    """Write the reviewed selection from import_meeting_preview (0 credits, idempotent)."""
+    if not project_id:
+        return _bad("project_id is required")
+    if not (source or "").strip():
+        return _bad("source is required (name of the transcript, as returned by the preview)")
+    facts = facts or []
+    rules = rules or []
+    personas = personas or []
+    brand_profile = brand_profile or {}
+    if not (facts or rules or personas or brand_profile):
+        return _bad("nothing selected: pass at least one of facts, rules, personas, brand_profile")
+    for rule in rules:
+        if not isinstance(rule, dict) or rule.get("rule_type") not in MEETING_RULE_TYPES:
+            return _bad(f"each rule needs rule_type in {', '.join(MEETING_RULE_TYPES)}")
+    for fact in facts:
+        if not isinstance(fact, dict) or not str(fact.get("content") or "").strip():
+            return _bad("each fact needs content")
+    payload = {"project_id": project_id, "source": str(source)[:200], "facts": facts, "rules": rules,
+               "personas": personas, "brand_profile": brand_profile, "idempotency_key": idempotency_key}
+    return _with_key("import_meeting_apply", payload)
