@@ -8,4 +8,4 @@
 # Deliberately not importlib.metadata: that reports the version of the INSTALLED
 # distribution, so running from a source tree would report whatever happens to be
 # installed in the environment rather than the code actually executing.
-__version__ = "0.11.0"
+__version__ = "0.11.1"
