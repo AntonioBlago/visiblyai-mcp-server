@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "visiblyai-mcp-server"
-version = "0.11.0"
+dynamic = ["version"]
 description = "MCP server for VisiblyAI SEO tools - free local tools + paid API-powered SEO analysis"
 readme = "README.md"
 license = "MIT"
@@ -38,3 +38,6 @@ Repository = "https://github.com/antonioblago/visiblyai-mcp-server"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/visiblyai_mcp"]
+
+[tool.hatch.version]
+path = "src/visiblyai_mcp/__init__.py"
