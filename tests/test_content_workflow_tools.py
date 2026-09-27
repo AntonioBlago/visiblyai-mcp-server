@@ -52,18 +52,18 @@ def test_editor_save_publish_and_optimizer_actions_are_mapped():
     assert len({tool.__name__ for tool in tools.TOOLS}) == len(tools.TOOLS)
 
 
-    def test_full_editor_and_version_operations_are_registered_and_revision_safe():
-        _, edit_call = _run(tools.edit_content_article, "edit_content_article", 11, 7, title="New",
-                search_intent="transactional", recommended_page_type="blog")
-        payload = edit_call.args[1]
-        assert edit_call.args[0] == "edit_content_article"
-        assert payload["expected_revision"] == 7 and len(payload["idempotency_key"]) == 32
-        _, restore_call = _run(tools.restore_article_backup, "restore_article_backup", 9, 3, 5)
-        assert restore_call.args == ("restore_article_backup", {"backup_id": 9, "project_id": 3,
-                                      "expected_revision": 5})
-        names = {tool.__name__ for tool in tools.TOOLS}
-        assert {"pull_live_article", "set_article_live_url", "list_article_backups",
-            "get_article_backup", "restore_article_backup", "regenerate_content_article"} <= names
+def test_full_editor_and_version_operations_are_registered_and_revision_safe():
+    _, edit_call = _run(tools.edit_content_article, "edit_content_article", 11, 7, title="New",
+            search_intent="transactional", recommended_page_type="blog")
+    payload = edit_call.args[1]
+    assert edit_call.args[0] == "edit_content_article"
+    assert payload["expected_revision"] == 7 and len(payload["idempotency_key"]) == 32
+    _, restore_call = _run(tools.restore_article_backup, "restore_article_backup", 9, 3, 5)
+    assert restore_call.args == ("restore_article_backup", {"backup_id": 9, "project_id": 3,
+                                  "expected_revision": 5})
+    names = {tool.__name__ for tool in tools.TOOLS}
+    assert {"pull_live_article", "set_article_live_url", "list_article_backups",
+        "get_article_backup", "restore_article_backup", "regenerate_content_article"} <= names
 
 
 def test_client_uses_allowlisted_mcp_paths():
@@ -99,7 +99,7 @@ def test_http_contract_matches_registered_stdio_tools():
 
     registered = {tool.name: tool for tool in mcp._tool_manager.list_tools()}
     definitions = tools.tool_definitions()
-    assert len(definitions) == 29
+    assert len(definitions) == 30
     for definition in definitions:
         name = definition['name']
         assert name in CONTENT_WORKFLOW_PATHS
@@ -109,3 +109,13 @@ def test_http_contract_matches_registered_stdio_tools():
     assert 'spending:execute' in descriptions['change_article_status']
     assert 'content:publish' in descriptions['approve_optimizer_suggestion']
     assert 'content:publish' in descriptions['undo_optimizer_suggestion']
+
+
+def test_workflow_preflight_maps_comparison_without_writing():
+    out, call = _run(tools.get_article_workflow, "get_article_workflow", 62, 22, True)
+    assert call.args == ("get_article_workflow", {"article_id": 62, "project_id": 22, "compare_live": True})
+    assert out["credits_used"] == 0
+    client = VisiblyAIClient("lc_test")
+    with patch.object(client, "_post", return_value=OK) as post:
+        client.content_workflow("get_article_workflow", call.args[1])
+    post.assert_called_once_with("/tools/content/article-workflow", call.args[1])

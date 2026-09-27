@@ -6,16 +6,16 @@ The agent uses its own model for writing. Visibly provides context, scoring and 
 
 ## Downloads
 
-Plugin release **1.0.0** works with the current remote MCP server (**0.12.1**, 83 tools).
+Plugin release **1.0.1** works with the current remote MCP server (**0.13.0**, 84 tools).
 An API key and the appropriate project permissions are required for account data and writing drafts.
 
 | Client | Plugin ZIP | Connection setup |
 | --- | --- | --- |
-| Claude Code | [visibly-claude-1.0.0.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.0/visibly-claude-1.0.0.zip) | Bundled remote MCP configuration; environment variable |
-| OpenAI Codex | [visibly-codex-1.0.0.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.0/visibly-codex-1.0.0.zip) | Bundled remote MCP configuration; environment variable |
-| GitHub Copilot CLI | [visibly-copilot-1.0.0.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.0/visibly-copilot-1.0.0.zip) | Install skill plugin, then add the MCP connection below |
+| Claude Code | [visibly-claude-1.0.1.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.1/visibly-claude-1.0.1.zip) | Bundled remote MCP configuration; environment variable |
+| OpenAI Codex | [visibly-codex-1.0.1.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.1/visibly-codex-1.0.1.zip) | Bundled remote MCP configuration; environment variable |
+| GitHub Copilot CLI | [visibly-copilot-1.0.1.zip](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/download/plugins-v1.0.1/visibly-copilot-1.0.1.zip) | Install skill plugin, then add the MCP connection below |
 
-[Release notes and SHA-256 checksums](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/tag/plugins-v1.0.0).
+[Release notes and SHA-256 checksums](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/tag/plugins-v1.0.1).
 Each ZIP contains a plugin root: extract it into a folder named after the plugin.
 The marketplace installation below downloads the files for you.
 

@@ -143,13 +143,27 @@ def publish_article(article_id: int, project_id: int, connection_id: int,
 
 
 def update_cms_article(article_id: int, project_id: int, connection_id: int) -> str:
-    """Write a saved revision back to its existing CMS entry. Requires content:publish."""
+    """Update the website from the saved Visibly article. Requires content:publish.
+
+    Check get_article_workflow first: another published article may own this URL.
+    A webhook receipt is not completion. Verify delivery and live content with get_article_workflow.
+    """
     return _call("update_cms_article", {"article_id": article_id, "project_id": project_id,
                                         "connection_id": connection_id})
 
 
+def get_article_workflow(article_id: int, project_id: int, compare_live: bool = False) -> str:
+    """Read editor links, published article conflicts and the last CMS transfer status (0 credits).
+
+    With compare_live, compare the saved revision's text, links, images, structure and metadata
+    against the website. Missing metadata is unknown. Writes nothing; accepted is not completed.
+    """
+    return _call("get_article_workflow", {"article_id": article_id, "project_id": project_id,
+                                          "compare_live": compare_live})
+
+
 def pull_live_article(article_id: int, project_id: int) -> str:
-    """Read the current live page as a proposal; nothing is saved."""
+    """Read website content and its comparison with Visibly as a proposal; nothing is saved or published."""
     return _call("pull_live_article", {"article_id": article_id, "project_id": project_id})
 
 
@@ -231,7 +245,7 @@ TOOLS = (
     edit_content_article, regenerate_content_article,
     list_cms_connections, create_cms_connection, test_cms_connection, delete_cms_connection,
     create_contentpilot_key, get_contentpilot_key_status, revoke_contentpilot_key,
-    publish_article, update_cms_article, pull_live_article, set_article_live_url,
+    publish_article, update_cms_article, get_article_workflow, pull_live_article, set_article_live_url,
     list_article_backups, get_article_backup, restore_article_backup,
     get_optimizer_settings, update_optimizer_settings,
     run_content_optimizer, list_optimizer_suggestions, approve_optimizer_suggestion,

@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
@@ -25,7 +26,7 @@ def build(output: Path, sync_skills: bool = False) -> None:
             skill.write_bytes(canonical)
         if skill.read_bytes() != canonical:
             raise ValueError(f"Stale skill in {folder.name}; run with --sync-skills")
-        if manifest["name"] != folder.name or manifest["version"] != "1.0.0":
+        if manifest["name"] != folder.name or not re.fullmatch(r"\d+\.\d+\.\d+", manifest["version"]):
             raise ValueError(f"Unexpected plugin identity/version: {folder.name}")
         paths = [manifest_path, "README.md", "skills/content-nss-optimize/SKILL.md"]
         if "mcpServers" in manifest:
@@ -39,7 +40,7 @@ def build(output: Path, sync_skills: bool = False) -> None:
             elif server.get("headers") != {"Authorization": "Bearer ${VISIBLYAI_API_KEY}"}:
                 raise ValueError("Claude must read the key from the environment")
             paths.append(config_path.removeprefix("./"))
-        bundles.append((folder, paths))
+        bundles.append((folder, paths, manifest["version"]))
 
     for catalog in (".claude-plugin/marketplace.json", ".github/plugin/marketplace.json", ".agents/plugins/marketplace.json"):
         market = json.loads((ROOT / catalog).read_text(encoding="utf-8"))
@@ -51,8 +52,8 @@ def build(output: Path, sync_skills: bool = False) -> None:
 
     output.mkdir(parents=True, exist_ok=True)
     checksums = []
-    for folder, paths in bundles:
-        archive = output / f"{folder.name}-1.0.0.zip"
+    for folder, paths, version in bundles:
+        archive = output / f"{folder.name}-{version}.zip"
         # Explicit allowlist: local credentials, caches and build output cannot enter ZIPs.
         with ZipFile(archive, "w", compression=ZIP_DEFLATED) as handle:
             for relative in sorted(paths):
@@ -70,7 +71,7 @@ def build(output: Path, sync_skills: bool = False) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "dist/plugins-1.0.0")
+    parser.add_argument("--output", type=Path, default=ROOT / "dist/plugins")
     parser.add_argument("--sync-skills", action="store_true", help="Refresh bundled skills from the canonical source")
     args = parser.parse_args()
     build(args.output, args.sync_skills)

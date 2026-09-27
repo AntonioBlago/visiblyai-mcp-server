@@ -17,7 +17,7 @@ SEO tools for Claude Code, OpenAI Codex, GitHub Copilot and other MCP clients. F
 No Python or pip needed. Just add a URL to your Claude Code config:
 
 ```bash
-# With API key (all 83 tools):
+# With API key (all 84 tools):
 claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp

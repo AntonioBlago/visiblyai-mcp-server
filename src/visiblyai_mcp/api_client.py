@@ -31,6 +31,7 @@ CONTENT_WORKFLOW_PATHS = {
     "revoke_contentpilot_key": "/tools/content/contentpilot-key/revoke",
     "publish_article": "/tools/content/publish",
     "update_cms_article": "/tools/content/cms-update",
+    "get_article_workflow": "/tools/content/article-workflow",
     "pull_live_article": "/tools/content/cms-pull",
     "set_article_live_url": "/tools/content/set-live-url",
     "list_article_backups": "/tools/content/backups",

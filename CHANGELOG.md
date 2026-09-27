@@ -4,6 +4,16 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.13.0] - 2026-09-27
+
+### Added
+- `get_article_workflow`: free, read-only editor links, duplicate published-article detection, last CMS transfer status and optional live content comparison. Available through both MCP transports (84 tools).
+- Plugin bundles 1.0.1 for Claude, Codex and Copilot: distinguish saving, importing the website version and publishing; resolve article identity before updating; verify live content after asynchronous receipt.
+
+### Fixed
+- Plugin archive names now use each manifest's release version.
+- Restore collection of the revision-safe editor/version mapping test.
+
 ## [0.12.1] - 2026-09-27
 
 ### Fixed
