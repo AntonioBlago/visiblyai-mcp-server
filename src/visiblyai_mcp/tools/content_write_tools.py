@@ -49,7 +49,14 @@ def submit_article_draft(project_id: int, title: str, content: str, keyword: str
                          idempotency_key: str | None = None, language: str = "de", country: str = "de",
                          persona_id: int | None = None, query_id: int | None = None,
                          expected_query_revision: int | None = None, expected_article_revision: int | None = None) -> str:
-    """Hand a text over as an article draft (status draft). Returns operation, article and query ids plus revisions."""
+    """Save text written by Claude as an article draft. No Visibly generation, 0 Visibly credits.
+
+    Returns editor_url: show this clickable link to the user after saving. The editor
+    automatically scores against an analyzed query, also at 0 credits. Use an existing
+    ready query_id and its expected_query_revision for full scoring; creating a new
+    analysis with create_content_query is separately paid. Never call generation,
+    regeneration or paid optimization merely to save or score Claude-written text.
+    """
     if not project_id or not (title or "").strip() or not (content or "").strip() or not (keyword or "").strip():
         return _bad("project_id, title, content and keyword are required")
     if format not in FORMATS:

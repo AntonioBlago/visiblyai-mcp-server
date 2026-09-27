@@ -12,6 +12,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 - Limit source distributions to package source, tests and release metadata; exclude local exports and old build artifacts.
 
 ### Added
+- Direct article editor link after handing over Claude-written text, with guidance for free saving and deterministic scoring without Visibly generation.
 - Shared content workflow endpoint mapping and tool definitions for the remote HTTP transport, keeping its 29 new tools aligned with the stdio package.
 
 ## [0.12.0] - 2026-09-26

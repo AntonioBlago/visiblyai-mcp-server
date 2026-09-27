@@ -120,6 +120,8 @@ Nothing here writes back to visibly or spends credits. Team members read on the 
 
 Read the editor context, research keywords, create and analyze a query, write and optimize drafts, approve articles, configure CMS connections, publish, and review optimizer suggestions. The Visibly server operator must enable the relevant write stage. Grant only the required rights in Visibly Settings → API key & MCP; existing keys do not receive new rights automatically.
 
+**Writing in Claude:** read an existing analyzed query and briefing, let Claude write the text, then call `submit_article_draft` with that `query_id` and its current `expected_query_revision`. Show the returned `editor_url` as a clickable link. Saving uses **0 Visibly credits** and never starts Visibly text generation. The editor automatically scores the text for **0 credits** against the analyzed query; `score_text` also provides free feedback within Claude. New SERP/content analyses via `create_content_query` are separately paid. Without a ready analysis, full NSS scoring is unavailable. Do not call generation, regeneration, queueing or paid optimization simply to save or score Claude's text. Automatic browser opening depends on the Claude client; the MCP response provides the link.
+
 | Tool | Description |
 |------|-------------|
 | `get_content_query` / `list_content_queries` / `get_content_briefing` / `get_content_status` | Read query, draft, briefing, analysis and generation state; draft bodies are paginated |
