@@ -116,6 +116,12 @@ Nothing here writes back to visibly or spends credits. Team members read on the 
 | `list_content_queries` / `get_content_briefing` / `get_content_status` | Content analyses, briefing, status |
 | `score_text` | Brand + AI-slop check, NSS with a finished analysis |
 
+### Agent self-optimization skill
+
+Load `get_skill(name="content-nss-optimize")`, then ask: "Write this article using the project briefing, improve it yourself with Visibly scoring until NSS 80, save the best draft and show its editor link." The portable [SKILL.md](skills/content-nss-optimize/SKILL.md) works as instructions for Claude, Codex or another MCP-capable agent. It also supports a requested target of 70, checks headings/text/links, stops at a plateau, and re-scores the saved text. Visibly generation is never used for this loop. External agent tokens and separately requested data analysis retain their usual costs.
+
+Claude Code and API-key-capable MCP clients use the existing HTTP connection. An OpenAI Responses API agent can use the same `server_url` and pass the Visibly key as `authorization` ([official MCP guide](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)). Direct ChatGPT plugin sign-in additionally needs an OAuth-compatible login; the current API-key connection alone is not a completed ChatGPT plugin integration ([authentication requirements](https://developers.openai.com/plugins/build/auth)).
+
 ### Content workflow (API key with scoped rights) — 35 tools
 
 Read the editor context, research keywords, create and analyze a query, write and optimize drafts, approve articles, configure CMS connections, publish, and review optimizer suggestions. The Visibly server operator must enable the relevant write stage. Grant only the required rights in Visibly Settings → API key & MCP; existing keys do not receive new rights automatically.

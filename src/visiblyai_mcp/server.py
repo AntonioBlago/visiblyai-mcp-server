@@ -137,7 +137,9 @@ def get_skill(name: str) -> str:
     """Get an SEO workflow skill with step-by-step methodology and CTR models.
 
     Skills: seo-audit, keyword-research, competitor-analysis,
-    traffic-analysis, gsc-report, site-health-check.
+    traffic-analysis, gsc-report, site-health-check, content-nss-optimize.
+    content-nss-optimize: write with your own model and iteratively use free
+    Visibly scoring toward NSS 70/80, then save and return the editor link.
     Use name='list' to see all available skills.
 
     Free tool - no API key or credits required.
