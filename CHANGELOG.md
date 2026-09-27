@@ -4,6 +4,16 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.12.1] - 2026-09-27
+
+### Fixed
+- Document spending permission, plan access, member budget and owner credits when queueing articles.
+- Document the additional `content:publish` permission for optimizer snippet/link approval and undo.
+- Limit source distributions to package source, tests and release metadata; exclude local exports and old build artifacts.
+
+### Added
+- Shared content workflow endpoint mapping and tool definitions for the remote HTTP transport, keeping its 29 new tools aligned with the stdio package.
+
 ## [0.12.0] - 2026-09-26
 
 ### Added

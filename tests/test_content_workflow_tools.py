@@ -91,3 +91,21 @@ def test_server_registers_all_workflow_tools_without_name_collisions():
         "create_contentpilot_key", "publish_article", "run_content_optimizer",
         "approve_optimizer_suggestion", "optimize_content_draft",
     } <= registered
+
+
+def test_http_contract_matches_registered_stdio_tools():
+    from visiblyai_mcp.api_client import CONTENT_WORKFLOW_PATHS
+    from visiblyai_mcp.server import mcp
+
+    registered = {tool.name: tool for tool in mcp._tool_manager.list_tools()}
+    definitions = tools.tool_definitions()
+    assert len(definitions) == 29
+    for definition in definitions:
+        name = definition['name']
+        assert name in CONTENT_WORKFLOW_PATHS
+        assert definition['inputSchema'] == registered[name].parameters
+        assert definition['description'] == registered[name].description
+    descriptions = {item['name']: item['description'] for item in definitions}
+    assert 'spending:execute' in descriptions['change_article_status']
+    assert 'content:publish' in descriptions['approve_optimizer_suggestion']
+    assert 'content:publish' in descriptions['undo_optimizer_suggestion']

@@ -131,7 +131,7 @@ Read the editor context, research keywords, create and analyze a query, write an
 | `update_article` | Edit a draft or rejected article with `expected_revision` (409 on conflict) |
 | `edit_content_article` | Full editor save for editable lifecycle states; snapshots the old version and checks `expected_revision` |
 | `regenerate_content_article` | Requeue an eligible article for paid generation (`content:write` + `spending:execute`) |
-| `change_article_status` | Approve, reject, archive or queue; approval requires `content:approve` and sends the normal approval webhook |
+| `change_article_status` | Approve, reject, archive or queue; approval requires `content:approve` and sends the normal approval webhook. Queueing additionally requires `spending:execute`, plan access, member budget and owner credits |
 | `list_cms_connections` / `create_cms_connection` / `test_cms_connection` / `delete_cms_connection` | Manage and test project CMS connections (`cms:manage`) |
 | `create_contentpilot_key` / `get_contentpilot_key_status` / `revoke_contentpilot_key` | Manage the project-scoped Pull API key; plaintext only on creation (`cms:manage`) |
 | `publish_article` / `update_cms_article` | Publish an approved article or update its existing CMS entry (`content:publish`) |
@@ -139,7 +139,7 @@ Read the editor context, research keywords, create and analyze a query, write an
 | `list_article_backups` / `get_article_backup` / `restore_article_backup` | Read and restore editor/CMS versions; restore requires the current article revision |
 | `get_optimizer_settings` / `update_optimizer_settings` | Read and change optimizer and autolink settings (`content:write`) |
 | `run_content_optimizer` | Start a paid optimizer run (`content:write` + `spending:execute`) |
-| `list_optimizer_suggestions` / `approve_optimizer_suggestion` / `reject_optimizer_suggestion` / `undo_optimizer_suggestion` | Review and apply measured suggestions; applying/undoing requires `content:approve` |
+| `list_optimizer_suggestions` / `approve_optimizer_suggestion` / `reject_optimizer_suggestion` / `undo_optimizer_suggestion` | Review and apply measured suggestions; applying/undoing requires `content:approve`. Snippet/link changes also require `content:publish` for automatic CMS writeback; topic suggestions do not |
 | `get_mcp_operation` | Status and result of one of your write operations |
 | `remember` | Store a fact in your own visibly brain (key right `memory:write`; account or project scope; read back by `recall` and the chat) |
 | `import_meeting_preview` | Turn a meeting transcript into a reviewable proposal: brain facts with categories and entities, brand rules, personas, profile fields (15 credits, nothing written) |

@@ -63,7 +63,10 @@ def optimize_content_draft(query_id: int, kind: Literal["terms", "header_terms",
 
 def change_article_status(article_id: int, new_status: Literal["approved", "rejected", "archived", "queued"],
                           project_id: int | None = None) -> str:
-    """Review or approve an article. Approval requires content:approve and triggers the normal CMS webhook."""
+    """Review an article. Approval requires content:approve and triggers the normal CMS webhook.
+
+    Queueing additionally requires spending:execute, content plan access, member budget and owner credits.
+    """
     return _call("change_article_status", {"article_id": article_id, "project_id": project_id,
                                             "new_status": new_status})
 
@@ -204,7 +207,11 @@ def list_optimizer_suggestions(project_id: int, status: Literal["open", "done"] 
 
 
 def approve_optimizer_suggestion(suggestion_id: int) -> str:
-    """Apply an optimizer suggestion; requires content:approve."""
+    """Apply an optimizer suggestion; requires content:approve.
+
+    Snippet and link changes additionally require content:publish for automatic CMS writeback.
+    Topic suggestions only create a query and do not require publishing rights.
+    """
     return _call("approve_optimizer_suggestion", {"suggestion_id": suggestion_id})
 
 
@@ -214,7 +221,7 @@ def reject_optimizer_suggestion(suggestion_id: int) -> str:
 
 
 def undo_optimizer_suggestion(suggestion_id: int) -> str:
-    """Undo an applied optimizer suggestion; requires content:approve."""
+    """Undo a snippet/link suggestion including CMS writeback; requires content:approve and content:publish."""
     return _call("undo_optimizer_suggestion", {"suggestion_id": suggestion_id})
 
 
@@ -230,3 +237,14 @@ TOOLS = (
     run_content_optimizer, list_optimizer_suggestions, approve_optimizer_suggestion,
     reject_optimizer_suggestion, undo_optimizer_suggestion,
 )
+
+
+def tool_definitions() -> list[dict[str, Any]]:
+    """Share the stdio tools' schemas and permission guidance with the HTTP transport."""
+    from mcp.server.fastmcp.tools import Tool
+
+    definitions = []
+    for function in TOOLS:
+        tool = Tool.from_function(function)
+        definitions.append({"name": tool.name, "description": tool.description, "inputSchema": tool.parameters})
+    return definitions

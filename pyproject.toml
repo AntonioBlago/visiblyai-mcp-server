@@ -39,5 +39,8 @@ Repository = "https://github.com/antonioblago/visiblyai-mcp-server"
 [tool.hatch.build.targets.wheel]
 packages = ["src/visiblyai_mcp"]
 
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/CHANGELOG.md", "/pyproject.toml"]
+
 [tool.hatch.version]
 path = "src/visiblyai_mcp/__init__.py"
