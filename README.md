@@ -124,7 +124,7 @@ Load `get_skill(name="content-nss-optimize")`, then ask: "Write this article usi
 
 Claude Code and API-key-capable MCP clients use the existing HTTP connection. An OpenAI Responses API agent can use the same `server_url` and pass the Visibly key as `authorization` ([official MCP guide](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)). Direct ChatGPT plugin sign-in additionally needs an OAuth-compatible login; the current API-key connection alone is not a completed ChatGPT plugin integration ([authentication requirements](https://developers.openai.com/plugins/build/auth)).
 
-### Content workflow (API key with scoped rights) — 35 tools
+### Content workflow (API key with scoped rights) — 36 tools
 
 Read the editor context, research keywords, create and analyze a query, write and optimize drafts, approve articles, configure CMS connections, publish, and review optimizer suggestions. The Visibly server operator must enable the relevant write stage. Grant only the required rights in Visibly Settings → API key & MCP; existing keys do not receive new rights automatically.
 
@@ -145,6 +145,7 @@ Read the editor context, research keywords, create and analyze a query, write an
 | `list_cms_connections` / `create_cms_connection` / `test_cms_connection` / `delete_cms_connection` | Manage and test project CMS connections (`cms:manage`) |
 | `create_contentpilot_key` / `get_contentpilot_key_status` / `revoke_contentpilot_key` | Manage the project-scoped Pull API key; plaintext only on creation (`cms:manage`) |
 | `publish_article` / `update_cms_article` | Publish an approved article or update its existing CMS entry (`content:publish`) |
+| `get_article_workflow` | Read editor links, published-article conflicts and CMS transfer status; optionally compare saved content with the website (0 credits, no writes) |
 | `pull_live_article` / `set_article_live_url` | Read the live page into a proposal or connect/disconnect its public URL |
 | `list_article_backups` / `get_article_backup` / `restore_article_backup` | Read and restore editor/CMS versions; restore requires the current article revision |
 | `get_optimizer_settings` / `update_optimizer_settings` | Read and change optimizer and autolink settings (`content:write`) |
