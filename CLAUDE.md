@@ -1,12 +1,20 @@
 # CLAUDE.md — VisiblyAI MCP Server
 
+## Plugin-/MCP-Übergabe
+
+Start with [AGENTS.md](AGENTS.md) and the cross-repository
+[handoff](docs/PLUGIN_MCP_HANDOFF.md) for plugin, skill, release or transport work.
+[PLUGINS.md](PLUGINS.md) is the user installation guide. Record verified changes,
+versions and publication status in the handoff so the next agent can continue.
+
 ## Project Overview
 
-Python MCP (Model Context Protocol) server providing 33 SEO tools for Claude Code and other MCP clients. Published on PyPI as `visiblyai-mcp-server`.
+Python MCP (Model Context Protocol) server providing 84 tools as of release 0.13.0 (2026-09-27) for Claude Code, Codex and other MCP clients. Published on PyPI as `visiblyai-mcp-server`. Plugin bundles have a separate version: 1.0.1.
 
 - **Free tools (8)**: Run locally or use free API metadata (classifier, checklists, guidance, URL analysis)
 - **Paid tools (20)**: Use the Visibly AI API (traffic, keywords, backlinks, competitors, crawling, audits, RAG, SEO agents, workflows)
 - **Google tools (5)**: Use user's OAuth tokens, 0 credits (GSC, GA4, projects)
+- **Project data tools (15)** and **content workflow tools (36)**: read/write, scoring and CMS operations; costs and permissions are defined per tool by the backend.
 
 **Backend API**: `https://app.visibly-ai.com/api/v1/mcp`
 **Remote MCP**: `https://mcp.visibly-ai.com/mcp`
@@ -19,12 +27,15 @@ The backend URL is the internal REST target used by API-backed package tools. MC
 
 | File | Purpose |
 |------|---------|
-| `src/visiblyai_mcp/server.py` | FastMCP server with all 33 `@mcp.tool()` registrations |
+| `src/visiblyai_mcp/server.py` | FastMCP registration, including dynamically registered workflow tools; count the runtime registry |
 | `src/visiblyai_mcp/api_client.py` | `VisiblyAIClient` HTTP client for backend |
 | `src/visiblyai_mcp/tools/paid_tools.py` | Paid tool implementations |
 | `src/visiblyai_mcp/tools/free_tools.py` | Free tool implementations (local) |
 | `src/visiblyai_mcp/classifier.py` | Keyword classifier engine |
 | `src/visiblyai_mcp/config.py` | API URLs, key management |
+| `src/visiblyai_mcp/tools/content_workflow_tools.py` | Shared workflow definitions used by package and remote transport |
+| `skills/content-nss-optimize/SKILL.md` | Canonical article optimization skill; synchronize bundle copies via build script |
+| `scripts/build_plugins.py` | Validate marketplaces/manifests and build reproducible plugin ZIPs |
 
 ---
 

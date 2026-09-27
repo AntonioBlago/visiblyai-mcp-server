@@ -11,7 +11,9 @@ git status
 git diff --cached
 ```
 - Verify no secrets in staged changes (.env, API keys, tokens)
-- Verify version in `pyproject.toml` is bumped
+- Verify `src/visiblyai_mcp/__init__.py` is bumped (`pyproject.toml` reads it via Hatch).
+- Read [the release handoff](../../docs/PLUGIN_MCP_HANDOFF.md): Python package,
+  plugin ZIPs, remote transport and marketing have separate publication steps.
 
 ### 2. Unit Tests
 ```bash
@@ -29,7 +31,7 @@ python -m build --sdist --wheel
 ```bash
 pytest tests/test_server_registration.py -v
 ```
-**Gate: Tool count must match expected (33).**
+**Gate: Tool count must match the release contract and runtime registry (84 for 0.13.0).**
 
 ### 5. Commit
 - Stage specific files (not `git add .`)
@@ -38,7 +40,7 @@ pytest tests/test_server_registration.py -v
 
 ### 6. Tag
 ```bash
-git tag v{version}  # Match pyproject.toml version
+git tag v{version}  # Match src/visiblyai_mcp/__init__.py
 ```
 
 ### 7. Push
@@ -58,7 +60,7 @@ python -m twine upload dist/*
 - Run quick smoke test: `python -c "from visiblyai_mcp.server import mcp; print('OK')"`
 
 ## Checklist
-- [ ] Version bumped in `pyproject.toml`
+- [ ] Version bumped in `src/visiblyai_mcp/__init__.py`
 - [ ] All unit tests pass
 - [ ] Package builds cleanly
 - [ ] Tool count matches expected

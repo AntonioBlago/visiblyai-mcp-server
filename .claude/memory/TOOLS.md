@@ -1,5 +1,10 @@
 # Tool Inventory
 
+> This file is a historical partial inventory, not the complete current registry.
+> Release 0.13.0 has 84 tools, including project/content workflows. Use the runtime
+> registry, README and [current handoff](../../docs/PLUGIN_MCP_HANDOFF.md) for the
+> current scope; authenticated `get_skill` reads the live Visibly catalog.
+
 ## Free Tools (8) — No credits
 
 | Tool | Parameters | Credits |

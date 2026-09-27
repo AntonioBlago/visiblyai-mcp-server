@@ -138,6 +138,10 @@ Client references: [Claude plugins](https://code.claude.com/docs/en/plugins-refe
 
 ## Maintaining the bundles
 
+Maintainers and agents: read [AGENTS.md](AGENTS.md) and the
+[cross-repository handoff](docs/PLUGIN_MCP_HANDOFF.md) for current ownership,
+release order, CMS handoff semantics, verified status and marketing updates.
+
 Edit the canonical skill under `skills/content-nss-optimize/`, then run:
 
 ```bash

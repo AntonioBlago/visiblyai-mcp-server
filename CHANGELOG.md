@@ -4,6 +4,14 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Documentation
+- Add a shared agent handoff for plugin releases, MCP transports, article/CMS status,
+  95% text tolerance, marketing downloads and verification evidence (2026-09-27).
+- Add an `AGENTS.md` entry point and correct stale tool-count/version-source
+  guidance. These documentation changes do not create a new package or ZIP release.
+
 ## [0.13.0] - 2026-09-27
 
 ### Added
