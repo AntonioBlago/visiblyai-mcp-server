@@ -25,6 +25,8 @@ Installationsbefehle, API-Key-Einrichtung und Beispielauftrag stehen in
 | --- | --- | --- |
 | `AntonioBlago/visibly-app` / `master` | Auth, Rechte, Abrechnung, Content, NSS, Editor, CMS-Status | `docs/PLUGIN_MCP_HANDOFF.md`, `docs/MCP_TOOLS_API.md` |
 | `AntonioBlago/visiblyai-mcp-server` / `master` | MCP-Paket, Tool-Schemas, kanonischer Skill, Plugin-Manifeste und ZIPs | diese Datei, `PLUGINS.md`, `scripts/build_plugins.py` |
+| `AntonioBlago/visibly-ai-cms-connector` / `master` | Python-SDK auf der CMS-Seite, zuvor GitHub `ai-content-autopilot` | `README.md`, `docs/INTEGRATION_DE.md` |
+| `AntonioBlago/anycms` / `main` | Konkrete CMS-Anwendungsfälle für WordPress, Astro, Next.js und Flask | `README.md`, `docs/CONTRACT.md` |
 | `AntonioBlago/Bikefitting_Project` / `master` | Remote-JSON-RPC und historische REST-Kompatibilität | `docs/internal/MCP_SYNC_GUIDE.md` |
 | `AntonioBlago/visiblyai` / `main` | Öffentliche Marketing-, Download- und Entwicklerseiten | `docs/PLUGIN_INTEGRATIONS.md`, `docs/DEPLOYMENT_VERCEL.md` |
 | `AntonioBlago/AntonioBlago` / `main` | GitHub-Profil mit Links zu Paket und Plugins | `README.md` |
@@ -148,3 +150,13 @@ Marketing-Tests erneut 70/70 erfolgreich, lokale Dokumentationslinks geprüft un
 alle drei Plugin-Bundles erneut validiert. Python-AST und sichtbare Templates der
 Marketingseite sind gegenüber `2f30c55` unverändert. Dieser Nachtrag ändert keine
 Produktversion und veröffentlicht keine neuen Paket- oder Plugin-Artefakte.
+
+## CMS-Connector benannt und eingeordnet (2026-09-27)
+
+Das separate GitHub-Repository `ai-content-autopilot` heißt jetzt
+`visibly-ai-cms-connector` (**Visibly AI CMS Connector**). Der PyPI-Name
+`ai-content-autopilot` und Python-Import `ai_content_autopilot` bleiben bestehen.
+Dieses MCP-/Plugin-Repository behält seinen Namen. `anycms` bleibt das
+Use-Case-Repository; es wird weder umbenannt noch mit dem SDK zusammengelegt.
+Die [gemeinsame Erklärung](https://github.com/AntonioBlago/visibly-ai-cms-connector/blob/master/docs/INTEGRATION_DE.md)
+führt vom externen Assistenten über Visibly zum CMS und zur Publikationsbestätigung.

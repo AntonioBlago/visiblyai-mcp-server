@@ -4,6 +4,14 @@ SEO tools for Claude Code, OpenAI Codex, GitHub Copilot and other MCP clients. F
 
 **Plugins:** [Install from the public Visibly marketplace or download a ZIP](https://github.com/AntonioBlago/visiblyai-mcp-server/blob/master/PLUGINS.md) for Claude Code, Codex or Copilot CLI. Each includes the article-writing and NSS optimization skill; see the client-specific MCP setup instructions.
 
+**From the assistant to your website:** these plugins connect the assistant to
+Visibly for briefings, NSS scoring and drafts. The
+[Visibly AI CMS Connector](https://github.com/AntonioBlago/visibly-ai-cms-connector)
+is the separate Python SDK on the CMS side: receive signed webhooks, fetch
+articles and confirm published URLs. [anyCMS](https://github.com/AntonioBlago/anycms)
+provides the concrete WordPress, Astro, Next.js and Flask use cases.
+See the [complete integration explained in German](https://github.com/AntonioBlago/visibly-ai-cms-connector/blob/master/docs/INTEGRATION_DE.md).
+
 **Production routing:** MCP clients connect to `https://mcp.visibly-ai.com/mcp`. The installed package sends API-backed tool calls to `https://app.visibly-ai.com/api/v1/mcp`. The marketing domain `visibly-ai.com` is not an API host.
 
 **Free tools** (no API key needed): keyword classifier, SEO checklists, best practices, URL analysis, Google guidelines, workflow skills.
