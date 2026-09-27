@@ -312,6 +312,45 @@ class VisiblyAIClient:
             payload["persona_id"] = persona_id
         return self._post("/tools/content/score-text", payload)
 
+    def content_workflow(self, tool_name: str, payload: dict[str, Any]) -> dict:
+        """Call an allowlisted content workflow endpoint; tool names never form arbitrary paths."""
+        paths = {
+            "list_articles": "/tools/content/articles",
+            "get_content_query": "/tools/content/query",
+            "create_content_query": "/tools/content/create-query",
+            "save_content_query_draft": "/tools/content/save-query-draft",
+            "generate_article_from_query": "/tools/content/generate-article",
+            "optimize_content_draft": "/tools/content/optimize-draft",
+            "change_article_status": "/tools/content/change-status",
+            "edit_content_article": "/tools/content/edit-article",
+            "regenerate_content_article": "/tools/content/regenerate-article",
+            "list_cms_connections": "/tools/content/cms/list",
+            "create_cms_connection": "/tools/content/cms/create",
+            "test_cms_connection": "/tools/content/cms/test",
+            "delete_cms_connection": "/tools/content/cms/delete",
+            "create_contentpilot_key": "/tools/content/contentpilot-key/create",
+            "get_contentpilot_key_status": "/tools/content/contentpilot-key/status",
+            "revoke_contentpilot_key": "/tools/content/contentpilot-key/revoke",
+            "publish_article": "/tools/content/publish",
+            "update_cms_article": "/tools/content/cms-update",
+            "pull_live_article": "/tools/content/cms-pull",
+            "set_article_live_url": "/tools/content/set-live-url",
+            "list_article_backups": "/tools/content/backups",
+            "get_article_backup": "/tools/content/backup",
+            "restore_article_backup": "/tools/content/restore-backup",
+            "get_optimizer_settings": "/tools/content/optimizer/settings",
+            "update_optimizer_settings": "/tools/content/optimizer/settings/update",
+            "run_content_optimizer": "/tools/content/optimizer/run",
+            "list_optimizer_suggestions": "/tools/content/optimizer/suggestions",
+            "approve_optimizer_suggestion": "/tools/content/optimizer/approve",
+            "reject_optimizer_suggestion": "/tools/content/optimizer/reject",
+            "undo_optimizer_suggestion": "/tools/content/optimizer/undo",
+        }
+        path = paths.get(tool_name)
+        if path is None:
+            raise APIError("Unknown content workflow tool", status_code=400)
+        return self._post(path, payload)
+
     # ------------------------------------------------------------------
     # Write tools (stage 2A, 0 credits, need key right content:write)
     # ------------------------------------------------------------------

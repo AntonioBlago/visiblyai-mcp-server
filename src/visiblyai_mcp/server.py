@@ -13,7 +13,7 @@ Usage:
 
 from mcp.server.fastmcp import FastMCP
 
-from .tools import content_write_tools, free_tools, paid_tools, project_tools
+from .tools import content_workflow_tools, content_write_tools, free_tools, paid_tools, project_tools
 
 mcp = FastMCP(
     "VisiblyAI SEO Tools",
@@ -25,11 +25,18 @@ mcp = FastMCP(
         "(requires API key + credits). "
         "Google: Search Console queries, Analytics reports, project management "
         "(requires API key, 0 credits). "
-        "Project data & content (read-only, 0 credits): GSC clusters, GA4 insights, "
-        "revenue, scorecard, EEAT, pages, internal links, articles, content queries, "
-        "briefings, text scoring, memory recall. Nothing is written back."
+        "Project data & content: read articles and queries, analyze keywords, save and "
+        "generate drafts, score and optimize content, review articles, configure CMS "
+        "connections, publish, and manage optimizer suggestions. Write, publish, and "
+        "spending actions require explicit API-key scopes; paid actions consume credits. "
+        "CMS and project keys are returned only once when created."
     ),
 )
+
+# Full content editor and publishing lifecycle. Each callable's type hints and
+# docstring become the MCP input schema and Claude-facing permission guidance.
+for _content_tool in content_workflow_tools.TOOLS:
+    mcp.tool()(_content_tool)
 
 # ---------------------------------------------------------------------------
 # Free Tools (local, no API key needed)

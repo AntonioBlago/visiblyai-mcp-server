@@ -4,6 +4,12 @@ All notable changes to `visiblyai-mcp-server` are documented in this file.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.12.0] - 2026-09-26
+
+### Added
+- Complete content workflow tools: create/analyze content queries, read and revision-save query/article drafts, generate/regenerate articles, request measured quick optimizations, approve/reject/archive/queue articles, manage CMS connections and project Pull keys, publish/update push-CMS articles, sync live pages, and inspect/restore editor versions.
+- CMS/publish/write tools document their separate API-key scopes and paid actions; generated webhook secrets and Pull keys are one-time values. Hosting environment variables remain managed by the selected provider.
+
 ## [0.11.0] - 2026-09-11
 
 ### Added
