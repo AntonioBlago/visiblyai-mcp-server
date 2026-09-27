@@ -1,0 +1,36 @@
+name: Plugin bundles
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'plugins/**'
+      - 'skills/**'
+      - 'scripts/build_plugins.py'
+      - '.agents/plugins/**'
+      - '.claude-plugin/**'
+      - '.github/plugin/**'
+      - '.github/workflows/plugins.yml'
+  pull_request:
+    paths:
+      - 'plugins/**'
+      - 'skills/**'
+      - 'scripts/build_plugins.py'
+      - '.agents/plugins/**'
+      - '.claude-plugin/**'
+      - '.github/plugin/**'
+      - '.github/workflows/plugins.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate bundled skills, catalogs and ZIPs
+        run: python scripts/build_plugins.py

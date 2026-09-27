@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "description": "Write articles with your agent, improve their Visibly NSS score, and save drafts to the Visibly editor.",
+  "author": {
+    "name": "Antonio Blago",
+    "url": "https://github.com/AntonioBlago"
+  },
+  "homepage": "https://github.com/AntonioBlago/visiblyai-mcp-server/blob/master/PLUGINS.md",
+  "repository": "https://github.com/AntonioBlago/visiblyai-mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "visibly",
+    "mcp",
+    "content",
+    "nss"
+  ],
+  "skills": [
+    "./skills/"
+  ],
+  "name": "visibly-copilot"
+}

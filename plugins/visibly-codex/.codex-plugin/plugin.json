@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "description": "Write articles with your agent, improve their Visibly NSS score, and save drafts to the Visibly editor.",
+  "author": {
+    "name": "Antonio Blago",
+    "url": "https://github.com/AntonioBlago"
+  },
+  "homepage": "https://github.com/AntonioBlago/visiblyai-mcp-server/blob/master/PLUGINS.md",
+  "repository": "https://github.com/AntonioBlago/visiblyai-mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "visibly",
+    "mcp",
+    "content",
+    "nss"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "name": "visibly-codex",
+  "interface": {
+    "displayName": "Visibly AI",
+    "shortDescription": "Write, score and improve articles with Visibly.",
+    "longDescription": "Write articles with your agent, improve their Visibly NSS score, and save drafts to the Visibly editor.",
+    "developerName": "Antonio Blago",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://visibly-ai.com",
+    "defaultPrompt": [
+      "Optimize my article with Visibly to NSS 80."
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 # VisiblyAI MCP Server
 
-SEO tools for Claude Code. Free local tools + paid API-powered analysis.
+SEO tools for Claude Code, OpenAI Codex, GitHub Copilot and other MCP clients. Free local tools + paid API-powered analysis.
+
+**Plugins:** [Install from the public Visibly marketplace or download a ZIP](https://github.com/AntonioBlago/visiblyai-mcp-server/blob/master/PLUGINS.md) for Claude Code, Codex or Copilot CLI. Each includes the article-writing and NSS optimization skill; see the client-specific MCP setup instructions.
 
 **Production routing:** MCP clients connect to `https://mcp.visibly-ai.com/mcp`. The installed package sends API-backed tool calls to `https://app.visibly-ai.com/api/v1/mcp`. The marketing domain `visibly-ai.com` is not an API host.
 
@@ -20,7 +22,7 @@ claude mcp add --transport http \
   --header "Authorization: Bearer lc_your_key" \
   visiblyai https://mcp.visibly-ai.com/mcp
 
-# Without API key (8 free tools only):
+# Without API key (public tools only):
 claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp
 ```
 
