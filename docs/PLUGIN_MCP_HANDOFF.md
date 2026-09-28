@@ -269,3 +269,22 @@ MCP 0.13.0 / Plugins 1.0.1 unverändert. Kein PyPI-/Plugin-ZIP-Release und keine
 Änderung installierter Caches; neue Bundle-Inhalte für nächsten Release vormerken.
 App-Build und gezielter NSS-Lint erneut erfolgreich; globaler App-Lint weiterhin
 31 Fehler/6 Warnungen in unveränderten Dateien. App-Status in deren Übergabe prüfen.
+# NSS v6 und Artikel-E-E-A-T (2026-09-28)
+
+Die App verwendet für den aktuellen Entwurf die vorhandenen Content-Prüfungen
+der E-E-A-T-Engine; kein duplizierter E-E-A-T-Service. Website-E-E-A-T bleibt
+separater Kontext. Das zusätzliche Ergebnis `data.nss.eeat` enthält Befunde und
+Verfügbarkeit, `scores.nss_version`/`nss_mode` kennzeichnen die Vergleichsgrundlage.
+Die Gewichtung bleibt in der internen App-Dokumentation, die öffentliche Erklärung
+unter [Deutsch](https://www.visibly-ai.com/de/nss-score) bzw.
+[English](https://www.visibly-ai.com/nss-score).
+
+Kanonischer Skill ergänzt: Version/Modus festhalten, bei Wechsel Baseline neu
+messen, fehlendes EEAT nicht als Null deuten, keine Autoren oder Belege erfinden.
+Drei Bundle-Kopien über `build_plugins.py --sync-skills` synchronisiert; alle drei
+Bundles temporär gebaut, `quick_validate.py` erfolgreich. API-Argumente unverändert,
+Paket 0.13.0 / Plugins 1.0.1 weiter kompatibel. Kein PyPI-/ZIP-Release und kein
+installierter Cache aktualisiert; Skill-Inhalte für nächsten regulären Release.
+App lokal: 518 Tests, Build, Lint (0 Fehler/6 bestehende Warnungen) und
+Editor-Browserprüfungen. Marketing lokal: 73 Tests und DE/EN-Browserprüfungen.
+Veröffentlichung je Repository/Commit prüfen; lokale Nachweise sind kein Live-Test.

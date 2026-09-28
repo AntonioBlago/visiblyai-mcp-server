@@ -35,6 +35,15 @@ Write the first complete draft, or keep the current text as the baseline. Use on
 
 Call `score_text(project_id, query_id, content, format, persona_id)` with the **whole candidate text**. Read the actual NSS at `data.nss.scores.nss` (some clients unwrap `data`). Keep the query, persona and analysis unchanged between rounds so scores remain comparable. Do not substitute AI-visibility, heuristic SEO or brand scores for NSS.
 
+When returned, record `scores.nss_version`, `scores.nss_mode` and `eeat.version`
+alongside the score. Re-measure the baseline if the scoring version or mode changes.
+Inspect `data.nss.eeat` for content signals assessed on the current draft; a website
+E-E-A-T score is separate context and must not replace that draft assessment.
+Missing E-E-A-T is unavailable, not zero. Never invent authors, qualifications,
+research, case studies or expert quotations to raise the score. Source classification
+does not verify the author’s reputation or the cited claims. Older responses may
+omit these fields; do not claim they include E-E-A-T.
+
 For each revision:
 
 1. Record the measured NSS and inspect the returned heading, term, entity, fan-out, structure, readability, style, brand and overoptimization feedback.
