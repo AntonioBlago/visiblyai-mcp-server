@@ -125,6 +125,43 @@ drei unterschiedliche Aussagen.
 
 ## Pflege und nächste Releases
 
+### Verbindliche Update-Checkliste pro Änderung
+
+Diese Liste vor jedem NSS-, API-, MCP- oder Plugin-Update durchgehen. Für jeden
+Bestandteil im datierten Übergabestand **geändert und geprüft**, **nicht nötig
+mit Grund** oder **offen** festhalten. Ein Git-Push ist kein Paket-Release und
+kein Nachweis eines erfolgreichen Deployments oder Client-Updates.
+
+| Bestandteil | Wann aktualisieren? | Abschlussnachweis |
+| --- | --- | --- |
+| App, NSS und Editor | Berechnung, Ergebnisfelder oder Anzeige geändert | Scorer-Version bei Berechnungsänderung; gemeinsame Engine wiederverwenden; lokale Kern-/Bereichstests, Lint/Build und betroffene Browserrouten; CI und produktiven Commit gesondert prüfen |
+| REST-API und generierte Referenz | Tool-Vertrag oder Beschreibung geändert | Pydantic/OpenAPI und Generator pflegen; `gen_mcp_api_doc --check`; Rechte, Kosten, Persistenz und Editor-/MCP-Parität prüfen |
+| Python-MCP-Paket / PyPI | Paketcode, Tool-Schemas, Mapping, Abhängigkeiten oder gebündelte Daten geändert | Paketversion erhöhen, Tests/Build, neuer Tag/Release und PyPI-Upload; saubere Installation der veröffentlichten Version, Toolzahl und Aufruf prüfen. Reine serverseitige NSS-Änderung braucht bei kompatiblem Vertrag keinen PyPI-Release |
+| Remote-MCP | Paket-Pin, Transport, Toolvertrag oder Auth geändert | Bikefitting-Adapter/Pins synchronisieren; richtigen Railway-Service deployen; authentifizierte/anonyme Aufrufe und weitergereichte Ergebnisfelder prüfen |
+| Plugin-Bundles | Mitgelieferter Skill, README, Manifest oder MCP-Konfiguration geändert | Kanonischen Skill synchronisieren; Versionen/Marktplatz-Kataloge prüfen; drei Bundles bauen; neuer `plugins-vX.Y.Z`-Release mit SHA256SUMS; ZIPs herunterladen und prüfen. Veröffentlichte ZIPs niemals unter gleichem Tag ersetzen |
+| Marketing / Webseite | Verhalten, Erklärung, Version oder Downloads geändert | DE/EN gemeinsam pflegen; zentrale NSS-Seite und Neuro-SEO-Grundlage verlinken; Versionskonstanten/Downloads erst auf vorhandene Artefakte umstellen; Tests, Mobil/Desktop und echte Live-Inhalte prüfen |
+| CMS-SDK und `anycms` | Artikel-, Revisions-, Import- oder CMS-Vertrag betroffen | Verträge, Beispiele und ggf. SDK-Version/Release synchronisieren; bei reiner NSS-Anzeige ausdrücklich als unverändert dokumentieren |
+| Öffentliche READMEs / Profil | Einrichtung, Produktnamen, Versionen oder Linkziele betroffen | MCP, CMS-Connector, `anycms` und GitHub-Profil prüfen; NSS-Erklärung zentral verlinken, keine zweite Formel veröffentlichen |
+| Installierte Clients / Caches | Nutzer soll einen neuen Plugin-/Paketstand tatsächlich verwenden | Installation aktualisieren, bei Bedarf Cache neu installieren; vollständiger Client-Neustart mit vorhandener Key-Umgebung auf Windows/macOS/Linux; neuen Chat und MCP-Verbindung prüfen. Git/PyPI allein aktualisiert keinen laufenden Client |
+| Übergaben / Changelog | Bei jedem Update | Datum, Repositories, Commit-/Paket-/Plugin-/Scorer-Versionen, Tests, Deployment- und Release-Links sowie verbleibende Schritte festhalten; keine Zugangsdaten |
+
+Für NSS immer zusätzlich prüfen: Der SEO-/GEO-Anteil enthält weiterhin Terme,
+Entitäten, Query-Fan-outs und Belegsignale; Sprache/Zielgruppenmotive und
+Artikel-E-E-A-T verständlich erklären. Keine vorhandene Komponente doppelt
+einrechnen. Website-E-E-A-T bleibt separater Kontext. Vergleich nur bei gleichem
+Text, Briefing, Persona, Scorer-Version und Bewertungsmodus.
+
+**Einordnung des Updates vom 28.09.2026:** App v6, API-Erklärung, Marketing und
+Plugin-Skill wurden geändert. PyPI 0.13.0 und Remote-Pin bleiben kompatibel,
+weil weder Tool-Argumente noch Paket-Mapping geändert wurden. CMS-SDK/`anycms`
+benötigen für diese NSS-Erweiterung keine neue Version; bestehende öffentliche
+NSS-Links bleiben gültig. Ein regulärer Plugin-Release bleibt **offen**, damit
+die geänderten gebündelten Anleitungen/Skills auch über die ZIP-Downloads
+ausgeliefert werden. Bisher wurden diese Änderungen nur in Git veröffentlicht;
+veröffentlichte Bundles 1.0.1 und installierte Caches bleiben auf ihrem Release-Stand.
+
+### Reihenfolge der Veröffentlichung
+
 1. Backend-Verträge zuerst ändern und prüfen; generierte API-Referenz mit
    `backend/scripts/gen_mcp_api_doc.py` aktualisieren. Auth/Billing nicht im Plugin
    oder Remote-Adapter nachimplementieren.
@@ -143,7 +180,9 @@ drei unterschiedliche Aussagen.
 6. Erst nach verfügbaren Downloads Marketing-Konstanten, DE/EN-Seiten und ggf.
    GitHub-Profil aktualisieren. Ein Marketing-Push auf `main` löst Vercel aus.
 7. Diese Übergabe, lokale Agent-Einstiege und Changelogs mit Datum/Belegen pflegen.
-   Dokumentationsänderungen allein benötigen keinen neuen PyPI-/Plugin-Release.
+   Reine Repository-Dokumentation benötigt keinen PyPI-Release. Geänderte Inhalte,
+   die in Plugin-ZIPs mitgeliefert werden, benötigen für deren Auslieferung einen
+   neuen Plugin-Release gemäß der Checkliste oben.
 
 ## Dokumentationsnachtrag vom 2026-09-27
 
