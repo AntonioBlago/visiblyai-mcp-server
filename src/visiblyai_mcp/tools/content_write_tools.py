@@ -113,7 +113,7 @@ def remember(content: str, scope: str = "project", project_id: int | None = None
         payload["project_id"] = project_id
     return _with_key("remember", payload)
 
-MEETING_RULE_TYPES = ("not_allowed", "preferred", "tone", "hard_rule")
+MEETING_RULE_TYPES = ("not_allowed", "preferred", "tone", "hard_rule", "excluded_topic")
 
 def import_meeting_preview(project_id: int, text: str, source: str | None = None) -> str:
     """Turn a meeting transcript into a proposal: brain facts, brand rules, personas, profile fields. Costs credits."""

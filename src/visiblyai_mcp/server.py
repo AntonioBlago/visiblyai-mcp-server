@@ -639,7 +639,7 @@ def import_meeting_preview(project_id: int, text: str, source: str | None = None
     """Turn a meeting or call transcript into a reviewable proposal for one project. Credits: 15 per run, charged to the key holder.
 
     Returns four lists, nothing is written: brain facts (each with a category and typed entities),
-    brand rules (not_allowed, preferred, tone, hard_rule), personas and brand profile fields. Show
+    brand rules (not_allowed, preferred, tone, hard_rule, excluded_topic), personas and brand profile fields. Show
     them to the user, let them strike or edit items, then call import_meeting_apply with the
     selection. text: 200 to 60000 characters, plain text; source: a short name for the transcript.
     Needs the key right memory:write and access to the project.
