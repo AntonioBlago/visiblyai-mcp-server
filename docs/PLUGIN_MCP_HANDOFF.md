@@ -47,7 +47,11 @@ Projekt zeigen: Zielservice vor einem Deployment anhand Domain und Repository pr
 - Der öffentliche GitHub-Marketplace ist verfügbar. Eine Listung in kuratierten
   Anbieter-Stores wurde nicht veröffentlicht und darf nicht behauptet werden.
 - `VISIBLYAI_API_KEY` kommt aus der Client-Umgebung. Ein neu gesetzter Key erreicht
-  bereits laufende GUI-Prozesse nicht automatisch; neue Sitzung starten.
+  bereits laufende GUI-Prozesse nicht automatisch. Die gesamte Anwendung mit
+  verfügbarer Variable neu starten, danach einen neuen Chat öffnen. Ein neuer
+  Chat oder ein integriertes Terminal allein aktualisiert den Elternprozess nicht.
+  Einrichtung für Windows, macOS und Linux sowie Verbindungsprüfung stehen in
+  `PLUGINS.md`. Shell-Profile und Desktop-Startumgebungen getrennt behandeln.
 
 Marktplatz-Kataloge: `.agents/plugins/marketplace.json` (Codex),
 `.claude-plugin/marketplace.json` (Claude), `.github/plugin/marketplace.json`
@@ -160,3 +164,108 @@ Dieses MCP-/Plugin-Repository behält seinen Namen. `anycms` bleibt das
 Use-Case-Repository; es wird weder umbenannt noch mit dem SDK zusammengelegt.
 Die [gemeinsame Erklärung](https://github.com/AntonioBlago/visibly-ai-cms-connector/blob/master/docs/INTEGRATION_DE.md)
 führt vom externen Assistenten über Visibly zum CMS und zur Publikationsbestätigung.
+
+## Windows-Prozessumgebung: Anleitung präzisiert (2026-09-28)
+
+- Betroffen: `visiblyai-mcp-server` (`PLUGINS.md`, Codex-Bundle-README und diese
+  Übergabe); Querverweis in `visibly-app/docs/PLUGIN_MCP_HANDOFF.md`.
+- Beobachtung in der lokalen Codex-Sitzung: Plugin aktiviert, Windows-User-Variable
+  vorhanden, Prozessvariable nicht vorhanden. Der vorhandene Schlüssel erlaubte
+  einen direkten MCP-Handshake mit Server 0.13.0, die Liste von 84 Tools und einen
+  erfolgreichen authentifizierten `list_projects`-Aufruf. Das beweist den Zugang,
+  nicht das nachträgliche Laden nativer Werkzeuge in den laufenden Codex-Chat.
+- Anleitung unterscheidet jetzt gespeicherte User-Variable, aktuelle Shell und
+  Elternprozess. Vollständiger Anwendungsneustart, Start aus einer Shell mit
+  geladenem Schlüssel und neuer Chat sind ausdrücklich beschrieben; ein neues
+  Chatfenster oder integriertes Terminal allein genügt nicht.
+- Lokal geprüft: vier PowerShell-Blöcke syntaktisch gültig; Schlüssel aus dem
+  User-Scope in eine Test-Shell geladen und Vererbung an einen Kindprozess bestätigt,
+  ohne den Wert auszugeben. Alle drei Bundles mit `scripts/build_plugins.py` in
+  einem separaten temporären Verzeichnis validiert/gebaut; `git diff --check` sauber.
+- Versionen unverändert: MCP 0.13.0, öffentliche Plugin-Manifeste 1.0.1. Nur
+  Dokumentationsänderungen; kein Laufzeit-, Skill- oder API-Vertrag geändert.
+  Nicht gepusht oder veröffentlicht; Release-ZIPs, installierter Plugin-Cache und
+  Marketingseite unverändert. Die gebauten ZIPs sind lokale Prüfartefakte und dürfen
+  veröffentlichte 1.0.1-Downloads nicht ersetzen. Für die aktualisierte gebündelte
+  README bleibt ein späterer regulärer Plugin-Release offen.
+
+## Plattformübergreifende Einrichtung (2026-09-28)
+
+- `PLUGINS.md` und alle drei Bundle-READMEs behandeln jetzt Windows, macOS und
+  Linux. zsh/bash: private Datei außerhalb des Projekts, Dateirechte, explizites
+  Laden, optionale Shell-Profile und ein Kindprozess-Check ohne Schlüsselausgabe.
+  macOS: Cmd+Q und `code`-Launcher; Linux: alle Editor-Instanzen beenden. Dock,
+  App-Menü, WSL/SSH/Container und laufende Elternprozesse sind separat erklärt.
+- Gemeinsamer Abschluss: authentifiziertes `list_projects`, leere Erfolgsliste
+  von fehlenden Rechten unterscheiden, Hinweise zu 401/403/Netzwerk und zu
+  Copilots gespeichertem Header nach einem Schlüsselwechsel.
+- Marketing-Repository `visiblyai`: DE/EN-Plugin-Seiten mit aufklappbaren
+  Betriebssystem-Anleitungen und Verbindungscheck. Der Guide-Link zeigt auf die
+  aktuelle `master/PLUGINS.md`; versionierte Downloads bleiben auf Release 1.0.1.
+  Dokumentationskorrekturen sollen nicht durch einen eingefrorenen Guide-Link
+  unsichtbar bleiben. MCP-Dokumentation vor Marketing veröffentlichen.
+- Geprüft: 11 Bash-Blöcke mit Git Bash syntaktisch validiert; fehlender und aus
+  privater Datei geladener Dummy-Key samt Kindprozess-Vererbung geprüft. Vier
+  PowerShell-Blöcke geparst; alle drei Plugin-Bundles temporär gebaut/validiert.
+  Marketing: 70 bestehende Tests bestanden; Chromium-Prüfung in DE/EN bei
+  390/1440 px, OS-Details geöffnet, Links/Verbindungscheck und Seitenbreite geprüft.
+- Grenzen: kein nativer macOS-/Linux-Clientlauf und kein zsh-Lauf auf diesem
+  Windows-Rechner; die Bash-Prüfung ersetzt diese nicht. Keine neuen Runtime-
+  Features oder Versionsänderungen. Alles lokal und unveröffentlicht; bestehende
+  Release-ZIPs und installierte Caches unverändert. Neue Bundle-READMEs erst mit
+  regulärem künftigem Plugin-Release ausliefern.
+
+## Öffentliche NSS-Referenz (2026-09-28, lokal)
+
+Nachtrag Grundlage: README, PLUGINS, drei Bundle-READMEs und kanonischer Skill
+verlinken Antonio Blagos Neuro-SEO System® unter
+`https://www.antonioblago.com/de/neuro-seo-system/` (HTTP 200 und Canonical geprüft).
+Die Marketingseite nennt die Grundlage auf DE/EN; entsprechende Verweise auch
+im CMS-Connector, GitHub-Profil und interner NSS-Referenz der App ergänzt.
+Skill-Kopien synchronisiert, Validator und drei temporäre Plugin-Builds erfolgreich;
+Marketing erneut 73 Tests sowie vier Browseransichten (DE/EN, 390/1440 px) geprüft.
+Weiterhin lokal, ohne Push/Deployment/Release. MCP 0.13.0, Plugins 1.0.1;
+veröffentlichte ZIPs und installierte Caches unverändert.
+
+Die zentrale Erklärung liegt künftig unter
+[Deutsch](https://www.visibly-ai.com/de/nss-score) und
+[English](https://www.visibly-ai.com/nss-score). Sie erklärt Bewertungsbereiche,
+nachvollziehbares Feedback, Vergleichsbedingungen und Grenzen ohne Formel oder
+Gewichte. Keine Zusage „unkopierbar“, Rankings oder KI-Zitationen daraus ableiten.
+
+Links ergänzt: dieses Repository (README, PLUGINS, drei Bundle-READMEs,
+kanonischer `content-nss-optimize`), `visibly-ai-cms-connector` (README und deutsche
+Integration), GitHub-Profil `AntonioBlago`. `visibly-app` ersetzt die detaillierte
+In-App-Formelerklärung durch eine Kurzreferenz mit Link. Scorer unverändert;
+E-E-A-T wurde nicht in NSS integriert. Eine gesonderte Gewichtung ist bisher
+nur ein Vorschlag und keine implementierte Produkteigenschaft.
+
+Skill mit `quick_validate.py` validiert, Kopien per `build_plugins.py --sync-skills`
+synchronisiert und drei Bundles in temporärem Verzeichnis geprüft. Marketing:
+73 Tests, sechs Browseransichten DE/EN bei 390/768/1440 px und sechs eingehende
+Linkwege. App-Build und gezielter Lint erfolgreich, globaler Lint mit bestehenden
+31 Fehlern/6 Warnungen in anderen Dateien nicht grün. App-Route lokal mit
+Auth-/Projekt-Fixtures geprüft; Details in App-Übergabe.
+
+Veröffentlichung offen: erst Marketing-URLs ausliefern und live prüfen, danach
+öffentliche Repository-Verweise; Setup-Dokumentation aus vorherigem Nachtrag vor
+dem Marketing-Guide-Link bereitstellen. Kein Push, Deployment oder neuer
+Plugin-/PyPI-Release erfolgt. Plugin-Version 1.0.1 und MCP 0.13.0 unverändert;
+neue Skill-/README-Kopien für einen regulären nächsten Plugin-Release vormerken,
+keine bestehenden Release-ZIPs ersetzen. Installierte Caches unverändert.
+
+## Veröffentlichung der Dokumentation (2026-09-28)
+
+Die vorherigen lokalen Statusangaben sind die Vorbereitungshistorie.
+Setup-Anleitung `5d564e5` ist nach `master` gepusht. Marketing `visiblyai`:
+Commit `c6f4d08` auf `main`, Vercel erfolgreich; die beiden NSS-Seiten live mit
+HTTP 200 und Neuro-SEO-Grundlagenlink geprüft. Die NSS-Verweise in diesem Stand
+zeigen damit auf vorhandene öffentliche Seiten. CMS-Connector und GitHub-Profil
+werden im selben Veröffentlichungslauf aktualisiert.
+
+Vor Veröffentlichung erneut drei Plugin-Bundles in einem temporären Verzeichnis
+gebaut und kanonischen Skill validiert; Marketing 73 Tests erfolgreich.
+MCP 0.13.0 / Plugins 1.0.1 unverändert. Kein PyPI-/Plugin-ZIP-Release und keine
+Änderung installierter Caches; neue Bundle-Inhalte für nächsten Release vormerken.
+App-Build und gezielter NSS-Lint erneut erfolgreich; globaler App-Lint weiterhin
+31 Fehler/6 Warnungen in unveränderten Dateien. App-Status in deren Übergabe prüfen.

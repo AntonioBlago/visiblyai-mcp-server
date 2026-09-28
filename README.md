@@ -1,5 +1,13 @@
 # VisiblyAI MCP Server
 
+**[What the NSS (Neuro-SEO Score) measures](https://www.visibly-ai.com/nss-score)**
+([Deutsch](https://www.visibly-ai.com/de/nss-score)): assessment areas, reproducible
+feedback and limits. The score is an editing aid, not a ranking or AI-citation guarantee.
+
+Its methodological foundation is Antonio Blago's
+[Neuro-SEO System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview),
+which combines search engine optimization with buying psychology.
+
 SEO tools for Claude Code, OpenAI Codex, GitHub Copilot and other MCP clients. Free local tools + paid API-powered analysis.
 
 **Plugins:** [Install from the public Visibly marketplace or download a ZIP](https://github.com/AntonioBlago/visiblyai-mcp-server/blob/master/PLUGINS.md) for Claude Code, Codex or Copilot CLI. Each includes the article-writing and NSS optimization skill; see the client-specific MCP setup instructions.

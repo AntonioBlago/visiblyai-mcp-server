@@ -4,6 +4,12 @@ Write an article with Claude Code, Codex or GitHub Copilot CLI, measure its real
 Visibly NSS score, improve it, and save the finished draft to the Visibly editor.
 The agent uses its own model for writing. Visibly provides context, scoring and storage.
 
+[NSS explained: what the Neuro-SEO Score measures](https://www.visibly-ai.com/nss-score)
+([Deutsch](https://www.visibly-ai.com/de/nss-score)) describes the assessment areas,
+transparent feedback and limits without publishing the scoring implementation.
+Its methodological foundation is Antonio Blago's
+[Neuro-SEO System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview).
+
 ## Downloads
 
 Plugin release **1.0.1** works with the current remote MCP server (**0.13.0**, 84 tools).
