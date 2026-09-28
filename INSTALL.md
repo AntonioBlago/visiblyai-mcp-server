@@ -335,4 +335,4 @@ Manage your subscription at [app.visibly-ai.com/settings](https://app.visibly-ai
 
 ---
 
-*Visibly AI — Neuro-SEO System® · Antonio Blago · Koblenz, Germany*
+*Visibly AI — Neuro-SEO-System® · Antonio Blago · Koblenz, Germany*

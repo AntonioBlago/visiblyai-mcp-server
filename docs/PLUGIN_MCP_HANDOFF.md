@@ -1,5 +1,22 @@
 # Visibly Plugins und MCP: Übergabe für Agents
 
+## Markenschreibweise (2026-09-28)
+
+Verbindlicher Nutzerwunsch: **Neuro-SEO-System®**, einschließlich ® und beider
+Bindestriche, auch im Englischen. In den `AGENTS.md` von App, Marketing, MCP,
+CMS-Connector und GitHub-Profil sowie im kanonischen Optimierungs-Skill verankert.
+Gepflegte Texte/Metadaten und Methodenhinweise vereinheitlicht; URLs, technische
+Kennungen und originale Quelldaten bleiben unverändert. Die App-Wissensquelle
+`neuro_seo_method.md` enthält dieselbe Ausgaberegel.
+
+Kanonischen Skill validiert, drei Plugin-Kopien per Build-Skript synchronisiert
+und drei Bundles temporär gebaut. Marketing: 73 Tests sowie 16 Browseransichten;
+Details und vorhandene Layoutgrenzen in dessen Übergabe. App-Laufzeitcode
+unverändert (AST-Vergleich ohne Docstrings für `neuro_funnel.py`). Öffentliche
+CMS-Connector-/Profil-Änderungen nur Dokumentation. Kein API-/Scorer-/PyPI-Release;
+Plugin-ZIP-Release zur Auslieferung geänderter mitgelieferter Texte weiterhin offen.
+App-Push-Gate `run_tests neuro_funnel`: 304 Tests bestanden (191 s).
+
 Stand: 2026-09-27. Diese Datei verbindet die Zuständigkeiten der Repositories.
 Sie beschreibt den zu diesem Datum verifizierten Release, keine automatische
 Live-Abfrage. Vor einem neuen Release Versionen und Deployment erneut prüfen.
@@ -257,7 +274,7 @@ führt vom externen Assistenten über Visibly zum CMS und zur Publikationsbestä
 ## Öffentliche NSS-Referenz (2026-09-28, lokal)
 
 Nachtrag Grundlage: README, PLUGINS, drei Bundle-READMEs und kanonischer Skill
-verlinken Antonio Blagos Neuro-SEO System® unter
+verlinken Antonio Blagos Neuro-SEO-System® unter
 `https://www.antonioblago.com/de/neuro-seo-system/` (HTTP 200 und Canonical geprüft).
 Die Marketingseite nennt die Grundlage auf DE/EN; entsprechende Verweise auch
 im CMS-Connector, GitHub-Profil und interner NSS-Referenz der App ergänzt.

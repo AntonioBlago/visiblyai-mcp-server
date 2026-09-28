@@ -8,7 +8,7 @@ The agent uses its own model for writing. Visibly provides context, scoring and 
 ([Deutsch](https://www.visibly-ai.com/de/nss-score)) describes the assessment areas,
 transparent feedback and limits without publishing the scoring implementation.
 Its methodological foundation is Antonio Blago's
-[Neuro-SEO System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview).
+[Neuro-SEO-System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview).
 
 ## Downloads
 

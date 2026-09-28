@@ -130,6 +130,6 @@ Adjusted from FirstPageSage using the ratio between Keyword Study 2026 and First
 ## Video References
 
 Methodology based on Antonio Blago's SEO training:
-- [Neuro SEO System - SEO und Verkaufspsychologie](https://www.youtube.com/watch?v=5rTDSvpH98s)
+- [Neuro-SEO-System® - SEO und Verkaufspsychologie](https://www.youtube.com/watch?v=5rTDSvpH98s)
 - [Vorstellung visibly AI](https://www.youtube.com/watch?v=LENq2hDKswg)
 - [Wettbewerbsanalyse fuer Keywords](https://www.youtube.com/watch?v=OzJdYOxVGuw)

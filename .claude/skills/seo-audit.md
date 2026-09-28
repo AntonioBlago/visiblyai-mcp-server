@@ -10,7 +10,7 @@ Run a comprehensive SEO audit combining traffic, keywords, on-page, links, and b
 
 The user provides a domain (e.g., `example.com`) and optionally a target keyword.
 
-## Methodology (Neuro-SEO System)
+## Methodology (Neuro-SEO-System®)
 
 Follow Antonio Blago's 4-phase Neuro-SEO audit approach:
 
@@ -128,6 +128,6 @@ For niche-specific projections, apply these Position 1 / 2 / 3 CTR benchmarks. V
 ## Video References
 
 Methodology based on Antonio Blago's SEO training:
-- [Neuro SEO System - SEO und Verkaufspsychologie](https://www.youtube.com/watch?v=5rTDSvpH98s)
+- [Neuro-SEO-System® - SEO und Verkaufspsychologie](https://www.youtube.com/watch?v=5rTDSvpH98s)
 - [Aufbau des optimalen Blogartikels](https://www.youtube.com/watch?v=JIzm5OumLEI)
 - [Vorstellung visibly AI](https://www.youtube.com/watch?v=LENq2hDKswg)

@@ -115,4 +115,4 @@ Adjusted from FirstPageSage using the ratio between Keyword Study 2026 and First
 
 Methodology based on Antonio Blago's SEO training:
 - [Wettbewerbsanalyse fuer Keywords](https://www.youtube.com/watch?v=OzJdYOxVGuw)
-- [Neuro SEO System](https://www.youtube.com/watch?v=5rTDSvpH98s)
+- [Neuro-SEO-System®](https://www.youtube.com/watch?v=5rTDSvpH98s)

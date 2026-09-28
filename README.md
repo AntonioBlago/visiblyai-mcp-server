@@ -5,7 +5,7 @@
 feedback and limits. The score is an editing aid, not a ranking or AI-citation guarantee.
 
 Its methodological foundation is Antonio Blago's
-[Neuro-SEO System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview),
+[Neuro-SEO-System®](https://www.antonioblago.com/de/neuro-seo-system/) (German overview),
 which combines search engine optimization with buying psychology.
 
 SEO tools for Claude Code, OpenAI Codex, GitHub Copilot and other MCP clients. Free local tools + paid API-powered analysis.

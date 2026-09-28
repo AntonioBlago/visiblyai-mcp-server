@@ -1,5 +1,8 @@
 # Hinweise für Agents
 
+- Markenname in gepflegten Texten immer **Neuro-SEO-System®** schreiben, auch
+  auf Englisch. URLs, technische Kennungen und originale Quelldaten beibehalten.
+
 - Lies [CLAUDE.md](CLAUDE.md) für Projektstruktur und bestehende Arbeitsregeln.
 - Vor Änderungen an Plugins, Skills, MCP-Transport, Releases oder öffentlicher
   Darstellung: [Plugin-/MCP-Übergabe](docs/PLUGIN_MCP_HANDOFF.md) lesen.
