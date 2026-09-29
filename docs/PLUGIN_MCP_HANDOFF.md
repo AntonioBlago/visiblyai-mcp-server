@@ -1,5 +1,14 @@
 # Visibly Plugins und MCP: Übergabe für Agents
 
+## Release MCP 0.13.1 und Plugins 1.0.2 (2026-09-29)
+
+- Paket 0.13.1: `MEETING_RULE_TYPES` akzeptiert `excluded_topic` (Paket-Commit `f8e1fc9`, passend zu App-Commit `0af5a08a`); Tool-Verträge sonst unverändert, weiterhin 84 Tools.
+- Kanonischer Skill `content-nss-optimize` übernimmt aus der App-Kopie genau zwei Änderungen (App `dc41cede`, `8902eae3`): neuer Schritt 4 „URLs and links stay fixed“ und in Schritt 3 der Satz zu `briefing.excluded_topics`. Alles andere (u. a. Neuro-SEO-System®-Hinweise) bleibt; die Autorenzeile der App-Kopie wurde bewusst nicht übernommen. Drei Plugin-Kopien per `build_plugins.py --sync-skills` synchronisiert.
+- Plugins 1.0.2: Manifeste, READMEs sowie Claude- und Copilot-Marktplatzkatalog (standen noch auf 1.0.0) angehoben; Codex-Katalog führt keine Version.
+- Release-Commit `13dba9f`, Tag `v0.13.1`. Tests ohne `VISIBLYAI_API_KEY`: 178 bestanden, 26 übersprungen. `twine check` bestanden, Upload nach PyPI; saubere Installation von 0.13.1 in frischer venv: Version 0.13.1, 84 Tools, `excluded_topic` in `MEETING_RULE_TYPES`.
+- GitHub-Release `plugins-v1.0.2` mit drei ZIPs und `SHA256SUMS.txt`; heruntergeladen, Prüfsummen OK, Skill und Manifestversion 1.0.2 in allen drei ZIPs geprüft.
+- **Offen:** Remote-Pin in Bikefitting (`requirements.txt` Zeile 245 `visiblyai-mcp-server==0.13.0`, Test `scripts/Testing/test_mcp_protocol.py` Zeile 814, `docs/internal/MCP_SYNC_GUIDE.md`) auf 0.13.1 ziehen und deployen. Der Remote-Adapter prüft `rule_type` nicht selbst und reicht `excluded_topic` schon heute an das Backend durch; der Pin betrifft nur `SERVER_VERSION`. Marketing-Konstanten und installierte Clients/Caches ebenfalls noch auf 1.0.1.
+
 ## Markenschreibweise (2026-09-28)
 
 Verbindlicher Nutzerwunsch: **Neuro-SEO-System®**, einschließlich ® und beider
@@ -17,7 +26,7 @@ CMS-Connector-/Profil-Änderungen nur Dokumentation. Kein API-/Scorer-/PyPI-Rele
 Plugin-ZIP-Release zur Auslieferung geänderter mitgelieferter Texte weiterhin offen.
 App-Push-Gate `run_tests neuro_funnel`: 304 Tests bestanden (191 s).
 
-Stand: 2026-09-27. Diese Datei verbindet die Zuständigkeiten der Repositories.
+Stand: 2026-09-29. Diese Datei verbindet die Zuständigkeiten der Repositories.
 Sie beschreibt den zu diesem Datum verifizierten Release, keine automatische
 Live-Abfrage. Vor einem neuen Release Versionen und Deployment erneut prüfen.
 
@@ -25,14 +34,14 @@ Live-Abfrage. Vor einem neuen Release Versionen und Deployment erneut prüfen.
 
 | Bestandteil | Verifizierter Stand | Maßgebliche Quelle |
 | --- | --- | --- |
-| Python-Paket / MCP | 0.13.0, 84 registrierte Tools | `src/visiblyai_mcp/__init__.py`, Runtime-Tool-Manager |
-| Plugin-Bundles | 1.0.1 für Codex, Claude Code und Copilot CLI | Manifeste unter `plugins/`, GitHub-Release `plugins-v1.0.1` |
-| Remote-Verbindung | `https://mcp.visibly-ai.com/mcp` | Bikefitting-Kompatibilitätstransport mit Paket-Pin 0.13.0 |
+| Python-Paket / MCP | 0.13.1, 84 registrierte Tools | `src/visiblyai_mcp/__init__.py`, Runtime-Tool-Manager |
+| Plugin-Bundles | 1.0.2 für Codex, Claude Code und Copilot CLI | Manifeste unter `plugins/`, GitHub-Release `plugins-v1.0.2` |
+| Remote-Verbindung | `https://mcp.visibly-ai.com/mcp` | Bikefitting-Kompatibilitätstransport mit Paket-Pin 0.13.0 (0.13.1 noch offen) |
 | Native REST-API | `https://app.visibly-ai.com/api/v1/mcp` | visibly-app, FastAPI-Router und gemeinsame Services |
 | Marketing | DE/EN-Downloadseiten live, Commit `2f30c55` | Repository `AntonioBlago/visiblyai`, `main`, Vercel |
 
-Releases: [PyPI](https://pypi.org/project/visiblyai-mcp-server/0.13.0/),
-[Plugin-ZIPs und Prüfsummen](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/tag/plugins-v1.0.1).
+Releases: [PyPI](https://pypi.org/project/visiblyai-mcp-server/0.13.1/),
+[Plugin-ZIPs und Prüfsummen](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/tag/plugins-v1.0.2).
 Installationsbefehle, API-Key-Einrichtung und Beispielauftrag stehen in
 [PLUGINS.md](../PLUGINS.md). Diese Befehle nicht als zweite Anleitung duplizieren.
 
