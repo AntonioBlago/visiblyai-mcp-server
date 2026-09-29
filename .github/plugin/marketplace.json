@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Visibly AI SEO and article optimization plugins",
-    "version": "1.0.0"
+    "version": "1.0.2"
   },
   "plugins": [
     {
       "name": "visibly-copilot",
       "description": "Write articles with your agent, improve their Visibly NSS score, and save drafts to the Visibly editor.",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "source": "./plugins/visibly-copilot"
     }
   ]

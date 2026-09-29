@@ -1,6 +1,6 @@
 # Visibly AI for GitHub Copilot CLI
 
-Version 1.0.1. Includes the content-nss-optimize skill. Add the Visibly MCP connection once using the setup instructions below; authentication is stored in Copilot's private user configuration.
+Version 1.0.2. Includes the content-nss-optimize skill. Add the Visibly MCP connection once using the setup instructions below; authentication is stored in Copilot's private user configuration.
 
 [What the NSS measures](https://www.visibly-ai.com/nss-score) ·
 [NSS auf Deutsch erklärt](https://www.visibly-ai.com/de/nss-score)

@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.13.1] - 2026-09-29
+
+### Changed
+- `import_meeting_preview` / `import_meeting_apply`: brand rule type `excluded_topic` is accepted (`MEETING_RULE_TYPES`, server validation and tool description), matching the Visibly app's excluded topics per project.
+- Plugin bundles 1.0.2 for Claude, Codex and Copilot: `content-nss-optimize` keeps published URLs/slugs and existing links fixed (verifiably dead links are reported, not swapped) and never makes a topic from `briefing.excluded_topics` the subject, title or H1.
+- Claude and Copilot marketplace catalogs now carry the plugin version 1.0.2 (they still said 1.0.0).
+
 ### Documentation
 - Add a shared agent handoff for plugin releases, MCP transports, article/CMS status,
   95% text tolerance, marketing downloads and verification evidence (2026-09-27).

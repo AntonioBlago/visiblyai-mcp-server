@@ -1,6 +1,6 @@
 # Visibly AI for Claude Code
 
-Version 1.0.1. Includes the Visibly MCP connection and the content-nss-optimize skill.
+Version 1.0.2. Includes the Visibly MCP connection and the content-nss-optimize skill.
 
 [What the NSS measures](https://www.visibly-ai.com/nss-score) ·
 [NSS auf Deutsch erklärt](https://www.visibly-ai.com/de/nss-score)
