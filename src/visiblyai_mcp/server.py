@@ -663,6 +663,42 @@ def import_meeting_apply(project_id: int, source: str, facts: list[dict] | None 
                                                     idempotency_key)
 
 
+@mcp.tool()
+def create_social_post(project_ids: list[int], texts: dict, image_urls: list[str] | None = None,
+                       document_url: str | None = None, document_title: str | None = None,
+                       due_at: str | None = None, approve: bool = False,
+                       idempotency_key: str | None = None) -> str:
+    """Create a finished social post in one or more projects (each project posts via its own Buffer account). Credits: 0.
+
+    texts: channel -> text, channels linkedin, instagram, google_business, x_post. image_urls: up to 10
+    public image URLs (Instagram needs at least one); visibly copies them into its own storage.
+    document_url + document_title: one PDF, LinkedIn only, needs an image as preview. due_at: ISO time
+    with offset (optional wish; otherwise the next free Tue/Thu/Sun 09:00 Berlin slot). approve=true puts
+    the post straight into the queue and needs the key right content:approve; otherwise content:write.
+    Retries with the same idempotency_key replay instead of duplicating.
+    """
+    return content_write_tools.create_social_post(project_ids, texts, image_urls, document_url, document_title,
+                                                  due_at, approve, idempotency_key)
+
+
+@mcp.tool()
+def list_social_queue(project_id: int, status: str = "all") -> str:
+    """Read your own social posts of a project with the state per channel (draft, queued, scheduled, failed). Credits: 0."""
+    return content_write_tools.list_social_queue(project_id, status)
+
+
+@mcp.tool()
+def approve_social_post(project_id: int, group_id: str, idempotency_key: str | None = None) -> str:
+    """Approve a social post: it then waits in the queue until Buffer accepts it. Credits: 0. Needs content:approve."""
+    return content_write_tools.approve_social_post(project_id, group_id, idempotency_key)
+
+
+@mcp.tool()
+def delete_social_post(project_id: int, group_id: str, idempotency_key: str | None = None) -> str:
+    """Delete a social post; channels already scheduled in Buffer are withdrawn first. Credits: 0. Needs content:write."""
+    return content_write_tools.delete_social_post(project_id, group_id, idempotency_key)
+
+
 def main():
     """Entry point for the MCP server and CLI commands.
 

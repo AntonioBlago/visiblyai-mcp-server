@@ -63,6 +63,10 @@ EXPECTED_TOOLS = {
     "remember",
     "import_meeting_preview",
     "import_meeting_apply",
+    "create_social_post",
+    "list_social_queue",
+    "approve_social_post",
+    "delete_social_post",
     # Full content workflow (30)
     "get_content_query",
     "create_content_query",
@@ -112,7 +116,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 84, f"Expected 84 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 88, f"Expected 88 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         for name, tool in mcp._tool_manager._tools.items():

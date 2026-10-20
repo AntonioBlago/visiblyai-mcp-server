@@ -376,6 +376,18 @@ class VisiblyAIClient:
     def import_meeting_apply(self, payload: dict) -> dict:
         return self._post("/tools/memory/meeting-import/apply", payload)
 
+    def create_social_post(self, payload: dict) -> dict:
+        return self._post("/tools/social/create-post", payload)
+
+    def list_social_queue(self, payload: dict) -> dict:
+        return self._post("/tools/social/queue", payload)
+
+    def approve_social_post(self, payload: dict) -> dict:
+        return self._post("/tools/social/approve", payload)
+
+    def delete_social_post(self, payload: dict) -> dict:
+        return self._post("/tools/social/delete", payload)
+
     # ------------------------------------------------------------------
     # Free endpoints
     # ------------------------------------------------------------------

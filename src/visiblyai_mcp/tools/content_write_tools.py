@@ -4,6 +4,7 @@ Write tools (stage 2A): hand a draft over to visibly and edit drafts.
 """
 
 import json
+import re
 import uuid
 
 from ..api_client import APIError, VisiblyAIClient
@@ -11,7 +12,8 @@ from ..config import SIGNUP_URL, get_api_key
 from .paid_tools import _format_result, _handle_error
 
 __all__ = ["submit_article_draft", "update_article", "get_mcp_operation", "remember",
-           "import_meeting_preview", "import_meeting_apply"]
+           "import_meeting_preview", "import_meeting_apply", "create_social_post", "list_social_queue",
+           "approve_social_post", "delete_social_post"]
 FORMATS = ("html", "markdown")
 
 
@@ -152,3 +154,42 @@ def import_meeting_apply(project_id: int, source: str, facts: list[dict] | None 
     payload = {"project_id": project_id, "source": str(source)[:200], "facts": facts, "rules": rules,
                "personas": personas, "brand_profile": brand_profile, "idempotency_key": idempotency_key}
     return _with_key("import_meeting_apply", payload)
+
+
+SOCIAL_STATUSES = ("all", "draft", "queued", "scheduled", "failed")
+_GROUP_RE = re.compile(r"^[a-f0-9]{32}$")
+
+
+def create_social_post(project_ids: list[int], texts: dict, image_urls: list[str] | None = None,
+                       document_url: str | None = None, document_title: str | None = None,
+                       due_at: str | None = None, approve: bool = False,
+                       idempotency_key: str | None = None) -> str:
+    """Create a finished social post (text per channel) in one or more projects. 0 credits."""
+    if not project_ids or not texts:
+        return _bad("project_ids and texts are required")
+    payload: dict = {"project_ids": project_ids, "texts": texts, "image_urls": image_urls or [],
+                     "approve": bool(approve), "idempotency_key": idempotency_key}
+    for name, value in (("document_url", document_url), ("document_title", document_title), ("due_at", due_at)):
+        if value:
+            payload[name] = value
+    return _with_key("create_social_post", payload)
+
+
+def list_social_queue(project_id: int, status: str = "all") -> str:
+    if not project_id or status not in SOCIAL_STATUSES:
+        return _bad("project_id is required; status must be all|draft|queued|scheduled|failed")
+    return _call("list_social_queue", {"project_id": project_id, "status": status})
+
+
+def approve_social_post(project_id: int, group_id: str, idempotency_key: str | None = None) -> str:
+    if not project_id or not _GROUP_RE.fullmatch(group_id or ""):
+        return _bad("project_id and a 32-character group_id are required")
+    return _with_key("approve_social_post", {"project_id": project_id, "group_id": group_id,
+                                             "idempotency_key": idempotency_key})
+
+
+def delete_social_post(project_id: int, group_id: str, idempotency_key: str | None = None) -> str:
+    if not project_id or not _GROUP_RE.fullmatch(group_id or ""):
+        return _bad("project_id and a 32-character group_id are required")
+    return _with_key("delete_social_post", {"project_id": project_id, "group_id": group_id,
+                                            "idempotency_key": idempotency_key})

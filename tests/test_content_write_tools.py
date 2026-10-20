@@ -84,3 +84,24 @@ def test_import_meeting_apply_validates_and_generates_key():
     assert len(payload["idempotency_key"]) == 32 and out["idempotency_key"] == payload["idempotency_key"]
     _, call = _run(w.import_meeting_apply, "import_meeting_apply", 5, "Call", facts=[fact], idempotency_key="k1")
     assert call.args[0]["idempotency_key"] == "k1"
+
+
+def test_create_social_post_validates_and_maps_payload():
+    assert "error" in json.loads(w.create_social_post([], {"linkedin": "x"}))
+    assert "error" in json.loads(w.create_social_post([5], {}))
+    out, call = _run(w.create_social_post, "create_social_post", [5, 6], {"linkedin": "Ein Satz."},
+                     image_urls=["https://cdn.test/a.jpg"], approve=True)
+    payload = call.args[0]
+    assert payload["project_ids"] == [5, 6] and payload["approve"] is True
+    assert payload["image_urls"] == ["https://cdn.test/a.jpg"] and len(payload["idempotency_key"]) == 32
+    assert "document_url" not in payload
+
+
+def test_social_queue_approve_delete_map_payload():
+    _, call = _run(w.list_social_queue, "list_social_queue", 5, status="queued")
+    assert call.args[0] == {"project_id": 5, "status": "queued"}
+    _, call = _run(w.approve_social_post, "approve_social_post", 5, "a" * 32)
+    assert call.args[0]["group_id"] == "a" * 32 and call.args[0]["idempotency_key"]
+    _, call = _run(w.delete_social_post, "delete_social_post", 5, "a" * 32, idempotency_key="d1")
+    assert call.args[0]["idempotency_key"] == "d1"
+    assert "error" in json.loads(w.approve_social_post(5, "kein-hex"))
