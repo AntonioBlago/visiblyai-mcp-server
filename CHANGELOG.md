@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-10-21
+
+### Added
+- Social post tools: `create_social_post`, `list_social_queue`, `approve_social_post` and `delete_social_post` (88 tools). Available through both MCP transports.
+
 ## [0.13.1] - 2026-09-29
 
 ### Changed

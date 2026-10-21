@@ -12,7 +12,7 @@ Its methodological foundation is Antonio Blago's
 
 ## Downloads
 
-Plugin release **1.0.2** works with the current remote MCP server (84 tools; Python package **0.13.1**).
+Plugin release **1.0.2** works with the current remote MCP server (88 tools; Python package **0.14.0**).
 An API key and the appropriate project permissions are required for account data and writing drafts.
 
 | Client | Plugin ZIP | Connection setup |
