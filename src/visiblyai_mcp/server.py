@@ -133,7 +133,7 @@ def list_locations() -> str:
 
 
 @mcp.tool()
-def get_skill(name: str) -> str:
+def get_skill(name: str, lang: str | None = None) -> str:
     """Get an SEO workflow skill with step-by-step methodology and CTR models.
 
     Skills: seo-audit, keyword-research, competitor-analysis,
@@ -141,10 +141,11 @@ def get_skill(name: str) -> str:
     content-nss-optimize: write with your own model and iteratively use free
     Visibly scoring toward NSS 70/80, then save and return the editor link.
     Use name='list' to see all available skills.
+    lang: de or en, default en.
 
     Free tool - no API key or credits required.
     """
-    return free_tools.get_skill(name)
+    return free_tools.get_skill(name, lang=lang)
 
 
 # ---------------------------------------------------------------------------

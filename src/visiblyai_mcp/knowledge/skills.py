@@ -32,11 +32,12 @@ def _load_fallback() -> dict:
         return {}
 
 
-def get_skill(name: str) -> str:
+def get_skill(name: str, lang: str | None = None) -> str:
     """Get a skill by name. API-first, fallback to embedded.
 
     Args:
         name: Skill slug (e.g. 'seo-audit', 'keyword-research')
+        lang: Optional 'de' or 'en'; only sent to the API when set
 
     Returns:
         Markdown formatted skill content
@@ -45,7 +46,7 @@ def get_skill(name: str) -> str:
     try:
         resp = httpx.get(
             BASE_URL + "/tools/skills",
-            params={"name": name},
+            params={"name": name, **({"lang": lang} if lang else {})},
             timeout=15.0,
         )
         if resp.status_code == 200:
@@ -71,7 +72,7 @@ def get_skill(name: str) -> str:
         return f"Could not load skill: {e}"
 
 
-def list_skills() -> list[dict]:
+def list_skills(lang: str | None = None) -> list[dict]:
     """List all available skills. API-first, fallback to embedded.
 
     Returns:
@@ -81,7 +82,7 @@ def list_skills() -> list[dict]:
     try:
         resp = httpx.get(
             BASE_URL + "/tools/skills",
-            params={"name": "list"},
+            params={"name": "list", **({"lang": lang} if lang else {})},
             timeout=15.0,
         )
         if resp.status_code == 200:

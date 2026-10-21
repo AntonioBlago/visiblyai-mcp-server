@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-11-11
+
+### Added
+- `get_skill` takes an optional `lang` (`de` or `en`, default `en`) and passes it to the API only when set. `name='list'` honors it too.
+- `create_content_query` accepts `source_query_id` to create a language version of an existing query (same project, different language). The key is only sent when set, so older Visibly backends keep working.
+
 ## [0.16.1] - 2026-11-03
 
 ### Fixed

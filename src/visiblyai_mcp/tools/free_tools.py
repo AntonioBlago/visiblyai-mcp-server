@@ -122,7 +122,7 @@ def seo_guidance(
     return get_guidance(topic)
 
 
-def get_skill(name: str) -> str:
+def get_skill(name: str, lang: str | None = None) -> str:
     """Get an SEO workflow skill with step-by-step methodology.
 
     Skills provide structured workflows for common SEO tasks including
@@ -132,12 +132,13 @@ def get_skill(name: str) -> str:
 
     Args:
         name: Skill name (e.g. 'seo-audit') or 'list' for all
+        lang: Optional 'de' or 'en' (default en on the API)
 
     Returns:
         Markdown formatted skill content
     """
     if name.lower() in ("list", "help", "all"):
-        skills = _list_skills()
+        skills = _list_skills(lang=lang)
         lines = ["# Available SEO Workflow Skills\n"]
         for s in skills:
             lines.append(f"- **{s['skill_name']}**: {s.get('description', '')}")
@@ -145,7 +146,7 @@ def get_skill(name: str) -> str:
             lines.append("No skills available. Skills are synced via `visiblyai-mcp-server sync-skills`.")
         return "\n".join(lines)
 
-    return _get_skill(name)
+    return _get_skill(name, lang=lang)
 
 
 def analyze_url_structure(url: str) -> str:
