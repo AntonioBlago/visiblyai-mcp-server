@@ -1,5 +1,12 @@
 # Visibly Plugins und MCP: Übergabe für Agents
 
+## Release MCP 0.14.0 (2026-10-21)
+
+- Paket 0.14.0 auf PyPI, Tag `v0.14.0`, Release-Commit `9a20d23`, Feature-Commit `97fbab0`. 88 registrierte Tools.
+- Vier neue Werkzeuge für eigene Social-Posts: `create_social_post`, `list_social_queue`, `approve_social_post`, `delete_social_post` (App-Router `mcp_social_routes.py`, 0 Credits; Anlegen und Löschen `content:write`, Freigabe `content:approve`).
+- Marketing-Website (Repo `visiblyai`, Commit `b29135a`): `MCP_TOOLS` 0.14.0 / 88, MCP-Doku-Seiten und Releases-Eintrag nachgezogen.
+- **Offen:** Remote-Katalog in Bikefitting (`b9466d7f`, `0d897ee5`) ist gepusht, aber auf `mcp.visibly-ai.com` noch nicht deployt; der Remote meldet weiter 0.13.1 (Railway-Störung). Danach Pin und Live-Version prüfen.
+
 ## Release MCP 0.13.1 und Plugins 1.0.2 (2026-09-29)
 
 - Paket 0.13.1: `MEETING_RULE_TYPES` akzeptiert `excluded_topic` (Paket-Commit `f8e1fc9`, passend zu App-Commit `0af5a08a`); Tool-Verträge sonst unverändert, weiterhin 84 Tools.
@@ -34,13 +41,13 @@ Live-Abfrage. Vor einem neuen Release Versionen und Deployment erneut prüfen.
 
 | Bestandteil | Verifizierter Stand | Maßgebliche Quelle |
 | --- | --- | --- |
-| Python-Paket / MCP | 0.13.1, 84 registrierte Tools | `src/visiblyai_mcp/__init__.py`, Runtime-Tool-Manager |
+| Python-Paket / MCP | 0.14.0, 88 registrierte Tools | `src/visiblyai_mcp/__init__.py`, Runtime-Tool-Manager |
 | Plugin-Bundles | 1.0.2 für Codex, Claude Code und Copilot CLI | Manifeste unter `plugins/`, GitHub-Release `plugins-v1.0.2` |
 | Remote-Verbindung | `https://mcp.visibly-ai.com/mcp` | Bikefitting-Kompatibilitätstransport mit Paket-Pin 0.13.0 (0.13.1 noch offen) |
 | Native REST-API | `https://app.visibly-ai.com/api/v1/mcp` | visibly-app, FastAPI-Router und gemeinsame Services |
 | Marketing | DE/EN-Downloadseiten live, Commit `2f30c55` | Repository `AntonioBlago/visiblyai`, `main`, Vercel |
 
-Releases: [PyPI](https://pypi.org/project/visiblyai-mcp-server/0.13.1/),
+Releases: [PyPI](https://pypi.org/project/visiblyai-mcp-server/0.14.0/),
 [Plugin-ZIPs und Prüfsummen](https://github.com/AntonioBlago/visiblyai-mcp-server/releases/tag/plugins-v1.0.2).
 Installationsbefehle, API-Key-Einrichtung und Beispielauftrag stehen in
 [PLUGINS.md](../PLUGINS.md). Diese Befehle nicht als zweite Anleitung duplizieren.
