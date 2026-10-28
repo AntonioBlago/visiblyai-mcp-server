@@ -525,6 +525,24 @@ def get_internal_links(project_id: int, url: str | None = None, limit: int = 20,
 
 
 @mcp.tool()
+def get_site_health(project_id: int) -> str:
+    """Site health from the project's latest stored site crawl: health score, history (up to 12 runs), severity counts, top findings, fixed items. Data carries the crawl date (run.finished_at). Credits: 0, read-only."""
+    return project_tools.get_site_health(project_id)
+
+
+@mcp.tool()
+def get_page_facts(project_id: int, url: str) -> str:
+    """Crawl facts, HTTP response and findings for one URL (max 1024 chars) from the latest stored site crawl. Data carries its crawl date (crawled_at). Credits: 0, read-only."""
+    return project_tools.get_page_facts(project_id, url)
+
+
+@mcp.tool()
+def list_site_findings(project_id: int, code: str | None = None, limit: int = 50, offset: int = 0) -> str:
+    """Findings of the latest stored site crawl, optionally filtered by finding code (e.g. redirect.chain), limit 1..100, paginated. Data carries its crawl date (run.finished_at). Credits: 0, read-only."""
+    return project_tools.list_site_findings(project_id, code, limit, offset)
+
+
+@mcp.tool()
 def recall(query: str = "", project_id: int | None = None, limit: int = 10) -> str:
     """Recall facts the account remembered in the visibly chat (account facts, plus project facts if project_id). Credits: 0, read-only.
 

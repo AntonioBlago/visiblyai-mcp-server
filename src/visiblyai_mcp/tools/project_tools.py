@@ -12,6 +12,7 @@ from .paid_tools import _format_result, _handle_error
 __all__ = [
     "get_gsc_clusters", "get_cluster_keywords", "get_analytics_insights", "get_revenue_insights",
     "get_scorecard", "get_eeat_summary", "list_pages", "get_internal_links", "recall",
+    "get_site_health", "get_page_facts", "list_site_findings",
     "list_articles", "get_article", "list_content_queries", "get_content_briefing",
     "get_content_status", "score_text",
 ]
@@ -96,6 +97,37 @@ def get_internal_links(project_id: int, url: str | None = None, limit: int = 20,
     if not project_id:
         return _bad("project_id is required")
     return _call("internal_links", project_id, url=url, limit=limit, offset=offset)
+
+
+def get_site_health(project_id: int) -> str:
+    """Site health from the latest stored site crawl: score, history, severity counts, findings. Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    return _call("site_health", project_id)
+
+
+def get_page_facts(project_id: int, url: str) -> str:
+    """Crawl facts and findings for one URL from the latest stored site crawl (carries crawled_at). Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    if not url or not url.strip():
+        return _bad("url is required")
+    if len(url) > 1024:
+        return _bad("url must be at most 1024 characters")
+    return _call("page_facts", project_id, url)
+
+
+def list_site_findings(project_id: int, code: str | None = None, limit: int = 50, offset: int = 0) -> str:
+    """List site-crawl findings, optionally for one finding code, paginated. Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    if code is not None and (not isinstance(code, str) or not code.strip() or len(code) > 64):
+        return _bad("code must be a non-empty string up to 64 characters")
+    if not isinstance(limit, int) or not 1 <= limit <= 100:
+        return _bad("limit must be between 1 and 100")
+    if not isinstance(offset, int) or offset < 0:
+        return _bad("offset must be 0 or greater")
+    return _call("site_findings", project_id, code=code, limit=limit, offset=offset)
 
 
 def recall(query: str = "", project_id: int | None = None, limit: int = 10) -> str:

@@ -76,3 +76,33 @@ def test_missing_key_hint():
     with patch("visiblyai_mcp.tools.project_tools.get_api_key", return_value=None):
         out = json.loads(project_tools.list_articles(5))
     assert "API key" in out["error"]
+
+
+def test_site_health_maps_arguments_and_requires_project():
+    assert "error" in json.loads(project_tools.get_site_health(0))
+    out, call = _run(project_tools.get_site_health, "site_health", 5)
+    assert out["credits_used"] == 0 and call.args == (5,)
+
+
+def test_page_facts_requires_valid_url():
+    assert "error" in json.loads(project_tools.get_page_facts(0, "https://a.de/"))
+    assert "error" in json.loads(project_tools.get_page_facts(5, ""))
+    assert "error" in json.loads(project_tools.get_page_facts(5, "x" * 1025))
+    _, call = _run(project_tools.get_page_facts, "page_facts", 5, "https://a.de/x")
+    assert call.args == (5, "https://a.de/x")
+
+
+def test_site_findings_defaults_and_mapping():
+    _, call = _run(project_tools.list_site_findings, "site_findings", 5)
+    assert call.args == (5,) and call.kwargs == {"code": None, "limit": 50, "offset": 0}
+    _, call = _run(project_tools.list_site_findings, "site_findings", 5, code="redirect.chain", limit=100, offset=20)
+    assert call.kwargs == {"code": "redirect.chain", "limit": 100, "offset": 20}
+
+
+def test_site_findings_rejects_bad_values_before_api():
+    for kwargs in ({"limit": 0}, {"limit": 101}, {"offset": -1}, {"code": ""}, {"code": "x" * 65}):
+        client = MagicMock()
+        with patch("visiblyai_mcp.tools.project_tools._require_key", return_value=client):
+            assert "error" in json.loads(project_tools.list_site_findings(5, **kwargs))
+        client.site_findings.assert_not_called()
+    assert "error" in json.loads(project_tools.list_site_findings(0))

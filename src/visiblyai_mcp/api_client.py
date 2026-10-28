@@ -305,6 +305,18 @@ class VisiblyAIClient:
             payload["url"] = url
         return self._post("/tools/internal-links", payload)
 
+    def site_health(self, project_id: int) -> dict:
+        return self._post("/tools/site-health", {"project_id": project_id})
+
+    def page_facts(self, project_id: int, url: str) -> dict:
+        return self._post("/tools/page-facts", {"project_id": project_id, "url": url})
+
+    def site_findings(self, project_id: int, code: str | None = None, limit: int = 50, offset: int = 0) -> dict:
+        payload: dict[str, Any] = {"project_id": project_id, "limit": limit, "offset": offset}
+        if code:
+            payload["code"] = code
+        return self._post("/tools/site-findings", payload)
+
     def memory_recall(self, query: str = "", project_id: int | None = None, limit: int = 10) -> dict:
         payload: dict[str, Any] = {"query": query, "limit": limit}
         if project_id:
