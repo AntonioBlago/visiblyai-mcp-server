@@ -202,7 +202,13 @@ class TestCrawlWebsite:
         mock_client = _mock_client_with("crawl", sample_crawl_response)
         with patch("visiblyai_mcp.tools.paid_tools._require_key", return_value=mock_client):
             paid_tools.crawl_website("https://example.com", max_pages=50)
-            mock_client.crawl.assert_called_once_with("https://example.com", "", 10)
+            mock_client.crawl.assert_called_once_with("https://example.com", "", 50)
+
+    def test_max_pages_capped_at_500(self, mock_api_key, sample_crawl_response):
+        mock_client = _mock_client_with("crawl", sample_crawl_response)
+        with patch("visiblyai_mcp.tools.paid_tools._require_key", return_value=mock_client):
+            paid_tools.crawl_website("https://example.com", max_pages=900)
+            mock_client.crawl.assert_called_once_with("https://example.com", "", 500)
 
 
 # ---------------------------------------------------------------------------

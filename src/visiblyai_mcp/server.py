@@ -249,7 +249,7 @@ def validate_keywords(
 
 @mcp.tool()
 def crawl_website(url: str, keyword: str = "", max_pages: int = 1) -> str:
-    """Crawl a website + optional 24-point OnPage SEO analysis. Live: Credits 15-60. When the project's stored site crawl is at most 30 days old, the answer comes from that store: Credits: 0, and data carries source='site_crawl' and crawled_at. get_site_health / list_site_findings give the full picture. Stored answers list up to min(tier cap, 500) pages ordered by depth and URL, with data.truncated.
+    """Crawl a website + optional 24-point OnPage SEO analysis. max_pages 1..500 (live crawls are capped at 10). Live: Credits 15-60. When the project's stored site crawl is at most 30 days old, the answer comes from that store: Credits: 0, and data carries source='site_crawl' and crawled_at. get_site_health / list_site_findings give the full picture. Stored answers start with source, crawled_at, truncated, pages_total, pages_crawled, pages_omitted, max_pages, then pages (ordered by depth and URL, up to min(max_pages, tier cap, 500), response under 256 KiB).
 
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """
@@ -526,19 +526,19 @@ def get_internal_links(project_id: int, url: str | None = None, limit: int = 20,
 
 @mcp.tool()
 def get_site_health(project_id: int) -> str:
-    """Site health from the project's latest stored site crawl: health score, history (up to 12 runs), severity counts, top findings, fixed items. Data carries the crawl date (run.finished_at). Credits: 0, read-only."""
+    """Site health from the project's latest stored site crawl: health score, history (up to 12 runs), severity counts, top findings, fixed items. Data carries crawled_at. Credits: 0, read-only."""
     return project_tools.get_site_health(project_id)
 
 
 @mcp.tool()
 def get_page_facts(project_id: int, url: str) -> str:
-    """Crawl facts, HTTP response and findings for one URL (max 1024 chars) from the latest stored site crawl. Data carries its crawl date (crawled_at). Credits: 0, read-only."""
+    """Crawl facts, HTTP response and findings for one URL (max 1024 chars) from the latest stored site crawl. Data: url, crawled_at, facts, response, findings. Error 404 page_not_in_graph: the crawl does not know the URL. Credits: 0, read-only."""
     return project_tools.get_page_facts(project_id, url)
 
 
 @mcp.tool()
 def list_site_findings(project_id: int, code: str | None = None, limit: int = 50, offset: int = 0) -> str:
-    """Findings of the latest stored site crawl, optionally filtered by finding code (e.g. redirect.chain), limit 1..100, paginated. Data carries its crawl date (run.finished_at). Credits: 0, read-only."""
+    """Findings of the latest stored site crawl, optionally filtered by finding code (e.g. redirect.chain), limit 1..100, paginated. Data: code, run, crawled_at, items, page. Without code one row per finding code, with code the affected URLs. Unknown code: error 422. Credits: 0, read-only."""
     return project_tools.list_site_findings(project_id, code, limit, offset)
 
 

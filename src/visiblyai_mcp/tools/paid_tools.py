@@ -278,20 +278,23 @@ def crawl_website(
     OnPage SEO analysis.
     Credits: 15-60 depending on pages crawled. If the project's stored site crawl is
     at most 30 days old, the backend answers from it with 0 credits; data then has
-    source='site_crawl', crawled_at and truncated (up to min(tier cap, 500) pages).
+    source='site_crawl', crawled_at, truncated, pages_total, pages_crawled, pages_omitted
+    and max_pages first, then pages (ordered by depth and URL, up to min(max_pages, tier cap, 500),
+    response under 256 KiB).
     get_site_health / list_site_findings give the full picture.
 
     Args:
         url: URL to crawl (e.g., 'https://example.com/page')
         keyword: Optional keyword for OnPage SEO analysis
-        max_pages: Number of pages to crawl (default: 1, max: 10)
+        max_pages: Number of pages (default: 1, max: 500). Live crawls are capped at 10 pages;
+            stored answers honour the value up to 500 and cost 0 credits.
 
     Returns:
         JSON with crawl data and optional SEO analysis
     """
     try:
         client = _require_key()
-        result = client.crawl(url, keyword, min(max_pages, 10))
+        result = client.crawl(url, keyword, max(1, min(max_pages, 500)))
         return _format_result(result)
     except Exception as e:
         return _handle_error(e)
@@ -394,9 +397,9 @@ def audit_sitemap(
 def check_structured_data(
     url: str,
 ) -> str:
-    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5 live; 0 when answered from a
-    stored site crawl (at most 30 days old), then data has source='site_crawl' and
-    crawled_at. See get_site_health / list_site_findings."""
+    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors.
+    Credits: 5 live; 0 when answered from a stored site crawl (at most 30 days old),
+    then data has source='site_crawl' and crawled_at. See get_site_health / list_site_findings."""
     try:
         client = _require_key()
         result = client.check_structured_data(url)
