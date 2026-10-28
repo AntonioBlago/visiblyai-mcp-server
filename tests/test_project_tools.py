@@ -106,3 +106,20 @@ def test_site_findings_rejects_bad_values_before_api():
             assert "error" in json.loads(project_tools.list_site_findings(5, **kwargs))
         client.site_findings.assert_not_called()
     assert "error" in json.loads(project_tools.list_site_findings(0))
+
+
+def test_stored_crawl_fields_pass_through_existing_tools():
+    from visiblyai_mcp.tools import paid_tools
+    data = {"source": "site_crawl", "crawled_at": "2026-10-27T10:00:00", "truncated": True, "pages": []}
+    resp = {"success": True, "data": data, "credits_used": 0, "credits_remaining": 10}
+    for fn, method, args in (
+        (paid_tools.crawl_website, "crawl", ("https://a.de/",)),
+        (paid_tools.onpage_analysis, "onpage_analysis", ("https://a.de/", "kw")),
+        (paid_tools.check_structured_data, "check_structured_data", ("https://a.de/",)),
+    ):
+        client = _client(method, resp)
+        with patch("visiblyai_mcp.tools.paid_tools._require_key", return_value=client):
+            out = json.loads(fn(*args))
+        assert out["credits_used"] == 0
+        assert out["data"]["source"] == "site_crawl" and out["data"]["crawled_at"] == data["crawled_at"]
+        assert out["data"]["truncated"] is True

@@ -249,7 +249,7 @@ def validate_keywords(
 
 @mcp.tool()
 def crawl_website(url: str, keyword: str = "", max_pages: int = 1) -> str:
-    """Crawl a website + optional 24-point OnPage SEO analysis. Credits: 15-60.
+    """Crawl a website + optional 24-point OnPage SEO analysis. Live: Credits 15-60. When the project's stored site crawl is at most 30 days old, the answer comes from that store: Credits: 0, and data carries source='site_crawl' and crawled_at. get_site_health / list_site_findings give the full picture. Stored answers list up to min(tier cap, 500) pages ordered by depth and URL, with data.truncated.
 
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """
@@ -258,7 +258,7 @@ def crawl_website(url: str, keyword: str = "", max_pages: int = 1) -> str:
 
 @mcp.tool()
 def onpage_analysis(url: str, keyword: str) -> str:
-    """Run 24-point OnPage SEO analysis: keyword, content, technical checks. Credits: 15.
+    """Run 24-point OnPage SEO analysis: keyword, content, technical checks. Live: Credits 15. When the project's stored site crawl is at most 30 days old, the answer comes from that store: Credits: 0, and data carries source='site_crawl' and crawled_at. get_site_health / list_site_findings give the full picture.
 
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """
@@ -315,7 +315,7 @@ def audit_sitemap(domain: str) -> str:
 
 @mcp.tool()
 def check_structured_data(url: str) -> str:
-    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5.
+    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Live: Credits 5. When the project's stored site crawl is at most 30 days old, the answer comes from that store: Credits: 0, and data carries source='site_crawl' and crawled_at. get_site_health / list_site_findings give the full picture.
 
     Requires VISIBLYAI_API_KEY. Use get_account_info to check your balance.
     """

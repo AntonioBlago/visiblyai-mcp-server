@@ -276,7 +276,10 @@ def crawl_website(
     Fetches page content and extracts title, meta description, headings,
     word count, links, and images. If keyword is provided, runs a 24-point
     OnPage SEO analysis.
-    Credits: 15-60 depending on pages crawled.
+    Credits: 15-60 depending on pages crawled. If the project's stored site crawl is
+    at most 30 days old, the backend answers from it with 0 credits; data then has
+    source='site_crawl', crawled_at and truncated (up to min(tier cap, 500) pages).
+    get_site_health / list_site_findings give the full picture.
 
     Args:
         url: URL to crawl (e.g., 'https://example.com/page')
@@ -303,7 +306,8 @@ def onpage_analysis(
     Analyzes keyword optimization (6 checks), content optimization (9 checks),
     and technical optimization (9 checks). Returns scores, passed/failed checks,
     and actionable recommendations.
-    Credits: 15.
+    Credits: 15 live; 0 when answered from a stored site crawl (at most 30 days old),
+    then data has source='site_crawl' and crawled_at. See get_site_health.
 
     Args:
         url: URL to analyze (e.g., 'https://example.com/page')
@@ -390,7 +394,9 @@ def audit_sitemap(
 def check_structured_data(
     url: str,
 ) -> str:
-    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5."""
+    """Validate JSON-LD and microdata on a URL: schema types, required fields, errors. Credits: 5 live; 0 when answered from a
+    stored site crawl (at most 30 days old), then data has source='site_crawl' and
+    crawled_at. See get_site_health / list_site_findings."""
     try:
         client = _require_key()
         result = client.check_structured_data(url)
