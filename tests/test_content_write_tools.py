@@ -97,6 +97,27 @@ def test_create_social_post_validates_and_maps_payload():
     assert "document_url" not in payload
 
 
+def test_create_social_post_maps_video_and_validates():
+    out, call = _run(w.create_social_post, "create_social_post", [5], {"instagram": "Reel."},
+                     video_url="https://cdn.test/v.mp4", video_thumb_ms=1500)
+    payload = call.args[0]
+    assert payload["video_url"] == "https://cdn.test/v.mp4" and payload["video_thumb_ms"] == 1500
+    assert payload["image_urls"] == []
+    _, call = _run(w.create_social_post, "create_social_post", [5], {"instagram": "Reel."},
+                   video_url="https://cdn.test/v.mp4", video_thumb_ms=0)
+    assert call.args[0]["video_thumb_ms"] == 0
+    _, call = _run(w.create_social_post, "create_social_post", [5], {"linkedin": "x"})
+    assert "video_url" not in call.args[0] and "video_thumb_ms" not in call.args[0]
+    texts = {"instagram": "x"}
+    v = "https://cdn.test/v.mp4"
+    assert "error" in json.loads(w.create_social_post([5], texts, image_urls=["https://a/i.jpg"], video_url=v))
+    assert "error" in json.loads(w.create_social_post([5], texts, document_url="https://a/d.pdf", video_url=v))
+    assert "error" in json.loads(w.create_social_post([5], texts, video_url=v, video_thumb_ms=-1))
+    assert "error" in json.loads(w.create_social_post([5], texts, video_url=v, video_thumb_ms=3600001))
+    assert "error" in json.loads(w.create_social_post([5], texts, video_thumb_ms=100))
+    assert "error" in json.loads(w.create_social_post([5], texts, video_url="https://a/" + "x" * 1030))
+
+
 def test_social_queue_approve_delete_map_payload():
     _, call = _run(w.list_social_queue, "list_social_queue", 5, status="queued")
     assert call.args[0] == {"project_id": 5, "status": "queued"}

@@ -9,7 +9,7 @@ versions and publication status in the handoff so the next agent can continue.
 
 ## Project Overview
 
-Python MCP (Model Context Protocol) server providing 88 tools as of release 0.14.0 (2026-10-21) for Claude Code, Codex and other MCP clients. Published on PyPI as `visiblyai-mcp-server`. Plugin bundles have a separate version: 1.0.2.
+Python MCP (Model Context Protocol) server providing 88 tools as of release 0.15.0 (2026-10-28) for Claude Code, Codex and other MCP clients. Published on PyPI as `visiblyai-mcp-server`. Plugin bundles have a separate version: 1.0.2.
 
 - **Free tools (8)**: Run locally or use free API metadata (classifier, checklists, guidance, URL analysis)
 - **Paid tools (20)**: Use the Visibly AI API (traffic, keywords, backlinks, competitors, crawling, audits, RAG, SEO agents, workflows)
