@@ -6,6 +6,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-10-29
+
+### Added
+- `get_site_health`, `list_site_findings`, `get_page_facts`: read the stored site crawl of a project (site health score with history, issues with affected URLs, facts of a single page). 0 credits. Requires the matching visibly-app release.
+
+### Changed
+- `crawl_website`, `onpage_analysis`, `check_structured_data`: answer from the stored crawl when one exists (0 credits, `source`, `crawled_at`, `truncated`); `crawl_website` accepts `max_pages` 1 to 500 for stored crawls (live crawls stay at 10).
+
 ## [0.15.0] - 2026-10-28
 
 ### Added
