@@ -50,6 +50,9 @@ EXPECTED_TOOLS = {
     "get_eeat_summary",
     "list_pages",
     "get_internal_links",
+    "get_site_health",
+    "get_page_facts",
+    "list_site_findings",
     "recall",
     "list_articles",
     "get_article",
@@ -116,7 +119,7 @@ class TestServerRegistration:
 
     def test_tool_count(self):
         registered = _get_registered_tools()
-        assert len(registered) == 88, f"Expected 88 tools, found {len(registered)}: {registered}"
+        assert len(registered) == 91, f"Expected 91 tools, found {len(registered)}: {registered}"
 
     def test_all_tools_have_docstrings(self):
         for name, tool in mcp._tool_manager._tools.items():

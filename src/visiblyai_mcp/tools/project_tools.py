@@ -12,6 +12,7 @@ from .paid_tools import _format_result, _handle_error
 __all__ = [
     "get_gsc_clusters", "get_cluster_keywords", "get_analytics_insights", "get_revenue_insights",
     "get_scorecard", "get_eeat_summary", "list_pages", "get_internal_links", "recall",
+    "get_site_health", "get_page_facts", "list_site_findings",
     "list_articles", "get_article", "list_content_queries", "get_content_briefing",
     "get_content_status", "score_text",
 ]
@@ -25,13 +26,31 @@ def _require_key() -> VisiblyAIClient:
     return VisiblyAIClient(api_key)
 
 
-def _call(method: str, *args, **kwargs) -> str:
-    """Call a client method and format the result, converting any error to JSON."""
+_PAGE_FACTS_HINTS = {
+    404: "The latest site crawl knows this URL neither as a page nor as a response. Check the exact URL "
+         "(scheme, www, trailing slash) or start/refresh the site crawl in the project first.",
+}
+_FINDINGS_HINTS = {
+    422: "Invalid parameter, most likely an unknown finding code. Call list_site_findings without code "
+         "to list the valid codes (each item carries its code), then pass one of them.",
+}
+
+
+def _call(method: str, *args, hints: dict[int, str] | None = None, **kwargs) -> str:
+    """Call a client method and format the result, converting any error to JSON.
+
+    ``hints`` maps an HTTP status to a plain-language explanation added as ``hint``.
+    """
     try:
         client = _require_key()
         return _format_result(getattr(client, method)(*args, **kwargs))
     except Exception as e:  # noqa: BLE001 - every failure becomes a JSON error for the LLM
-        return _handle_error(e)
+        out = _handle_error(e)
+        if hints and isinstance(e, APIError) and e.status_code in hints:
+            payload = json.loads(out)
+            payload["hint"] = hints[e.status_code]
+            return json.dumps(payload, indent=2)
+        return out
 
 
 def _bad(message: str) -> str:
@@ -96,6 +115,38 @@ def get_internal_links(project_id: int, url: str | None = None, limit: int = 20,
     if not project_id:
         return _bad("project_id is required")
     return _call("internal_links", project_id, url=url, limit=limit, offset=offset)
+
+
+def get_site_health(project_id: int) -> str:
+    """Site health from the latest stored site crawl: health, history, severity counts, findings, fixed. Data carries crawled_at. Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    return _call("site_health", project_id)
+
+
+def get_page_facts(project_id: int, url: str) -> str:
+    """Facts, HTTP response and findings for one URL from the latest stored site crawl (data carries crawled_at). 404 means the crawl does not know the URL. Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    url = (url or "").strip()
+    if not url:
+        return _bad("url is required")
+    if len(url) > 1024:
+        return _bad("url must be at most 1024 characters")
+    return _call("page_facts", project_id, url, hints=_PAGE_FACTS_HINTS)
+
+
+def list_site_findings(project_id: int, code: str | None = None, limit: int = 50, offset: int = 0) -> str:
+    """List site-crawl findings (data: code, run, crawled_at, items, page). Without code: one row per finding code; with code: the affected URLs. Unknown code gives 422. Credits: 0, read-only."""
+    if not project_id:
+        return _bad("project_id is required")
+    if code is not None and (not isinstance(code, str) or not code.strip() or len(code) > 64):
+        return _bad("code must be a non-empty string up to 64 characters")
+    if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 100:
+        return _bad("limit must be between 1 and 100")
+    if isinstance(offset, bool) or not isinstance(offset, int) or offset < 0:
+        return _bad("offset must be 0 or greater")
+    return _call("site_findings", project_id, code=code, limit=limit, offset=offset, hints=_FINDINGS_HINTS)
 
 
 def recall(query: str = "", project_id: int | None = None, limit: int = 10) -> str:
