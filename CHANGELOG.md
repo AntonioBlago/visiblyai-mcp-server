@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-10-28
+
+### Added
+- `create_social_post`: optional `video_url` (public https MP4, up to 100 MB, copied into visibly's media storage) and `video_thumb_ms` (cover frame in milliseconds, only with a video). One video per post, no mix with `image_urls` or `document_url`, not for `google_business`. Instagram posts as a Reel. Media of own posts are deleted about 48 hours after publishing. Requires the matching visibly-app release.
+
 ## [0.14.0] - 2026-10-21
 
 ### Added

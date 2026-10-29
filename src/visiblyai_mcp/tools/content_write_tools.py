@@ -163,15 +163,31 @@ _GROUP_RE = re.compile(r"^[a-f0-9]{32}$")
 def create_social_post(project_ids: list[int], texts: dict, image_urls: list[str] | None = None,
                        document_url: str | None = None, document_title: str | None = None,
                        due_at: str | None = None, approve: bool = False,
-                       idempotency_key: str | None = None) -> str:
+                       idempotency_key: str | None = None, video_url: str | None = None,
+                       video_thumb_ms: int | None = None) -> str:
     """Create a finished social post (text per channel) in one or more projects. 0 credits."""
     if not project_ids or not texts:
         return _bad("project_ids and texts are required")
+    if video_url and (image_urls or document_url):
+        return _bad("video_url cannot be combined with image_urls or document_url")
+    if video_url and len(video_url) > 1024:
+        return _bad("video_url must be at most 1024 characters")
+    if video_thumb_ms is not None:
+        if isinstance(video_thumb_ms, bool) or not isinstance(video_thumb_ms, int):
+            return _bad("video_thumb_ms must be an integer")
+        if not video_url:
+            return _bad("video_thumb_ms requires video_url")
+        if not 0 <= video_thumb_ms <= 3600000:
+            return _bad("video_thumb_ms must be between 0 and 3600000")
     payload: dict = {"project_ids": project_ids, "texts": texts, "image_urls": image_urls or [],
                      "approve": bool(approve), "idempotency_key": idempotency_key}
     for name, value in (("document_url", document_url), ("document_title", document_title), ("due_at", due_at)):
         if value:
             payload[name] = value
+    if video_url:
+        payload["video_url"] = video_url
+    if video_thumb_ms is not None:
+        payload["video_thumb_ms"] = video_thumb_ms
     return _with_key("create_social_post", payload)
 
 

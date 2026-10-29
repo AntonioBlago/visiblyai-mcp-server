@@ -685,7 +685,8 @@ def import_meeting_apply(project_id: int, source: str, facts: list[dict] | None 
 def create_social_post(project_ids: list[int], texts: dict, image_urls: list[str] | None = None,
                        document_url: str | None = None, document_title: str | None = None,
                        due_at: str | None = None, approve: bool = False,
-                       idempotency_key: str | None = None) -> str:
+                       idempotency_key: str | None = None, video_url: str | None = None,
+                       video_thumb_ms: int | None = None) -> str:
     """Create a finished social post in one or more projects (each project posts via its own Buffer account). Credits: 0.
 
     texts: channel -> text, channels linkedin, instagram, google_business, x_post. image_urls: up to 10
@@ -694,9 +695,14 @@ def create_social_post(project_ids: list[int], texts: dict, image_urls: list[str
     with offset (optional wish; otherwise the next free Tue/Thu/Sun 09:00 Berlin slot). approve=true puts
     the post straight into the queue and needs the key right content:approve; otherwise content:write.
     Retries with the same idempotency_key replay instead of duplicating.
+    video_url: public https URL of one MP4 (max 1024 characters, up to 100 MB); visibly copies it into its
+    own media storage. At most one video per post; a video excludes image_urls and document_url. The
+    channel google_business takes no video (error video_not_supported). Instagram then posts as a Reel
+    (also shown in the feed). video_thumb_ms: millisecond in the video (0 to 3600000) used as cover image;
+    only with video_url. Media of own posts are deleted automatically about 48 hours after publishing.
     """
     return content_write_tools.create_social_post(project_ids, texts, image_urls, document_url, document_title,
-                                                  due_at, approve, idempotency_key)
+                                                  due_at, approve, idempotency_key, video_url, video_thumb_ms)
 
 
 @mcp.tool()
