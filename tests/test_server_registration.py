@@ -128,3 +128,29 @@ class TestServerRegistration:
     def test_no_duplicate_tool_names(self):
         names = [tool.__name__ for tool in content_workflow_tools.TOOLS]
         assert len(names) == len(set(names)), f"Duplicate content workflow tools: {names}"
+
+
+class TestSeoFieldsRequired:
+    """Antonio 03.11.2026: Agents vergassen Meta Description und Title."""
+
+    @staticmethod
+    def _required(name):
+        return set(mcp._tool_manager._tools[name].parameters.get("required", []))
+
+    @staticmethod
+    def _props(name):
+        return mcp._tool_manager._tools[name].parameters["properties"]
+
+    def test_create_and_replace_tools_require_title_and_meta_description(self):
+        assert {"title", "meta_description"} <= self._required("submit_article_draft")
+        assert {"title", "meta_description"} <= self._required("save_content_query_draft")
+
+    def test_partial_edit_tools_keep_them_optional(self):
+        for name in ("update_article", "edit_content_article"):
+            assert "meta_description" in self._props(name)
+            assert not {"title", "meta_description"} & self._required(name)
+
+    def test_required_fields_describe_length_and_language(self):
+        for name in ("submit_article_draft", "save_content_query_draft"):
+            doc = mcp._tool_manager._tools[name].description
+            assert "60 characters" in doc and "140 to 160" in doc and "language" in doc

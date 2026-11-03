@@ -16,6 +16,53 @@ __all__ = ["submit_article_draft", "update_article", "get_mcp_operation", "remem
            "approve_social_post", "delete_social_post"]
 FORMATS = ("html", "markdown")
 
+SEO_FIELDS_GUIDE = (
+    "title = SEO title: up to 60 characters, focus keyword first. "
+    "meta_description: 140 to 160 characters, with a benefit and a call to action. "
+    "Both in the same language as the article."
+)
+TITLE_MAX = 60
+META_MIN, META_MAX = 140, 160
+
+
+def seo_hints(title: str | None, meta_description: str | None) -> list[str]:
+    """Soft quality hints; the save still goes through."""
+    hints = []
+    if title and len(title.strip()) > TITLE_MAX:
+        hints.append(f"title has {len(title.strip())} characters; keep it at {TITLE_MAX} or less, focus keyword first")
+    if meta_description:
+        n = len(meta_description.strip())
+        if not META_MIN - 20 <= n <= META_MAX + 5:
+            hints.append(f"meta_description has {n} characters; aim for {META_MIN} to {META_MAX}")
+    return hints
+
+
+def seo_required_error(title: str | None, meta_description: str | None) -> str | None:
+    """Title and meta description are mandatory when an article is created or replaced."""
+    missing = [name for name, value in (("title", title), ("meta_description", meta_description))
+               if not (value or "").strip()]
+    if not missing:
+        return None
+    return (f"{' and '.join(missing)} required: every article needs an SEO title and a meta description "
+            f"before it leaves the draft. {SEO_FIELDS_GUIDE}")
+
+
+def surface_warnings(out: str, tools: str = "update_article or edit_content_article") -> str:
+    """Make backend warnings (for example a missing meta description) an explicit next step."""
+    try:
+        data = json.loads(out)
+    except ValueError:
+        return out
+    inner = (data.get("data") or {}) if isinstance(data, dict) else {}
+    warnings = inner.get("warnings") or (inner.get("result") or {}).get("warnings")
+    if warnings:
+        data["action_required"] = (
+            " ".join(str(w) for w in warnings)
+            + f" Send meta_description now with {tools}. " + SEO_FIELDS_GUIDE)
+        return json.dumps(data, ensure_ascii=False)
+    return out
+
+
 
 def _require_key() -> VisiblyAIClient:
     api_key = get_api_key()
@@ -47,11 +94,30 @@ def _with_key(method: str, payload: dict) -> str:
     return json.dumps(data, ensure_ascii=False)
 
 
-def submit_article_draft(project_id: int, title: str, content: str, keyword: str, format: str = "markdown",
+def _add_hints(out: str, title: str | None, meta_description: str | None) -> str:
+    hints = seo_hints(title, meta_description)
+    if not hints:
+        return out
+    try:
+        data = json.loads(out)
+    except ValueError:
+        return out
+    if isinstance(data, dict) and "error" not in data:
+        data["seo_hints"] = hints
+        return json.dumps(data, ensure_ascii=False)
+    return out
+
+
+def submit_article_draft(project_id: int, title: str, content: str, keyword: str, meta_description: str,
+                         format: str = "markdown",
                          idempotency_key: str | None = None, language: str = "de", country: str = "de",
                          persona_id: int | None = None, query_id: int | None = None,
                          expected_query_revision: int | None = None, expected_article_revision: int | None = None) -> str:
     """Save text written by Claude as an article draft. No Visibly generation, 0 Visibly credits.
+
+    title (SEO title, up to 60 characters, focus keyword first) and meta_description (140 to 160
+    characters, with a benefit and a call to action) are REQUIRED, in the language of the article.
+    An article without them cannot leave the draft.
 
     Returns editor_url: show this clickable link to the user after saving. The editor
     automatically scores against an analyzed query, also at 0 credits. Use an existing
@@ -61,23 +127,30 @@ def submit_article_draft(project_id: int, title: str, content: str, keyword: str
     """
     if not project_id or not (title or "").strip() or not (content or "").strip() or not (keyword or "").strip():
         return _bad("project_id, title, content and keyword are required")
+    problem = seo_required_error(title, meta_description)
+    if problem:
+        return _bad(problem)
     if format not in FORMATS:
         return _bad("format must be html or markdown")
     payload = {"project_id": project_id, "title": title, "content": content, "keyword": keyword, "format": format,
-               "language": language, "country": country, "idempotency_key": idempotency_key}
+               "meta_description": meta_description.strip(), "language": language, "country": country, "idempotency_key": idempotency_key}
     for name, value in (("persona_id", persona_id), ("query_id", query_id),
                         ("expected_query_revision", expected_query_revision),
                         ("expected_article_revision", expected_article_revision)):
         if value is not None:
             payload[name] = value
-    return _with_key("submit_article_draft", payload)
+    return _add_hints(surface_warnings(_with_key("submit_article_draft", payload)), title, meta_description)
 
 
 def update_article(article_id: int, expected_revision: int, idempotency_key: str | None = None,
                    title: str | None = None, content: str | None = None, format: str | None = None,
                    meta_description: str | None = None, keywords: list[str] | None = None,
                    project_id: int | None = None) -> str:
-    """Edit a draft article; expected_revision must match the current revision (from get_article)."""
+    """Edit a draft article; expected_revision must match the current revision (from get_article).
+
+    Partial edits may omit title and meta_description. If the article has no meta_description,
+    the response carries action_required: send meta_description (140 to 160 characters) then.
+    """
     if not article_id or not expected_revision:
         return _bad("article_id and expected_revision are required")
     fields = {"title": title, "content": content, "meta_description": meta_description, "keywords": keywords}
@@ -91,7 +164,7 @@ def update_article(article_id: int, expected_revision: int, idempotency_key: str
         payload["format"] = format
     if project_id:
         payload["project_id"] = project_id
-    return _with_key("update_article", payload)
+    return _add_hints(surface_warnings(_with_key("update_article", payload)), title, meta_description)
 
 
 def get_mcp_operation(operation_id: int) -> str:
