@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.16.1] - 2026-11-03
+
+### Fixed
+- Articles from agents often had no meta description. `submit_article_draft` now takes `meta_description` and `save_content_query_draft` takes `title` and `meta_description`, all REQUIRED (title up to 60 characters with the focus keyword first, meta description 140 to 160 characters with benefit and call to action, same language as the article). Empty values are refused before any call; lengths outside the range produce `seo_hints`.
+- `update_article` and `edit_content_article` stay optional for partial edits, but when the article has no meta description the answer now carries `action_required` asking for it. Needs the matching visibly-app release (it also fills a missing meta description on approval and publish, or answers 422 `seo_fields_missing`).
+
+### Changed
+- Breaking for callers that pass positional arguments: `submit_article_draft(project_id, title, content, keyword, meta_description, format, ...)` and `save_content_query_draft(query_id, expected_revision, content, title, meta_description, format, project_id)`.
+
 ## [0.16.0] - 2026-10-29
 
 ### Added

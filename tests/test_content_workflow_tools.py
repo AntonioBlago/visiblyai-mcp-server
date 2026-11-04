@@ -39,9 +39,10 @@ def test_cms_connection_generation_does_not_require_caller_to_send_secret():
 
 def test_editor_save_publish_and_optimizer_actions_are_mapped():
     _, save_call = _run(tools.save_content_query_draft, "save_content_query_draft", 21, 3,
-                        "<p>Draft</p>", "Title", "html", 7)
+                        "<p>Draft</p>", "Title", "Meta " * 30, "html", 7)
     assert save_call.args[0] == "save_content_query_draft"
     assert save_call.args[1]["expected_revision"] == 3
+    assert save_call.args[1]["meta_description"].startswith("Meta Meta")
     _, publish_call = _run(tools.publish_article, "publish_article", 11, 7, 9, "publish")
     assert publish_call.args == ("publish_article", {
         "article_id": 11, "project_id": 7, "connection_id": 9, "publish_status": "publish",
@@ -119,3 +120,19 @@ def test_workflow_preflight_maps_comparison_without_writing():
     with patch.object(client, "_post", return_value=OK) as post:
         client.content_workflow("get_article_workflow", call.args[1])
     post.assert_called_once_with("/tools/content/article-workflow", call.args[1])
+
+
+def test_save_content_query_draft_requires_title_and_meta_description():
+    for title, meta in (("T", ""), ("", "M" * 150), (None, "M" * 150)):
+        out = json.loads(tools.save_content_query_draft(21, 3, "<p>x</p>", title, meta))
+        assert "error" in out and "required" in out["error"]
+
+
+def test_edit_content_article_surfaces_missing_meta():
+    client = MagicMock()
+    client.content_workflow.return_value = {"success": True, "credits_used": 0, "data": {
+        "revision": 4, "warnings": ["Dieser Artikel hat keine Meta Description."]}}
+    with patch("visiblyai_mcp.tools.content_workflow_tools.get_api_key", return_value="lc_test"), \
+         patch("visiblyai_mcp.tools.content_workflow_tools.VisiblyAIClient", return_value=client):
+        out = json.loads(tools.edit_content_article(11, 7, title="Neu"))
+    assert "meta_description" in out["action_required"]

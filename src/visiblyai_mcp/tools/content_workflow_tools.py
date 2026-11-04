@@ -1,11 +1,13 @@
 """Complete Visibly content lifecycle tools for Claude/MCP."""
 from __future__ import annotations
 
+import json
 import uuid
 from typing import Any, Literal
 
 from ..api_client import APIError, VisiblyAIClient
 from ..config import SIGNUP_URL, get_api_key
+from .content_write_tools import seo_hints, seo_required_error, surface_warnings
 from .paid_tools import _format_result, _handle_error
 
 
@@ -41,12 +43,29 @@ def create_content_query(project_id: int, keyword: str, country: str = "de", lan
                                            "language": language, "persona_id": persona_id})
 
 
-def save_content_query_draft(query_id: int, expected_revision: int, content: str, title: str | None = None,
-                             format: Literal["html", "markdown"] = "html", project_id: int | None = None) -> str:
-    """Save an editor draft with revision CAS. The content is sanitized and nothing is published."""
-    return _call("save_content_query_draft", {"query_id": query_id, "project_id": project_id,
-                                              "expected_revision": expected_revision, "title": title,
-                                              "content": content, "format": format})
+def save_content_query_draft(query_id: int, expected_revision: int, content: str, title: str,
+                             meta_description: str, format: Literal["html", "markdown"] = "html",
+                             project_id: int | None = None) -> str:
+    """Save an editor draft with revision CAS. The content is sanitized and nothing is published.
+
+    title (SEO title, up to 60 characters, focus keyword first) and meta_description (140 to 160
+    characters, with a benefit and a call to action) are REQUIRED, in the language of the article.
+    """
+    problem = seo_required_error(title, meta_description)
+    if problem:
+        return json.dumps({"error": problem})
+    out = _call("save_content_query_draft", {"query_id": query_id, "project_id": project_id,
+                                             "expected_revision": expected_revision, "title": title,
+                                             "meta_description": meta_description.strip(),
+                                             "content": content, "format": format})
+    out = surface_warnings(out, "save_content_query_draft (same expected_revision rules, with meta_description)")
+    hints = seo_hints(title, meta_description)
+    if hints:
+        data = json.loads(out)
+        if isinstance(data, dict) and "error" not in data:
+            data["seo_hints"] = hints
+            out = json.dumps(data, ensure_ascii=False)
+    return out
 
 
 def generate_article_from_query(query_id: int, project_id: int | None = None, improve: bool = False) -> str:
@@ -66,6 +85,8 @@ def change_article_status(article_id: int, new_status: Literal["approved", "reje
     """Review an article. Approval requires content:approve and triggers the normal CMS webhook.
 
     Queueing additionally requires spending:execute, content plan access, member budget and owner credits.
+    Approval needs title and meta_description: a missing meta_description is generated from the first
+    paragraph (response field seo_generated); if that is impossible, the call fails with 422 seo_fields_missing.
     """
     return _call("change_article_status", {"article_id": article_id, "project_id": project_id,
                                             "new_status": new_status})
@@ -76,7 +97,11 @@ def edit_content_article(article_id: int, expected_revision: int, title: str | N
                          meta_description: str | None = None, keywords: list[str] | None = None,
                          search_intent: str | None = None, recommended_page_type: str | None = None,
                          project_id: int | None = None, idempotency_key: str | None = None) -> str:
-    """Full editor update for editable statuses. Creates a backup and checks the revision."""
+    """Full editor update for editable statuses. Creates a backup and checks the revision.
+
+    Partial edits may omit title and meta_description. If the article has no meta_description,
+    the response carries action_required: send meta_description (140 to 160 characters) then.
+    """
     payload: dict[str, Any] = {"article_id": article_id, "expected_revision": expected_revision,
                                "idempotency_key": idempotency_key or uuid.uuid4().hex}
     for key, value in (("title", title), ("content", content), ("format", format),
@@ -85,7 +110,7 @@ def edit_content_article(article_id: int, expected_revision: int, title: str | N
                        ("project_id", project_id)):
         if value is not None:
             payload[key] = value
-    return _call("edit_content_article", payload)
+    return surface_warnings(_call("edit_content_article", payload))
 
 
 def regenerate_content_article(article_id: int, project_id: int | None = None) -> str:
@@ -137,7 +162,11 @@ def revoke_contentpilot_key(project_id: int) -> str:
 
 def publish_article(article_id: int, project_id: int, connection_id: int,
                     publish_status: Literal["draft", "publish"] = "draft") -> str:
-    """Publish an approved article to a push CMS. Requires content:publish; webhook pull CMS runs on approval instead."""
+    """Publish an approved article to a push CMS. Requires content:publish; webhook pull CMS runs on approval instead.
+
+    The backend fills in a missing meta_description from the first paragraph and refuses (422
+    seo_fields_missing) only if nothing can be derived; add title and meta_description first.
+    """
     return _call("publish_article", {"article_id": article_id, "project_id": project_id,
                                      "connection_id": connection_id, "publish_status": publish_status})
 

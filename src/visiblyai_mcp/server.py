@@ -603,18 +603,23 @@ def score_text(project_id: int, content: str, format: str = "markdown",
 
 
 @mcp.tool()
-def submit_article_draft(project_id: int, title: str, content: str, keyword: str, format: str = "markdown",
+def submit_article_draft(project_id: int, title: str, content: str, keyword: str, meta_description: str,
+                         format: str = "markdown",
                          idempotency_key: str | None = None, language: str = "de", country: str = "de",
                          persona_id: int | None = None, query_id: int | None = None,
                          expected_query_revision: int | None = None, expected_article_revision: int | None = None) -> str:
     """Hand your text over to visibly as an article draft (status draft, never queued). Credits: 0.
 
+    title and meta_description are REQUIRED. title is the SEO title: up to 60 characters, focus keyword
+    first. meta_description: 140 to 160 characters with a benefit and a call to action. Both in the
+    language of the article. An article without them cannot be approved or published.
+
     Needs an API key with the right content:write. Pass a stable idempotency_key when retrying;
     the response echoes the key used. format: html|markdown. Without query_id a new content query
     is created; with query_id keyword/country/language/persona and expected_query_revision must match.
     """
-    return content_write_tools.submit_article_draft(project_id, title, content, keyword, format, idempotency_key,
-                                                    language, country, persona_id, query_id,
+    return content_write_tools.submit_article_draft(project_id, title, content, keyword, meta_description,
+                                                    format, idempotency_key, language, country, persona_id, query_id,
                                                     expected_query_revision, expected_article_revision)
 
 

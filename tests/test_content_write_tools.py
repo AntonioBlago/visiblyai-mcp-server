@@ -8,6 +8,9 @@ from visiblyai_mcp.tools import content_write_tools as w
 OK = {"success": True, "data": {"operation_id": 1, "status": "succeeded"}, "credits_used": 0, "credits_remaining": None}
 
 
+META = "Bachata lernen in drei Schritten: So tanzt du nach nur einer Stunde sicher und mit Freude auf der Tanzfläche. Jetzt den Kurs ansehen und noch heute starten."
+
+
 def _run(fn, method, *args, **kwargs):
     client = MagicMock()
     getattr(client, method).return_value = OK
@@ -17,8 +20,8 @@ def _run(fn, method, *args, **kwargs):
 
 
 def test_submit_maps_payload_and_generates_key():
-    out, call = _run(w.submit_article_draft, "submit_article_draft", 5, "T", "# x", "kw", format="markdown",
-                     persona_id=3)
+    out, call = _run(w.submit_article_draft, "submit_article_draft", 5, "T", "# x", "kw", META,
+                     format="markdown", persona_id=3)
     payload = call.args[0]
     assert payload["project_id"] == 5 and payload["format"] == "markdown" and payload["persona_id"] == 3
     assert "query_id" not in payload and len(payload["idempotency_key"]) == 32
@@ -26,11 +29,11 @@ def test_submit_maps_payload_and_generates_key():
 
 
 def test_submit_keeps_given_key_and_validates():
-    _, call = _run(w.submit_article_draft, "submit_article_draft", 5, "T", "x", "kw", idempotency_key="abc",
+    _, call = _run(w.submit_article_draft, "submit_article_draft", 5, "T", "x", "kw", META, idempotency_key="abc",
                    query_id=9, expected_query_revision=2)
     assert call.args[0]["idempotency_key"] == "abc" and call.args[0]["query_id"] == 9
-    assert "error" in json.loads(w.submit_article_draft(5, "", "x", "kw"))
-    assert "error" in json.loads(w.submit_article_draft(5, "T", "x", "kw", format="docx"))
+    assert "error" in json.loads(w.submit_article_draft(5, "", "x", "kw", META))
+    assert "error" in json.loads(w.submit_article_draft(5, "T", "x", "kw", META, format="docx"))
 
 
 def test_update_requires_field_and_format_with_content():
@@ -126,3 +129,37 @@ def test_social_queue_approve_delete_map_payload():
     _, call = _run(w.delete_social_post, "delete_social_post", 5, "a" * 32, idempotency_key="d1")
     assert call.args[0]["idempotency_key"] == "d1"
     assert "error" in json.loads(w.approve_social_post(5, "kein-hex"))
+
+
+def test_submit_requires_title_and_meta_description():
+    for meta in ("", "   ", None):
+        out = json.loads(w.submit_article_draft(5, "T", "x", "kw", meta))
+        assert "meta_description" in out["error"] and "140 to 160" in out["error"]
+    assert "title" in json.loads(w.submit_article_draft(5, "  ", "x", "kw", META))["error"]
+
+
+def test_submit_sends_meta_and_hints_on_bad_length():
+    out, call = _run(w.submit_article_draft, "submit_article_draft", 5, "T", "x", "kw", "  zu kurz  ")
+    assert call.args[0]["meta_description"] == "zu kurz"
+    assert any("meta_description" in h for h in out["seo_hints"])
+    ok, _ = _run(w.submit_article_draft, "submit_article_draft", 5, "Bachata lernen", "x", "kw", META)
+    assert "seo_hints" not in ok
+    long_title, _ = _run(w.submit_article_draft, "submit_article_draft", 5, "T" * 61, "x", "kw", META)
+    assert any("title" in h for h in long_title["seo_hints"])
+
+
+def test_update_surfaces_missing_meta_as_action_required():
+    client = MagicMock()
+    client.update_article.return_value = {"success": True, "credits_used": 0, "data": {
+        "revision": 2, "warnings": ["Dieser Artikel hat keine Meta Description."]}}
+    with patch("visiblyai_mcp.tools.content_write_tools._require_key", return_value=client):
+        out = json.loads(w.update_article(7, 1, title="Neu"))
+    assert "action_required" in out and "meta_description" in out["action_required"]
+    client.update_article.return_value = {"success": True, "credits_used": 0, "data": {"revision": 3, "warnings": []}}
+    with patch("visiblyai_mcp.tools.content_write_tools._require_key", return_value=client):
+        assert "action_required" not in json.loads(w.update_article(7, 2, meta_description="x" * 150))
+
+
+def test_update_with_meta_keeps_it_optional_for_partial_edits():
+    _, call = _run(w.update_article, "update_article", 7, 1, title="Neu")
+    assert "meta_description" not in call.args[0]
