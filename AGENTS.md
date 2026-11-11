@@ -12,6 +12,11 @@
   aktualisieren, nicht unabhängig bearbeiten.
 - Python-Paket, Plugin-ZIPs, Remote-MCP und Marketingseite haben getrennte
   Veröffentlichungen. Ein Commit allein aktualisiert diese nicht alle.
+- Der Paperclip-Konnektor (`AntonioBlago/paperclip-plugin-visibly-ai`) ruft
+  dieselben REST-Pfade wie `src/visiblyai_mcp/api_client.py` auf, mit fester
+  Werkzeugliste. Wird dort ein Pfad oder Parameter umbenannt, entfernt oder
+  ein neues lesendes Werkzeug ergänzt, im Konnektor `npm run check:mcp`
+  laufen lassen und `src/tools.ts` nachziehen.
 - Nach Änderungen den Übergabestand mit Datum, betroffenen Repositories,
   Versionsquellen, Tests und tatsächlichem Veröffentlichungsstatus ergänzen.
   Geprüfte Beobachtungen von offenen Punkten unterscheiden; keine Keys oder

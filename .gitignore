@@ -10,4 +10,4 @@ build/
 *.egg
 logs/
 .venv/
-venv/
+venv/dist-*/
