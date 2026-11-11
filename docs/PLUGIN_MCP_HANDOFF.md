@@ -1,5 +1,13 @@
 # Visibly Plugins und MCP: Übergabe für Agents
 
+## Paperclip-Konnektor 0.1.0 (2026-10-28)
+
+- Neues Repository `AntonioBlago/paperclip-plugin-visibly-ai` (öffentlich, MIT), Plugin-ID `visibly-ai.seo`, npm-Paket `paperclip-plugin-visibly-ai`. Elf lesende Werkzeuge über die native REST-API: list-projects, query-search-console, keywords, traffic-snapshot, competitors, backlinks, check-serp, validate-keywords, onpage-analysis, query-fanout, check-pagespeed.
+- Der Konnektor nutzt weder Remote-MCP noch das Python-Paket. Paperclip registriert Plugin-Werkzeuge aus dem Manifest, die Liste ist je Release fest. Neue MCP-Werkzeuge erscheinen dort nicht automatisch.
+- Abgleich: `npm run check:mcp` im Konnektor lädt `api_client.py` von GitHub und bricht ab, wenn ein Konnektor-Pfad hier fehlt. Läuft auch vor jedem `npm publish`. Regeln stehen in dessen `AGENTS.md`.
+- Geprüft: Typprüfung, 6 Tests mit dem Paperclip-Testgerüst, Live-Aufrufe list-projects und query-search-console mit echtem Key (0 Credits), falscher Key liefert die 401-Meldung, lokale Installation in Paperclip 2026.1023.0 mit 11 registrierten Werkzeugen.
+- **Offen:** npm-Veröffentlichung und Pull Request an `gsxdsm/awesome-paperclip` (Skript `.local/einreichen.ps1` im Konnektor).
+
 ## Release MCP 0.14.0 (2026-10-21)
 
 - Paket 0.14.0 auf PyPI, Tag `v0.14.0`, Release-Commit `9a20d23`, Feature-Commit `97fbab0`. 88 registrierte Tools.
@@ -63,6 +71,7 @@ Installationsbefehle, API-Key-Einrichtung und Beispielauftrag stehen in
 | `AntonioBlago/Bikefitting_Project` / `master` | Remote-JSON-RPC und historische REST-Kompatibilität | `docs/internal/MCP_SYNC_GUIDE.md` |
 | `AntonioBlago/visiblyai` / `main` | Öffentliche Marketing-, Download- und Entwicklerseiten | `docs/PLUGIN_INTEGRATIONS.md`, `docs/DEPLOYMENT_VERCEL.md` |
 | `AntonioBlago/AntonioBlago` / `main` | GitHub-Profil mit Links zu Paket und Plugins | `README.md` |
+| `AntonioBlago/paperclip-plugin-visibly-ai` / `main` | Paperclip-Konnektor, lesende Werkzeuge über die REST-API, npm-Paket | `AGENTS.md`, `src/tools.ts`, `npm run check:mcp` |
 
 Die Marketing-Domain ist kein API-Host. Marketing läuft auf Vercel; Backend und
 Remote-MCP laufen auf Railway. Ein lokales `railway status` kann auf ein anderes
@@ -172,6 +181,7 @@ kein Nachweis eines erfolgreichen Deployments oder Client-Updates.
 | Python-MCP-Paket / PyPI | Paketcode, Tool-Schemas, Mapping, Abhängigkeiten oder gebündelte Daten geändert | Paketversion erhöhen, Tests/Build, neuer Tag/Release und PyPI-Upload; saubere Installation der veröffentlichten Version, Toolzahl und Aufruf prüfen. Reine serverseitige NSS-Änderung braucht bei kompatiblem Vertrag keinen PyPI-Release |
 | Remote-MCP | Paket-Pin, Transport, Toolvertrag oder Auth geändert | Bikefitting-Adapter/Pins synchronisieren; richtigen Railway-Service deployen; authentifizierte/anonyme Aufrufe und weitergereichte Ergebnisfelder prüfen |
 | Plugin-Bundles | Mitgelieferter Skill, README, Manifest oder MCP-Konfiguration geändert | Kanonischen Skill synchronisieren; Versionen/Marktplatz-Kataloge prüfen; drei Bundles bauen; neuer `plugins-vX.Y.Z`-Release mit SHA256SUMS; ZIPs herunterladen und prüfen. Veröffentlichte ZIPs niemals unter gleichem Tag ersetzen |
+| Paperclip-Konnektor | REST-Pfad oder Parameter eines lesenden Werkzeugs geändert, neues lesendes Werkzeug für Paperclip gewünscht | `npm run check:mcp` grün, `src/tools.ts`, Test und README-Zeile ergänzt; Version in `package.json` und `src/manifest.ts` erhöhen, Tag, `npm publish`; Installation per `paperclipai plugin install` prüfen |
 | Marketing / Webseite | Verhalten, Erklärung, Version oder Downloads geändert | DE/EN gemeinsam pflegen; zentrale NSS-Seite und Neuro-SEO-Grundlage verlinken; Versionskonstanten/Downloads erst auf vorhandene Artefakte umstellen; Tests, Mobil/Desktop und echte Live-Inhalte prüfen |
 | CMS-SDK und `anycms` | Artikel-, Revisions-, Import- oder CMS-Vertrag betroffen | Verträge, Beispiele und ggf. SDK-Version/Release synchronisieren; bei reiner NSS-Anzeige ausdrücklich als unverändert dokumentieren |
 | Öffentliche READMEs / Profil | Einrichtung, Produktnamen, Versionen oder Linkziele betroffen | MCP, CMS-Connector, `anycms` und GitHub-Profil prüfen; NSS-Erklärung zentral verlinken, keine zweite Formel veröffentlichen |
