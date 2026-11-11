@@ -37,10 +37,18 @@ def get_content_query(query_id: int, project_id: int | None = None, include_draf
 
 
 def create_content_query(project_id: int, keyword: str, country: str = "de", language: str = "de",
-                         persona_id: int | None = None) -> str:
-    """Run paid SERP/content analysis and create a query. Requires content:write and spending:execute."""
-    return _call("create_content_query", {"project_id": project_id, "keyword": keyword, "country": country,
-                                           "language": language, "persona_id": persona_id})
+                         persona_id: int | None = None, source_query_id: int | None = None) -> str:
+    """Run paid SERP/content analysis and create a query. Requires content:write and spending:execute.
+
+    Language version: pass source_query_id (an existing query in the same project) to link the new
+    query as its language version. language must differ from the source; translate the keyword
+    yourself first, then score the translated draft against this new query.
+    """
+    payload: dict[str, Any] = {"project_id": project_id, "keyword": keyword, "country": country,
+                               "language": language, "persona_id": persona_id}
+    if source_query_id is not None:
+        payload["source_query_id"] = source_query_id
+    return _call("create_content_query", payload)
 
 
 def save_content_query_draft(query_id: int, expected_revision: int, content: str, title: str,
