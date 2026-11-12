@@ -291,11 +291,23 @@ TOOLS = (
 
 
 def tool_definitions() -> list[dict[str, Any]]:
-    """Share the stdio tools' schemas and permission guidance with the HTTP transport."""
+    """Share the stdio tools' schemas, titles, annotations and permission guidance with the HTTP transport.
+
+    title and annotations come from ``annotations.TOOL_ANNOTATIONS``, the same table the
+    stdio registration uses; annotations is a plain dict (readOnlyHint, destructiveHint).
+    """
     from mcp.server.fastmcp.tools import Tool
+
+    from .annotations import tool_options
 
     definitions = []
     for function in TOOLS:
-        tool = Tool.from_function(function)
-        definitions.append({"name": tool.name, "description": tool.description, "inputSchema": tool.parameters})
+        tool = Tool.from_function(function, **tool_options(function.__name__))
+        definitions.append({
+            "name": tool.name,
+            "title": tool.title,
+            "description": tool.description,
+            "inputSchema": tool.parameters,
+            "annotations": tool.annotations.model_dump(exclude_none=True),
+        })
     return definitions

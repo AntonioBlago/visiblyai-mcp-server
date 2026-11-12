@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-11-12
+
+Not published to PyPI (nicht auf PyPI veröffentlicht); publication waits for Antonio's go.
+
+### Added
+- Every tool carries a `title` and MCP annotations (`readOnlyHint`, `destructiveHint`, both always set) from one table, `visiblyai_mcp/tools/annotations.py`. A tool without table entry fails at import with `KeyError`.
+- `tool_definitions()` also returns `title` and `annotations` for the remote server, with the same values as `list_tools()`.
+- Classification: `readOnlyHint: true` only for reads without credits and without any write effect; credit-spending reads have `readOnlyHint: false`; tools that delete, overwrite (even with a backup), publish, send outward or revoke access have `destructiveHint: true`.
+
+### Changed
+- `mcp` lower bound raised to `>=1.10.0` (still `<2.0.0`): the first SDK release whose `FastMCP.tool` and `Tool.from_function` accept `title` (`annotations` came with 1.7.0). Checked in the 1.9.4 and 1.10.0 wheels; release: https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0
+
 ## [0.17.0] - 2026-11-11
 
 ### Added
