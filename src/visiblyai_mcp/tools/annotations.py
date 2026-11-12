@@ -47,7 +47,7 @@ _OWN: World = (False, "Closed world: limited to the connected account and its ow
 _STATIC: World = (False, "Closed world: it returns only static content provided by the service.")
 _LOCAL: World = (False, "Closed world: it runs locally on the given input only.")
 _CATALOG: World = (False, "Closed world: it searches only the service's own indexed catalog.")
-# Tools that send content outward count as open world (OpenAI review guidelines, boss decision 12.11.2026).
+# Tools that send content outward count as open world (OpenAI review guidelines, decision 2026-11-12).
 _SENDS_CMS: World = (True, "Open world: it sends content to the user's configured CMS, an external system.")
 _SENDS_SOCIAL: World = (True, "Open world: it sends content to the user's configured social account, an external system.")
 _OWN_LIVE_URL: World = (False, "Closed world: it only reads the live URL the project set for this article.")
@@ -247,12 +247,13 @@ _ENTRIES: tuple[tuple[str, ToolEntry], ...] = (
     ("list_optimizer_suggestions", _read("List Optimizer Suggestions",
                                          "lists the optimizer suggestions of a project")),
     ("approve_optimizer_suggestion", _destructive("Approve Optimizer Suggestion", "applies an optimizer suggestion",
-                                                  "it changes article content and can write back to the CMS")),
+                                                  "it changes article content and can write back to the CMS",
+                                                  _SENDS_CMS)),
     # Changes the state of an existing suggestion.
     ("reject_optimizer_suggestion", _destructive("Reject Optimizer Suggestion", "rejects an optimizer suggestion",
                                                  "it changes the state of the suggestion for good")),
     ("undo_optimizer_suggestion", _destructive("Undo Optimizer Suggestion", "undoes an applied suggestion",
-                                               "it rewrites the article and its CMS page")),
+                                               "it rewrites the article and its CMS page", _SENDS_CMS)),
 )
 
 

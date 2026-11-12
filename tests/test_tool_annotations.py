@@ -429,20 +429,37 @@ def test_k9_4_title_verb_matches_hint():
 # ---------------------------------------------------------------------------
 
 # Tools that query arbitrary public domains, URLs, live search results or public search data.
-OPEN_WORLD = {
+OPEN_WORLD_QUERIES = {
     "analyze_url_structure", "classify_keywords_advanced", "get_traffic_snapshot",
     "get_historical_traffic", "get_keywords", "get_competitors", "get_backlinks",
     "get_referring_domains", "validate_keywords", "crawl_website", "onpage_analysis", "check_serp",
     "query_fanout", "check_pagespeed", "audit_sitemap", "check_structured_data", "check_hreflang",
     "check_links", "seo_agent", "seo_workflow", "create_content_query",
-    # Send content outward to the user's configured CMS or social account (boss decision 12.11.2026).
-    "publish_article", "update_cms_article", "change_article_status", "test_cms_connection",
-    "create_social_post", "approve_social_post",
 }
-TARGET_FIELDS = {"url", "domain", "target"}
-# Named exception (boss decision 12.11.2026): for get_internal_links and get_page_facts, url is a lookup
-# key inside the project's own stored crawl (project_id required), not a fetch target, so they stay False.
-PROJECT_SCOPED_URL = {"get_internal_links", "get_page_facts"}
+# Rule (decision 2026-11-12): a justification that mentions sending outward means openWorldHint True.
+SENDING_WORDS = re.compile(r"\b(sends|CMS|Buffer|webhook|publishes)\b")
+# Named exceptions: they mention the CMS but send nothing to an external system.
+SENDING_EXCEPTIONS = {
+    "pull_live_article": "reads the live URL stored in the project, sends nothing",
+    "create_cms_connection": "stores a new connection inside Visibly, sends nothing",
+    "set_article_live_url": "stores the URL used later for writeback, sends nothing",
+    "list_cms_connections": "lists stored connections, sends nothing",
+    "get_article_workflow": "reads the stored transfer status, sends nothing",
+    "delete_cms_connection": "removes the stored connection inside Visibly, sends nothing",
+    "revoke_contentpilot_key": "revokes a key inside Visibly, sends nothing",
+}
+SENDING_TOOLS = {
+    "publish_article", "update_cms_article", "change_article_status", "test_cms_connection",
+    "approve_optimizer_suggestion", "undo_optimizer_suggestion", "create_social_post", "approve_social_post",
+}
+OPEN_WORLD = OPEN_WORLD_QUERIES | SENDING_TOOLS
+TARGET_FIELDS = {"url", "domain", "target", "webhook_url"}
+# Named exceptions (decision 2026-11-12), each only while project_id is required.
+TARGET_FIELD_EXCEPTIONS = {
+    "get_internal_links": "url is a lookup key inside the project's own stored crawl",
+    "get_page_facts": "url is a lookup key inside the project's own stored crawl",
+    "create_cms_connection": "webhook_url is stored for later deliveries; creating the connection sends nothing",
+}
 SENTENCE_PREFIXES = (
     ("readOnlyHint", "Read-only:", "Not read-only:"),
     ("destructiveHint", "Destructive:", "Not destructive:"),
@@ -462,7 +479,7 @@ def _target_field_problems(table: dict, schemas: dict) -> list[str]:
         fields = TARGET_FIELDS & set(schema.get("properties", {}))
         if not fields or table[name]["openWorldHint"] is True:
             continue
-        if name in PROJECT_SCOPED_URL and "project_id" in schema.get("required", []):
+        if name in TARGET_FIELD_EXCEPTIONS and "project_id" in schema.get("required", []):
             continue
         problems.append(f"{name}: input {sorted(fields)} with openWorldHint=False")
     return problems
@@ -493,6 +510,16 @@ def _justification_problems(table: dict) -> list[str]:
     return problems
 
 
+def _sending_problems(table: dict) -> list[str]:
+    """Justification mentions sends/CMS/Buffer/webhook/publishes but openWorldHint is False (named exceptions)."""
+    problems = []
+    for name, entry in sorted(table.items()):
+        match = SENDING_WORDS.search(entry.get("justification") or "")
+        if match and entry.get("openWorldHint") is not True and name not in SENDING_EXCEPTIONS:
+            problems.append(f"{name}: justification mentions {match.group(0)!r} but openWorldHint=False")
+    return problems
+
+
 def _schemas() -> dict:
     return {tool.name: tool.inputSchema or {} for tool in _list_tools()}
 
@@ -506,6 +533,18 @@ def test_k12_1_open_world_explicit():
     for tool in _list_tools():
         assert tool.annotations.openWorldHint is TOOL_ANNOTATIONS[tool.name]["openWorldHint"], tool.name
 
+    # Rule: sending outward means open world; the sending tools are exactly those found by the rule.
+    assert _sending_problems(TOOL_ANNOTATIONS) == []
+    by_rule = {name for name, entry in TOOL_ANNOTATIONS.items()
+               if SENDING_WORDS.search(entry["justification"]) and name not in SENDING_EXCEPTIONS}
+    assert by_rule == SENDING_TOOLS and len(SENDING_TOOLS) == 8, sorted(by_rule ^ SENDING_TOOLS)
+    assert set(SENDING_EXCEPTIONS) <= set(TOOL_ANNOTATIONS)
+    assert not any(TOOL_ANNOTATIONS[name]["openWorldHint"] for name in SENDING_EXCEPTIONS)
+    for name in ("approve_optimizer_suggestion", "undo_optimizer_suggestion", "publish_article"):
+        table = _copy_table()
+        table[name]["openWorldHint"] = False
+        assert _sending_problems(table)[0].startswith(name), name
+
     # Negative cases: missing key, None, int, string.
     for bad_value in ("missing", None, 1, "true"):
         table = _copy_table()
@@ -518,14 +557,16 @@ def test_k12_1_open_world_explicit():
 
 
 def test_k12_1_url_domain_open_world():
-    """K12.1: A tool with input url, domain or target has openWorldHint True."""
+    """K12.1: A tool with input url, domain, target or webhook_url has openWorldHint True (named exceptions)."""
     schemas = _schemas()
     assert _target_field_problems(TOOL_ANNOTATIONS, schemas) == []
     with_target = sorted(name for name, schema in schemas.items()
                          if TARGET_FIELDS & set(schema.get("properties", {})))
     print(f"{len(with_target)} Werkzeuge mit url/domain/target: {with_target}")
-    assert PROJECT_SCOPED_URL == {"get_internal_links", "get_page_facts"} <= set(with_target)
-    assert not any(TOOL_ANNOTATIONS[name]["openWorldHint"] for name in PROJECT_SCOPED_URL)
+    assert set(TARGET_FIELD_EXCEPTIONS) == {"get_internal_links", "get_page_facts", "create_cms_connection"}
+    assert set(TARGET_FIELD_EXCEPTIONS) <= set(with_target)
+    assert not any(TOOL_ANNOTATIONS[name]["openWorldHint"] for name in TARGET_FIELD_EXCEPTIONS)
+    assert "webhook_url" in schemas["create_cms_connection"]["properties"]
 
     # Negative: an open-world tool switched to False, and a new tool with a `target` field.
     table = _copy_table()
