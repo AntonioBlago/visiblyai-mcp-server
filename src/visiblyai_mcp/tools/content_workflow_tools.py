@@ -37,10 +37,18 @@ def get_content_query(query_id: int, project_id: int | None = None, include_draf
 
 
 def create_content_query(project_id: int, keyword: str, country: str = "de", language: str = "de",
-                         persona_id: int | None = None) -> str:
-    """Run paid SERP/content analysis and create a query. Requires content:write and spending:execute."""
-    return _call("create_content_query", {"project_id": project_id, "keyword": keyword, "country": country,
-                                           "language": language, "persona_id": persona_id})
+                         persona_id: int | None = None, source_query_id: int | None = None) -> str:
+    """Run paid SERP/content analysis and create a query. Requires content:write and spending:execute.
+
+    Language version: pass source_query_id (an existing query in the same project) to link the new
+    query as its language version. language must differ from the source; translate the keyword
+    yourself first, then score the translated draft against this new query.
+    """
+    payload: dict[str, Any] = {"project_id": project_id, "keyword": keyword, "country": country,
+                               "language": language, "persona_id": persona_id}
+    if source_query_id is not None:
+        payload["source_query_id"] = source_query_id
+    return _call("create_content_query", payload)
 
 
 def save_content_query_draft(query_id: int, expected_revision: int, content: str, title: str,
@@ -283,11 +291,23 @@ TOOLS = (
 
 
 def tool_definitions() -> list[dict[str, Any]]:
-    """Share the stdio tools' schemas and permission guidance with the HTTP transport."""
+    """Share the stdio tools' schemas, titles, annotations and permission guidance with the HTTP transport.
+
+    title and annotations come from ``annotations.TOOL_ANNOTATIONS``, the same table the
+    stdio registration uses; annotations is a plain dict with the read-only, destructive and open-world hints.
+    """
     from mcp.server.fastmcp.tools import Tool
+
+    from .annotations import tool_options
 
     definitions = []
     for function in TOOLS:
-        tool = Tool.from_function(function)
-        definitions.append({"name": tool.name, "description": tool.description, "inputSchema": tool.parameters})
+        tool = Tool.from_function(function, **tool_options(function.__name__))
+        definitions.append({
+            "name": tool.name,
+            "title": tool.title,
+            "description": tool.description,
+            "inputSchema": tool.parameters,
+            "annotations": tool.annotations.model_dump(exclude_none=True),
+        })
     return definitions

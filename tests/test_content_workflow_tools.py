@@ -17,6 +17,17 @@ def _run(tool, name, *args, **kwargs):
     return out, client.content_workflow.call_args
 
 
+def test_create_query_reicht_source_query_id_nur_gesetzt_durch():
+    _, without = _run(tools.create_content_query, "create_content_query", 7, "bachata kurs", "de", "de", 4)
+    assert "source_query_id" not in without.args[1]
+    _, with_source = _run(tools.create_content_query, "create_content_query", 7, "bachata class", "us", "en",
+                          None, 12)
+    assert with_source.args == ("create_content_query", {
+        "project_id": 7, "keyword": "bachata class", "country": "us", "language": "en", "persona_id": None,
+        "source_query_id": 12,
+    })
+
+
 def test_create_query_and_generate_article_map_to_expected_workflow_paths():
     _, query_call = _run(tools.create_content_query, "create_content_query", 7, "bachata kurs", "de", "de", 4)
     assert query_call.args == ("create_content_query", {

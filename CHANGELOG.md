@@ -6,6 +6,33 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), version
 
 ## [Unreleased]
 
+## [0.19.0] - 2026-11-12
+
+Not published to PyPI yet (nicht auf PyPI veröffentlicht). Contract chatgpt-plugin v001, milestone 12 (K12.1, K12.2).
+
+### Added
+- Third MCP annotation `openWorldHint` for every tool, always set as a boolean, from the same table `visiblyai_mcp/tools/annotations.py`. `true` for the 21 tools that query arbitrary public domains, URLs, live search results or public search market data, and for the 8 tools that send content to the user's configured CMS or social account (`publish_article`, `update_cms_article`, `change_article_status`, `test_cms_connection`, `approve_optimizer_suggestion`, `undo_optimizer_suggestion`, `create_social_post`, `approve_social_post`); `false` for tools limited to the connected account and its own projects, or to static content.
+- Every table entry carries `justification`: one English sentence per hint (read-only, destructive, open-world) for the ChatGPT review portal. It stays in the table and is not sent to MCP clients.
+- `list_tools()` and `tool_definitions()` now return `readOnlyHint`, `destructiveHint` and `openWorldHint` for every tool.
+
+## [0.18.0] - 2026-11-12
+
+Not published to PyPI (nicht auf PyPI veröffentlicht); publication waits for Antonio's go.
+
+### Added
+- Every tool carries a `title` and MCP annotations (`readOnlyHint`, `destructiveHint`, both always set) from one table, `visiblyai_mcp/tools/annotations.py`. A tool without table entry fails at import with `KeyError`.
+- `tool_definitions()` also returns `title` and `annotations` for the remote server, with the same values as `list_tools()`.
+- Classification: `readOnlyHint: true` only for reads without credits and without any write effect; credit-spending reads have `readOnlyHint: false`; tools that delete, overwrite (even with a backup), publish, send outward or revoke access have `destructiveHint: true`.
+
+### Changed
+- `mcp` lower bound raised to `>=1.10.0` (still `<2.0.0`): the first SDK release whose `FastMCP.tool` and `Tool.from_function` accept `title` (`annotations` came with 1.7.0). Checked in the 1.9.4 and 1.10.0 wheels; release: https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0
+
+## [0.17.0] - 2026-11-11
+
+### Added
+- `get_skill` takes an optional `lang` (`de` or `en`, default `en`) and passes it to the API only when set. `name='list'` honors it too.
+- `create_content_query` accepts `source_query_id` to create a language version of an existing query (same project, different language). The key is only sent when set, so older Visibly backends keep working.
+
 ## [0.16.1] - 2026-11-03
 
 ### Fixed
