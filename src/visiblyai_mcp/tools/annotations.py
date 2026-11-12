@@ -17,9 +17,10 @@ In doubt readOnlyHint=False: a wrong True lets clients run the tool unasked.
 openWorldHint (K12.1):
 - True for tools that query arbitrary public domains, URLs, search results or
   web data (any domain or URL as input, live SERPs, public search market data).
-- False for tools limited to the connected account, its own projects and the
-  connections the project configured, or to static content of the package or
-  service.
+- True as well for tools that send content outward to the user's configured
+  CMS or social account (publish, CMS writeback, webhook, Buffer queue).
+- False for tools limited to the connected account and its own projects, or to
+  static content of the package or service.
 
 ``justification`` holds one English sentence per hint (read-only, destructive,
 open-world) for the review portal (T4). It is not sent to MCP clients.
@@ -46,8 +47,9 @@ _OWN: World = (False, "Closed world: limited to the connected account and its ow
 _STATIC: World = (False, "Closed world: it returns only static content provided by the service.")
 _LOCAL: World = (False, "Closed world: it runs locally on the given input only.")
 _CATALOG: World = (False, "Closed world: it searches only the service's own indexed catalog.")
-_OWN_CMS: World = (False, "Closed world: it only contacts the CMS the project has configured.")
-_OWN_BUFFER: World = (False, "Closed world: it posts only through the project's own connected Buffer account.")
+# Tools that send content outward count as open world (OpenAI review guidelines, boss decision 12.11.2026).
+_SENDS_CMS: World = (True, "Open world: it sends content to the user's configured CMS, an external system.")
+_SENDS_SOCIAL: World = (True, "Open world: it sends content to the user's configured social account, an external system.")
 _OWN_LIVE_URL: World = (False, "Closed world: it only reads the live URL the project set for this article.")
 
 
@@ -189,9 +191,9 @@ _ENTRIES: tuple[tuple[str, ToolEntry], ...] = (
     # approve=true queues the post for Buffer, i.e. sends it outward.
     ("create_social_post", _destructive("Create Social Post", "creates a social post",
                                         "with approve=true it queues the post for publishing via Buffer",
-                                        _OWN_BUFFER)),
+                                        _SENDS_SOCIAL)),
     ("approve_social_post", _destructive("Approve Social Post for Publishing", "approves a social post",
-                                         "the approved post is handed to Buffer for publishing", _OWN_BUFFER)),
+                                         "the approved post is handed to Buffer for publishing", _SENDS_SOCIAL)),
     ("delete_social_post", _destructive("Delete Social Post", "deletes a social post",
                                         "it removes the post and withdraws channels already scheduled")),
     # Content workflow (content_workflow_tools.TOOLS)
@@ -206,7 +208,7 @@ _ENTRIES: tuple[tuple[str, ToolEntry], ...] = (
     ("optimize_content_draft", _paid("Optimize Content Draft",
                                      "returns an optimization proposal without saving it")),
     ("change_article_status", _destructive("Change Article Status", "changes the review status of an article",
-                                           "approval triggers the CMS webhook of the project", _OWN_CMS)),
+                                           "approval triggers the CMS webhook of the project", _SENDS_CMS)),
     ("edit_content_article", _destructive("Edit Article in Editor", "updates an article in the editor",
                                           "it overwrites the article text, keeping a backup")),
     ("regenerate_content_article", _destructive("Regenerate Article", "queues paid regeneration of an article",
@@ -215,7 +217,7 @@ _ENTRIES: tuple[tuple[str, ToolEntry], ...] = (
     ("create_cms_connection", _additive("Create CMS Connection", "creates a CMS connection for the project")),
     # E15: sends a signed webhook to the CMS.
     ("test_cms_connection", _destructive("Test CMS Connection", "tests a CMS connection",
-                                         "it sends a signed webhook to the CMS of the project", _OWN_CMS)),
+                                         "it sends a signed webhook to the CMS of the project", _SENDS_CMS)),
     ("delete_cms_connection", _destructive("Delete CMS Connection", "deletes a CMS connection",
                                            "the connection is removed for good")),
     # E15: rotating invalidates the previous key.
@@ -225,9 +227,9 @@ _ENTRIES: tuple[tuple[str, ToolEntry], ...] = (
     ("revoke_contentpilot_key", _destructive("Revoke Pull API Key", "revokes the Pull API key",
                                              "the CMS loses access with that key")),
     ("publish_article", _destructive("Publish Article to CMS", "publishes an approved article",
-                                     "it puts the article live on the CMS of the project", _OWN_CMS)),
+                                     "it puts the article live on the CMS of the project", _SENDS_CMS)),
     ("update_cms_article", _destructive("Update Live CMS Article", "updates the live CMS article",
-                                        "it overwrites the content of the live page", _OWN_CMS)),
+                                        "it overwrites the content of the live page", _SENDS_CMS)),
     ("get_article_workflow", _read("Get Article Publishing Workflow",
                                    "reads editor links and the CMS transfer status of an article")),
     ("pull_live_article", _read("Fetch Live Article Content",

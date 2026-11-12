@@ -435,9 +435,13 @@ OPEN_WORLD = {
     "get_referring_domains", "validate_keywords", "crawl_website", "onpage_analysis", "check_serp",
     "query_fanout", "check_pagespeed", "audit_sitemap", "check_structured_data", "check_hreflang",
     "check_links", "seo_agent", "seo_workflow", "create_content_query",
+    # Send content outward to the user's configured CMS or social account (boss decision 12.11.2026).
+    "publish_article", "update_cms_article", "change_article_status", "test_cms_connection",
+    "create_social_post", "approve_social_post",
 }
 TARGET_FIELDS = {"url", "domain", "target"}
-# url is a lookup key inside the project's stored crawl (project_id required), not a fetch target.
+# Named exception (boss decision 12.11.2026): for get_internal_links and get_page_facts, url is a lookup
+# key inside the project's own stored crawl (project_id required), not a fetch target, so they stay False.
 PROJECT_SCOPED_URL = {"get_internal_links", "get_page_facts"}
 SENTENCE_PREFIXES = (
     ("readOnlyHint", "Read-only:", "Not read-only:"),
@@ -520,7 +524,8 @@ def test_k12_1_url_domain_open_world():
     with_target = sorted(name for name, schema in schemas.items()
                          if TARGET_FIELDS & set(schema.get("properties", {})))
     print(f"{len(with_target)} Werkzeuge mit url/domain/target: {with_target}")
-    assert PROJECT_SCOPED_URL <= set(with_target)
+    assert PROJECT_SCOPED_URL == {"get_internal_links", "get_page_facts"} <= set(with_target)
+    assert not any(TOOL_ANNOTATIONS[name]["openWorldHint"] for name in PROJECT_SCOPED_URL)
 
     # Negative: an open-world tool switched to False, and a new tool with a `target` field.
     table = _copy_table()
