@@ -34,8 +34,9 @@ mcp = FastMCP(
     ),
 )
 
-# Every tool is registered through the annotation table (title, readOnlyHint,
-# destructiveHint); a tool without table entry raises KeyError at import.
+# Every tool is registered through the annotation table (title plus the
+# read-only, destructive and open-world hints); a tool without table entry
+# raises KeyError at import.
 _tool = annotated_tool(mcp)
 
 # Full content editor and publishing lifecycle. Each callable's type hints and

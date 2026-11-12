@@ -294,7 +294,7 @@ def tool_definitions() -> list[dict[str, Any]]:
     """Share the stdio tools' schemas, titles, annotations and permission guidance with the HTTP transport.
 
     title and annotations come from ``annotations.TOOL_ANNOTATIONS``, the same table the
-    stdio registration uses; annotations is a plain dict (readOnlyHint, destructiveHint).
+    stdio registration uses; annotations is a plain dict with the read-only, destructive and open-world hints.
     """
     from mcp.server.fastmcp.tools import Tool
 
