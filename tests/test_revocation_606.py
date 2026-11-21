@@ -342,6 +342,36 @@ def test_k1_5_client_closed_after_call(fake_app, monkeypatch):
     assert app.clients[0].is_closed is True
 
 
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="Befund 606-L2, Fix offen: Schlüssel mit Whitespace erscheint in 'HTTP error'-Meldung",
+)
+def test_k1_5_key_not_in_transport_error(monkeypatch):
+    """K1.5: Ein Schlüssel mit Zeilenumbruch am Ende (Kopierfehler, CRLF) erscheint nicht in der Werkzeugausgabe.
+
+    Echter ``httpx.HTTPTransport`` mit ``httpcore.MockBackend`` statt MockTransport,
+    weil h11 den Header-Wert prüft und ihn vollständig in die Fehlermeldung setzt.
+    """
+    import httpcore
+
+    key = _placeholder("lc", "a", 24)
+    monkeypatch.setenv("VISIBLYAI_API_KEY", key + "\n")
+    real_client = httpx.Client
+
+    def factory(*args, **kwargs):
+        transport = httpx.HTTPTransport()
+        transport._pool = httpcore.ConnectionPool(
+            network_backend=httpcore.MockBackend([b"HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\n{}"]))
+        kwargs.pop("transport", None)
+        return real_client(*args, transport=transport, **kwargs)
+
+    monkeypatch.setattr("visiblyai_mcp.api_client.httpx.Client", factory)
+    raw = paid_tools.get_traffic_snapshot("example.com")
+    json.loads(raw)
+    assert key not in raw
+
+
 # ---------------------------------------------------------------------------
 # K1.7 Kein Schlüssel in der 401-Antwort
 # ---------------------------------------------------------------------------
